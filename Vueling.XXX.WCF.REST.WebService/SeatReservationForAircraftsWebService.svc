@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Vueling.XXX.WCF.REST.WebService.ISeatReservationForAircraftsWebService, Vueling.XXX.WCF.REST.WebService" Factory="Autofac.Integration.Wcf.AutofacWebServiceHostFactory, Autofac.Integration.Wcf" %>

@@ -1,0 +1,9 @@
+SOLUTION_DIR="C:\workspace\VSTS\Templates\Vueling.XXX\"
+PROJECT_DIR="C:\workspace\VSTS\Templates\Vueling.XXX\Vueling.XXX.WCF.WebService.IntegrationTest\"
+Using Development
+Relative path : 
+Maps to path  : C:\workspace\VSTS
+nugetDirectory=C:\workspace\VSTS\BuildProcessTemplates\NuGet\
+ensureNugetPackagesFilePath=C:\workspace\VSTS\BuildProcessTemplates\NuGet\EnsureNugetPackages.cmd 
+SOLUTION_DIR="C:\workspace\VSTS\Templates\Vueling.XXX\"
+PROJECT_DIR="C:\workspace\VSTS\Templates\Vueling.XXX\Vueling.XXX.WCF.WebService.IntegrationTest\"

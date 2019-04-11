@@ -1,0 +1,9 @@
+SOLUTION_DIR="C:\workspace\TFS\Vueling\Vueling.XXX\PRE\"
+PROJECT_DIR="C:\workspace\TFS\Vueling\Vueling.XXX\PRE\Vueling.XXX.Message\"
+Using Development
+Relative path : 
+Maps to path  : C:\workspace\TFS\Vueling
+nugetDirectory=C:\workspace\TFS\Vueling\BuildProcessTemplates\NuGet\
+ensureNugetPackagesFilePath=C:\workspace\TFS\Vueling\BuildProcessTemplates\NuGet\EnsureNugetPackages.cmd 
+SOLUTION_DIR="C:\workspace\TFS\Vueling\Vueling.XXX\PRE\"
+PROJECT_DIR="C:\workspace\TFS\Vueling\Vueling.XXX\PRE\Vueling.XXX.Message\"

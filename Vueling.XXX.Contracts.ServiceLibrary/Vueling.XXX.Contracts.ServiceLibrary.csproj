@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F8C8F7E-94CD-4FB0-898A-8ED97B98B846}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vueling.XXX.Contracts.ServiceLibrary</RootNamespace>
+    <AssemblyName>Vueling.XXX.Contracts.ServiceLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ATC.Taskling.Client.Core.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Core.Extensions.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Core.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.6.0\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\BookingDTO.cs" />
+    <Compile Include="DTO\FlightDTO.cs" />
+    <Compile Include="DTO\Flights\FlightCancelledDTO.cs" />
+    <Compile Include="DTO\Flights\FlightRescheduledDTO.cs" />
+    <Compile Include="DTO\JourneyDTO.cs" />
+    <Compile Include="DTO\PassengerDTO.cs" />
+    <Compile Include="DTO\SeatDTO.cs" />
+    <Compile Include="Flights\IFlightReschedulerService.cs" />
+    <Compile Include="Flights\IUpdateFlightService.cs" />
+    <Compile Include="IAircraftMaintenanceApplicationService.cs" />
+    <Compile Include="IBookingApplicationServices.cs" />
+    <Compile Include="IBookingBusinessApplicationServices.cs" />
+    <Compile Include="IBookingCancelerApplicationServices.cs" />
+    <Compile Include="IBookingValidationApplicationServices.cs" />
+    <Compile Include="ISeatAssignmentApplicationService.cs" />
+    <Compile Include="ITasklingService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\NugetPackageGenerationAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="BeforeBuild">
+    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
+  </Target>
+</Project>

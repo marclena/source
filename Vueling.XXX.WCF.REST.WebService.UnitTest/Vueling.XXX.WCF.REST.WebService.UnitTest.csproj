@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68799089-190D-4C85-B095-607D01E5DD5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vueling.XXX.WCF.REST.WebService.UnitTest</RootNamespace>
+    <AssemblyName>Vueling.XXX.WCF.REST.WebService.UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="NMock3">
+      <HintPath>..\packages\NMock3.3.0\lib\NMock3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Given_Flight_With_Available_Seats\When_ReserveSeat.cs" />
+    <Compile Include="Given_Flight_With_No_Available_Seats\When_ReserveSeat.cs" />
+    <Compile Include="Given_No_Available_Flight\When_ReserveSeat.cs" />
+    <Compile Include="Given_No_Database_Connection\When_ReserveSeat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vueling.XXX.Contracts.ServiceLibrary\Vueling.XXX.Contracts.ServiceLibrary.csproj">
+      <Project>{0f8c8f7e-94cd-4fb0-898a-8ed97b98b846}</Project>
+      <Name>Vueling.XXX.Contracts.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.DB.Infrastructure\Vueling.XXX.DB.Infrastructure.csproj">
+      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
+      <Name>Vueling.XXX.DB.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Library\Vueling.XXX.Library.csproj">
+      <Project>{8d48807f-7d49-4444-95d7-6453af9c13df}</Project>
+      <Name>Vueling.XXX.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.REST.WebService\Vueling.XXX.WCF.REST.WebService.csproj">
+      <Project>{35e49eb0-6ef1-4e05-9c78-3125716fedcb}</Project>
+      <Name>Vueling.XXX.WCF.REST.WebService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
+  </Target>
+</Project>

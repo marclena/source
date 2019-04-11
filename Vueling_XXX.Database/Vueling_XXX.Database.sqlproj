@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Vueling_XXX.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{217f3a50-4ab8-4bfd-82d8-e072aa449bb2}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Vueling_XXX.Database</RootNamespace>
+    <AssemblyName>Vueling_XXX.Database</AssemblyName>
+    <ModelCollation>3082,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <DefaultCollation>Modern_Spanish_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+    <SqlCodeAnalysisRules>+!Microsoft.Rules.Data.SR0014;+!Microsoft.Rules.Data.SR0008;+!Microsoft.Rules.Data.SR0010;+!Microsoft.Rules.Data.SR0013;+!Microsoft.Rules.Data.SR0001;+!Microsoft.Rules.Data.SR0009;+!Microsoft.Rules.Data.SR0012;+!Microsoft.Rules.Data.SR0011;+!Microsoft.Rules.Data.SR0016;+!Microsoft.Rules.Data.SR0015;+!Microsoft.Rules.Data.SR0005;+!Microsoft.Rules.Data.SR0006;+!Microsoft.Rules.Data.SR0004;+!Microsoft.Rules.Data.SR0007</SqlCodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SqlCodeAnalysisRules>+!Microsoft.Rules.Data.SR0014;+!Microsoft.Rules.Data.SR0008;+!Microsoft.Rules.Data.SR0010;+!Microsoft.Rules.Data.SR0013;+!Microsoft.Rules.Data.SR0001;+!Microsoft.Rules.Data.SR0009;+!Microsoft.Rules.Data.SR0012;+!Microsoft.Rules.Data.SR0011;+!Microsoft.Rules.Data.SR0016;+!Microsoft.Rules.Data.SR0015;+!Microsoft.Rules.Data.SR0005;+!Microsoft.Rules.Data.SR0006;+!Microsoft.Rules.Data.SR0004;+!Microsoft.Rules.Data.SR0007</SqlCodeAnalysisRules>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Index" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Aircraft.sql" />
+    <Build Include="dbo\Tables\Booking.sql" />
+    <Build Include="dbo\Tables\Passenger.sql" />
+    <Build Include="dbo\Tables\Journey.sql" />
+    <Build Include="dbo\Index\IX_CLUSTER_AIRCRAFT.sql" />
+  </ItemGroup>
+</Project>

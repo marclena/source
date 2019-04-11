@@ -1,0 +1,32 @@
+﻿
+<div class="bs-example">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Booking <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-inverse">
+                            <li><a href="#"></a></li>
+                            <li>@Html.ActionLink("Create", "CreateBooking", "Booking")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Retrieve", "Index", "Booking")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Divide Prices", "DividePrices", "Booking")</li>
+                            <li>@Html.ActionLink("Change Flights", "ChangeFlights", "Booking")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Maestros Settings <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-inverse">
+                            <li><a href="#"></a></li>
+                            <li>@Html.ActionLink("Routes", "Markets", "SettingsRoutes")</li>
+                            <li>@Html.ActionLink("Stations", "Stations", "SettingsRoutes")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+

@@ -1,0 +1,51 @@
+﻿@using Telerik.Web.Mvc.UI
+
+@model List<Vueling.XXX.WebUI.Models.BookingViewModel>
+
+@{
+    ViewBag.Title = "Booking";
+}
+
+@using(Html.BeginForm())
+{
+    @(Html.Telerik().Grid(Model)
+                .Name("Grid")
+                .Columns(columns =>
+                    {
+                        columns.Bound(p => p.Id);
+                        columns.Bound(p => p.RecordLocator);
+                        columns.Bound(p => p.SalesAgent);
+                        columns.Bound(p => p.Created);
+                        columns.Bound(p => p.Modified);
+                        columns.Bound(p => p.PassengersCount).Filterable(false);
+                        columns.Bound(p => p.JourneysCount).Filterable(false);
+                        columns.Bound(p => p.TotalPrice).Filterable(false);
+                    })
+                .DataBinding(dataBinding => dataBinding.Ajax().Select("SearchBookings", "Booking"))
+                .Pageable(settings => settings
+                    .Total((int)ViewData["total"])
+                    .Style(GridPagerStyles.NextPreviousAndNumeric | GridPagerStyles.PageSizeDropDown))
+                .EnableCustomBinding(true)
+                .Sortable()
+                .Scrollable()
+                .Filterable()
+                //.Groupable()
+                //.Footer(true)
+            )
+}
+
+@section Footer
+{
+    <script src="@(ViewBag.StaticContentUrlBase)back/js/jquery-migrate-1.2.1.js" type="text/javascript"></script>
+
+    @(Html.Telerik().StyleSheetRegistrar()
+				.DefaultGroup(group => group
+					.Add("telerik.office2010silver.min.css")
+					.Add("telerik.common.css")
+					.Add("telerik.rtl.css")
+					.Combined(true)
+					.Compress(true)))
+
+    @(Html.Telerik().ScriptRegistrar().jQuery(false))
+}
+

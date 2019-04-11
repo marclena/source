@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="aeb9ed8c-3ed5-4043-b23a-2441f7cf363b" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="8da234db-57d1-4898-a2e9-22acd59ae1ee" name="1.1 - Presentation">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="09e24378-1317-46df-8d9d-9f6ecd3a4248" direction="Forward">
+          <layerMoniker Id="5b6437a0-d24e-41fb-9518-832937132b3a" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="942ad8f8-df5d-4c1b-ac2c-598602b4242a" direction="Forward">
+          <layerMoniker Id="2f1b2250-f696-4cc8-b938-4460cee1f3b8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="91c9027c-96ed-4911-aded-b13c7f186512" direction="Forward">
+          <layerMoniker Id="2db0b451-6a04-4c44-8fac-c7da412439f2" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="723d76bc-9014-43b1-a30a-48ffb0b9ceec" direction="Forward">
+          <layerMoniker Id="1c265b0f-e771-4204-ad23-19e759ab0c26" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="4c8792e2-c81a-46b7-9226-9f4cbf332b7b" name="Vueling.XXX.WebUI">
+          <ArtifactNode Label="Vueling.XXX.WebUI" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WebUI/Vueling.XXX.WebUI.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WebUI)" Label="Vueling.XXX.WebUI.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="114d19da-118a-4056-bdc3-69c4862e8d5a" name="Vueling.XXX.WebUI.UnitTest">
+          <ArtifactNode Label="Vueling.XXX.WebUI.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WebUI.UnitTest/Vueling.XXX.WebUI.UnitTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WebUI.UnitTest)" Label="Vueling.XXX.WebUI.UnitTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f256a01d-2fdf-44ef-8317-1e35eafd1bd8" name="1.2 - Distributed Services">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="cb88467b-f81d-42b3-a02d-8036ac02801a" direction="Forward">
+          <layerMoniker Id="5b6437a0-d24e-41fb-9518-832937132b3a" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="643e288f-8092-4058-9326-3b420a70602e" direction="Forward">
+          <layerMoniker Id="2f1b2250-f696-4cc8-b938-4460cee1f3b8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="de62eecc-b196-490f-8695-7efa9e85a687" direction="Forward">
+          <layerMoniker Id="2db0b451-6a04-4c44-8fac-c7da412439f2" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="dc6ef740-c05d-46cc-b365-181be5c4b264" direction="Forward">
+          <layerMoniker Id="1c265b0f-e771-4204-ad23-19e759ab0c26" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="4cdf4da2-8ef4-48a2-880f-5be49ecd4998" name="Vueling.XXX.Publisher.WCF.WebService">
+          <ArtifactNode Label="Vueling.XXX.Publisher.WCF.WebService" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Publisher.WCF.WebService/Vueling.XXX.Publisher.WCF.WebService.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.Publisher.WCF.WebService)" Label="Vueling.XXX.Publisher.WCF.WebService.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="a344a765-6b3f-447c-9475-90fcabbb387b" name="Vueling.XXX.Subscriber.WindowsService">
+          <ArtifactNode Label="Vueling.XXX.Subscriber.WindowsService" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Subscriber.WindowsService/Vueling.XXX.Subscriber.WindowsService.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.Subscriber.WindowsService)" Label="Vueling.XXX.Subscriber.WindowsService.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c7923feb-4e8e-4f04-8697-fc5932819661" name="Vueling.XXX.WCF.REST.WebService">
+          <ArtifactNode Label="Vueling.XXX.WCF.REST.WebService" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.REST.WebService/Vueling.XXX.WCF.REST.WebService.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.REST.WebService)" Label="Vueling.XXX.WCF.REST.WebService.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="25e4bddf-c5fd-4d3a-969b-62b2ae6e388a" name="Vueling.XXX.WCF.REST.WebService.IntegrationTest">
+          <ArtifactNode Label="Vueling.XXX.WCF.REST.WebService.IntegrationTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.REST.WebService.IntegrationTest/Vueling.XXX.WCF.REST.WebService.IntegrationTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.REST.WebService.IntegrationTest)" Label="Vueling.XXX.WCF.REST.WebService.IntegrationTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="39cdc4e7-e59a-432b-91ae-687bd0d9b4be" name="Vueling.XXX.WCF.REST.WebService.UnitTest">
+          <ArtifactNode Label="Vueling.XXX.WCF.REST.WebService.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.REST.WebService.UnitTest/Vueling.XXX.WCF.REST.WebService.UnitTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.REST.WebService.UnitTest)" Label="Vueling.XXX.WCF.REST.WebService.UnitTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="ecfc356e-4ca1-4419-8721-fd892dba201a" name="Vueling.XXX.WCF.WebService">
+          <ArtifactNode Label="Vueling.XXX.WCF.WebService" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.WebService/Vueling.XXX.WCF.WebService.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.WebService)" Label="Vueling.XXX.WCF.WebService.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="52aaa868-d0c0-49e4-9d81-209aebe9417f" name="Vueling.XXX.WCF.WebService.IntegrationTest">
+          <ArtifactNode Label="Vueling.XXX.WCF.WebService.IntegrationTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.WebService.IntegrationTest/Vueling.XXX.WCF.WebService.IntegrationTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.WebService.IntegrationTest)" Label="Vueling.XXX.WCF.WebService.IntegrationTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="04eb3e50-9bbf-4846-9dc4-25adff5a1783" name="Vueling.XXX.WCF.WebService.UnitTest">
+          <ArtifactNode Label="Vueling.XXX.WCF.WebService.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.WCF.WebService.UnitTest/Vueling.XXX.WCF.WebService.UnitTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.WCF.WebService.UnitTest)" Label="Vueling.XXX.WCF.WebService.UnitTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="144c4606-b7cd-45b6-b3f4-9dffe2f48422" name="1.3 - Application">
+      <childLayers>
+        <layer Id="5b6437a0-d24e-41fb-9518-832937132b3a" name="Contracts">
+          <references>
+            <reference Id="499860e3-ec7a-4328-809b-207813db0acb" name="Vueling.XXX.Contracts.ServiceLibrary">
+              <ArtifactNode Label="Vueling.XXX.Contracts.ServiceLibrary" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Contracts.ServiceLibrary/Vueling.XXX.Contracts.ServiceLibrary.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Contracts.ServiceLibrary)" Label="Vueling.XXX.Contracts.ServiceLibrary.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="759df479-ac56-4bb0-bec1-a6f6642e265b" name="Vueling.XXX.Message">
+              <ArtifactNode Label="Vueling.XXX.Message" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Message/Vueling.XXX.Message.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Message)" Label="Vueling.XXX.Message.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="3e1aec10-4e51-4042-9304-817da13bbcbc" name="Vueling.XXX.Publisher.Contracts.ServiceLibrary">
+              <ArtifactNode Label="Vueling.XXX.Publisher.Contracts.ServiceLibrary" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Publisher.Contracts.ServiceLibrary/Vueling.XXX.Publisher.Contracts.ServiceLibrary.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Publisher.Contracts.ServiceLibrary)" Label="Vueling.XXX.Publisher.Contracts.ServiceLibrary.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="2f1b2250-f696-4cc8-b938-4460cee1f3b8" name="Impl">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="74d4571d-d828-4149-9f2e-59b1b1611d5f" direction="Forward">
+              <layerMoniker Id="1c265b0f-e771-4204-ad23-19e759ab0c26" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="f8be1613-a17c-4dc8-9d5d-8d14f34fc02e" direction="Forward">
+              <layerMoniker Id="5b6437a0-d24e-41fb-9518-832937132b3a" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="e952a660-5108-4c9d-a06e-d4698ea32d23" name="Vueling.XXX.Impl.ServiceLibrary">
+              <ArtifactNode Label="Vueling.XXX.Impl.ServiceLibrary" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Impl.ServiceLibrary/Vueling.XXX.Impl.ServiceLibrary.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Impl.ServiceLibrary)" Label="Vueling.XXX.Impl.ServiceLibrary.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="de957dd7-dbd7-4211-985f-156bdb5651e3" name="Vueling.XXX.Impl.ServiceLibrary.UnitTest">
+              <ArtifactNode Label="Vueling.XXX.Impl.ServiceLibrary.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Impl.ServiceLibrary.UnitTest/Vueling.XXX.Impl.ServiceLibrary.UnitTest.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Impl.ServiceLibrary.UnitTest)" Label="Vueling.XXX.Impl.ServiceLibrary.UnitTest.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="e73ae928-0733-4c78-900b-abdaceecda35" name="Vueling.XXX.Publisher.Impl.ServiceLibrary">
+              <ArtifactNode Label="Vueling.XXX.Publisher.Impl.ServiceLibrary" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Publisher.Impl.ServiceLibrary/Vueling.XXX.Publisher.Impl.ServiceLibrary.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.Publisher.Impl.ServiceLibrary)" Label="Vueling.XXX.Publisher.Impl.ServiceLibrary.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="1c265b0f-e771-4204-ad23-19e759ab0c26" name="1.4 - Domain">
+      <references>
+        <reference Id="9f74e3a9-16ad-4ca0-b608-7e8c23a9bb27" name="Vueling.XXX.Library">
+          <ArtifactNode Label="Vueling.XXX.Library" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Library/Vueling.XXX.Library.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.Library)" Label="Vueling.XXX.Library.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="6b3b6026-f0df-4fec-952d-83a3f1f9009e" name="Vueling.XXX.Library.UnitTest">
+          <ArtifactNode Label="Vueling.XXX.Library.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.Library.UnitTest/Vueling.XXX.Library.UnitTest.csproj)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Vueling.XXX.Library.UnitTest)" Label="Vueling.XXX.Library.UnitTest.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="91d067b4-413a-41a9-8d5c-2403be84b724" name="1.5 - Infrastructure">
+      <childLayers>
+        <layer Id="2db0b451-6a04-4c44-8fac-c7da412439f2" name="1.5.1 - Data">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="b9ded83e-c250-4876-9bc1-65cde6a82352" direction="Forward">
+              <layerMoniker Id="1c265b0f-e771-4204-ad23-19e759ab0c26" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="384cfc4c-c004-46a1-a21a-3b66497f981f" name="Vueling.XXX.DB.Infrastructure">
+              <ArtifactNode Label="Vueling.XXX.DB.Infrastructure" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.DB.Infrastructure/Vueling.XXX.DB.Infrastructure.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.DB.Infrastructure)" Label="Vueling.XXX.DB.Infrastructure.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="adbf95f9-928a-4e75-a6a8-35fade88d792" name="Vueling.XXX.DB.Infrastructure.UnitTest">
+              <ArtifactNode Label="Vueling.XXX.DB.Infrastructure.UnitTest" Category="CodeSchema_Project" Id="(Assembly=../Vueling.XXX.DB.Infrastructure.UnitTest/Vueling.XXX.DB.Infrastructure.UnitTest.csproj)">
+                <Category Ref="File" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Vueling.XXX.DB.Infrastructure.UnitTest)" Label="Vueling.XXX.DB.Infrastructure.UnitTest.dll" Category="CodeSchema_Assembly">
+                <Category Ref="FileSystem.Category.FileOfType.dll" />
+                <LinkCategory Ref="Produces" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

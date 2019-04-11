@@ -1,0 +1,285 @@
+
+
+/*====================== Clases Iconos ========================*/
+
+.icoQuestion, .icoQuestionHover, .icoDownload, .icoDownloadHover, .icoList, .icoListHover, .icoGrid, .icoGridHover, .icoMail, .icoMailHover, .icoDoc, .icoDocHover, .icoPrintHover, .icoBinHover, .icoPencilHover, .icoEyeHover, .icoDiscHover, .icoGood, .icoGoodHover, .icoBadHover, .icoBad, .icoOk, .icoOkHover, .icoRemove, .icoRemoveHover, .icoLock, .icoLockHover, .icoUnlock, .icoUnlockHover, .icoPrint, .icoBin, .icoPencil, .icoEye, .icoDisc, .icoUserOkHover, .icoUserOk, .icoUserQuestion, .icoUserQuestionHover, .icoUserRemove, .icoUserRemoveHover, .icoDocOk, .icoDocOkHover, .icoDocQuestion, .icoDocQuestionHover, .icoDocRemove, .icoDocRemoveHover{
+	background: url(images/sprites.png) no-repeat;
+    vertical-align: middle;
+}
+
+.icoQuestion{
+	background-position: 0 0;
+	width: 25px;
+	height: 25px;
+}
+a.icoQuestion, a.icoDownload, a.icoList, a.icoGrid, a.icoMail, a.icoDoc, a.icoPrint, a.icoBin, a.icoPencil, a.icoEye, a.icoDisc, a.icoGood, a.icoBad, a.icoOk, a.icoRemove, a.icoLock, a.icoUnlock, a.icoUserOk, a.icoUserQuestion, a.icoUserRemove, a.icoDocOk, a.icoDocQuestion, a.icoDocRemove {
+    display: inline-block;
+    overflow:hidden;
+    color: transparent;
+    width: 25px;
+	height: 25px;
+}
+.icoQuestionHover, a:hover.icoQuestion{
+	background-position: 0 -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDownload{
+	background-position: -25px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDownloadHover, a:hover.icoDownload{
+	background-position: -25px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoList{
+	background-position: -50px 0;
+	width: 25px;
+	height: 25px;
+}
+.icoListHover, a:hover.icoList{
+	background-position: -50px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoGrid{
+	background-position: -75px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoGridHover, a:hover.icoGrid{
+	background-position: -75px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoMail{
+	background-position: -100px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoMailHover, a:hover.icoMail{
+	background-position: -100px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDoc{
+	background-position: -125px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocHover, a:hover.icoDoc{
+	background-position: -125px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDiscHover, a:hover.icoDisc{
+	background-position: -250px -25px ;
+	width: 25px;
+	height: 25px;
+}
+.icoGood{
+	background-position: 0 -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoGoodHover{
+	background-position: 0 -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoBadHover{
+	background-position: -25px -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoBad{
+	background-position: -25px -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoOk{
+	background-position: -50px -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoOkHover{
+	background-position: -50px -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoRemove{
+	background-position: -75px -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoRemoveHover{
+	background-position: -75px -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoLock{
+	background-position: -100px -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoLockHover{
+	background-position: -100px -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUnlock{
+	background-position: -125px -50px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUnlockHover{
+	background-position: -125px -75px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoPrint{
+	background-position: -150px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoPrintHover, a:hover.icoPrint{
+	background-position: -150px -25px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoBin{
+	background-position: -175px 0;
+	width: 25px;
+	height: 25px;
+}
+.icoBinHover, a:hover.icoBin{
+	background-position: -175px -25px ;
+	width: 25px;
+	height: 25px;
+}
+.icoPencil{
+	background-position: -200px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoPencilHover, a:hover.icoPencil{
+	background-position: -200px -25px ;
+	width: 25px;
+	height: 25px;
+}
+.icoEye{
+	background-position: -225px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoEyeHover, a:hover.icoEye{
+	background-position: -225px -25px ;
+	width: 25px;
+	height: 25px;
+}
+.icoDisc{
+	background-position: -250px 0;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserOkHover{
+	background-position: 0 -125px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserOk{
+	background-position: 0 -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserQuestion{
+	background-position: -25px -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserQuestionHover{
+	background-position: -25px -125px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserRemove{
+	background-position: -50px -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoUserRemoveHover{
+	background-position: -50px -125px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocOk{
+	background-position: -75px -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocOkHover{
+	background-position: -75px -125px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocQuestion{
+	background-position: -100px -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocQuestionHover{
+	background-position: -100px -125px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocRemove{
+	background-position: -125px -100px ;
+	width: 25px;
+	height: 25px;
+}
+
+.icoDocRemoveHover{
+	background-position: -125px -125px ;
+	width: 25px;
+	height: 25px;
+}
+

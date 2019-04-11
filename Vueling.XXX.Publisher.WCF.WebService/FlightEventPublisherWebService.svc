@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Vueling.XXX.Publisher.WCF.WebService.IFlightEventPublisherWebService, Vueling.XXX.Publisher.WCF.WebService" Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>

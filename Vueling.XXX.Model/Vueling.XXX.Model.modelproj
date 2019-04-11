@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{bbe18162-1043-4946-8fad-bf6dd267be9c}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Vueling.XXX.Model</Name>
+    <RootNamespace>Vueling.XXX.Model</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Vueling.XXX.Model.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDecomposition.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDecomposition.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDecomposition.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDecomposition.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDecomposition.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vueling.XXX.Contracts.ServiceLibrary\Vueling.XXX.Contracts.ServiceLibrary.csproj">
+      <Name>Vueling.XXX.Contracts.ServiceLibrary</Name>
+      <Project>{0f8c8f7e-94cd-4fb0-898a-8ed97b98b846}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.DB.Infrastructure.UnitTest\Vueling.XXX.DB.Infrastructure.UnitTest.csproj">
+      <Name>Vueling.XXX.DB.Infrastructure.UnitTest</Name>
+      <Project>{141853ee-6fdf-4379-9469-452b578735f5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.DB.Infrastructure\Vueling.XXX.DB.Infrastructure.csproj">
+      <Name>Vueling.XXX.DB.Infrastructure</Name>
+      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.EF.DB.Infrastructure.IntegrationTest\Vueling.XXX.EF.DB.Infrastructure.IntegrationTest.csproj">
+      <Name>Vueling.XXX.EF.DB.Infrastructure.IntegrationTest</Name>
+      <Project>{dcd625fc-cb82-48b7-9ec1-9c2fa7a62ce7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.EF.DB.Infrastructure\Vueling.XXX.EF.DB.Infrastructure.csproj">
+      <Name>Vueling.XXX.EF.DB.Infrastructure</Name>
+      <Project>{be2b4bf5-f791-4d94-85df-ab1da30d9a3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Impl.ServiceLibrary.UnitTest\Vueling.XXX.Impl.ServiceLibrary.UnitTest.csproj">
+      <Name>Vueling.XXX.Impl.ServiceLibrary.UnitTest</Name>
+      <Project>{3ea12918-fe25-438a-8580-65514ffd0921}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Impl.ServiceLibrary\Vueling.XXX.Impl.ServiceLibrary.csproj">
+      <Name>Vueling.XXX.Impl.ServiceLibrary</Name>
+      <Project>{62d3f9f6-8fe6-4b1a-9584-f88cdcee8119}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Library.UnitTest\Vueling.XXX.Library.UnitTest.csproj">
+      <Name>Vueling.XXX.Library.UnitTest</Name>
+      <Project>{2710706d-eebc-4f8a-b5da-6f577d90e38e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Library\Vueling.XXX.Library.csproj">
+      <Name>Vueling.XXX.Library</Name>
+      <Project>{8d48807f-7d49-4444-95d7-6453af9c13df}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Message\Vueling.XXX.Message.csproj">
+      <Name>Vueling.XXX.Message</Name>
+      <Project>{90d045a3-cddc-45f2-9d6a-f37ee8c25b83}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Publisher.Contracts.ServiceLibrary\Vueling.XXX.Publisher.Contracts.ServiceLibrary.csproj">
+      <Name>Vueling.XXX.Publisher.Contracts.ServiceLibrary</Name>
+      <Project>{e98db0cf-07ae-48e2-a5a3-13115356b8b4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Publisher.Impl.ServiceLibrary\Vueling.XXX.Publisher.Impl.ServiceLibrary.csproj">
+      <Name>Vueling.XXX.Publisher.Impl.ServiceLibrary</Name>
+      <Project>{6bcbe41a-5a96-42bf-b797-de49ac849594}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Publisher.WCF.WebService\Vueling.XXX.Publisher.WCF.WebService.csproj">
+      <Name>Vueling.XXX.Publisher.WCF.WebService</Name>
+      <Project>{40c306f2-51f6-4e19-a30e-fb00532818de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.Subscriber.WindowsService\Vueling.XXX.Subscriber.WindowsService.csproj">
+      <Name>Vueling.XXX.Subscriber.WindowsService</Name>
+      <Project>{a5eb3a40-c938-40a2-9281-fdd23643cb1b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.REST.WebService.IntegrationTest\Vueling.XXX.WCF.REST.WebService.IntegrationTest.csproj">
+      <Name>Vueling.XXX.WCF.REST.WebService.IntegrationTest</Name>
+      <Project>{d94573d8-6534-4585-aab8-4a4aeef7fba1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.REST.WebService.UnitTest\Vueling.XXX.WCF.REST.WebService.UnitTest.csproj">
+      <Name>Vueling.XXX.WCF.REST.WebService.UnitTest</Name>
+      <Project>{68799089-190d-4c85-b095-607d01e5dd5d}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.REST.WebService\Vueling.XXX.WCF.REST.WebService.csproj">
+      <Name>Vueling.XXX.WCF.REST.WebService</Name>
+      <Project>{35e49eb0-6ef1-4e05-9c78-3125716fedcb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.WebService.IntegrationTest\Vueling.XXX.WCF.WebService.IntegrationTest.csproj">
+      <Name>Vueling.XXX.WCF.WebService.IntegrationTest</Name>
+      <Project>{4b7f4ee0-d061-416b-a18d-d24755f78c86}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.WebService.UnitTest\Vueling.XXX.WCF.WebService.UnitTest.csproj">
+      <Name>Vueling.XXX.WCF.WebService.UnitTest</Name>
+      <Project>{810e0850-53a4-460c-b955-e80d15339f51}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WCF.WebService\Vueling.XXX.WCF.WebService.csproj">
+      <Name>Vueling.XXX.WCF.WebService</Name>
+      <Project>{313e65eb-191f-4082-b96f-df4c7d44d404}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WebUI.UnitTest\Vueling.XXX.WebUI.UnitTest.csproj">
+      <Name>Vueling.XXX.WebUI.UnitTest</Name>
+      <Project>{f5be6486-0bf9-437e-9dcd-0ea505eec76e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.XXX.WebUI\Vueling.XXX.WebUI.csproj">
+      <Name>Vueling.XXX.WebUI</Name>
+      <Project>{c939f4eb-4df2-44f2-8983-5e9a69f58358}</Project>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

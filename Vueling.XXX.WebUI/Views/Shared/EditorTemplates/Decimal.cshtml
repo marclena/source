@@ -1,0 +1,5 @@
+﻿@model System.Decimal?
+@using System.Globalization
+@Html.TextBox("", (Model.HasValue ? Model.Value.ToString(CultureInfo.CurrentUICulture.NumberFormat) : string.Empty))
+(00@(CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator)@(Enumerable.Range(1, CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalDigits).Select(x => "0").Aggregate((x, y) => x + y).ToString()))
+
