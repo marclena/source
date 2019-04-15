@@ -57,23 +57,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
+    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="ATC.Taskling.Client.Core.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Core.Extensions.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Core.Extensions.dll</HintPath>
+    <Reference Include="ATC.Taskling.Client.DB.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.DB.Infrastructure.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.DB.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="ATC.Taskling.Client.DIRegister.NetFramework, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ATC.Taskling.Client.DIRegister.NetFramework.1.1.0\lib\net461\ATC.Taskling.Client.DIRegister.NetFramework.dll</HintPath>
     </Reference>
-    <Reference Include="ATC.Taskling.Client.Impl.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Impl.ServiceLibrary.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Impl.ServiceLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="ATC.Taskling.Client.Repository.Contracts, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Repository.Contracts.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Repository.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="ATC.Taskling.Client.Repository.Impl, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Repository.Impl.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Repository.Impl.dll</HintPath>
+    <Reference Include="ATC.Taskling.Client.Impl.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Impl.ServiceLibrary.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Impl.ServiceLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

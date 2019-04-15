@@ -44,11 +44,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.2.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="ATC.Taskling.Client.Core.Extensions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Core.Extensions.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Core.Extensions.dll</HintPath>
+    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Fasterflect, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a64e1179c81b1e25, processorArchitecture=MSIL">
       <HintPath>..\packages\fasterflect.2.0.1\lib\net35\Fasterflect.dll</HintPath>

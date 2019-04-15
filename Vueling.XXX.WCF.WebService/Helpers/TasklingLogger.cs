@@ -1,4 +1,4 @@
-﻿using ATC.Taskling.Client.Core.Extensions.Logger;
+﻿using ATC.Taskling.Client.Contracts.ServiceLibrary.Logger;
 using System.Diagnostics;
 
 namespace Vueling.XXX.WCF.WebService.Helpers

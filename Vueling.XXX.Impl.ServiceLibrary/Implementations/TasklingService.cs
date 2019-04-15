@@ -1,6 +1,5 @@
 ﻿using ATC.Taskling.Client.Contracts.ServiceLibrary;
 using ATC.Taskling.Client.Contracts.ServiceLibrary.Blocks;
-using ATC.Taskling.Client.Core.Extensions.Blocks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
