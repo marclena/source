@@ -1,0 +1,23 @@
+﻿#header {
+    background-color: #F1C30D !important;
+}
+
+body.swagger-section #header .swagger-ui-wrap #logo {
+    display: none;
+}
+
+body.swagger-section #header {
+    background: url('../VuelingLogo') no-repeat;
+    background-position-x: 15%;
+    background-position-y: 5px;
+    background-size: 120px;
+}
+
+.swagger-section #explore {
+    border: 2px groove #6e6f70;
+    background-color: #6d6e71;
+}
+
+.swagger-section #explore:hover {
+    background-color: #6d6e71;
+}
