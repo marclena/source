@@ -9,16 +9,27 @@ using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary;
 using System.Reflection;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.DTO;
 using Vueling.XXX.WebApi.Helpers;
-using Vueling.XXX.WebApi.App_Start;
+using ATC.Swagger.Standard.Extension;
+using Microsoft.Owin.Cors;
 
 [assembly: OwinStartup(typeof(Vueling.XXX.WebApi.Startup))]
 
 namespace Vueling.XXX.WebApi
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// Application Id
+        /// </summary>
         public const string ApplicationId = "Vueling.XXX.WebAPI";
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="appBuilder"></param>
         public void Configuration(IAppBuilder appBuilder)
         {
             var baseNamespace = typeof(Startup).Namespace;
@@ -29,18 +40,9 @@ namespace Vueling.XXX.WebApi
             
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
-            
-            //if (bool.Parse(VuelingEnvironment.Current.GetCustomSetting(baseNamespace + ".EnableSwagger")))
-            //{
-            //    Trace.TraceInformation("Configuring Swagger");
-            //    GlobalConfiguration.Configure(SwaggerConfig.Register);
-            //    Trace.TraceInformation("Swagger configured");
-            //}
-
             Trace.TraceInformation("Configuring Swagger");
-            GlobalConfiguration.Configure(SwaggerConfig.Register);
+            GlobalConfiguration.Configuration.AddCustomSwaggerGen(ApplicationId);
             Trace.TraceInformation("Swagger configured");
-
 
             RegisterDependencies();
             Trace.TraceInformation("Dependecies registered");
@@ -51,6 +53,10 @@ namespace Vueling.XXX.WebApi
 
             Trace.TraceInformation("Using Web API....");
             appBuilder.UseWebApi(GlobalConfiguration.Configuration);
+            appBuilder.UseCors(CorsOptions.AllowAll);
+
+            GlobalConfiguration.Configuration.EnsureInitialized();
+
         }
 
         private void ConfigureAuth(IAppBuilder appBuilder)

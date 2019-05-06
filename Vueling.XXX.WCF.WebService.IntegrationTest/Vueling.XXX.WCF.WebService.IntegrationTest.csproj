@@ -38,8 +38,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -49,8 +47,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
@@ -90,9 +86,8 @@
     <Reference Include="System.ServiceModel.Activation" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vueling.Configuration.Library, Version=1.3.0.1, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vueling.Configuration.Library.1.3.0.1\lib\net35\Vueling.Configuration.Library.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Vueling.Configuration.Library, Version=1.3.0.2, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Configuration.Library.1.3.0.2\lib\net35\Vueling.Configuration.Library.dll</HintPath>
     </Reference>
     <Reference Include="Vueling.DBAccess.Contracts.ServiceLibrary, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vueling.DBAccess.Contracts.ServiceLibrary.1.0.0.2\lib\net35\Vueling.DBAccess.Contracts.ServiceLibrary.dll</HintPath>
@@ -189,7 +184,4 @@
   </Choose>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Target Name="BeforeBuild">
-    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
-  </Target>
 </Project>

@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Vueling.XXX.WebApi.Handlers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class LoggingHandler : DelegatingHandler
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             Trace.TraceInformation("[{0}] Begin action.", request.RequestUri.ToString());

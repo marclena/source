@@ -6,30 +6,36 @@ using Vueling.XXX.WebApi.Handlers;
 
 namespace Vueling.XXX.WebApi
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class WebApiConfig
     {
-        public static void Register(HttpConfiguration config)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
+        public static void Register(HttpConfiguration configuration)
         {
-            var constraintResolver = new DefaultInlineConstraintResolver()
-            {
-                ConstraintMap = { ["apiVersion"] = typeof(ApiVersionRouteConstraint) }
-            };
+            var constraintResolver = new DefaultInlineConstraintResolver() { ConstraintMap = { ["apiVersion"] = typeof(ApiVersionRouteConstraint) } };
 
-            config.AddApiVersioning(options =>
-            {
-                options.ReportApiVersions = true;
-                options.DefaultApiVersion = ApiVersion.Default;
-            });
+            // reporting api versions will return the headers "api-supported-versions" and "api-deprecated-versions"
+            configuration.AddApiVersioning(options => options.ReportApiVersions = true);
+            configuration.MapHttpAttributeRoutes(constraintResolver);
 
-            config.MapHttpAttributeRoutes(constraintResolver);
+            // add the versioned IApiExplorer and capture the strongly-typed implementation (e.g. VersionedApiExplorer vs IApiExplorer)
+            // note: the specified format code will format the version as "'v'major[.minor][-status]"
+            var apiExplorer = configuration.AddVersionedApiExplorer(
+                options =>
+                {
+                    options.GroupNameFormat = "'v'VVV";
 
-            //config.Routes.MapHttpRoute(
-            //    name: "DefaultApi",
-            //    routeTemplate: "v{version:apiVersion}/{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional }
-            //);
+                    // note: this option is only necessary when versioning by url segment. the SubstitutionFormat
+                    // can also be used to control the format of the API version in route templates
+                    options.SubstituteApiVersionInUrl = true;
+                });
 
-           GlobalConfiguration.Configuration.MessageHandlers.Add(new LoggingHandler());
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new LoggingHandler());
         }
     }
 }

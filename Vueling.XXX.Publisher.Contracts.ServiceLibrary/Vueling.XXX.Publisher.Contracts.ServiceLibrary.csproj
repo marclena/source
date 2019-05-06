@@ -42,8 +42,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,8 +50,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -96,7 +92,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Target Name="BeforeBuild">
-    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
-  </Target>
 </Project>

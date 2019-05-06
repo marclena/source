@@ -27,8 +27,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -39,13 +37,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
+    <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.2.1.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ATC.Taskling.Client.Core.Extensions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.Core.Extensions.1.1.0\lib\netstandard2.0\ATC.Taskling.Client.Core.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -93,7 +92,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Target Name="BeforeBuild">
-    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
-  </Target>
 </Project>
