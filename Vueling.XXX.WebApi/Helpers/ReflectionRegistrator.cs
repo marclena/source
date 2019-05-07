@@ -3,18 +3,17 @@
 namespace Vueling.XXX.WebApi.Helpers
 {
     /// <summary>
-    /// 
+    /// Services registration
     /// </summary>
     public class ReflectionRegistrator : WebApiRegistrator
     {
         /// <summary>
-        /// 
+        /// Register your custom services
         /// </summary>
-        /// <param name="containerBuilder"></param>
+        /// <param name="containerBuilder">Autofac container builder</param>
         protected override void CustomDependenciesRegister(ContainerBuilder containerBuilder)
         {
-            //containerBuilder.RegisterApiControllers(Assembly.GetExecutingAssembly());
-            //RegisterApplicationServices(containerBuilder);
+            //Register your services here
         }
 
     }

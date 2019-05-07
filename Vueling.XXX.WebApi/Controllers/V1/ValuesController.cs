@@ -16,7 +16,6 @@ namespace Vueling.XXX.WebApi.Controllers.V1
     [RoutePrefix("api/v{version:apiVersion}/values")]
     public class ValuesController : ApiController
     {
-
         /// <summary>
         /// Get header values
         /// </summary>
@@ -33,6 +32,10 @@ namespace Vueling.XXX.WebApi.Controllers.V1
         }
 
 
+        /// <summary>
+        /// Demo of getting a custom header injected by swagger due to he HeaderAttribute specification
+        /// </summary>
+        /// <returns></returns>
         private IEnumerable<string> GetHeaderValues()
         {
             return Request.Headers.GetValues("Accept-Language");
