@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
 namespace Vueling.XXX.EF.DB.Infrastructure.Properties
 {
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]

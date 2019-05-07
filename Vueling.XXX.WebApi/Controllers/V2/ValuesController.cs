@@ -1,5 +1,8 @@
 ﻿using Microsoft.Web.Http;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Description;
 
 namespace Vueling.XXX.WebApi.Controllers.V2
 {
@@ -18,10 +21,10 @@ namespace Vueling.XXX.WebApi.Controllers.V2
         /// <returns></returns>
         [HttpGet]
         [Route]
-        public IHttpActionResult Get()
+        public async Task<IHttpActionResult> Get()
         {
-
-            return Ok(new string[] { GetApiKey(), GetCulture() });
+            var result = await Task.Run(() => new string[] { GetApiKey(), GetCulture() });
+            return Ok(result);
         }
 
         private string GetCulture()
@@ -34,34 +37,31 @@ namespace Vueling.XXX.WebApi.Controllers.V2
             return "apiKeyv2";
         }
 
+        /// <summary>
+        /// Get by id
+        /// </summary>
+        /// <param name="id">id dto</param>
+        /// <response code="200">Returns a list of item</response>
+        [Route("{id:int}")]
+        [ResponseType(typeof(IEnumerable<string>))]
+        public IHttpActionResult Get(int id)
+        {
+            var result = new List<string>();
+            return Ok(result);
+        }
 
-
-
-        ///// <summary>
-        ///// Get by id
-        ///// </summary>
-        ///// <param name="id">id dto</param>
-        ///// <response code="200">Returns a list of item</response>
-        //[Route("{id:int}")]        
-        //[ResponseType(typeof(IEnumerable<TestDto>))]
-        //public IHttpActionResult Get(int id)
-        //{
-        //    var result = new List<TestDto>();
-        //    return Ok(result);
-        //}
-
-        ///// <summary>
-        ///// Post action description
-        ///// </summary>
-        ///// <param name="value"></param>
-        ///// <returns></returns>
-        //[Authorize]
-        //[HttpPost]
-        //[Route]
-        //public IHttpActionResult Post([FromBody]TestDto value)
-        //{
-
-        //    return Ok();
-        //}
+        /// <summary>
+        /// Post action description
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        [Authorize]
+        [HttpPost]
+        [Route]
+        public async Task<IHttpActionResult> Post([FromBody]string value)
+        {
+            await Task.Run(() => { });
+            return Ok();
+        }
     }
 }

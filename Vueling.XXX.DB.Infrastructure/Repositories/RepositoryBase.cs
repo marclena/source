@@ -129,7 +129,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
             if (Context.TryGetObjectByKey(key, out originalItem))
             {
-                Context.ApplyPropertyChanges(key.EntitySetName, mapped);
+                Context.ApplyCurrentValues(key.EntitySetName, mapped);
             }
 
             return mapped;
@@ -155,7 +155,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
                 if (Context.TryGetObjectByKey(key, out originalItem))
                 {
-                    Context.ApplyPropertyChanges(key.EntitySetName, entity);
+                    Context.ApplyCurrentValues(key.EntitySetName, entity);
                 }
             }
 

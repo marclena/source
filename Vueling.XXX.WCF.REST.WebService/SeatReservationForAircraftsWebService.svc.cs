@@ -14,7 +14,7 @@ using Vueling.XXX.WCF.REST.WebService.DTO;
 using Vueling.XXX.WCF.REST.WebService.Helpers;
 using Vueling.XXX.WCF.REST.WebService.MapFactories.MapWebServiceDTOToApplicationDTO;
 
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
 namespace Vueling.XXX.WCF.REST.WebService
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]

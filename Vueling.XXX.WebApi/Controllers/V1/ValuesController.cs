@@ -1,6 +1,7 @@
 ﻿using ATC.Swagger.Standard.Extension.Attributes;
 using Microsoft.Web.Http;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 
@@ -9,7 +10,7 @@ namespace Vueling.XXX.WebApi.Controllers.V1
     /// <summary>
     /// Values controller v2 description
     /// </summary>
-    [Authorize]
+    //[Authorize]
     [Header("Accept-Language", "culture info")]
     [ApiVersion("1.0")]
     [RoutePrefix("api/v{version:apiVersion}/values")]
@@ -25,9 +26,10 @@ namespace Vueling.XXX.WebApi.Controllers.V1
         [Header("Accept-Language", "method data")]
         [Header("OtherHeader", "OtherData")]
         [ResponseType(typeof(IEnumerable<string>))]
-        public IHttpActionResult Get()
+        public async Task<IHttpActionResult> Get()
         {
-            return Ok(GetHeaderValues());
+            var result = await Task.Run(() => GetHeaderValues());
+            return Ok(result);
         }
 
 
@@ -37,28 +39,28 @@ namespace Vueling.XXX.WebApi.Controllers.V1
         }
 
 
-        ///// <summary>
-        ///// Create new element
-        ///// </summary>
-        ///// <param name="value">Test dto</param>
-        ///// <remarks>
-        ///// Note that the key is a GUID and not an integer.
-        /////  
-        /////     POST /Todo
-        /////     {
-        /////        "id": "0e7ad584-7788-4ab1-95a6-ca0a5b444cbb",
-        /////        "name": "Item1",
-        /////        "data": "31/12/2016"
-        /////     }
-        ///// 
-        ///// </remarks>
-        //[HttpPost]
-        //[Route]
-        //public IHttpActionResult Post([FromBody]TestDto value)
-        //{
-
-        //    return Ok();
-        //}
+        /// <summary>
+        /// Create new element
+        /// </summary>
+        /// <param name="value">Test dto</param>
+        /// <remarks>
+        /// Note that the key is a GUID and not an integer.
+        ///  
+        ///     POST /Todo
+        ///     {
+        ///        "id": "0e7ad584-7788-4ab1-95a6-ca0a5b444cbb",
+        ///        "name": "Item1",
+        ///        "data": "31/12/2016"
+        ///     }
+        /// 
+        /// </remarks>
+        [HttpPost]
+        [Route]
+        public async Task<IHttpActionResult> Post([FromBody]string value)
+        {
+            await Task.Run(() => { });
+            return Ok();
+        }
 
         /// <summary>
         /// Put action description
@@ -68,8 +70,9 @@ namespace Vueling.XXX.WebApi.Controllers.V1
         [Authorize]
         [Route("{id:int}")]
         [HttpPut]
-        public void Put(int id, [FromBody]string value)
+        public async Task Put(int id, [FromBody]string value)
         {
+            await Task.Run(() => { });
         }
 
         /// <summary>
@@ -78,8 +81,9 @@ namespace Vueling.XXX.WebApi.Controllers.V1
         /// <param name="id"></param>
         [Route("{id:int}")]
         [HttpDelete]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
+            await Task.Run(() => { });
         }
     }
 }

@@ -14,7 +14,6 @@ using Vueling.XXX.WebUI.MapFactories.DataModelToApplicationDTO;
 using Vueling.XXX.WebUI.Models;
 using System.Globalization;
 
-[assembly: CLSCompliant(true)]
 namespace Vueling.XXX.WebUI.Controllers
 {
     public class HomeController : Vueling.Web.UI.Library.Controllers.VuelingController

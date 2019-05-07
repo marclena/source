@@ -13,7 +13,7 @@ using Vueling.XXX.Library.Exceptions;
 using Vueling.XXX.WCF.WebService.Helpers;
 using System.Diagnostics;
 
-[assembly: CLSCompliant(true)]
+[assembly: CLSCompliant(false)]
 namespace Vueling.XXX.WCF.WebService
 {
     [RegisterServiceAttribute]

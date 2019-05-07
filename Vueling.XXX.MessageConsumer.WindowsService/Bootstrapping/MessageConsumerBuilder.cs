@@ -2,13 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using Vueling.Configuration.Library;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.DTO;
-using Vueling.Messaging.RabbitMqEndpoint.Impl.ServiceLibrary.Consumers;
 using Vueling.Messaging.RabbitMqEndpoint.Impl.ServiceLibrary.Consumers.Dispatching;
 using Vueling.Messaging.RabbitMqEndpoint.Impl.ServiceLibrary.Endpoints;
 using Vueling.XXX.MessageConsumer.WindowsService.Bootstrapping.Fluent;
