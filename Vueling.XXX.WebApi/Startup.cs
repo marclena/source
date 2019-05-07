@@ -54,7 +54,7 @@ namespace Vueling.XXX.WebApi
             Trace.TraceInformation("Using Web API....");
             appBuilder.UseWebApi(GlobalConfiguration.Configuration);
             appBuilder.UseCors(CorsOptions.AllowAll);
-
+            
             GlobalConfiguration.Configuration.EnsureInitialized();
 
         }

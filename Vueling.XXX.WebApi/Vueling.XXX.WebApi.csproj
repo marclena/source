@@ -183,6 +183,7 @@
     <Compile Include="Helpers\Log4netTraceListener.cs" />
     <Compile Include="Helpers\ReflectionRegistrator.cs" />
     <Compile Include="Helpers\WebApiRegistrator.cs" />
+    <Compile Include="Logging\UnhandledExceptionLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
