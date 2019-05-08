@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using Vueling.Maestros.Settings.Generic.Contracts.ServiceLibrary;
+using Vueling.ProgrammingInterface.Contracts.ServiceLibrary;
+using Vueling.ProgrammingInterface.Impl.ServiceLibrary;
+using Vueling.ProgrammingInterface.Infrastructure.BookingProxy;
+using Vueling.ProgrammingInterface.ServiceLibrary;
 
 namespace Vueling.XXX.WebAPI.Controllers.V1
 {
@@ -18,19 +22,23 @@ namespace Vueling.XXX.WebAPI.Controllers.V1
     public class ValuesController : ApiController
     {
         private readonly IGenericSettingsServiceContract _genericSettingsServiceContract;
+        private readonly ProgrammingInterface.ServiceLibrary.INavitaireManagerFactory _navitaireManagerFactory;
         /// <summary>
         /// 
         /// </summary>
         /// <param name="genericSettingsServiceContract"></param>
-        public ValuesController(IGenericSettingsServiceContract genericSettingsServiceContract)
+        /// <param name="navitaireManagerFactory"></param>
+        public ValuesController(IGenericSettingsServiceContract genericSettingsServiceContract,
+                                ProgrammingInterface.ServiceLibrary.INavitaireManagerFactory navitaireManagerFactory)
         {
             _genericSettingsServiceContract = genericSettingsServiceContract;
+            _navitaireManagerFactory = navitaireManagerFactory;
         }
         /// <summary>
         /// Get header values
         /// </summary>
         /// <returns></returns>
-        [HttpGet]        
+        [HttpGet]
         [Route]
         [Header("Accept-Language", "method data")]
         [Header("OtherHeader", "OtherData")]
@@ -38,9 +46,56 @@ namespace Vueling.XXX.WebAPI.Controllers.V1
         public async Task<IHttpActionResult> Get()
         {
             var settingValueFromKey = _genericSettingsServiceContract.GetGenericSetting("VY_Skysales_services", "AMS_services").Value.ToString();
+
+            MakeSomethingWithNavitaire();
+
             var result = await Task.Run(() => settingValueFromKey);
+
             //var result = await Task.Run(() => GetHeaderValues());
             return Ok(result);
+        }
+
+
+        private void MakeSomethingWithNavitaire()
+        {
+            INavitaireSession session = GetSession("airportsagent", "BXBrp64Sp!w98#");
+
+            IBookingManager bookingManager = _navitaireManagerFactory.CreateManager<IBookingManager>();
+            
+            var resultBooking = bookingManager.GetBooking(new GetBookingRequest
+            {
+                Signature = session.Signature,
+                ContractVersion = session.ContractVersion,
+                GetBookingReqData = new GetBookingRequestData
+                {
+                    GetByRecordLocator = new GetByRecordLocator
+                    {
+                        RecordLocator = "VY12345"
+                    }
+                }
+            });
+
+        }
+
+        private INavitaireSession GetSession(string agentName, string password)
+        {
+            var endPoint = new ManagerEndPointInformation
+            {
+                AgentName = agentName, // "APITest"
+                Password = password, //"P@ssw0rd"
+                ContractVersion = 340,
+                DomainName = "DEF",
+                ServerName = "https://vytestr4xapi.navitaire.com",
+                ServerName4x = "https://vytestr4xapi.navitaire.com",
+                Map3xTo4x = true,
+                ContractVersion4x = 420,
+                MaxReceivedMessageSize = 1006000
+            };
+
+            var navitaireSessionFactory = new NavitaireSessionFactory(endPoint);
+            var navitaireSession = navitaireSessionFactory.CreateNavitaireSession();
+
+            return navitaireSession;
         }
 
 

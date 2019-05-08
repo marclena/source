@@ -23,7 +23,7 @@ namespace Vueling.XXX.WebAPI.Helpers
             {
                 ValidateRegisterDefinition(registerDefinition);
 
-                var containerBuilder = RegisterDependenciesFromWebUI(registerDefinition);
+                var containerBuilder = RegisterDependenciesFromWebApi(registerDefinition);
 
                 var container = BuildContainer(containerBuilder);
 
@@ -46,7 +46,7 @@ namespace Vueling.XXX.WebAPI.Helpers
             }
         }
 
-        private ContainerBuilder RegisterDependenciesFromWebUI(RegisterDefinition registerDefinition)
+        private ContainerBuilder RegisterDependenciesFromWebApi(RegisterDefinition registerDefinition)
         {
             var containerBuilder = new ContainerBuilder();
 
@@ -75,10 +75,18 @@ namespace Vueling.XXX.WebAPI.Helpers
             return container;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="containerBuilder"></param>
         protected virtual void CustomDependenciesRegister(ContainerBuilder containerBuilder)
         {
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="container"></param>
         protected virtual void ResolveAfterBuildContainer(IContainer container)
         {
         }

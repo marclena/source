@@ -187,6 +187,9 @@
     <Reference Include="Vueling.ProgrammingInterface.Infrastructure, Version=1.2.1.1, Culture=neutral, PublicKeyToken=535fd0fbd634045a, processorArchitecture=MSIL">
       <HintPath>..\packages\Vueling.ProgrammingInterface.Infrastructure.1.2.1.1\lib\net35\Vueling.ProgrammingInterface.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Vueling.ProgrammingInterface.ServiceLibrary, Version=2.1.4.1, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ProgrammingInterface.ServiceLibrary.2.1.4.1\lib\net35\Vueling.ProgrammingInterface.ServiceLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>
