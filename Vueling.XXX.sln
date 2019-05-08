@@ -86,7 +86,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vueling.XXX.StaticContent",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vueling.XXX.MessageConsumer.WindowsService", "Vueling.XXX.MessageConsumer.WindowsService\Vueling.XXX.MessageConsumer.WindowsService.csproj", "{EBBF55FE-DED1-4CE9-AECE-FAF3674EB28F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vueling.XXX.WebApi", "Vueling.XXX.WebApi\Vueling.XXX.WebApi.csproj", "{99FEB59F-9017-415D-926C-B11A45BC7C99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vueling.XXX.WebAPI", "Vueling.XXX.WebAPI\Vueling.XXX.WebAPI.csproj", "{99FEB59F-9017-415D-926C-B11A45BC7C99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

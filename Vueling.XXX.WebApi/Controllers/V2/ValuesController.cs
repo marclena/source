@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 
-namespace Vueling.XXX.WebApi.Controllers.V2
+namespace Vueling.XXX.WebAPI.Controllers.V2
 {
 
     /// <summary>

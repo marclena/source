@@ -4,7 +4,7 @@ using System.Diagnostics;
 using log4net;
 using System.Globalization;
 
-namespace Vueling.XXX.WebApi.Helpers
+namespace Vueling.XXX.WebAPI.Helpers
 {
     /// <summary>
     /// 

@@ -6,7 +6,7 @@ using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.Services;
 using Vueling.DIRegister.Autofac.ServiceLibrary;
 
-namespace Vueling.XXX.WebApi.Helpers
+namespace Vueling.XXX.WebAPI.Helpers
 {
     /// <summary>
     /// 

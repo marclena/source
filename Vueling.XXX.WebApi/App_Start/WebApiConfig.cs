@@ -2,10 +2,9 @@
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Routing;
-using Vueling.XXX.WebApi.Handlers;
-using Vueling.XXX.WebApi.Logging;
+using Vueling.XXX.WebAPI.Logging;
 
-namespace Vueling.XXX.WebApi
+namespace Vueling.XXX.WebAPI
 {
     /// <summary>
     /// 

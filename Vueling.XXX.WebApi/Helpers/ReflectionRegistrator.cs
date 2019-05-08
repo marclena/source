@@ -1,6 +1,6 @@
 ﻿using Autofac;
 
-namespace Vueling.XXX.WebApi.Helpers
+namespace Vueling.XXX.WebAPI.Helpers
 {
     /// <summary>
     /// Services registration

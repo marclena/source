@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http.ExceptionHandling;
 
-namespace Vueling.XXX.WebApi.Logging
+namespace Vueling.XXX.WebAPI.Logging
 {
     /// <summary>
     /// Log all unhandled exceptions

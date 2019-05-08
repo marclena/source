@@ -8,13 +8,13 @@ using Vueling.Configuration.Library;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary;
 using System.Reflection;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.DTO;
-using Vueling.XXX.WebApi.Helpers;
+using Vueling.XXX.WebAPI.Helpers;
 using ATC.Swagger.Standard.Extension;
 using Microsoft.Owin.Cors;
 
-[assembly: OwinStartup(typeof(Vueling.XXX.WebApi.Startup))]
+[assembly: OwinStartup(typeof(Vueling.XXX.WebAPI.Startup))]
 
-namespace Vueling.XXX.WebApi
+namespace Vueling.XXX.WebAPI
 {
     /// <summary>
     /// 

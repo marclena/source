@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Vueling.XXX.WebApi.Handlers
+namespace Vueling.XXX.WebAPI.Handlers
 {
     /// <summary>
     /// 
