@@ -11,8 +11,6 @@ using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.DTO;
 using Vueling.XXX.WebAPI.Helpers;
 using ATC.Swagger.Standard.Extension;
 using Microsoft.Owin.Cors;
-using Vueling.Maestros.Settings.Contracts.ServiceLibrary;
-using Vueling.Maestros.Settings.Generic.Impl.ServiceLibrary;
 
 [assembly: OwinStartup(typeof(Vueling.XXX.WebAPI.Startup))]
 
@@ -44,8 +42,6 @@ namespace Vueling.XXX.WebAPI
             RegisterDependencies(applicationId);
             Trace.TraceInformation("Dependecies registered");
 
-            LoadMaestrosSettings();
-
             Trace.TraceInformation("Configuring Authentication Server");
             ConfigureAuth(appBuilder);
             Trace.TraceInformation("Authentication Server configured");
@@ -59,10 +55,6 @@ namespace Vueling.XXX.WebAPI
             GlobalConfiguration.Configuration.EnsureInitialized();
         }
 
-        private void LoadMaestrosSettings()
-        {
-            SettingsSingletonMemory.Instance.LoadConfigValues();
-        }
 
         private void ConfigureAuth(IAppBuilder appBuilder)
         {
@@ -87,16 +79,16 @@ namespace Vueling.XXX.WebAPI
                 DefaultServiceLifetimeScope = LifetimeScopes.InstancePerDependency,
                 InstanciateSingleInstanceServicesAfterRegister = true,
                 InstanciateAllServicesAfterRegister = false,
-                IgnoreTypes = new List<Type> { typeof(GenericSettingsApplicationServiceWCF) },
-                AdditionalEntryServices = new List<Type>(),
-                MaestrosSettingsDefinition = new MaestrosSettingsDefinition
-                {
-                    ApplicationId = applicationId,
-                    DataDirectoryPath = VuelingEnvironment.Current.GetDataDirectoryPath(),
-                    TimeInMinutesToUpdate = 5,
-                    WriteInAppDataFile = true,
-                    GenerateFromFileInCaseOfFailureOnLoad = false
-                }
+                IgnoreTypes = new List<Type>(),
+                AdditionalEntryServices = new List<Type>()
+                //MaestrosSettingsDefinition = new MaestrosSettingsDefinition
+                //{
+                //    ApplicationId = applicationId,
+                //    DataDirectoryPath = VuelingEnvironment.Current.GetDataDirectoryPath(),
+                //    TimeInMinutesToUpdate = 5,
+                //    WriteInAppDataFile = true,
+                //    GenerateFromFileInCaseOfFailureOnLoad = false
+                //}
             };
         }
     }

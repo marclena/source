@@ -8,7 +8,7 @@ namespace Vueling.XXX.WebUI.Helpers
 {
     public static class HtmlHelpers
     {
-        public static MvcHtmlString LabelFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, object htmlAttributes)
+        public static MvcHtmlString LabelExFor<TModel, TValue>(this HtmlHelper<TModel> html, Expression<Func<TModel, TValue>> expression, object htmlAttributes)
         {
             return LabelHelper(html, ModelMetadata.FromLambdaExpression(expression, html.ViewData), ExpressionHelper.GetExpressionText(expression), htmlAttributes);
         }
