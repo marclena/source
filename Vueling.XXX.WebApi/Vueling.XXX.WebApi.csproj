@@ -163,6 +163,30 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Vueling.Maestros.Settings.Contracts.ServiceLibrary, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Maestros.Settings.Contracts.ServiceLibrary.2.0.0.1\lib\net35\Vueling.Maestros.Settings.Contracts.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.Maestros.Settings.Generic.Contracts.ServiceLibrary, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Maestros.Settings.Generic.Contracts.ServiceLibrary.1.1.1.0\lib\net35\Vueling.Maestros.Settings.Generic.Contracts.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.Maestros.Settings.Generic.DB.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Maestros.Settings.Generic.DB.Infrastructure.1.0.0.0\lib\net35\Vueling.Maestros.Settings.Generic.DB.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.Maestros.Settings.Generic.Impl.ServiceLibrary, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Maestros.Settings.Generic.Impl.ServiceLibrary.1.2.0.0\lib\net35\Vueling.Maestros.Settings.Generic.Impl.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.Maestros.Settings.Impl.ServiceLibrary, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Maestros.Settings.Impl.ServiceLibrary.1.0.3.0\lib\net35\Vueling.Maestros.Settings.Impl.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.ProgrammingInterface.Contracts.ServiceLibrary, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ProgrammingInterface.Contracts.ServiceLibrary.1.0.2.0\lib\net35\Vueling.ProgrammingInterface.Contracts.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.ProgrammingInterface.Impl.ServiceLibrary, Version=2.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ProgrammingInterface.Impl.ServiceLibrary.2.2.1.0\lib\net35\Vueling.ProgrammingInterface.Impl.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.ProgrammingInterface.Infrastructure, Version=1.2.1.1, Culture=neutral, PublicKeyToken=535fd0fbd634045a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ProgrammingInterface.Infrastructure.1.2.1.1\lib\net35\Vueling.ProgrammingInterface.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
     </Reference>

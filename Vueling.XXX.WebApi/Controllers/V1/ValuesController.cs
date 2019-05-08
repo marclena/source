@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
+using Vueling.Maestros.Settings.Generic.Contracts.ServiceLibrary;
 
 namespace Vueling.XXX.WebAPI.Controllers.V1
 {
@@ -16,6 +17,15 @@ namespace Vueling.XXX.WebAPI.Controllers.V1
     [RoutePrefix("api/v{version:apiVersion}/values")]
     public class ValuesController : ApiController
     {
+        private readonly IGenericSettingsServiceContract _genericSettingsServiceContract;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="genericSettingsServiceContract"></param>
+        public ValuesController(IGenericSettingsServiceContract genericSettingsServiceContract)
+        {
+            _genericSettingsServiceContract = genericSettingsServiceContract;
+        }
         /// <summary>
         /// Get header values
         /// </summary>
@@ -27,7 +37,9 @@ namespace Vueling.XXX.WebAPI.Controllers.V1
         [ResponseType(typeof(IEnumerable<string>))]
         public async Task<IHttpActionResult> Get()
         {
-            var result = await Task.Run(() => GetHeaderValues());
+            var settingValueFromKey = _genericSettingsServiceContract.GetGenericSetting("VY_Skysales_services", "AMS_services").Value.ToString();
+            var result = await Task.Run(() => settingValueFromKey);
+            //var result = await Task.Run(() => GetHeaderValues());
             return Ok(result);
         }
 
