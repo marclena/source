@@ -63,13 +63,13 @@ namespace Vueling.XXX.WebAPI
 
         private void RegisterDependencies(string applicationId)
         {
-            var registerDefinition = BuildRegisterDefinition(applicationId);
+            var registerDefinition = BuildRegisterDefinition();
             var registrator = new ReflectionRegistrator();
             registrator.EnableVerboseTrace();
             registrator.RegisterDependencies(registerDefinition);
         }
 
-        private static RegisterDefinition BuildRegisterDefinition(string applicationId)
+        private static RegisterDefinition BuildRegisterDefinition()
         {
             return new RegisterDefinition
             {
@@ -80,7 +80,7 @@ namespace Vueling.XXX.WebAPI
                 InstanciateSingleInstanceServicesAfterRegister = true,
                 InstanciateAllServicesAfterRegister = false,
                 IgnoreTypes = new List<Type>(),
-                AdditionalEntryServices = new List<Type>()
+                AdditionalEntryServices = new List<Type>(),
                 //MaestrosSettingsDefinition = new MaestrosSettingsDefinition
                 //{
                 //    ApplicationId = applicationId,

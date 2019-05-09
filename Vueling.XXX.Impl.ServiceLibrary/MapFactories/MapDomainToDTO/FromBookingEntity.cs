@@ -6,8 +6,8 @@ namespace Vueling.XXX.Impl.ServiceLibrary.MapFactories.MapDomainToDTO
 {
     internal class FromBookingEntity : MappingBase
     {
-        MappingBase jouneyMapping = MappingFromDomainFactory.GetFor(DomainToDtoEnum.Journey);
-        MappingBase paxMapping = MappingFromDomainFactory.GetFor(DomainToDtoEnum.Passenger);
+        private readonly MappingBase jouneyMapping = MappingFromDomainFactory.GetFor(DomainToDtoEnum.Journey);
+        private readonly MappingBase paxMapping = MappingFromDomainFactory.GetFor(DomainToDtoEnum.Passenger);
 
         internal override TOutput Get<TInput, TOutput>(TInput source)
         {

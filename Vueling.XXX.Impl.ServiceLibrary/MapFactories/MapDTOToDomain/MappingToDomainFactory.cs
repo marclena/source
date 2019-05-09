@@ -2,7 +2,7 @@
 
 namespace Vueling.XXX.Impl.ServiceLibrary.MapFactories.MapDTOToDomain
 {
-    internal class MappingToDomainFactory
+    internal static class MappingToDomainFactory
     {
         internal static MappingBase GetFor(EnumDomain model)
         {

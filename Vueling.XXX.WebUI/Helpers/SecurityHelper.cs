@@ -18,7 +18,7 @@ namespace Vueling.XXX.WebUI.Helpers
             var actionAttributes = type.GetMethod(actionName).GetCustomAttributes(false);
             actionAttributes = actionAttributes != null ? actionAttributes.Where(x => x is VuelingAuthorizeAttribute).ToArray() : null;
 
-            var attributes = typeAttributes == null || typeAttributes.Count() == 0 ? actionAttributes : typeAttributes;
+            var attributes = typeAttributes == null || !typeAttributes.Any() ? actionAttributes : typeAttributes;
 
             if (attributes != null)
             {

@@ -67,16 +67,5 @@ namespace Vueling.XXX.Library.Configuration
             return _currentConfig.GetCustomSetting(keyVar);
         }
 
-        private List<string> FindKeyList(string keyVar)
-        {
-            var result = new List<string>();
-            var findKey = this.FindKey(keyVar);
-            if (!String.IsNullOrEmpty(findKey))
-            {
-                result = new List<string>(findKey.Split(CONFIGLISTSEPARATOR).Select(s => s.Trim()));
-            }
-            return result;
-        }
-
     }
 }

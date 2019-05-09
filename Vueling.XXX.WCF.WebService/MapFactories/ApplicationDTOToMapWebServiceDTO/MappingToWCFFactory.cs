@@ -2,7 +2,7 @@
 
 namespace Vueling.XXX.WCF.WebService.MapFactories.ApplicationDTOToMapWebServiceDTO
 {
-    internal class MappingToWCFFactory
+    internal static class MappingToWCFFactory
     {
         internal static MappingBase GetFor(DtoToWCFEnum entityName)
         {

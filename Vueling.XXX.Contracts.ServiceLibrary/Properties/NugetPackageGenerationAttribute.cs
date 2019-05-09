@@ -8,16 +8,11 @@ namespace Vueling.XXX.Contracts.ServiceLibrary.Properties
     [ComVisible(true)]
     public sealed class NugetPackageGenerationAttribute : Attribute
     {
-        private bool _nugetPackageGeneration;
-
         public NugetPackageGenerationAttribute(bool Description)
         {
-            _nugetPackageGeneration = Description;
+            this.Description = Description;
         }
 
-        public bool Description
-        {
-            get { return _nugetPackageGeneration; }
-        }
+        public bool Description { get; }
     }
 }

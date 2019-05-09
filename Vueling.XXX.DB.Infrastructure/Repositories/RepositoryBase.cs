@@ -13,13 +13,9 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         where TInput : class
         where TOutput : EntityObject
     {
-        private ObjectContext _context;
+        private bool isDisposed = false;
 
-        public ObjectContext Context
-        {
-            get { return _context; }
-            set { _context = value; }  
-        }
+        public ObjectContext Context { get; set; }
 
         protected IEnumerable<TOutput> Find(string query, System.Data.Objects.ObjectParameter parameters)
         {
@@ -30,7 +26,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         {
             if (entity == null)
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entity", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -46,7 +42,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         {
             if (entity == null)
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entity", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -61,9 +57,9 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
         protected IEnumerable<TOutput> CreateCollection(IEnumerable<TInput> entities)
         {
-            if (entities == null || entities.Count() == 0)
+            if (entities == null || !entities.Any())
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entities", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -80,7 +76,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         {
             if (entity == null)
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entity", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -95,9 +91,9 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
         protected IEnumerable<TOutput> DeleteCollection(IEnumerable<TInput> entities)
         {
-            if (entities == null || entities.Count() == 0)
+            if (entities == null || !entities.Any())
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entities", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -117,7 +113,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         {
             if (entity == null)
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entity", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -138,9 +134,9 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
         protected virtual IEnumerable<TOutput> UpdateCollection(IEnumerable<TInput> entities)
         {
-            if (entities == null || entities.Count() == 0)
+            if (entities == null || !entities.Any())
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entities", "Entity to be created can not be null");
             }
 
             MapDomainToConceptualModelFactoryBase factory = SwitcherEntityToRepositoryFactory.GetFactoryFor(typeof(TInput), typeof(TOutput));
@@ -179,7 +175,7 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
         {
             if (entityOrCollection == null)
             {
-                throw new ArgumentNullException("Entity to be created can not be null");
+                throw new ArgumentNullException("entityOrCollection", "Entity to be created can not be null");
             }
 
             if (entityOrCollection.GetType() == typeof(IEnumerable<object>).GetGenericTypeDefinition())
@@ -248,13 +244,13 @@ namespace Vueling.XXX.DB.Infrastructure.Repositories
 
         protected virtual void Dispose(bool disposing)
         {
-            if (disposing)
+            if (isDisposed) return;
+
+            if (disposing && Context != null)
             {
-                if (Context != null)
-                {
-                    Context.Dispose();
-                }
+                Context.Dispose();
             }
+            isDisposed = true;
         }
 
         public void Dispose()
