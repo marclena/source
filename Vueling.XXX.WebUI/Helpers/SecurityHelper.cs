@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Vueling.Web.Library.Security;
@@ -10,7 +11,7 @@ namespace Vueling.XXX.WebUI.Helpers
         public static bool IsAuthorizedUser(Type type, string actionName)
         {
             var result = false;
-            var roles = "";
+            
             var typeAttributes = type.GetCustomAttributes(false);
             typeAttributes = typeAttributes != null ? typeAttributes.Where(x => x is VuelingAuthorizeAttribute).ToArray() : null;
 
@@ -19,17 +20,15 @@ namespace Vueling.XXX.WebUI.Helpers
 
             var attributes = typeAttributes == null || typeAttributes.Count() == 0 ? actionAttributes : typeAttributes;
 
-            foreach (VuelingAuthorizeAttribute item in attributes)
+            if (attributes != null)
             {
-                roles += item.Roles + ",";
-            }
-            foreach (var item in roles.Split(','))
-            {
-                if (HttpContext.Current.User.IsInRole(item))
+                List<string> roles = new List<string>();
+                foreach (VuelingAuthorizeAttribute item in attributes)
                 {
-                    result = true;
-                    break;
+                    roles.AddRange(item.Roles.Split('\''));
                 }
+
+                result = roles.Any(c => HttpContext.Current.User.IsInRole(c));
             }
             return result;
         }

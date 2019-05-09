@@ -57,7 +57,6 @@ namespace Vueling.XXX.Library.Configuration
         {
             TimeSalesCloseBeforeFlight = Convert.ToInt32(FindKey("Vueling.XXX.Library.timeSalesCloseBeforeFlight"), CultureInfo.InvariantCulture);
 
-            //TODO: set in appconfig
             MaxJourneysAllowedByBooking = 2;
             PartialCodeForAgencyAgent = "agency";
             PartialCodeForCorporateAgent = "corp";

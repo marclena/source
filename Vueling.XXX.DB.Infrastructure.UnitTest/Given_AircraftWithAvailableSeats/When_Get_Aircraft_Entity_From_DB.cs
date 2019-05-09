@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Vueling.XXX.DB.Infrastructure.UnitTest.Helpers;
 using Vueling.XXX.DB.Infrastructure.MapFactories.MapConceptualModelToDomain.AircraftRepository;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.DB.Infrastructure.UnitTest.Given_AircraftWithAvailableSeats
 {
     [TestClass]

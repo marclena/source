@@ -7,7 +7,7 @@ using Vueling.XXX.Contracts.DTO.ServiceLibrary;
 using Vueling.XXX.Library.Exceptions;
 using System.Globalization;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.WCF.REST.WebService.UnitTest.Given_No_Database_Connection
 {
     [TestClass]

@@ -19,6 +19,9 @@ namespace Vueling.XXX.Library.Exceptions
         {
 
         }
-
+        protected InvalidBookingOperationException(
+        System.Runtime.Serialization.SerializationInfo info,
+        System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
+
 }

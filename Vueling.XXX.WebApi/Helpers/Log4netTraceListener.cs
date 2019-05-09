@@ -9,7 +9,7 @@ namespace Vueling.XXX.WebAPI.Helpers
     /// <summary>
     /// 
     /// </summary>
-    [DebuggerStepThrough]    
+    [DebuggerStepThrough]
     public class Log4netTraceListener : TraceListener
     {
         #region Constants
@@ -20,12 +20,12 @@ namespace Vueling.XXX.WebAPI.Helpers
         #endregion
 
         #region Variables
-        private static readonly ILog _log = LogManager.GetLogger("Vueling.VuelingUp.WebAPI");
+        private static readonly ILog _log = LogManager.GetLogger("Vueling.XXX.Publisher.WCF.WebService");
         #endregion
 
         #region Constructor & destructor
         /// <summary>
-        /// Initializes a new instance of the <see cref="Log4netTraceListener"/> class.
+        /// Initializes a new ins
         /// </summary>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2122:Do not indirectly expose methods with link demands")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:Do not call overridable methods in constructors")]
@@ -82,6 +82,18 @@ namespace Vueling.XXX.WebAPI.Helpers
             TraceEvent(eventCache, source, eventType, id, string.Format(CultureInfo.InvariantCulture, format, args));
         }
 
+        private string GetMessage(TraceEventCache eventCache, string message)
+        {
+            string result = string.Empty;
+            var lastIndexOf = eventCache?.Callstack?.LastIndexOf("System.Diagnostics.Trace.TraceError(String format, Object[] args)", StringComparison.Ordinal);
+            if (lastIndexOf.HasValue)
+            {
+                result = (lastIndexOf > -1) ? eventCache.Callstack.Substring(lastIndexOf.Value).Replace("System.Diagnostics.Trace.TraceError(String format, Object[] args)\r\n", "") :
+                                              eventCache.Callstack;
+            }
+            return message + result;
+        }
+
         /// <summary>
         /// Writes trace information, a message, and event information to the listener specific output.
         /// </summary>
@@ -104,64 +116,26 @@ namespace Vueling.XXX.WebAPI.Helpers
             switch (eventType)
             {
                 case TraceEventType.Error:
-                    if ((ActiveTraceLevel == TraceLevel.Error) ||
-                         (ActiveTraceLevel == TraceLevel.Warning) ||
-                         (ActiveTraceLevel == TraceLevel.Info) ||
-                         (ActiveTraceLevel == TraceLevel.Verbose))
+                    if (ActiveTraceLevel >= TraceLevel.Error)
                     {
-                        try
-                        {
-                            var lastIndexOf = eventCache.Callstack.LastIndexOf("System.Diagnostics.Trace.TraceError(String format, Object[] args)", StringComparison.Ordinal);
-                            if (lastIndexOf > -1)
-                            {
-                                _log.Error(message + eventCache.Callstack.Substring(lastIndexOf).Replace("System.Diagnostics.Trace.TraceError(String format, Object[] args)\r\n", ""));
-                            }
-                            else
-                            {
-                                _log.Error(message + eventCache.Callstack);
-                            }
-                        }
-                        catch (Exception)
-                        {
-                            _log.Error(message);
-                        }
+                        _log.Error(GetMessage(eventCache, message));
                     }
                     break;
 
                 case TraceEventType.Warning:
-                    if ((ActiveTraceLevel == TraceLevel.Warning) ||
-                         (ActiveTraceLevel == TraceLevel.Info) ||
-                         (ActiveTraceLevel == TraceLevel.Verbose))
+                    if (ActiveTraceLevel >= TraceLevel.Warning)
                     {
-                        try
-                        {
-                            var lastIndexOf = eventCache.Callstack.LastIndexOf("System.Diagnostics.Trace.TraceError(String format, Object[] args)", StringComparison.Ordinal);
-                            if (lastIndexOf > -1)
-                            {
-                                _log.Warn(message + eventCache.Callstack.Substring(lastIndexOf).Replace("System.Diagnostics.Trace.TraceError(String format, Object[] args)\r\n", ""));
-                            }
-                            else
-                            {
-                                _log.Warn(message + eventCache.Callstack);
-                            }
-                        }
-                        catch (Exception)
-                        {
-                            _log.Warn(message);
-                        }
+                        _log.Warn(GetMessage(eventCache, message));
                     }
                     break;
 
                 case TraceEventType.Information:
-                    if ((ActiveTraceLevel == TraceLevel.Info) ||
-                         (ActiveTraceLevel == TraceLevel.Verbose))
+                    if (ActiveTraceLevel >= TraceLevel.Info)
                     {
                         _log.Info(message);
                     }
                     break;
 
-                // Everything else is verbose
-                //case TraceEventType.Verbose:
                 default:
                     if (ActiveTraceLevel == TraceLevel.Verbose)
                     {

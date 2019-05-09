@@ -7,7 +7,7 @@ using Vueling.XXX.Library.DomainServicesContracts;
 using Vueling.XXX.Library.UnitTest.Helpers;
 using Vueling.XXX.Library.Configuration;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.Library.UnitTest.Given_AircraftWithAvailableSeats
 {
     [TestClass]

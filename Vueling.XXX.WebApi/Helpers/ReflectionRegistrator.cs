@@ -13,6 +13,7 @@ namespace Vueling.XXX.WebAPI.Helpers
         /// <param name="containerBuilder">Autofac container builder</param>
         protected override void CustomDependenciesRegister(ContainerBuilder containerBuilder)
         {
+            //register your services here
         }
     }
 }

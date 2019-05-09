@@ -14,7 +14,7 @@ namespace Vueling.XXX.Impl.ServiceLibrary.Implementations
     {
         #region ..: Fields :..
 
-        private ITasklingClient _tasklingClient;
+        private readonly ITasklingClient _tasklingClient;
 
         #endregion
 

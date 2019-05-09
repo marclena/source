@@ -6,21 +6,18 @@ namespace Vueling.XXX.Library.Entities
 {
     public class Aircraft
     {
-
-        private List<Seat> _seats;
-
         public Aircraft(string flightNumber, DateTime departureDate, List<Seat> seats)
         {
             FlightNumber = flightNumber;
             DepartureDate = departureDate;
-            _seats = seats;
+            Seats = seats;
         }
 
         public Aircraft(string flightNumber, DateTime departureDate)
         {
             FlightNumber = flightNumber;
             DepartureDate = departureDate;
-            _seats = new List<Seat>();
+            Seats = new List<Seat>();
         }
 
 
@@ -35,10 +32,7 @@ namespace Vueling.XXX.Library.Entities
             protected set; 
         }
 
-        public List<Seat> Seats 
-        {
-            get { return _seats; } 
-        }
+        public List<Seat> Seats { get; }
 
         public IEnumerable<Seat> AvailableSeats
         {
@@ -47,14 +41,14 @@ namespace Vueling.XXX.Library.Entities
 
         public bool Assign(Seat seat)
         {
-            var currentSeat = Seats.Where(x => x.Row == seat.Row && x.Column == seat.Column).FirstOrDefault();
+            var currentSeat = Seats.FirstOrDefault(x => x.Row == seat.Row && x.Column == seat.Column);
             if (currentSeat == null) 
             { 
                 return false; 
             }
             if (currentSeat.IsAvailable) 
             {
-                this.Seats.Where(x => x.Row == seat.Row && x.Column == seat.Column).FirstOrDefault().Availability = AvailabilityEnum.Busy;
+                this.Seats.First(x => x.Row == seat.Row && x.Column == seat.Column).Availability = AvailabilityEnum.Busy;
                 return true;
             }
 
@@ -63,12 +57,12 @@ namespace Vueling.XXX.Library.Entities
 
         public bool Unassign(Seat seat)
         {
-            var currentSeat = Seats.Where(x => x.Row == seat.Row && x.Column == seat.Column).FirstOrDefault();
+            var currentSeat = Seats.FirstOrDefault(x => x.Row == seat.Row && x.Column == seat.Column);
             if (currentSeat.IsNull) 
             { 
                 return false; 
             }
-            this.Seats.Where(x => x.Row == seat.Row && x.Column == seat.Column).FirstOrDefault().Availability = AvailabilityEnum.Available;
+            this.Seats.First(x => x.Row == seat.Row && x.Column == seat.Column).Availability = AvailabilityEnum.Available;
 
             return true;
         }

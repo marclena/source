@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.Contracts.ServiceLibrary.Properties
 {
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]

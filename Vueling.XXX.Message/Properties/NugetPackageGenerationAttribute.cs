@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.Message.Properties
 {
     [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]

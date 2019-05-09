@@ -7,7 +7,7 @@ using Vueling.XXX.Contracts.DTO.ServiceLibrary;
 using Vueling.XXX.Library.Entities;
 using Vueling.XXX.Contracts.ServiceLibrary.DTO;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.Impl.ServiceLibrary.UnitTest.Given_TimeLimitForSeatAssigmentNotExceded
 {
     [TestClass]

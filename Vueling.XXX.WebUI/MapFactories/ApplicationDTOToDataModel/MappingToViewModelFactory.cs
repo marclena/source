@@ -2,7 +2,7 @@
 
 namespace Vueling.XXX.WebUI.MapFactories.ApplicationDTOToDataModel
 {
-    internal class MappingToViewModelFactory
+    internal static class MappingToViewModelFactory
     {
         internal static MappingBase GetFor(EnumViewModel model)
         {

@@ -9,8 +9,8 @@ namespace Vueling.XXX.WCF.WebService
     {
         #region ..: Fields :..
 
-        private ITasklingClient _tasklingClient;
-        private ITasklingService _tasklingService;
+        private readonly ITasklingClient _tasklingClient;
+        private readonly ITasklingService _tasklingService;
 
         private const string WCFName = "Vueling.XXX.WCF.WebService.AutomaticTasklingProcesses";
 

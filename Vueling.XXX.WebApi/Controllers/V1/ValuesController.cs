@@ -44,15 +44,13 @@ namespace Vueling.XXX.WebAPI.Controllers.V1
         /// <summary>
         /// Create new element
         /// </summary>
-        /// <param name="value">Test dto</param>
+        /// <param name="value">Some string data</param>
         /// <remarks>
         /// Note that the key is a GUID and not an integer.
         ///  
-        ///     POST /Todo
+        ///     POST /api/values
         ///     {
-        ///        "id": "0e7ad584-7788-4ab1-95a6-ca0a5b444cbb",
-        ///        "name": "Item1",
-        ///        "data": "31/12/2016"
+        ///        "string",
         ///     }
         /// 
         /// </remarks>

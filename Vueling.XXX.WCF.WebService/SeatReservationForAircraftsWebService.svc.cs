@@ -13,7 +13,7 @@ using Vueling.XXX.Library.Exceptions;
 using Vueling.XXX.WCF.WebService.Helpers;
 using System.Diagnostics;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.WCF.WebService
 {
     [RegisterServiceAttribute]
@@ -97,7 +97,7 @@ namespace Vueling.XXX.WCF.WebService
         private void ValidateParametersForReserveSeat(string flighIdentifier, DateTime departureTime, int row, string colum)
         {
             if (flighIdentifier != null && flighIdentifier.Length == 0) throw new ArgumentException("FlightNumber is empty.");
-            if (departureTime == null) throw new ArgumentNullException("DepartureDate is null.");
+            if (departureTime == DateTime.MinValue) throw new ArgumentException("departureDate not set");
             if (row < 0) throw new ArgumentException("Row number is not allow.");
             if (colum == null) throw new ArgumentNullException("Colum is null.");
         }

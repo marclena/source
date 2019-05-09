@@ -18,10 +18,9 @@ namespace Vueling.XXX.MessageConsumer.WindowsService.Bootstrapping
         #region .: Boilerplate (don't change) :.
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
-        private ContainerBuilder _builder;
-
-        private RegisterDefinition _registerDefinition;
-        private ReflectionRegistrator _reflectionRegistrator;
+        private readonly ContainerBuilder _builder;
+        private readonly RegisterDefinition _registerDefinition;
+        private readonly ReflectionRegistrator _reflectionRegistrator;
         
 
         private MessageConsumerBuilder(params Type[] eventHandlers)

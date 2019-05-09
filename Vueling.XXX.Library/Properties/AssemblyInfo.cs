@@ -17,4 +17,4 @@ using Vueling.XXX.Library.Properties;
 [assembly: AssemblyCopyright("Copyright © Vueling.com 2013")]
 [assembly: AssemblyTrademark("Vueling.com")]
 [assembly: ComVisible(false)]
-[assembly: CLSCompliant(false)]
+

@@ -8,7 +8,7 @@ namespace Vueling.XXX.MessageConsumer.WindowsService.Helpers
     public class ReflectionRegistrator : DICustom
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
-        public IContainer Container;
+        public IContainer Container { get; set; }
 
         protected override void CustomDependenciesRegister(ContainerBuilder builder)
         {

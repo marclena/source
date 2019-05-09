@@ -9,7 +9,7 @@ using System.Web;
 using Vueling.XXX.WebUI.UnitTest.Helpers;
 using System.Globalization;
 
-[assembly: CLSCompliant(true)]
+
 namespace Vueling.XXX.WebUI.UnitTest.Given_Flight_With_Available_Seats.And_Row_Param_Is_Negative
 {
     [TestClass]

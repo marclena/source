@@ -40,9 +40,7 @@ namespace Vueling.XXX.MessageConsumer.WindowsService.CommandHandlers
                     OldDepartureTime = oldDepartureDate
                 };
 
-                var result = proxy.PublishEvent(flightRescheduled);
-
-
+                proxy.PublishEvent(flightRescheduled);
                 proxy.Completed();
             }
             catch(Exception ex)

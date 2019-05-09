@@ -52,24 +52,13 @@ namespace Vueling.XXX.WebUI.Configuration
 
         private void LoadCustomSettings()
         {
-            //TODO: set in app.config
+            //set in app.config
             DefaultGridPageSize = 10;
         }
 
         private string FindKey(string keyVar)
         {
             return _currentConfig.GetCustomSetting(keyVar);
-        }
-
-        private List<string> FindKeyList(string keyVar)
-        {
-            var result = new List<string>();
-            var findKey = this.FindKey(keyVar);
-            if (!String.IsNullOrEmpty(findKey))
-            {
-                result = new List<string>(findKey.Split(CONFIGLISTSEPARATOR).Select(s => s.Trim()));
-            }
-            return result;
         }
 
         [RegisterActionOnActivated]

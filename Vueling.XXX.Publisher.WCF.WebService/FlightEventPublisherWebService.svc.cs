@@ -4,7 +4,7 @@ using Vueling.Extensions.Library.DI;
 using Vueling.XXX.Publisher.Contracts.ServiceLibrary;
 using Vueling.XXX.Publisher.Contracts.ServiceLibrary.DTO;
 
-[assembly: CLSCompliant(false)]
+
 namespace Vueling.XXX.Publisher.WCF.WebService
 {
     [RegisterService]

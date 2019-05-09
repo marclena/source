@@ -9,7 +9,7 @@ using Vueling.XXX.Library.Entities;
 
 namespace Vueling.XXX.Impl.ServiceLibrary
 {
-    [RegisterServiceAttribute]
+    [RegisterService]
     public class SeatAssignmentApplicationService : ISeatAssignmentApplicationService
     {
         private ISeatAssignment _seatAssignment;
@@ -43,7 +43,7 @@ namespace Vueling.XXX.Impl.ServiceLibrary
         private void ValidateDTOsProperties(FlightDTO flight, SeatDTO seatDTO)
         {
             if (flight.Identifier != null && flight.Identifier.Length == 0) throw new ArgumentException("Empty flightNumber");
-            if (flight.DepartureTime == null) throw new ArgumentNullException("Null departureDate");
+            if (flight.DepartureTime == DateTime.MinValue) throw new ArgumentException("departureDate not set");
             if (seatDTO == default(SeatDTO)) throw new ArgumentNullException("Null seatDTO");
         }
 

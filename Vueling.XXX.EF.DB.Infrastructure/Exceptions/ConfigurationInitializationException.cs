@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace Vueling.XXX.EF.DB.Infrastructure.Exceptions
 {
@@ -21,5 +22,6 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Exceptions
 
         }
 
+        protected ConfigurationInitializationException(SerializationInfo info, StreamingContext context) : base(info, context) { }
     }
 }
