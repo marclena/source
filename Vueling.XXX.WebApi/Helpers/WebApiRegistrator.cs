@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Web.Http;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary;
 using Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.Services;
@@ -11,12 +12,14 @@ namespace Vueling.XXX.WebAPI.Helpers
     /// <summary>
     /// 
     /// </summary>
+    [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
     public class WebApiRegistrator : ReflectionRegister
     {
         /// <summary>
         /// 
         /// </summary>
         /// <param name="registerDefinition"></param>
+        [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
         public void RegisterDependencies(RegisterDefinition registerDefinition)
         {
             try
@@ -46,6 +49,7 @@ namespace Vueling.XXX.WebAPI.Helpers
             }
         }
 
+        [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
         private ContainerBuilder RegisterDependenciesFromWebApi(RegisterDefinition registerDefinition)
         {
             var containerBuilder = new ContainerBuilder();
@@ -67,6 +71,7 @@ namespace Vueling.XXX.WebAPI.Helpers
             return containerBuilder;
         }
 
+        [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
         private static IContainer BuildContainer(ContainerBuilder containerBuilder)
         {
             var container = containerBuilder.Build();
@@ -79,6 +84,7 @@ namespace Vueling.XXX.WebAPI.Helpers
         /// 
         /// </summary>
         /// <param name="containerBuilder"></param>
+        [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
         protected virtual void CustomDependenciesRegister(ContainerBuilder containerBuilder)
         {
         }
@@ -87,6 +93,7 @@ namespace Vueling.XXX.WebAPI.Helpers
         /// 
         /// </summary>
         /// <param name="container"></param>
+        [SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
         protected virtual void ResolveAfterBuildContainer(IContainer container)
         {
         }

@@ -221,6 +221,10 @@ project.lock.json
 *.feature.xlsx.*
 *.Specs_*.html
 
+#Analisi code logs
+EnsureNugetPackages.*
+ExecutePrebuildTasks.*
+
 #####
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
