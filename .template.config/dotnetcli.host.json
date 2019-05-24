@@ -1,0 +1,12 @@
+{
+  "symbolInfo": {
+    "slnName": {
+      "longName": "slnName",
+      "shortName": "sln"
+    },
+	"ProjectType": {
+      "longName": "ProjectType",
+      "shortName": "prj"
+    }
+  }
+}
