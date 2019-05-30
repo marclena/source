@@ -39,11 +39,34 @@
 		{
           "choice": "WebService",
           "description": "Instalar Template WebService"
+        },
+		{
+          "choice": "WebServiceLayer",
+          "description": "Instalar La capa de WebServices "
+        },
+		{
+          "choice": "ContractsServiceLayer",
+          "description": "Instalar La capa de Contracts "
+        },
+		{
+          "choice": "LibraryLayer",
+          "description": "Instalar La capa de Library "
+        },
+		{
+          "choice": "ImplementationServiceLibraryLayer",
+          "description": "Instalar La capa de ImplementationServiceLibrary "
+        },
+		{
+          "choice": "WebUILayer",
+          "description": "Instalar La capa de WebUI "
+        },
+		{
+          "choice": "DBLayer",
+          "description": "Instalar La capa de DB "
         }
       
 		],
-      "defaultValue": "WebUI",
-      "description": "Por defecto instalara el template de WebUI"
+     
     },
 	"IsWebUI": {
       "type": "computed",
@@ -52,6 +75,30 @@
 	"IsWebService": {
       "type": "computed",
       "value": "(ProjectType == \"WebService\")"
+    },
+	"IsWebServiceLayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"WebServiceLayer\")"
+    },
+	"IsContractsbServiceLayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"ContractsServiceLayer\")"
+    },
+	"IsLibraryLayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"LibraryLayer\")"
+    },
+	"IsImplementationServiceLibraryLayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"ImplementationServiceLibraryLayer\")"
+    },
+	"IsWebUILayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"WebUILayer\")"
+    },
+	"IsDBLayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"DBLayer\")"
     },
   },
   "sources": [
@@ -63,6 +110,36 @@
 	{
 		 "condition": "(IsWebService)",
 		"include": [ "Vueling.XXX.WebService.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Library/**","Vueling.XXX.DB.Infrastructure/**","Vueling_XXX.Database/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsWebServiceLayer)",
+		"include": ["Vueling.XXX.WCF.WebService/**","Vueling.XXX.WCF.WebService.UnitTest/**","Vueling.XXX.WCF.WebService.IntegrationTest/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsContractsbServiceLayer)",
+		"include": ["Vueling.XXX.Contracts.ServiceLibrary/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsLibraryLayer)",
+		"include": ["Vueling.XXX.Library/**","Vueling.XXX.Library.UnitTest/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsImplementationServiceLibraryLayer)",
+		"include": ["Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary.UnitTest/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsWebUILayer)",
+		"include": ["Vueling.XXX.WebUI/**","Vueling.XXX.WebUI.UnitTest/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsDBLayer)",
+		"include": ["Vueling.XXX.DB.Infrastructure/**","Vueling.XXX.DB.Infrastructure.UnitTest/**"],
 		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
     }
   ]
