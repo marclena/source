@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Vueling.XXX.Templates</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Vueling.XXX.Templates</title>
     <authors>Architecture</authors>
     <owners>Architecture</owners>
@@ -19,6 +19,6 @@
     </packageTypes>
   </metadata>
   <files>
-    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;_rels\**\*;**\packages\**\*" />
+    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.lock.json;_rels\**\*;**\packages\**\*;**\BuildProcessTemplates\**\*" />
   </files>
 </package>
