@@ -32,7 +32,7 @@ namespace Vueling.XXX.MessageConsumer.WindowsService.EventHandlers
                 var flightCancelledDTO = mapper.MapToDTO<FlightCancelled, FlightCancelledDTO>(flightRescheduledEvent);
                 if (flightCancelledDTO.CancellationReason == "FORCED_TO_FAIL_PLEASE")
                 {
-                    throw new Exception("MANUALLY FORCED TO FAIL");
+                    throw new ArgumentException("MANUALLY FORCED TO FAIL");
                 }
                 _updateFlightService.UpdateFlightStatus(flightCancelledDTO);
 

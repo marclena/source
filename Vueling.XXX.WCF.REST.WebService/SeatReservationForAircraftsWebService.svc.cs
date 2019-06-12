@@ -14,7 +14,7 @@ using Vueling.XXX.WCF.REST.WebService.DTO;
 using Vueling.XXX.WCF.REST.WebService.Helpers;
 using Vueling.XXX.WCF.REST.WebService.MapFactories.MapWebServiceDTOToApplicationDTO;
 
-[assembly: CLSCompliant(true)]
+
 namespace Vueling.XXX.WCF.REST.WebService
 {
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
@@ -84,7 +84,7 @@ namespace Vueling.XXX.WCF.REST.WebService
         private void ValidateParametersForReserveSeat(string flighIdentifier, DateTime departureTime, int row, string colum)
         {
             if (flighIdentifier != null && flighIdentifier.Length == 0) throw new ArgumentException("FlightNumber is empty.");
-            if (departureTime == null) throw new ArgumentNullException("DepartureDate is null.");
+            if (departureTime == DateTime.MinValue) throw new ArgumentException("departureDate not set");
             if (row < 0) throw new ArgumentException("Row number is not allow.");
             if (colum == null) throw new ArgumentNullException("Colum is null.");
         }

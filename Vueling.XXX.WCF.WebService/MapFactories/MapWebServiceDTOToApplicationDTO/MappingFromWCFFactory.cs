@@ -3,7 +3,7 @@ using Vueling.XXX.WCF.WebService.MapFactories.MapWebServiceDTOToApplicationDTO;
 
 namespace Vueling.XXX.WCF.WebService.MapFactories.ApplicationDTOToMapWebServiceDTO
 {
-    internal class MappingFromWCFFactory
+    internal static class MappingFromWCFFactory
     {
         internal static MappingBase GetFactoryFor(EnumApplicationDTO model)
         {

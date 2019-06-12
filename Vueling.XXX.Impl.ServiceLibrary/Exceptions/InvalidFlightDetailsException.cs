@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Vueling.XXX.Impl.ServiceLibrary.Exceptions
 {
@@ -13,5 +10,14 @@ namespace Vueling.XXX.Impl.ServiceLibrary.Exceptions
         {
 
         }
+
+        public InvalidFlightDetailsException(string message, Exception innerException)
+            : base(message, innerException)
+        {
+
+        }
+        protected InvalidFlightDetailsException(
+        System.Runtime.Serialization.SerializationInfo info,
+        System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }

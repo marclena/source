@@ -4,11 +4,6 @@ namespace Vueling.XXX.Contracts.ServiceLibrary.DTO
 {
     public class BookingDTO
     {
-        //public BookingDTO()
-        //{
-        //    Journeys = new List<JourneyDTO>();
-        //    Passengers = new List<PassengerDTO>();
-        //}
 
         public int Id { get; set; }
         public string SalesAgent { get; set; }

@@ -40,7 +40,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Repositories
                 .Include(x => x.Passengers)
                 .SingleOrDefault();
 
-            if (dbBooking == null) { throw new Exception(string.Format("Vueling.XXX.Library.Entities.Booking not found with Id {0}", entity.Id)); }
+            if (dbBooking == null) { throw new ArgumentNullException(string.Format("Vueling.XXX.Library.Entities.Booking not found with Id {0}", entity.Id)); }
 
             UpdateBooking(entity, dbBooking);
 
@@ -82,7 +82,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Repositories
 
             foreach (var itemId in deletedPaxs)
             {
-                var toDelete = dbBooking.Passengers.Where(x => x.Id == itemId).FirstOrDefault();
+                var toDelete = dbBooking.Passengers.FirstOrDefault(x => x.Id == itemId);
                 Context.Entry(toDelete).State = EntityState.Deleted;
             }
         }
@@ -94,9 +94,9 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Repositories
 
             foreach (var itemId in modifiedPaxs)
             {
-                var dbPax = dbBooking.Passengers.Where(x => x.Id == itemId).FirstOrDefault();
+                var dbPax = dbBooking.Passengers.FirstOrDefault(x => x.Id == itemId);
 
-                var entityPax = entity.Passengers.Where(x => x.Id == itemId).FirstOrDefault();
+                var entityPax = entity.Passengers.FirstOrDefault(x => x.Id == itemId);
 
                 UpdatePax(entityPax, dbPax);
             }
@@ -152,7 +152,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Repositories
 
             foreach (var itemId in deletedJourneys)
             {
-                var toDelete = dbBooking.Journeys.Where(x => x.Id == itemId).FirstOrDefault();
+                var toDelete = dbBooking.Journeys.FirstOrDefault(x => x.Id == itemId);
                 Context.Entry(toDelete).State = EntityState.Deleted;
             }
         }
@@ -163,9 +163,9 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Repositories
 
             foreach (var itemId in modifiedJourneys)
             {
-                var dbJourney = dbBooking.Journeys.Where(x => x.Id == itemId).FirstOrDefault();
+                var dbJourney = dbBooking.Journeys.FirstOrDefault(x => x.Id == itemId);
 
-                var entityJourney = entity.Journeys.Where(x => x.Id == itemId).FirstOrDefault();
+                var entityJourney = entity.Journeys.FirstOrDefault(x => x.Id == itemId);
 
                 UpdateJourney(entityJourney, dbJourney);
             }

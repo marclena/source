@@ -36,8 +36,6 @@ namespace Vueling.XXX.WCF.WebService
 
             var registrator = new ReflectionRegistrator();
 
-            //registrator.EnableVerboseTrace();
-
             registrator.RegisterDependencies(registerDefinition);
         }
 
@@ -99,11 +97,17 @@ namespace Vueling.XXX.WCF.WebService
         }
     }
 
+
     [Serializable]
     public class AppStartException : Exception
     {
-        public AppStartException(Exception innerException)
-            : base(innerException.Message, innerException)
-        { }
+        public AppStartException() { }
+        public AppStartException(string message) : base(message) { }
+        public AppStartException(Exception inner) : base(inner.Message, inner) { }
+        public AppStartException(string message, Exception inner) : base(message, inner) { }
+        protected AppStartException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
+
 }

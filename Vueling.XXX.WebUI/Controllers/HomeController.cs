@@ -14,7 +14,6 @@ using Vueling.XXX.WebUI.MapFactories.DataModelToApplicationDTO;
 using Vueling.XXX.WebUI.Models;
 using System.Globalization;
 
-[assembly: CLSCompliant(true)]
 namespace Vueling.XXX.WebUI.Controllers
 {
     public class HomeController : Vueling.Web.UI.Library.Controllers.VuelingController
@@ -123,8 +122,8 @@ namespace Vueling.XXX.WebUI.Controllers
 
         private void DepartureTimeNotNullValidate(DateTime departureTime)
         {
-            if (departureTime == null)
-                ThrowArgumentException("DepartureDate is null.");
+            if (departureTime == DateTime.MinValue)
+                ThrowArgumentException("DepartureDate is not set.");
         }
 
         private void FlighIdentifierNotNullValidate(string flighIdentifier)
@@ -152,9 +151,9 @@ namespace Vueling.XXX.WebUI.Controllers
                     if (!_seatAssigmentService.AssignSeatWithValidation(flight, seats.First())) returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
 
                 }
-                else if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ChangeASeatReservation)
+                else if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ChangeASeatReservation && !_seatAssigmentService.ChangeSeatWithValidation(flight, seats.First(), seats.Last()))
                 {
-                    if (!_seatAssigmentService.ChangeSeatWithValidation(flight, seats.First(), seats.Last())) returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
+                    returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
                 }
             }
             catch (AircraftNotFoundOnDatabaseException infrastructureException)

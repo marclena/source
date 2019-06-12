@@ -4,7 +4,7 @@ using Vueling.XXX.Library.Entities;
 
 namespace Vueling.XXX.Library.BookingServices
 {
-    internal class InMemoryBookingProvider
+    internal static class InMemoryBookingProvider
     {
         internal static List<Booking> CreateBatch(int amount)
         {

@@ -12,8 +12,6 @@ namespace Vueling.XXX.WebUI.Controllers
 {
     public class BookingController : Vueling.Web.UI.Library.Controllers.VuelingController
     {
-        static ILog Logger = LogManager.GetLogger(typeof(BookingController));
-
         private readonly IXXXWebUIConfiguration _XXXWebUIConfiguration;
         private readonly Vueling.XXX.Contracts.ServiceLibrary.IBookingApplicationServices _BookingApplicationServices;
         private readonly IBookingViewModelQueryAdapterService _BookingViewModelQueryAdapterService;
@@ -53,7 +51,7 @@ namespace Vueling.XXX.WebUI.Controllers
         {
             int amount = 5;
 
-            var activeBookings = _BookingApplicationServices.CreateBooking(amount);
+            _BookingApplicationServices.CreateBooking(amount);
 
             return RedirectToAction("Index", "Booking");
         }
@@ -61,8 +59,6 @@ namespace Vueling.XXX.WebUI.Controllers
         [GridAction(EnableCustomBinding = true)]
         public JsonResult SearchBookings(GridCommand command)
         {
-            var bookings = new List<Vueling.XXX.Contracts.ServiceLibrary.DTO.BookingDTO>();
-
             int total = GetDataCount(command);
 
             IEnumerable<BookingViewModel> data = GetData(command);
@@ -79,21 +75,21 @@ namespace Vueling.XXX.WebUI.Controllers
 
         public ActionResult GetCanceledByPages()
         {
-            var activeBookings = _BookingApplicationServices.GetCanceledByPages(1, 10);
+            _BookingApplicationServices.GetCanceledByPages(1, 10);
 
             return View();
         }
 
         public ActionResult ChangeFlights()
         {
-            var activeBookings = _BookingApplicationServices.ChangeFlights();
+            _BookingApplicationServices.ChangeFlights();
 
             return RedirectToAction("Index");
         }
 
         public ActionResult DividePrices()
         {
-            var activeBookings = _BookingApplicationServices.DividePrices();
+            _BookingApplicationServices.DividePrices();
 
             return RedirectToAction("Index");
         }

@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Vueling.XXX.DB.Infrastructure.MapFactories.MapConceptualModelToDomain
 {
-    internal class SwitcherRepositoryToEntityFactory
+    internal static class SwitcherRepositoryToEntityFactory
     {
         internal static MapConceptualModelToDomainFactoryBase GetFactoryFor(Type typeOfdbObject)
         {

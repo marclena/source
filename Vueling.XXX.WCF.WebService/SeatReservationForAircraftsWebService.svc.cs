@@ -13,7 +13,7 @@ using Vueling.XXX.Library.Exceptions;
 using Vueling.XXX.WCF.WebService.Helpers;
 using System.Diagnostics;
 
-[assembly: CLSCompliant(true)]
+
 namespace Vueling.XXX.WCF.WebService
 {
     [RegisterServiceAttribute]
@@ -96,10 +96,10 @@ namespace Vueling.XXX.WCF.WebService
 
         private void ValidateParametersForReserveSeat(string flighIdentifier, DateTime departureTime, int row, string colum)
         {
-            if (flighIdentifier != null && flighIdentifier.Length == 0) throw new ArgumentException("FlightNumber is empty.");
-            if (departureTime == null) throw new ArgumentNullException("DepartureDate is null.");
-            if (row < 0) throw new ArgumentException("Row number is not allow.");
-            if (colum == null) throw new ArgumentNullException("Colum is null.");
+            if (flighIdentifier != null && flighIdentifier.Length == 0) throw new ArgumentException("flightIdentifier", "FlightNumber is empty.");
+            if (departureTime == DateTime.MinValue) throw new ArgumentException("departureDate", "departureDate not set");
+            if (row < 0) throw new ArgumentException("row", "Row number is not allow.");
+            if (colum == null) throw new ArgumentNullException("colum","Colum is null.");
         }
 
         private string CallApplicationMethods(SeatReservationForAircraftsOperationsEnum clientRequestedMethod, FlightDTO flight, List<SeatDTO> seats)
@@ -110,15 +110,14 @@ namespace Vueling.XXX.WCF.WebService
             try
             {
 
-                if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ReserveASeat)
+                if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ReserveASeat && (!_seatAssigmentService.AssignSeatWithValidation(flight, seats.First())))
                 {
-
-                    if (!_seatAssigmentService.AssignSeatWithValidation(flight, seats.First())) returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
+                    returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
 
                 }
-                else if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ChangeASeatReservation)
+                else if (clientRequestedMethod == SeatReservationForAircraftsOperationsEnum.ChangeASeatReservation && (!_seatAssigmentService.ChangeSeatWithValidation(flight, seats.First(), seats.Last())))
                 {
-                    if (!_seatAssigmentService.ChangeSeatWithValidation(flight, seats.First(), seats.Last())) returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
+                    returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
                 }
             }
             catch (AircraftNotFoundOnDatabaseException infrastructureException)

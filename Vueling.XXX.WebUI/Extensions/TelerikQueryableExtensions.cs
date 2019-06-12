@@ -33,9 +33,10 @@ namespace Vueling.XXX.WebUI
         {
             var filtersNested = new List<FilterDescriptor>();
 
-            if (filter is CompositeFilterDescriptor)
+            var comFilter = filter as CompositeFilterDescriptor;
+            if (comFilter != null)
             {
-                foreach (var childFilter in ((CompositeFilterDescriptor)filter).FilterDescriptors)
+                foreach (var childFilter in comFilter.FilterDescriptors)
                 {
                     var nestedFilter = GetFiltersRecursively(childFilter);
                     filtersNested.AddRange(nestedFilter);
@@ -124,7 +125,7 @@ namespace Vueling.XXX.WebUI
 
         private static Expression GetExpressionCallForString(object value, MemberExpression propertyExp, ConstantExpression constantValue, string filterOperator)
         {
-            if (value.GetType() != typeof(string)) { throw new InvalidOperationException(string.Format("Operator {0} is only valid for data type string.", filterOperator)); }
+            if (!(value is string)) { throw new InvalidOperationException(string.Format("Operator {0} is only valid for data type string.", filterOperator)); }
 
             var methodInfo = value.GetType().GetMethod(filterOperator, new[] { typeof(string) });
             return Expression.Call(propertyExp, methodInfo, constantValue);

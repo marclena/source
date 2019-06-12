@@ -8,9 +8,6 @@ namespace Vueling.XXX.Library.Entities
     {
         public Booking()
         {
-            //this.Journeys = new HashSet<Journey>();
-            //this.Passengers = new HashSet<Passenger>();
-
             Created = DateTime.UtcNow;
             UpdateModifiedDate();
         }
@@ -88,13 +85,13 @@ namespace Vueling.XXX.Library.Entities
         private void ValidateNewJourney(Journey journey)
         {
             if (journey == null) { throw new ArgumentNullException("journey"); }
-            if (string.IsNullOrEmpty(journey.Departure) || string.IsNullOrEmpty(journey.Arrival)) { throw new Exception("Paremeters Departure and Arrival are required to add new journey."); }
+            if (string.IsNullOrEmpty(journey.Departure) || string.IsNullOrEmpty(journey.Arrival)) { throw new ArgumentException("Paremeters Departure and Arrival are required to add new journey."); }
         }
 
         private void ValidateNewPassenger(Passenger passenger)
         {
             if (passenger == null) { throw new ArgumentNullException("passenger"); }
-            if (string.IsNullOrEmpty(passenger.FullName)) { throw new Exception("Paremeter FullName is required to add new passenger."); }
+            if (string.IsNullOrEmpty(passenger.FullName)) { throw new ArgumentException("Paremeter FullName is required to add new passenger."); }
         }
 
         private void UpdateModifiedDate()

@@ -57,7 +57,6 @@ namespace Vueling.XXX.Library.Configuration
         {
             TimeSalesCloseBeforeFlight = Convert.ToInt32(FindKey("Vueling.XXX.Library.timeSalesCloseBeforeFlight"), CultureInfo.InvariantCulture);
 
-            //TODO: set in appconfig
             MaxJourneysAllowedByBooking = 2;
             PartialCodeForAgencyAgent = "agency";
             PartialCodeForCorporateAgent = "corp";
@@ -66,17 +65,6 @@ namespace Vueling.XXX.Library.Configuration
         private string FindKey(string keyVar)
         {
             return _currentConfig.GetCustomSetting(keyVar);
-        }
-
-        private List<string> FindKeyList(string keyVar)
-        {
-            var result = new List<string>();
-            var findKey = this.FindKey(keyVar);
-            if (!String.IsNullOrEmpty(findKey))
-            {
-                result = new List<string>(findKey.Split(CONFIGLISTSEPARATOR).Select(s => s.Trim()));
-            }
-            return result;
         }
 
     }

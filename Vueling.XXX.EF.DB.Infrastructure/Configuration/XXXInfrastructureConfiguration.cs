@@ -45,9 +45,6 @@ namespace Vueling.XXX.EF.DB.Infrastructure.Configuration
 
         private void LoadCustomSettings()
         {
-            //TODO:
-            //DatabaseConnectionString = "Data Source=(local);Initial Catalog=Vueling_XXX;Integrated Security=SSPI;MultipleActiveResultSets=True;";
-            //DatabaseConnectionString = "Data Source=(local);Initial Catalog=Vueling_XXX;User ID=xxx.inf;Password=xxx.inf;";
             DatabaseConnectionString = VuelingEnvironment.Current.GetDataConnectionString("Vueling_XXX");
         }
 

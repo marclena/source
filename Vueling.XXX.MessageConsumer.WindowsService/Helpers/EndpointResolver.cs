@@ -12,7 +12,7 @@ namespace Vueling.XXX.MessageConsumer.WindowsService.Helpers
     public class EndpointResolver : IDependencyResolver
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CustomRules.Maintenability", "VY1000:GlobalNotUseServiceLocatorPattern")]
-        public static IContainer Container;
+        public static IContainer Container { get; set; }
 
         public dynamic Resolve(Type type)
         {

@@ -2,7 +2,7 @@
 
 namespace Vueling.XXX.WebUI.MapFactories.IQueryableMaps
 {
-    internal class MappingIQueryableFactory
+    internal static class MappingIQueryableFactory
     {
         internal static MappingBase GetFor(EnumViewModel model)
         {

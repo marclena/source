@@ -1,16 +1,15 @@
 ﻿using log4net;
 using Vueling.Extensions.Library.DI;
+using Vueling.XXX.Contracts.ServiceLibrary;
 
 namespace Vueling.XXX.WCF.WebService
 {
     [RegisterServiceAttribute]
     public class BookingCancelerSecureService : IBookingCancelerSecureService
     {
-        static ILog Logger = LogManager.GetLogger(typeof(BookingCancelerSecureService));
+        private readonly IBookingCancelerApplicationServices _BookingCancelerApplicationServices;
 
-        private readonly Vueling.XXX.Contracts.ServiceLibrary.IBookingCancelerApplicationServices _BookingCancelerApplicationServices;
-
-        public BookingCancelerSecureService(Vueling.XXX.Contracts.ServiceLibrary.IBookingCancelerApplicationServices _IBookingCancelerApplicationServices)
+        public BookingCancelerSecureService(IBookingCancelerApplicationServices _IBookingCancelerApplicationServices)
         {
             _BookingCancelerApplicationServices = _IBookingCancelerApplicationServices;
         }

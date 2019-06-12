@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Globalization;
 using Vueling.XXX.WCF.WebService.IntegrationTest.Helpers;
 
-[assembly: CLSCompliant(true)]
+
 namespace Vueling.XXX.WCF.WebService.IntegrationTest.Given_Flight_With_Available_Seats
 {
     [TestClass]

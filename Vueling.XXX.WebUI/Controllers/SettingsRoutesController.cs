@@ -5,8 +5,6 @@ namespace Vueling.XXX.WebUI.Controllers
 {
     public class SettingsRoutesController : Vueling.Web.UI.Library.Controllers.VuelingController
     {
-        static ILog Logger = LogManager.GetLogger(typeof(SettingsRoutesController));
-
         protected  Vueling.Maestros.Settings.Routes.Contracts.ServiceLibrary.IRoutesSettingsServiceContract _RoutesSettingsServiceContract;
 
         public SettingsRoutesController(

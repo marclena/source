@@ -7,12 +7,12 @@ using Vueling.XXX.Library.Entities;
 
 namespace Vueling.XXX.Impl.ServiceLibrary
 {
-    [RegisterServiceAttribute]
+    [RegisterService]
     public class AircraftMaintenanceApplicationService : IAircraftMaintenanceApplicationService
     {
 
-        private IFleetRecoverAndPersist _fleetRecoverAndPersist;
-        private IXXXServiceLibraryConfiguration _xXXServiceLibraryConfiguration;
+        private readonly IFleetRecoverAndPersist _fleetRecoverAndPersist;
+        private readonly IXXXServiceLibraryConfiguration _xXXServiceLibraryConfiguration;
 
         public AircraftMaintenanceApplicationService(IXXXServiceLibraryConfiguration serviceLibraryConfiguration, IFleetRecoverAndPersist fleetRecoverAndPersist)
         {
@@ -25,8 +25,7 @@ namespace Vueling.XXX.Impl.ServiceLibrary
 
             bool returned = false;
 
-            List<Seat> seatsFornewAircraft = new List<Seat>();
-            seatsFornewAircraft = _xXXServiceLibraryConfiguration.FlightSeatsConfiguration;
+            List<Seat> seatsFornewAircraft = _xXXServiceLibraryConfiguration.FlightSeatsConfiguration;
 
             var aircraft = new Aircraft(flight.Identifier, flight.DepartureTime, seatsFornewAircraft);
 
