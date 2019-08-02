@@ -52,6 +52,7 @@ namespace Vueling.XXX.WebAPI
             Trace.TraceInformation("Enabling CORS in Web API....");
             appBuilder.UseCors(CorsOptions.AllowAll);
 
+
             GlobalConfiguration.Configuration.EnsureInitialized();
         }
 

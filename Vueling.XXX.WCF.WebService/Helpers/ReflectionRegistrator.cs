@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using Autofac;
 using Vueling.DIRegister.WebService.ServiceLibrary;
-using Vueling.XXX.DB.Infrastructure.Configuration;
+using Vueling.XXX.EF.DB.Infrastructure.Configuration;
 using TasklingDIRegister = ATC.Taskling.Client.DIRegister.NetFramework.DIRegister;
 
 namespace Vueling.XXX.WCF.WebService.Helpers
@@ -12,7 +12,7 @@ namespace Vueling.XXX.WCF.WebService.Helpers
         {
             Trace.TraceInformation("Execute override of CustomDependenciesRegister.");
 
-            TasklingDIRegister.RegisterTasklingClientDependencies<TasklingLogger, XXXInfrastructureConfiguration>(builder);
+            TasklingDIRegister.RegisterTasklingClientDependencies<TasklingLogger, InfrastructureConfiguration>(builder);
         }
 
         protected override void ResolveAfterBuildContainer(IContainer container)

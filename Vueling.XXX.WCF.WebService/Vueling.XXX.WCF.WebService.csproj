@@ -52,12 +52,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-	<RunCodeAnalysis>true</RunCodeAnalysis>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ATC.HealthChecks.Wcf, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.HealthChecks.Wcf.1.0.0-beta\lib\net40\ATC.HealthChecks.Wcf.dll</HintPath>
+    </Reference>
     <Reference Include="ATC.Taskling.Client.Contracts.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ATC.Taskling.Client.Contracts.ServiceLibrary.1.0.0\lib\netstandard2.0\ATC.Taskling.Client.Contracts.ServiceLibrary.dll</HintPath>
     </Reference>
@@ -176,6 +179,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="HealthCheckService.cs" />
     <Compile Include="Helpers\ReflectionRegistrator.cs" />
     <Compile Include="Helpers\SeatReservationForAircraftsOperationsEnum.cs" />
     <Compile Include="Helpers\Log4netTraceListener.cs" />
@@ -211,10 +215,6 @@
     <ProjectReference Include="..\Vueling.XXX.Contracts.ServiceLibrary\Vueling.XXX.Contracts.ServiceLibrary.csproj">
       <Project>{0F8C8F7E-94CD-4FB0-898A-8ED97B98B846}</Project>
       <Name>Vueling.XXX.Contracts.ServiceLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Vueling.XXX.DB.Infrastructure\Vueling.XXX.DB.Infrastructure.csproj">
-      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
-      <Name>Vueling.XXX.DB.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\Vueling.XXX.EF.DB.Infrastructure\Vueling.XXX.EF.DB.Infrastructure.csproj">
       <Project>{be2b4bf5-f791-4d94-85df-ab1da30d9a3e}</Project>

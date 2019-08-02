@@ -1,8 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Vueling Architecture",
-  "classifications": [ "WebUI" ],
-  "name": "ASP.NET Vueling.XXX.WebUI",
+  "classifications": [ "WebUI","WindowsService","WebService","WebAPI" ],
+  "name": "Vueling.XXX.Templates",
   "identity": "Vueling.XXX.WebUI.Template.CSharp",
   "groupIdentity": "Vueling.XXX.Template.Generic",
   "shortName": "Vueling.XXX.Templates",
@@ -18,14 +18,26 @@
       "datatype": "string",
       "isRequired": true,
       "replaces": "Vueling.XXX",
-      "fileRename": "Vueling.XXX"
+      "fileRename":"Vueling.XXX"
+	  
+	  
+    },
+	 "config": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": false,
+     "replaces": "XXX",
+      "fileRename": "XXX",
+	  
+	  
     },
     "dbName": {
       "type": "parameter",
       "datatype": "string",
-      "isRequired": true,
+      "isRequired": false,
       "replaces": "Vueling_XXX",
       "fileRename": "Vueling_XXX"
+	
     },
 	 "ProjectType": {
       "type": "parameter",	
@@ -33,84 +45,117 @@
       "datatype": "choice",
       "choices": [
         {
-          "choice": "WebUI",
-          "description": "Instalar Template WebUI"
+          "choice": "SolutionWebUI",
+          "description": "Instalar Template de la solucion WebUI"
         },
 		{
-          "choice": "WebService",
-          "description": "Instalar Template WebService"
+          "choice": "SolutionWebService",
+          "description": "Instalar Template de la solucion WebService"
         },
 		{
-          "choice": "WebServiceLayer",
+          "choice": "SolutionWindowsService",
+          "description": "Instalar Template de la solucion WindowsService"
+        },
+		{
+          "choice": "SolutionWebAPI",
+          "description": "Instalar La solucion de WebAPI con los proyectos contracts y implementation "
+        },
+		{
+          "choice": "LayerWebService",
           "description": "Instalar La capa de WebServices "
         },
 		{
-          "choice": "ContractsServiceLayer",
+          "choice": "LayerContractsService",
           "description": "Instalar La capa de Contracts "
         },
 		{
-          "choice": "LibraryLayer",
+          "choice": "LayerLibrary",
           "description": "Instalar La capa de Library "
         },
 		{
-          "choice": "ImplementationServiceLibraryLayer",
+          "choice": "LayerImplementationServiceLibrary",
           "description": "Instalar La capa de ImplementationServiceLibrary "
         },
 		{
-          "choice": "WebUILayer",
+          "choice": "LayerWebUI",
           "description": "Instalar La capa de WebUI "
         },
 		{
-          "choice": "DBLayer",
+          "choice": "LayerDB",
           "description": "Instalar La capa de DB "
+        },
+		{
+          "choice": "LayerWebAPI",
+          "description": "Instalar La capa de WebAPI "
         }
+		
       
 		],
      
     },
 	"IsWebUI": {
       "type": "computed",
-      "value": "(ProjectType == \"WebUI\")"
+      "value": "(ProjectType == \"SolutionWebUI\")"
     },
 	"IsWebService": {
       "type": "computed",
-      "value": "(ProjectType == \"WebService\")"
+      "value": "(ProjectType == \"SolutionWebService\")"
+    },
+	"IsWindowsService": {
+      "type": "computed",
+      "value": "(ProjectType == \"SolutionWindowsService\")"
     },
 	"IsWebServiceLayer": {
       "type": "computed",
-      "value": "(ProjectType == \"WebServiceLayer\")"
+      "value": "(ProjectType == \"LayerWebService\")"
     },
 	"IsContractsbServiceLayer": {
       "type": "computed",
-      "value": "(ProjectType == \"ContractsServiceLayer\")"
+      "value": "(ProjectType == \"LayerContractsService\")"
     },
 	"IsLibraryLayer": {
       "type": "computed",
-      "value": "(ProjectType == \"LibraryLayer\")"
+      "value": "(ProjectType == \"LayerLibrary\")"
     },
 	"IsImplementationServiceLibraryLayer": {
       "type": "computed",
-      "value": "(ProjectType == \"ImplementationServiceLibraryLayer\")"
+      "value": "(ProjectType == \"LayerImplementationServiceLibrary\")"
     },
 	"IsWebUILayer": {
       "type": "computed",
-      "value": "(ProjectType == \"WebUILayer\")"
+      "value": "(ProjectType == \"LayerWebUI\")"
     },
 	"IsDBLayer": {
       "type": "computed",
-      "value": "(ProjectType == \"DBLayer\")"
+      "value": "(ProjectType == \"LayerDB\")"
+    },
+	"IsWebAPILayer": {
+      "type": "computed",
+      "value": "(ProjectType == \"LayerWebAPI\")"
+    },
+	"IsWebAPISolution": {
+      "type": "computed",
+      "value": "(ProjectType == \"SolutionWebAPI\")"
     },
   },
   "sources": [
     {
 		 "condition": "(IsWebUI)",
-		"include": [ "Vueling.XXX.WebUI.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"Vueling.XXX.WebUI/**","Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary.UnitTest/**","Vueling.XXX.Library/**","Vueling.XXX.Library.UnitTest/**","Vueling.XXX.DB.Infrastructure/**","Vueling.XXX.DB.Infrastructure.UnitTest/**","Vueling_XXX.Database/**"],
-		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+      "include": [ "Vueling.XXX.WebUI.sln", "Remote.testsettings", "nuget.config", "Local.testsettings", "ExecutePrebuildTasks.cmd", "Vueling.XXX.WebUI/**", "Vueling.XXX.Contracts.ServiceLibrary/**", "Vueling.XXX.Impl.ServiceLibrary/**", "Vueling.XXX.Impl.ServiceLibrary.UnitTest/**", "Vueling.XXX.Library/**", "Vueling.XXX.Library.UnitTest/**", "Vueling.XXX.EF.DB.Infrastructure/**" ],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ],
+		
     },
 	{
 		 "condition": "(IsWebService)",
-		"include": [ "Vueling.XXX.WebService.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Library/**","Vueling.XXX.DB.Infrastructure/**","Vueling_XXX.Database/**"],
-		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+		"include": [ "Vueling.XXX.WebService.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"ExecutePrebuildTasks.cmd","Vueling.XXX.WCF.WebService/**","Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Library/**","Vueling.XXX.EF.DB.Infrastructure/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ],
+		
+    },
+	{
+		 "condition": "(IsWindowsService)",
+		"include": [ "Vueling.XXX.WindowsService.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"ExecutePrebuildTasks.cmd","Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Library/**","Vueling.XXX.MessageConsumer.WindowsService/**","Vueling.XXX.Publisher.WCF.WebService/**","Vueling.XXX.Impl.ServiceLibrary.UnitTest/**","Vueling.XXX.Publisher.Contracts.ServiceLibrary/**","Vueling.XXX.Publisher.Impl.ServiceLibrary/**","Vueling.XXX.Library.UnitTest/**","Vueling.XXX.EF.DB.Infrastructure/**","Vueling.XXX.Message/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ],
+		
     },
 	{
 		 "condition": "(IsWebServiceLayer)",
@@ -139,7 +184,17 @@
     },
 	{
 		 "condition": "(IsDBLayer)",
-		"include": ["Vueling.XXX.DB.Infrastructure/**","Vueling.XXX.DB.Infrastructure.UnitTest/**"],
+		"include": ["Vueling.XXX.EF.DB.Infrastructure/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsWebAPILayer)",
+		"include": ["Vueling.XXX.WebApi/**"],
+		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
+    },
+	{
+		 "condition": "(IsWebAPISolution)",
+		"include": ["Vueling.XXX.WebApi.sln","Remote.testsettings","nuget.config","Local.testsettings" ,"ExecutePrebuildTasks.cmd","Vueling.XXX.Contracts.ServiceLibrary/**","Vueling.XXX.WebApi/**","Vueling.XXX.Impl.ServiceLibrary/**","Vueling.XXX.Impl.ServiceLibrary.UnitTest/**","Vueling.XXX.Library/**", "Vueling.XXX.Library.UnitTest/**","Vueling.XXX.EF.DB.Infrastructure/**"],
 		"exclude" :[ "**/[Bb]in/**", "**/[Oo]bj/**", ".template.config/**/*", "**/*.filelist", "**/*.user", "**/*.lock.json" ]
     }
   ]

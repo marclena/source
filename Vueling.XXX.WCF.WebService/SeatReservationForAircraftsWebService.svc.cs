@@ -8,7 +8,7 @@ using Vueling.XXX.WCF.WebService.MapFactories.ApplicationDTOToMapWebServiceDTO;
 using Vueling.XXX.WCF.WebService.MapFactories.MapWebServiceDTOToApplicationDTO;
 using Vueling.XXX.Contracts.ServiceLibrary.DTO;
 using Vueling.XXX.Contracts.DTO.ServiceLibrary;
-using Vueling.XXX.DB.Infrastructure.Exceptions;
+
 using Vueling.XXX.Library.Exceptions;
 using Vueling.XXX.WCF.WebService.Helpers;
 using System.Diagnostics;
@@ -120,20 +120,20 @@ namespace Vueling.XXX.WCF.WebService
                     returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
                 }
             }
-            catch (AircraftNotFoundOnDatabaseException infrastructureException)
-            {
+            //catch (AircraftNotFoundOnDatabaseException infrastructureException)
+            //{
 
-                returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
-                Trace.TraceError("Flight not found :" + infrastructureException.Message);
+            //    returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
+            //    Trace.TraceError("Flight not found :" + infrastructureException.Message);
 
-            }
-            catch (AircraftAlreadyExistingOnDatabaseException infrastructureException)
-            {
+            //}
+            //catch (AircraftAlreadyExistingOnDatabaseException infrastructureException)
+            //{
 
-                returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
-                Trace.TraceError("Flight already existing :" + infrastructureException.Message);
+            //    returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
+            //    Trace.TraceError("Flight already existing :" + infrastructureException.Message);
 
-            }
+            //}
             catch (ArgumentNullException Exception)
             {
 

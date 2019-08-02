@@ -9,7 +9,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.UnitOfWorks
     public class UnitOfWorkBooking : Vueling.DBAccess.EF.DB.Infrastructure.UnitOfWorkBase, 
         Vueling.XXX.Library.InfrastructureContracts.IUnitOfWorkBooking
     {
-        public UnitOfWorkBooking(IXXXInfrastructureConfiguration _IXXXInfrastructureConfiguration)
+        public UnitOfWorkBooking(IInfrastructureConfiguration _IXXXInfrastructureConfiguration)
             : base(new BookingContext(_IXXXInfrastructureConfiguration))
         { }
 

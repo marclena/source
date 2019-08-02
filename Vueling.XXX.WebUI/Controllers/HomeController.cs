@@ -8,7 +8,7 @@ using Vueling.WebUI.Helpers;
 using Vueling.XXX.Contracts.DTO.ServiceLibrary;
 using Vueling.XXX.Contracts.ServiceLibrary;
 using Vueling.XXX.Contracts.ServiceLibrary.DTO;
-using Vueling.XXX.DB.Infrastructure.Exceptions;
+
 using Vueling.XXX.Library.Exceptions;
 using Vueling.XXX.WebUI.MapFactories.DataModelToApplicationDTO;
 using Vueling.XXX.WebUI.Models;
@@ -156,20 +156,20 @@ namespace Vueling.XXX.WebUI.Controllers
                     returned = BUSINESS_ERROR_MESSAGE_TO_CLIENT;
                 }
             }
-            catch (AircraftNotFoundOnDatabaseException infrastructureException)
-            {
+            //catch (AircraftNotFoundOnDatabaseException infrastructureException)
+            //{
 
-                returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
-                Trace.TraceError("Flight not found :" + infrastructureException.Message);
+            //    returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
+            //    Trace.TraceError("Flight not found :" + infrastructureException.Message);
 
-            }
-            catch (AircraftAlreadyExistingOnDatabaseException infrastructureException)
-            {
+            //}
+            //catch (AircraftAlreadyExistingOnDatabaseException infrastructureException)
+            //{
 
-                returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
-                Trace.TraceError("Flight already existing :" + infrastructureException.Message);
+            //    returned = APPLICATION_ERROR_MESSAGE_TO_CLIENT;
+            //    Trace.TraceError("Flight already existing :" + infrastructureException.Message);
 
-            }
+            //}
             catch (ArgumentNullException Exception)
             {
 

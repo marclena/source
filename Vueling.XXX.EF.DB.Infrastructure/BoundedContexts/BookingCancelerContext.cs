@@ -10,7 +10,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.BoundedContexts
             Database.SetInitializer<BookingCancelerContext>(null);
         }
 
-        public BookingCancelerContext(IXXXInfrastructureConfiguration _IXXXInfrastructureConfiguration)
+        public BookingCancelerContext(IInfrastructureConfiguration _IXXXInfrastructureConfiguration)
             : base(_IXXXInfrastructureConfiguration.DatabaseConnectionString)
         {
             this.Configuration.LazyLoadingEnabled = false;

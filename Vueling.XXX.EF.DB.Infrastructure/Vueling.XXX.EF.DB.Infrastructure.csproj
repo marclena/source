@@ -44,6 +44,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ATC.Taskling.Client.DIRegister.NetFramework, Version=2.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ATC.Taskling.Client.DIRegister.NetFramework.2.2.0.1\lib\net461\ATC.Taskling.Client.DIRegister.NetFramework.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net40\EntityFramework.dll</HintPath>
@@ -89,8 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoundedContexts\BookingCancelerContext.cs" />
-    <Compile Include="Configuration\IXXXInfrastructureConfiguration.cs" />
-    <Compile Include="Configuration\XXXInfrastructureConfiguration.cs" />
+    <Compile Include="Configuration\IInfrastructureConfiguration.cs" />
+    <Compile Include="Configuration\InfrastructureConfiguration.cs" />
     <Compile Include="Properties\NugetPackageGenerationAttribute.cs" />
     <Compile Include="Exceptions\ConfigurationInitializationException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

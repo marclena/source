@@ -82,8 +82,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AircraftMaintenanceApplicationService.cs" />
-    <Compile Include="Configuration\IXXXServiceLibraryConfiguration.cs" />
-    <Compile Include="Configuration\XXXServiceLibraryConfiguration.cs" />
+    <Compile Include="Configuration\IServiceLibraryConfiguration.cs" />
+    <Compile Include="Configuration\ServiceLibraryConfiguration.cs" />
     <Compile Include="Exceptions\ConfigurationInitializationException.cs" />
     <Compile Include="Exceptions\InvalidFlightDetailsException.cs" />
     <Compile Include="Implementations\BookingApplicationServices.cs" />

@@ -88,8 +88,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\IXXXLibraryConfiguration.cs" />
-    <Compile Include="Configuration\XXXLibraryConfiguration.cs" />
+    <Compile Include="Configuration\ILibraryConfiguration.cs" />
+    <Compile Include="Configuration\LibraryConfiguration.cs" />
     <Compile Include="DomainServicesContracts\IBookingCancelerDomainServices.cs" />
     <Compile Include="DomainServicesContracts\IBookingDomainServices.cs" />
     <Compile Include="DomainServicesContracts\IBookingFeaturesDomainServices.cs" />

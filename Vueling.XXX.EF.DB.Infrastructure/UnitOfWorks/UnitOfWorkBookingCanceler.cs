@@ -7,7 +7,7 @@ namespace Vueling.XXX.EF.DB.Infrastructure.UnitOfWorks
     [RegisterContextAttribute]
     public class UnitOfWorkBookingCanceler : Vueling.DBAccess.EF.DB.Infrastructure.UnitOfWorkBase, Vueling.XXX.Library.InfrastructureContracts.IUnitOfWorkBookingCanceler
     {
-        public UnitOfWorkBookingCanceler(IXXXInfrastructureConfiguration _IXXXInfrastructureConfiguration)
+        public UnitOfWorkBookingCanceler(IInfrastructureConfiguration _IXXXInfrastructureConfiguration)
             : base(new BookingCancelerContext(_IXXXInfrastructureConfiguration))
         {
 

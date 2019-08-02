@@ -75,8 +75,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\IXXXInfrastructureConfiguration.cs" />
-    <Compile Include="Configuration\XXXInfrastructureConfiguration.cs" />
+    <Compile Include="Configuration\IInfrastructureConfiguration.cs" />
+    <Compile Include="Configuration\InfrastructureConfiguration.cs" />
     <Compile Include="MapFactories\MapConceptualModelToDomain\FleetRepository\AircraftDbObjectToAircraftEntityFactory.cs" />
     <Compile Include="MapFactories\MapConceptualModelToDomain\FleetRepository\SeatDbObjectToSeatEntityFactory.cs" />
     <Compile Include="MapFactories\MapDomainToConceptualModel\FleetRepository\AircraftEntityToAircraftDbObjectFactory.cs" />

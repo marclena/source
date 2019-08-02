@@ -68,10 +68,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vueling.XXX.DB.Infrastructure\Vueling.XXX.DB.Infrastructure.csproj">
-      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
-      <Name>Vueling.XXX.DB.Infrastructure</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Vueling.XXX.Library\Vueling.XXX.Library.csproj">
       <Project>{8D48807F-7D49-4444-95D7-6453AF9C13DF}</Project>
       <Name>Vueling.XXX.Library</Name>
