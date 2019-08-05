@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssemblyExceptions>
+  <GenericExclusions>
+    <Assembly>System.Web.Mvc</Assembly>
+    <Assembly>Microsoft.VisualStudio.QualityTools.UnitTestFramework</Assembly>
+    <Assembly>Newtonsoft.Json.Net35</Assembly>
+  </GenericExclusions>
+  <Projects>
+    <Project Name="Vueling.Architecture.NDepend.Impl.ServiceLibrary" >
+      <Assembly>NDepend.API</Assembly>
+    </Project>
+    <Project Name="Vueling.Razor.ConsoleApplicationTest" >
+      <Assembly>System.Web.Razor</Assembly>
+      <Assembly>Xipton.Razor</Assembly>
+    </Project>
+    <Project Name="Vueling.Razor.Impl.ServiceLibrary" >
+      <Assembly>System.Web.Razor</Assembly>
+      <Assembly>Xipton.Razor</Assembly>
+    </Project>
+    <Project Name="Vueling.EmmitMapper.Impl.ServiceLibrary" >
+      <Assembly>EmitMapper</Assembly>
+    </Project>
+    <Project Name="Vueling.DeviceDescriptor.Impl.ServiceLibrary" >
+      <Assembly>Vueling.DeviceDescriptior.APIDDR.Library</Assembly>
+      <Assembly>Vueling.DeviceDescriptor.ODDR.Library</Assembly>
+    </Project>
+    <Project Name="Vueling.PDFReader.Impl.ServiceLibrary" >
+      <Assembly>itextsharp</Assembly>
+    </Project>
+    <Project Name="SkySales" >
+      <Assembly>Allotment.Contract</Assembly>
+      <Assembly>AOS.Common</Assembly>
+      <Assembly>AOS.Contract</Assembly>
+      <Assembly>Booking.Common</Assembly>
+      <Assembly>Booking.Contract</Assembly>
+      <Assembly>BSSJobAPI</Assembly>
+      <Assembly>ClientServices.Common</Assembly>
+      <Assembly>Common</Assembly>
+      <Assembly>Common.Contract</Assembly>
+      <Assembly>CommonServices.Booking</Assembly>
+      <Assembly>CommonServices.Common</Assembly>
+      <Assembly>CommonServices.Core</Assembly>
+      <Assembly>CommonServices.Finance</Assembly>
+      <Assembly>CommonServices.Itinerary</Assembly>
+      <Assembly>CommonServices.Operations</Assembly>
+      <Assembly>CommonServices.Person</Assembly>
+      <Assembly>CommonServices.Schedule</Assembly>
+      <Assembly>Data.DataAccess</Assembly>
+      <Assembly>DiffieHellman</Assembly>
+      <Assembly>Equipment.Contract</Assembly>
+      <Assembly>Equipment.Contract.Server</Assembly>
+      <Assembly>Equipment.Contract.Validation</Assembly>
+      <Assembly>ExternalMessage.Contract</Assembly>
+      <Assembly>ExternalMessage.SharedContract</Assembly>
+      <Assembly>Finance.Data.Contract</Assembly>
+      <Assembly>Fares.Common</Assembly>
+      <Assembly>Fares.Contract</Assembly>
+      <Assembly>Fares.Contract.ATPCO</Assembly>
+      <Assembly>FareRules.Contract</Assembly>
+      <Assembly>GovernmentSecurity.Contract</Assembly>
+      <Assembly>ICSharpCode.SharpZipLib</Assembly>
+      <Assembly>Messages.Agent</Assembly>
+      <Assembly>Messages.Allotment</Assembly>
+      <Assembly>Messages.Batch</Assembly>
+      <Assembly>Messages.Booking</Assembly>
+      <Assembly>Messages.CAPPS</Assembly>
+      <Assembly>Messages.Common</Assembly>
+      <Assembly>Messages.Core</Assembly>
+      <Assembly>Messages.Fare</Assembly>
+      <Assembly>Messages.Finance</Assembly>
+      <Assembly>Messages.Itinerary</Assembly>
+      <Assembly>Messages.Manifest</Assembly>
+      <Assembly>Messages.Operations</Assembly>
+      <Assembly>Messages.PaymentSystem</Assembly>
+      <Assembly>Messages.Person</Assembly>
+      <Assembly>Messages.Queue</Assembly>
+      <Assembly>Messages.Reports</Assembly>
+      <Assembly>Messages.Role</Assembly>
+      <Assembly>Messages.Security</Assembly>
+      <Assembly>Messages.Session</Assembly>
+      <Assembly>Microsoft.Practices.EnterpriseLibrary.Common</Assembly>
+      <Assembly>Microsoft.Practices.EnterpriseLibrary.Logging</Assembly>
+      <Assembly>Microsoft.Practices.ObjectBuilder</Assembly>
+      <Assembly>Microsoft.Web.RedisSessionStateProvider</Assembly>
+      <Assembly>Microsoft.Scripting.Core</Assembly>
+      <Assembly>Microsoft.Scripting.ExtensionAttribute</Assembly>
+      <Assembly>Microsoft.Web.Services3</Assembly>
+      <Assembly>Mvp.Xml</Assembly>
+      <Assembly>Navitaire.ESC.Common.BusinessServices.Messages.AirportOperations.Objects</Assembly>
+      <Assembly>Navitaire.ESC.Shared.Contract</Assembly>
+      <Assembly>Navitaire.Loyalty.Common</Assembly>
+      <Assembly>Navitaire.Loyalty.Responses</Assembly>
+      <Assembly>Navitaire.NCA.Collections</Assembly>
+      <Assembly>Navitaire.NCA.UI</Assembly>
+      <Assembly>Navitaire.Ncl</Assembly>
+      <Assembly>Navitaire.Ncl.ComponentModel</Assembly>
+      <Assembly>Navitaire.Ncl.Compression</Assembly>
+      <Assembly>Navitaire.Ncl.Data</Assembly>
+      <Assembly>Navitaire.Ncl.Diagnostics.Logging.EnterpriseLibrary</Assembly>
+      <Assembly>Navitaire.Ncl.Server.Wcf</Assembly>
+      <Assembly>Navitaire.Ncl.ServiceModel</Assembly>
+      <Assembly>Navitaire.Ncl.Serialization</Assembly>
+      <Assembly>Navitaire.Ncl.ValidationFramework</Assembly>
+      <Assembly>Navitaire.Ncs.Rules.Contract</Assembly>
+      <Assembly>Navitaire.Ncs.Security.Contract</Assembly>
+      <Assembly>Navitaire.Ncs.Security.ServiceModel</Assembly>
+      <Assembly>Navitaire.Ncui</Assembly>
+      <Assembly>Navitaire.Ncui.PresentationModel</Assembly>
+      <Assembly>Navitaire.Ncui.Web</Assembly>
+      <Assembly>Navitaire.Ncui.Web.PresentationModel</Assembly>
+      <Assembly>Navitaire.Ncui.WebRedirector</Assembly>
+      <Assembly>Org.Mentalis.Security</Assembly>
+      <Assembly>pdf417Web_20</Assembly>
+      <Assembly>pdf417_20</Assembly>
+      <Assembly>protobuf-net</Assembly>
+      <Assembly>Queue.Contract</Assembly>
+      <Assembly>Queue.Rules.Contract</Assembly>
+      <Assembly>RemotingServices.Interfaces.AgentManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.BatchManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.CAPPSManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.CoreManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.FareManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.FinanceManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.ListManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.OperationsManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.PersonManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.PrinterManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.QueueManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.ScheduleManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.SecurityManager</Assembly>
+      <Assembly>RemotingServices.Interfaces.SessionManager</Assembly>
+      <Assembly>Schedule.Contract</Assembly>
+      <Assembly>SecureBlackbox</Assembly>
+      <Assembly>StackExchange.Redis.StrongName</Assembly>
+      <Assembly>Subscription.Common</Assembly>
+      <Assembly>Subscription.Contract</Assembly>
+      <Assembly>Tamir.SharpSSH</Assembly>
+      <Assembly>UI.AddOn</Assembly>
+      <Assembly>UI.AddOn.Interoperation.Booking</Assembly>
+      <Assembly>UI.AddOn.Models</Assembly>
+      <Assembly>UI.AddOn.Models.Test</Assembly>
+      <Assembly>UI.Common</Assembly>
+      <Assembly>UI.Common.Fares</Assembly>
+      <Assembly>UI.Common.Fares.Controllers</Assembly>
+      <Assembly>UI.Common.Fares.Models</Assembly>
+      <Assembly>UI.Common.Rez</Assembly>
+      <Assembly>UI.Common.Rez.Contract</Assembly>
+      <Assembly>UI.Common.Rez.Controllers</Assembly>
+      <Assembly>UI.Common.Rez.Models</Assembly>
+      <Assembly>UI.Common.Rez.Notifications</Assembly>
+      <Assembly>UI.Common.Rez.Rules</Assembly>
+      <Assembly>UI.Common.Schedule</Assembly>
+      <Assembly>UI.Common.Schedule.Controllers</Assembly>
+      <Assembly>UI.Common.Schedule.Models</Assembly>
+      <Assembly>UI.Common.Services</Assembly>
+      <Assembly>UI.Common.Session</Assembly>
+      <Assembly>UI.Common.Session.Models</Assembly>
+      <Assembly>UI.Common.Utilities.Contract</Assembly>
+      <Assembly>UI.Common.Utilities.Controllers</Assembly>
+      <Assembly>UI.Common.Utilities.Models</Assembly>
+      <Assembly>UI.Common.Utilities.Notifications</Assembly>
+      <Assembly>UI.Common.ViewModels</Assembly>
+      <Assembly>UI.Common.Xml</Assembly>
+      <Assembly>UI.Equipment</Assembly>
+      <Assembly>UI.Equipment.Contract</Assembly>
+      <Assembly>UI.Equipment.Models</Assembly>
+      <Assembly>UI.Language</Assembly>
+      <Assembly>UI.Nca.Extensions</Assembly>
+      <Assembly>UI.Resources</Assembly>
+      <Assembly>UI.Resources.Contract</Assembly>
+      <Assembly>UI.Resources.Models</Assembly>
+      <Assembly>UI.Rez.Booking</Assembly>
+      <Assembly>UI.Web.AddOn.Payments</Assembly>
+      <Assembly>UI.Web.AddOn.Views</Assembly>
+      <Assembly>UI.Web.Common</Assembly>
+      <Assembly>UI.Web.Exceptions</Assembly>
+      <Assembly>UI.Web.Loyalty</Assembly>
+      <Assembly>UI.Web.Resources</Assembly>
+      <Assembly>UI.Web.Rez.Controls</Assembly>
+      <Assembly>UI.Web.Rez.Rules</Assembly>
+      <Assembly>UI.Web.Rez.Services</Assembly>
+      <Assembly>UI.Web.SkySales</Assembly>
+      <Assembly>UI.Web.SkySales.Equipment</Assembly>
+      <Assembly>UI.Web.TripPlanner</Assembly>
+      <Assembly>UI.Win.Common</Assembly>
+      <Assembly>SkySales.XmlSerializers</Assembly>
+      <Assembly>MarkdownDeep</Assembly>
+      <Assembly>Navitaire.Ncui.Win</Assembly>
+      <Assembly>Navitaire.Ncui.Win.PresentationModel</Assembly>
+      <Assembly>Navitaire.Tools.Web.PageStreamValidation</Assembly>
+      <Assembly>Navitaire.Nca.HttpSanitizer</Assembly>
+      <Assembly>Navitaire.Loyalty.Requests</Assembly>
+      <Assembly>Navitaire.ESC.GovernmentSecurity.Contract</Assembly>
+    </Project>
+    <Project Name="SkySales.ProxiesServices.ServiceLibrary">
+      <Assembly>Navitaire.Ncui</Assembly>
+      <Assembly>Navitaire.Ncui.PresentationModel</Assembly>
+    </Project>
+    <Project Name="SkySales.IntegrationTest" >
+    </Project>
+    <Project Name="SkySales.UnitTest" >
+      <Assembly>Booking.Common</Assembly>
+      <Assembly>Booking.Contract</Assembly>
+      <Assembly>BSSJobAPI</Assembly>
+      <Assembly>Common</Assembly>
+      <Assembly>Common.Contract</Assembly>
+      <Assembly>Fares.Common</Assembly>
+      <Assembly>Fares.Contract</Assembly>
+      <Assembly>Fares.Contract.ATPCO</Assembly>
+      <Assembly>FareRules.Contract</Assembly>
+      <Assembly>Messages.Agent</Assembly>
+      <Assembly>Messages.Common</Assembly>
+      <Assembly>Messages.Core</Assembly>
+      <Assembly>Messages.Finance</Assembly>
+      <Assembly>Messages.Person</Assembly>
+      <Assembly>Messages.Role</Assembly>
+      <Assembly>Messages.Session</Assembly>
+      <Assembly>Microsoft.Web.RedisSessionStateProvider</Assembly>
+      <Assembly>Navitaire.Ncl</Assembly>
+      <Assembly>Navitaire.Ncl.ComponentModel</Assembly>
+      <Assembly>Navitaire.Ncui</Assembly>
+      <Assembly>Navitaire.Ncui.PresentationModel</Assembly>
+      <Assembly>Navitaire.Ncui.Web</Assembly>
+      <Assembly>Navitaire.Ncui.Web.PresentationModel</Assembly>
+      <Assembly>RemotingServices.Interfaces.CoreManager</Assembly>
+      <Assembly>SecureBlackbox</Assembly>
+      <Assembly>StackExchange.Redis.StrongName</Assembly>
+      <Assembly>Subscription.Common</Assembly>
+      <Assembly>Subscription.Contract</Assembly>
+      <Assembly>UI.Common</Assembly>
+      <Assembly>UI.Common.Rez</Assembly>
+      <Assembly>UI.Common.Rez.Controllers</Assembly>
+      <Assembly>UI.Common.Rez.Models</Assembly>
+      <Assembly>UI.Common.Rez.Notifications</Assembly>
+      <Assembly>UI.Common.Rez.Rules</Assembly>
+      <Assembly>UI.Common.Services</Assembly>
+      <Assembly>UI.Web.Common</Assembly>
+      <Assembly>UI.Web.Rez.Controls</Assembly>
+      <Assembly>UI.Web.Rez.Rules</Assembly>
+    </Project>
+    <Project Name="Vueling.Remo.WindowsUI" >
+      <Assembly>Janus.Windows.ButtonBar.v2</Assembly>
+      <Assembly>Janus.Windows.CalendarCombo.v2</Assembly>
+      <Assembly>Janus.Windows.Common.v2</Assembly>
+      <Assembly>Janus.Windows.ExplorerBar.v2</Assembly>
+      <Assembly>Janus.Windows.GridEX.v2</Assembly>
+      <Assembly>Janus.Windows.Schedule.v2</Assembly>
+      <Assembly>Janus.Windows.TimeLine.v2</Assembly>
+      <Assembly>Janus.Windows.UI.v2</Assembly>
+      <Assembly>Janus.Windows.ButtonBar.v4</Assembly>
+      <Assembly>Janus.Windows.CalendarCombo.v4</Assembly>
+      <Assembly>Janus.Windows.Common.v4</Assembly>
+      <Assembly>Janus.Windows.ExplorerBar.v4</Assembly>
+      <Assembly>Janus.Windows.GridEX.v4</Assembly>
+      <Assembly>Janus.Windows.Schedule.v4</Assembly>
+      <Assembly>Janus.Windows.TimeLine.v4</Assembly>
+      <Assembly>Janus.Windows.UI.v4</Assembly>
+      <Assembly>Janus.Data.v4</Assembly>
+      <Assembly>Vueling.Configuration.Library</Assembly>
+      <Assembly>Vueling.Extensions.Library</Assembly>
+    </Project>
+    <Project Name="Vueling.Phoenix.Remo.WindowsUI" >
+      <Assembly>Janus.Windows.ButtonBar.v2</Assembly>
+      <Assembly>Janus.Windows.CalendarCombo.v2</Assembly>
+      <Assembly>Janus.Windows.Common.v2</Assembly>
+      <Assembly>Janus.Windows.ExplorerBar.v2</Assembly>
+      <Assembly>Janus.Windows.GridEX.v2</Assembly>
+      <Assembly>Janus.Windows.Schedule.v2</Assembly>
+      <Assembly>Janus.Windows.TimeLine.v2</Assembly>
+      <Assembly>Janus.Windows.UI.v2</Assembly>
+      <Assembly>Janus.Windows.ButtonBar.v4</Assembly>
+      <Assembly>Janus.Windows.CalendarCombo.v4</Assembly>
+      <Assembly>Janus.Windows.Common.v4</Assembly>
+      <Assembly>Janus.Windows.ExplorerBar.v4</Assembly>
+      <Assembly>Janus.Windows.GridEX.v4</Assembly>
+      <Assembly>Janus.Windows.Schedule.v4</Assembly>
+      <Assembly>Janus.Windows.TimeLine.v4</Assembly>
+      <Assembly>Janus.Windows.UI.v4</Assembly>
+      <Assembly>Janus.Data.v4</Assembly>
+      <Assembly>Vueling.Configuration.Library</Assembly>
+      <Assembly>Vueling.Extensions.Library</Assembly>
+    </Project>
+    <Project Name="Vueling.SAR.WebUI" >
+      <Assembly>Microsoft.Web.UI.WebControls</Assembly>
+      <Assembly>Vueling.Library.net</Assembly>
+    </Project>
+    <Project Name="Vueling.BolsaTrabajo.WebUI">
+      <Assembly>itextsharp</Assembly>
+    </Project>
+    <Project Name="Vueling.Bonus.WebUI">
+      <Assembly>System.Web.Razor</Assembly>
+    </Project>
+    <Project Name="Vueling.ServiceBus.Library">
+      <Assembly>Rhino.ServiceBus</Assembly>
+      <Assembly>Rhino.ServiceBus.Autofac</Assembly>
+    </Project>
+    <Project Name="SkySales.WorkBenchBackup.Service.IntegrationTest">
+      <Assembly>KellermanSoftware.Compare-NET-Objects</Assembly>
+    </Project>
+    <Project Name="SkySales.WorkBenchBackup.Service.UnitTest">
+      <Assembly>KellermanSoftware.Compare-NET-Objects</Assembly>
+    </Project>
+    <Project Name="Vueling.TCNFiles.Library">
+      <Assembly>DiffieHellman</Assembly>
+      <Assembly>Org.Mentalis.Security</Assembly>
+      <Assembly>Tamir.SharpSSH</Assembly>
+    </Project>
+    <Project Name="Vueling.TCNFiles.Library.UnitTest">
+      <Assembly>DiffieHellman</Assembly>
+      <Assembly>Org.Mentalis.Security</Assembly>
+      <Assembly>Tamir.SharpSSH</Assembly>
+    </Project>
+    <Project Name="Vueling.TCNFiles.Infrastructure">
+      <Assembly>Tamir.SharpSSH</Assembly>
+    </Project>
+    <Project Name="Vueling.TfsOperations.Impl.ServiceLibrary">
+      <Assembly>Microsoft.QualityTools.Testing.Fakes</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common.Library</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Deployment.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Diff</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Discussion.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestManagement.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestManagement.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common.Integration</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Proxy</Assembly>
+      <Assembly>Microsoft.VisualStudio.DebuggerVisualizers</Assembly>
+      <Assembly>Microsoft.VisualStudio.QualityTools.Common</Assembly>
+      <Assembly>Microsoft.VisualStudio.QualityTools.ExecutionCommon</Assembly>
+      <Assembly>Microsoft.VisualStudio.QualityTools.UnitTestFramework</Assembly>
+    </Project>
+    <Project Name="Vueling.TfsOperations.Contracts.ServiceLibrary">
+      <Assembly>Microsoft.QualityTools.Testing.Fakes</Assembly>
+      <Assembly>Microsoft.TeamFoundation</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client</Assembly>
+    </Project>
+    <Project Name="Vueling.TfsOperations.BuildDefinition.Impl.ServiceLibrary">
+      <Assembly>Microsoft.TeamFoundation</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+    </Project>
+    <Project Name="Vueling.Authorization.WebUI">
+      <Assembly>Autofac</Assembly>
+      <Assembly>MvcContrib</Assembly>
+      <Assembly>Autofac.Integration.Web</Assembly>
+      <Assembly>MvcContrib.FluentHtml</Assembly>
+    </Project>
+    <Project Name="Vueling.Activities.Impl.ServiceLibrary">
+      <Assembly>SqlCodeGuard.API</Assembly>
+    </Project>
+    <Project Name="Activities">
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common</Assembly>
+      <Assembly>Quartz</Assembly>
+      <Assembly>System.Management.Automation</Assembly>
+      <Assembly>WebDeploy.Manager.Messages</Assembly>
+      <Assembly>ASMTools.Libraries.AddInHost.Client</Assembly>
+      <Assembly>ASMTools.Libraries.AddInHost.Messages</Assembly>
+      <Assembly>ASMTools.Libraries.Utilities.FileUtils2</Assembly>
+      <Assembly>WebDeploy.Manager.Client</Assembly>
+      <Assembly>WebDeploy.Manager.GUI.Main</Assembly>
+      <Assembly>AjaxMin</Assembly>
+    </Project>
+    <Project Name="Template">
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestImpact.BuildIntegration</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestImpact.Client</Assembly>
+      <Assembly>System.Management.Automation</Assembly>
+    </Project>
+    <Project Name="CodeMetricsConsole">
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+    </Project>
+    <Project Name="CodeCoverageConsole">
+      <Assembly>Microsoft.VisualStudio.Coverage.Analysis</Assembly>
+    </Project>
+    <Project Name="Vueling.Build.CodeCoverage.ConsoleUI">
+      <Assembly>Microsoft.VisualStudio.Coverage.Analysis</Assembly>
+    </Project>
+    <Project Name="Vueling.Build.WebUI">
+      <Assembly>Microsoft.Web.Administration</Assembly>
+    </Project>
+    <Project Name="Vueling.Build.BO.Contracts.ServiceLibrary">
+      <Assembly>Microsoft.Web.Administration</Assembly>
+    </Project>
+    <Project Name="TFSBuildExtensions.Library">
+      <Assembly>Microsoft.VisualStudio.Coverage.Analysis</Assembly>
+    </Project>
+    <Project Name="Activities.IntegrationTest">
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>System.Management.Automation</Assembly>
+    </Project>
+    <Project Name="Vueling.Scheduler">
+      <Assembly>Quartz</Assembly>
+      <Assembly>Common.Logging</Assembly>
+    </Project>
+    <Project Name="Vueling.Scheduler.WindowsService">
+      <Assembly>Quartz</Assembly>
+      <Assembly>Common.Logging</Assembly>
+    </Project>
+    <Project Name="Vueling.Library.Jobs">
+      <Assembly>Quartz</Assembly>
+      <Assembly>Common.Logging</Assembly>
+    </Project>
+    <Project Name="Vueling.Cryptography.Impl.ServiceLibrary">
+      <Assembly>BouncyCastle.Crypto</Assembly>
+    </Project>
+    <Project Name="Vueling.Cryptography.Avios.Impl.ServiceLibrary">
+      <Assembly>BouncyCastle.Crypto</Assembly>
+    </Project>
+    <Project Name="Vueling.AviosMigration.ConsoleUI">
+      <Assembly>BouncyCastle.Crypto</Assembly>
+    </Project>
+    <Project Name="Vueling.SharePoint.Infrastructure">
+      <Assembly>Microsoft.BusinessData</Assembly>
+      <Assembly>Microsoft.Office.SecureStoreService</Assembly>
+      <Assembly>Microsoft.Office.SecureStoreService.Server.Security</Assembly>
+      <Assembly>Microsoft.Office.Server</Assembly>
+      <Assembly>Microsoft.Office.Server.UserProfiles</Assembly>
+      <Assembly>Microsoft.SharePoint</Assembly>
+      <Assembly>Microsoft.SharePoint.IdentityModel</Assembly>
+      <Assembly>Microsoft.SharePoint.WorkflowServices.Activities</Assembly>
+      <Assembly>Microsoft.SharePoint.WorkflowServicesBase</Assembly>
+    </Project>
+    <Project Name="Vueling.PDF.Reader.Impl.ServiceLibrary">
+      <Assembly>itextsharp</Assembly>
+    </Project>
+    <Project Name="Vueling.PDF.Snapshot.Impl.ServiceLibrary">
+      <Assembly>PDFLibNet</Assembly>
+    </Project>
+    <Project Name="Vueling.SharePoint.Client.Infrastructure">
+      <Assembly>Microsoft.SharePoint.Client</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.Runtime</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.Taxonomy</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.WorkflowServices</Assembly>
+      <Assembly>Microsoft.SharePoint.IdentityModel</Assembly>
+    </Project>
+    <Project Name="Vueling.SharePoint.Client.ServiceLibrary">
+      <Assembly>Microsoft.BusinessData</Assembly>
+      <Assembly>Microsoft.Office.SecureStoreService</Assembly>
+      <Assembly>Microsoft.Office.SecureStoreService.Server.Security</Assembly>
+      <Assembly>Microsoft.Office.Server</Assembly>
+      <Assembly>Microsoft.Office.Server.UserProfiles</Assembly>
+      <Assembly>Microsoft.SharePoint</Assembly>
+      <Assembly>Microsoft.SharePoint.IdentityModel</Assembly>
+      <Assembly>Microsoft.SharePoint.WorkflowServices.Activities</Assembly>
+      <Assembly>Microsoft.SharePoint.WorkflowServicesBase</Assembly>
+      <Assembly>Microsoft.SharePoint.Client</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.Runtime</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.Taxonomy</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.WorkflowServices</Assembly>
+    </Project>
+    <Project Name="Vueling.BulkEditBuildDefintion.ConsoleUI">
+      <Assembly>TFSBuildExtensions</Assembly>
+    </Project>
+    <Project Name="Vueling.SkySpeed.Desktop">
+      <Assembly>UI.Win.SkySpeed</Assembly>
+    </Project>
+    <Project Name ="Vueling.SkySpeed.WCF.WebService">
+      <Assembly>Emailage.NET.4.5.1.Wrapper</Assembly>
+    </Project>
+    <Project Name="Vueling.CodeAnalysis">
+      <Assembly>FxCopSdk</Assembly>
+      <Assembly>Microsoft.Cci</Assembly>
+      <Assembly>Microsoft.VisualStudio.CodeAnalysis</Assembly>
+    </Project>
+    <Project Name="Vueling.Network.Impl.ServiceLibrary">
+      <Assembly>DynamicLinQ</Assembly>
+    </Project>
+    <Project Name="Vueling.Network.BTypeMessages.Impl.ServiceLibrary">
+      <Assembly>DynamicLinQ</Assembly>
+    </Project>
+    <Project Name="Vueling.RazorToPDF.Impl.ServiceLibrary">
+      <Assembly>RazorEngine</Assembly>
+      <Assembly>TuesPechkin</Assembly>
+      <Assembly>TuesPechkin.Wkhtmltox.Win32</Assembly>
+      <Assembly>TuesPechkin.Wkhtmltox.Win64</Assembly>
+      <Assembly>System.Web.Razor</Assembly>
+      <Assembly>wkhtmltox</Assembly>
+      <Assembly>libgcc_s_sjlj-1</Assembly>
+      <Assembly>libstdc++-6</Assembly>
+      <Assembly>libwinpthread-1</Assembly>
+    </Project>
+    <Project Name ="Vueling.Emailage.Impl.ServiceLibrary">
+      <Assembly>Emailage.NET.4.5.1.Wrapper</Assembly>
+    </Project>
+    <Project Name="Vueling.SFTPClient.WinScp.Impl.ServiceLibrary">
+      <Assembly>WinSCPnet</Assembly>
+    </Project>
+    <Project Name="Vueling.WorkflowsRRHH.Impl.ServiceLibrary">
+      <Assembly>Microsoft.SharePoint.Client</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.Runtime</Assembly>
+      <Assembly>Microsoft.SharePoint.Client.UserProfiles</Assembly>
+    </Project>
+    <Project Name="Vueling.ObjectMapper.Impl.ServiceLibrary">
+      <Assembly>Mapster</Assembly>
+    </Project>
+    <Project Name="Vueling.Redis.Impl.ServiceLibrary">
+      <Assembly>StackExchange.Redis</Assembly>
+    </Project>
+    <Project Name="Vueling.Markdown.Library">
+      <Assembly>MarkdownDeep</Assembly>
+    </Project>
+    <Project Name="Vueling.Templates.Template">
+      <Assembly>microsoft.visualstudio.shell</Assembly>
+      <Assembly>microsoft.visualstudio.shell.immutable</Assembly>
+      <Assembly>microsoft.visualstudio.shell.interop</Assembly>
+      <Assembly>microsoft.visualstudio.textmanager.interop</Assembly>
+    </Project>
+    <Project Name="Vueling.Observability.ES.Infrastructure">
+      <Assembly>Elasticsearch.Net</Assembly>
+      <Assembly>Nest</Assembly>
+      <Assembly>Newtonsoft.Json</Assembly>
+    </Project>
+    <Project Name="Vueling.Observability.MessageConsumer.WindowsService">
+      <Assembly>Newtonsoft.Json</Assembly>
+    </Project>
+    <Project Name="Vueling.Observability.Source.Contracts.ServiceLibrary">
+      <Assembly>Newtonsoft.Json</Assembly>
+    </Project>
+    <Project Name="Vueling.Observability.Source.Impl.ServiceLibrary">
+      <Assembly>Newtonsoft.Json</Assembly>
+    </Project>
+    <Project Name="Vueling.Observability.WebUI">
+      <Assembly>Newtonsoft.Json</Assembly>
+    </Project>
+    <Project Name="Vueling.AppRequests.TFS.Infrastructure">
+      <Assembly>Microsoft.TeamFoundation</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client</Assembly>
+    </Project>
+    <Project Name="Vueling.ServiceManagement.Impl.ServiceLibrary">
+      <Assembly>System.Management.Automation</Assembly>
+    </Project>
+    <Project Name="Vueling.ServiceManagement.Contracts.ServiceLibrary">
+      <Assembly>System.Management.Automation</Assembly>
+    </Project>
+    <Project Name="Vueling.Jira.TFS.Infrastructure">
+      <Assembly>Microsoft.TeamFoundation</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Workflow</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common</Assembly>
+    </Project>
+    <Project Name="Vueling.Jira.VSTS.Infrastructure">
+      <Assembly>Microsoft.IdentityModel.Clients.ActiveDirectory.dll</Assembly>
+      <Assembly>Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll</Assembly>
+      <Assembly>Microsoft.ServiceBus.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Build2.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Chat.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Core.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Dashboards.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.DeleteTeamProject.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Diff.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Discussion.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Git.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Lab.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Lab.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Lab.TestIntegration.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Lab.WorkflowIntegration.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Policy.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.ProjectManagement.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.SharePointReporting.Integration.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.SourceControl.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Test.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestImpact.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestManagement.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestManagement.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.TestManagement.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.VersionControl.Common.Integration.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.Work.WebApi.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client.DataStoreLoader.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Client.QueryLanguage.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Common.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.Proxy.dll</Assembly>
+      <Assembly>Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</Assembly>
+      <Assembly>Microsoft.VisualStudio.Services.Client.Interactive.dll</Assembly>
+      <Assembly>Microsoft.VisualStudio.Services.Common.dll</Assembly>
+      <Assembly>Microsoft.VisualStudio.Services.WebApi.dll</Assembly>
+      <Assembly>System.Net.Http.dll</Assembly>
+      <Assembly>System.Net.Http.Extensions.dll</Assembly>
+      <Assembly>System.Net.Http.Formatting.dll</Assembly>
+      <Assembly>System.Net.Http.Primitives.dll</Assembly>
+      <Assembly>System.Net.Http.WebRequest.dll</Assembly>
+      <Assembly>System.Threading.Tasks.Dataflow.dll</Assembly>
+      <Assembly>System.Web.Http.dll</Assembly>
+    </Project>
+  </Projects>
+</AssemblyExceptions>

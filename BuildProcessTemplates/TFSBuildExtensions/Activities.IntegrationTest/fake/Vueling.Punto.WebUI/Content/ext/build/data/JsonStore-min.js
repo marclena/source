@@ -1,0 +1,1 @@
+Ext.data.JsonStore=function(n){Ext.data.JsonStore.superclass.constructor.call(this,Ext.apply(n,{proxy:n.data?undefined:new Ext.data.HttpProxy({url:n.url}),reader:new Ext.data.JsonReader(n,n.fields)}))};Ext.extend(Ext.data.JsonStore,Ext.data.Store)

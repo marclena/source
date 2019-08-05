@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Name>Vueling.TfsOperations.INT.64</Name>
+  <TeamProject>Vueling</TeamProject>
+  <TeamProjectCollectionUri>http://wbcnvuetfs:8080/tfs/vueling</TeamProjectCollectionUri>
+  <Description />
+  <QueueStatus>Enabled</QueueStatus>
+  <ContinuousIntegrationType>Gated</ContinuousIntegrationType>
+  <ContinuousIntegrationQuietPeriod>0</ContinuousIntegrationQuietPeriod>
+  <BuildController>Controller1</BuildController>
+  <DefaultDropLocation>\\WBCNVUEBLD\Drops</DefaultDropLocation>
+  <Process>51</Process>
+  <ProcessParameters>&lt;Dictionary x:TypeArguments="x:String, x:Object" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:mtbw="clr-namespace:Microsoft.TeamFoundation.Build.Workflow;assembly=Microsoft.TeamFoundation.Build.Workflow" xmlns:mtbwa="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;mtbwa:BuildSettings x:Key="BuildSettings" ProjectsToBuild="$/Vueling/Vueling.TfsOperations/INT/Vueling.TfsOperations.sln"&gt;
+    &lt;mtbwa:BuildSettings.PlatformConfigurations&gt;
+      &lt;mtbwa:PlatformConfigurationList Capacity="4"&gt;
+        &lt;mtbwa:PlatformConfiguration Configuration="Release" Platform="Any CPU" /&gt;
+      &lt;/mtbwa:PlatformConfigurationList&gt;
+    &lt;/mtbwa:BuildSettings.PlatformConfigurations&gt;
+  &lt;/mtbwa:BuildSettings&gt;
+  &lt;mtbwa:TestSpecList x:Key="TestSpecs" Capacity="1"&gt;
+    &lt;mtbwa:TestAssemblySpec AssemblyFileSpec="*UnitTest.dll" CategoryFilter="" MSTestCommandLineArgs="" TestSettingsFileName="" /&gt;
+  &lt;/mtbwa:TestSpecList&gt;
+  &lt;x:Boolean x:Key="CreateWorkItem"&gt;False&lt;/x:Boolean&gt;
+  &lt;mtbw:BuildVerbosity x:Key="Verbosity"&gt;Detailed&lt;/mtbw:BuildVerbosity&gt;
+  &lt;x:String x:Key="ServersToDeploy"&gt;int64,int264&lt;/x:String&gt;
+  &lt;x:String x:Key="Environment"&gt;INT&lt;/x:String&gt;
+&lt;/Dictionary&gt;</ProcessParameters>
+  <Schedules />
+  <Mappings>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\antScripts</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/antScripts</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\MetaConfig</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/MetaConfig</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\NuGet</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/NuGet</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\NugetVersionChecker</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/NugetVersionChecker</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\PsTools</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/PsTools</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TeamBuildTempAutoSetupApplication</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TeamBuildTempAutoSetupApplication</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TeamBuildValidateEnvironmentApplication</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TeamBuildValidateEnvironmentApplication</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TFSBuildExtensions\SupportFiles</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TFSBuildExtensions/SupportFiles</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\VSDBCMDTemp</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/VSDBCMDTemp</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/Vueling.TfsOperations/INT</ServerItem>
+    </Mapping>
+  </Mappings>
+  <RetentionPloicyList>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+  </RetentionPloicyList>
+</Root>

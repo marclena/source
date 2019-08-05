@@ -1,0 +1,192 @@
+[
+    {
+        "library": "AutoMapper",
+        "version": "3.3.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.PaxNotifications.Library" ]
+    },
+    {
+        "library": "ClientDependency",
+        "version": "1.9.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "ClientDependency-Mvc5",
+        "version": "1.8.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Examine",
+        "version": "0.1.82",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "HtmlAgilityPack",
+        "version": "1.4.9",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "ImageProcessor",
+        "version": "2.5.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "ImageProcessor.Web",
+        "version": "4.8.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "ImageProcessor.Web.Config",
+        "version": "2.3.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Lucene.Net",
+        "version": "2.9.4.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Markdown",
+        "version": "1.14.7",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Microsoft.AspNet.Identity.Core",
+        "version": "2.2.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Microsoft.AspNet.Identity.Owin",
+        "version": "2.2.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.AspNet.WebApi",
+        "version": "5.2.3",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.CodeAnalysis.Analyzers",
+        "version": "1.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Microsoft.CodeAnalysis.Common",
+        "version": "1.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Microsoft.CodeAnalysis.CSharp",
+        "version": "1.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Microsoft.IO.RecyclableMemoryStream",
+        "version": "1.2.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Microsoft.Owin",
+        "version": "3.0.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.Owin.Host.SystemWeb",
+        "version": "3.0.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.Owin.Security",
+        "version": "3.0.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.Owin.Security",
+        "version": "3.0.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Microsoft.Owin.Security.Cookies",
+        "version": "3.0.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "MiniProfiler",
+        "version": "2.1.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "semver",
+        "version": "1.1.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "System.Collections.Immutable",
+        "version": "1.1.36",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "System.Reflection.Metadata",
+        "version": "1.0.21",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Umbraco.ModelsBuilder",
+        "version": "3.0.7",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "Umbraco.ModelsBuilder.Api",
+        "version": "3.0.6",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "UmbracoCms",
+        "version": "7.5.13",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "UmbracoCms.Core",
+        "version": "7.5.13",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", " Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "UrlRewritingNet",
+        "version": "2.0.7",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "xmlrpcnet",
+        "version": "2.5.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "log4net",
+        "version": "2.0.0",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "lecoati.leblender",
+        "version": "1.0.8.4",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI" ]
+    },
+    {
+        "library": "archetype",
+        "version": "1.13.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "archetype.binaries",
+        "version": "1.13.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7.DB.Infrastructure" ]
+    },
+    {
+        "library": "Autofac",
+        "version": "4.6.1",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7Api.WebAPI" ]
+    },
+    {
+        "library": "Autofac.Mvc5",
+        "version": "4.0.2",
+        "allowedApplications": [ "Vueling.Blog.WebUI", "Vueling.Corporative7.WebUI", "Vueling.Corporative7Api.WebAPI" ]
+    }
+]

@@ -1,0 +1,1 @@
+Ext.util.DelayedTask=function(n,t,i){var r=null,u,f,e=function(){var e=(new Date).getTime();e-f>=u&&(clearInterval(r),r=null,n.apply(t,i||[]))};this.delay=function(o,s,h,c){r&&o!=u&&this.cancel();u=o;f=(new Date).getTime();n=s||n;t=h||t;i=c||i;r||(r=setInterval(e,u))};this.cancel=function(){r&&(clearInterval(r),r=null)}}

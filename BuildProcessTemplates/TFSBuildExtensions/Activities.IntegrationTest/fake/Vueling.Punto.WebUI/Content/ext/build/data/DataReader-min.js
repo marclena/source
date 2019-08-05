@@ -1,0 +1,1 @@
+Ext.data.DataReader=function(n,t){this.meta=n;this.recordType=t instanceof Array?Ext.data.Record.create(t):t};Ext.data.DataReader.prototype={}

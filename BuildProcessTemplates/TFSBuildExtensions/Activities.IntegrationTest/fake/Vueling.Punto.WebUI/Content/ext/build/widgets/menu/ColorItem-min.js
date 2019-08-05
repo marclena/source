@@ -1,0 +1,1 @@
+Ext.menu.ColorItem=function(n){if(Ext.menu.ColorItem.superclass.constructor.call(this,new Ext.ColorPalette(n),n),this.palette=this.component,this.relayEvents(this.palette,["select"]),this.selectHandler)this.on("select",this.selectHandler,this.scope)};Ext.extend(Ext.menu.ColorItem,Ext.menu.Adapter)

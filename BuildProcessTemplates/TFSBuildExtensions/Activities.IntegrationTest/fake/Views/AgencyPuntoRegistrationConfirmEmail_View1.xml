@@ -1,0 +1,175 @@
+﻿<culture skin="Default" culture="es-ES" version="0.0.1">
+  <label id="alreadyActiveMhead"><![CDATA[L'usuari Punto ja s'ha confirmat prèviament]]></label>
+  <label id="forgotPassword" text="Si has oblidat la teva contrasenya, fes clic a l'enllaç següent per tal de recuperar-la:" />
+  <label id="findPassword" text="No recordo la contrasenya" />
+
+  <label id="mhead"><![CDATA[Confirmació del registre de myvueling i Punto]]></label>
+  <label id="successMhead"><![CDATA[Usuari confirmat amb èxit!]]></label>
+
+  <label id="succesfulConfirmationPuntoLogin">
+    <![CDATA[Ja pots accedir al teu compte. Entra a <a href="javascript:" class="goToLoginPunto">Punto</a>]]>
+  </label>
+
+  <label id="hiMessage" text="Hola" />
+  <label id="confirmMessage" text=", per confirmar el teu compte myvueling i Punto, has d'introduir una contrasenya i acceptar les condicions legals." />
+
+  <label id="password" text="Contrasenya:"/>
+  <input id="textBoxPassword" type="password" vuelingCustomDataAssociated="Password" class="typeText" required="true" requiredError="Has d'introduir una contrasenya." regex="^.{8,32}$" regexError="La contrasenya ha de tenir entre 8 i 32 caràcters." hint="(mín. 8 dígits)" />
+
+  <label id="repeatPassword" text="Repeteix la contrasenya:"/>
+  <input id="textBoxRepeatPassword" type="password" vuelingCustomDataAssociated="RepeatPassword" class="typeText" required="true" requiredError="Has de confirmar la contrasenya." equalsInputError="Torna a escriure les contrasenyes, ja que no coincideixen." />
+
+  <input type="checkbox" id="newsletter" vuelingCustomDataAssociated="Newsletter" />
+  <input type="checkbox" id="agreement" vuelingCustomDataAssociated="Agreement" required="true" requiredError="Has d'acceptar les Condicions legals de myvueling i Punto."/>
+
+  
+  <label id="LegalConditionsPopUpHeader" text="Condicions legals de myvueling i Punto" />
+  <label id="PromoConditionsPopUpHeader" text="Condicions de subscripció a ofertes i promocions" />
+  <label id="LegalConditions" requiredError="Has d'acceptar les Condicions legals de myvueling i Punto"><![CDATA[He llegit, he entès i accepto les <a id="legalConditionsLink" href="#">condicions legals de myvueling i Punto</a>]]></label>
+  <label id="PromoConditions"><![CDATA[Vull ser el primer en assabentar-me de les ofertes i notícies de Vueling (<a id="promoConditionsLink" href="#">Consulta les condicions</a>)]]></label>
+
+  <ul id="textoCondiciones">
+    <li>
+      <p>
+        Pel fet d'emplenar el present formulari, ens autoritzes a incloure les teves dades en un fitxer responsabilitat de VUELING AIRLINES, S.A. amb la finalitat d'enviar-te informació i publicitat, fins i tot per mitjans electrònics, sobre els nostres productes, serveis, promocions i altra informació que pugui interessar-te.
+      </p>
+      <p>
+        De la mateixa manera, pel fet d'emplenar el present formulari, ens autoritzes a enviar-te, fins i tot per mitjans electrònics, informació i publicitat sobre els nostres productes i serveis d'altres sectors d'activitat relacionats amb els nostres productes i serveis propis, en particular sobre els sectors següents: finances, assegurances, lloguer i venda de vehicles, hotels, agències de viatges, operadors turístics, restauració, turisme, esports i oci relacionats amb el transport aeri. La present autorització per cessió de dades als únics efectes indicats en el paràgraf anterior és vàlida només per tal que les empreses que pertanyen als sectors esmentats puguin beneficiar-se de les nostres bases de dades per a l'enviament de la seva pròpia informació promocional, però en cap circumstància les teves dades es lliuraran o facilitaran a cap altra empresa, i sempre quedaran sota el control de VUELING AIRLINES, S.A.
+      </p>
+      <p>
+        T'informem que a VUELING estem a la teva disposició en el cas que decideixis exercir els teus drets d'accés, rectificació i, si et vols donar de baixa, cancel·lació de les teves dades de caràcter personal mitjançant una sol·licitud per escrit que hauràs d'enviar a l'atenció del departament Jurídic de VUELING AIRLINES, S.A. amb domicili social al Parc de Negocis Mas Blau II, carrer Pla de l'Estany, núm. 5, 08820 El Prat del Llobregat (Barcelona).
+      </p>
+    </li>
+  </ul>
+  <ul id="textoLegalmyvy">
+    <li>
+      <p>
+        <b>CONDICIONS GENERALS DE L'ÀREA PRIVADA MYVUELING</b>
+      </p>
+      <br/>
+    </li>
+    <li>
+      <p>“Myvueling” és l'àrea privada a través de la qual Vueling Airlines, S.A. (d'ara endavant «Vueling») presta els serveis següents als seus clients: (i) la recuperació automàtica de les dades personals en les operacions de compra de productes i serveis a través de la pàgina web, www.vueling.com, (ii) la consulta de l'historial o extractes de les esmentades operacions de compra, (iii) l'enviament d'informació comercial dels productes i serveis oferts per Vueling a la seva pàgina web, www.vueling.com, (iv) l'accés gratuït al programa de fidelització de l'empresa anomenat “Punto”, que permet de manera voluntària obtenir i bescanviar punts per serveis i productes que ofereix el programa Punto en les condicions estipulades en les presents Condicions de l'àrea privada Myvueling i Condicions operatives del programa Punto, i (v) també ofereix la possibilitat, en determinades condicions i supòsits, obtenir “Avios” corresponents al programa ”Iberia Plus” pels vols de Vueling comprats a través de la pàgina web www.vueling.com i que es comprin amb les tarifes “Optima” i “Excellence” de Vueling, sempre i quan el titular de la targeta Iberia Plus s'identifiqui com a tal en el moment de fer la reserva.</p>
+      <li>
+        <span></span>
+        <p>
+          <b>1. Definicions</b><br/><br/>
+          Per tal de facilitar-te la lectura, a continuació et mostren la definició dels termes, en majúscules i en ordre alfabètic, inclosos en el present Document:
+          <br/><br/>
+          CANALS DE COMUNICACIÓ: són els mitjans que cada membre de l'àrea privada MYVUELING té a la seva disposició per posar-se en contacte amb Vueling. En particular, s'inclouen aquests mitjans: (i) l'entorn web de MYVUELING, després d'haver introduït correctament les claus d'accés (el "Canal online"), i (ii) el telèfon d'atenció al client.
+          <br/><br/>
+          CONDICIONS DE MYVUELING: és el conjunt de normes bàsiques indicades en el present Document establertes per Vueling per tal de regular l'àrea privada myvueling.
+          <br/><br/>
+          MEMBRE MYVUELING: és la persona que, de conformitat amb les presents Condicions de l'àrea privada myvueling, s'ha registrat correctament a l'esmentada àrea privada, la qual cosa implica l'acceptació expressa de les presents Condicions.
+        </p>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>2. Participació a myvueling</b>
+          <br/><br/>
+          Per formar part de l'àrea privada myvueling has de tenir en compte els requisits i condicions següents:<br/><br/>
+          i. Els Membres de myvueling es comprometen expressament a proporcionar dades veraces, exactes i actualitzades. En el cas que Vueling detecti una aportació de dades que no respecten aquesta obligació podrà donar de baixa el Membre en qüestió, llevat que el Membre acrediti degudament el compliment de les esmentades condicions.<br/><br/>
+          ii. Quan el Membre de myvueling faciliti dades personals de tercers, haurà de comptar amb el consentiment exprés i per escrit d'aquestes persones per tal de poder consignar les seves dades en el perfil del Membre a l'àrea privada myvueling. De la mateixa manera, en el cas de facilitar dades de menors de 14 anys, haurà de comptar amb el consentiment del representant legal del menor de la mateixa manera descrita abans. En conseqüència, Vueling podrà sol·licitar en qualsevol moment al Membre acreditat l'obtenció del susdit consentiment, de manera que si el Membre no aporta proves suficients, Vueling donarà de baixa, previ bloqueig de les seves dades, el Membre de l'àrea privada myvueling, sense perjudici de la reclamació dels danys i perjudicis que es derivin d'aquest incompliment.<br/><br/>
+          iii. El Membre de myvueling haurà d'emplenar correctament la sol·licitud d'adhesió al Programa myvueling que figura a la pàgina web www.vueling.com, acceptant les presents Condicions de myvueling. Les dades personals que el Membre proporcioni en el marc del desenvolupament de l'àrea privada seran tractats per Vueling de conformitat amb la política de privadesa indicada a l'apartat 3 de les presents Condicions de myvueling.<br/><br/>
+          iv. La condició de Membre de myvueling té caràcter personal i en cap cas no es poden transmetre els drets derivats d'aquesta condició a una persona diferent.<br/><br/>
+          v. Cada Membre, en donar-se d'alta a myvueling, informarà del seu nom i cognoms i de l'email de contacte. De la mateixa manera, el Membre haurà d'introduir una contrasenya que, juntament amb el seu codi identificador, constituiran les seves claus d'accés. Cada Membre de myvueling serà el responsable de la custòdia de la seva contrasenya i email, essent ambdues dades personals i intransferibles. Vueling podrà comunicar als Membres la necessitat de modificar la contrasenya per motius de seguretat. Vueling reconeixerà els Membres de myvueling quan facin servir el canal online gràcies al seu email i només permetrà l'accés al compte personal quan s'introdueixi la contrasenya. Vueling no serà en cap cas responsable de les conseqüències d'accessos de terceres persones que facin ús de l'email i la contrasenya d'un Membre de myvueling.<br/><br/>
+          vi. La pèrdua del codi identificador o de la contrasenya s'haurà de comunicar a Vueling de manera immediata per mitjà d'algun dels Canals de Comunicació esmentats a l'anterior Clàusula 1a.<br/><br/>
+          vii. L'adhesió a l'àrea privada myvueling no té cap cost per als Membres.<br/><br/>
+          viii. La duració de l'àrea privada myvueling s'estableix per temps indefinit. No obstant això, Vueling es reserva el dret de finalitzar el Programa en qualsevol moment, i ofereix un termini previ de preavís de 3 mesos respecte la data en què s'extingeix.
+        </p>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>3. Protecció de dades</b>
+          <br/><br/>
+          1. De conformitat amb la normativa aplicable en matèria de protecció de dades, Vueling informa als seus Membres que les dades personals que els membres els proporcionen pel fet de participar a l'àrea privada myvueling seran incorporades en un fitxer titularitat de Vueling i tractades amb la finalitat d'oferir serveis de fidelització als seus membres, entre els que s'inclouen els serveis següents:<br/><br/>
+          i. Gestionar l'alta i la baixa del Membre a l'àrea privada myvueling.<br/>
+          ii. Si és usuari del programa Punto, gestionar tant l'obtenció com el bescanvi dels punts Vueling<br/>
+          iii. Oferir serveis de fidelització.<br/>
+          iv. Permetre als seus Membres la consulta de l'historial o els extractes de les operacions de compra de productes i serveis realitzats a través de la pàgina web www.vueling.com, prèvia introducció del nom d'usuari i la contrasenya del respectiu Membre.<br/>
+          v. Prestar el servei de recuperació automàtica de les dades dels Membres en els processos de compra de productes i serveis realitzats a la pàgina web www.vueling.com, prèvia introducció del nom d'usuari i la contrasenya del respectiu Membre.<br/>
+          vi. Realitzar activitats de gestió administrativa, fiscal, comptable i comercial per a la fidelització dels seus Membres. A tal efecte, es comunicaran les incidències que es produeixin sota l'àrea privada myvueling i s'enviaran newsletters al Membre amb ofertes personalitzades dels productes i serveis oferts per Vueling i les seves Entitats Col·laboradores a través de la seva pàgina web, www.vueling.com.<br/><br/>
+          2. Vueling informa als seus Membres que els camps de dades personals sol·licitats per Vueling a la Secció "Dades de Registre" que no presenten cap marca s'han d'emplenar obligatòriament i que, sense aquestes dades, no es podran proporcionar els serveis propis de l'àrea privada myvueling indicats a l'apartat anterior de la present Clàusula, mentre que tota la resta de dades sol·licitades per Vueling i marcades amb un (*) tenen caràcter facultatiu, per bé que la negativa de subministrar-les impedirà que Vueling pugui oferir d'una manera més personalitzada els serveis inclosos a l'àrea privada myvueling.<br/><br/>
+          3. Els Membres poden exercir els drets d'accés, rectificació, cancel·lació i oposició en qualsevol moment, per mitjà d'un escrit adreçat a Vueling Airlines, S.A., Departament Legal. Pla de l'Estany, 5. Polígon Industrial Mas Blau II. El Prat de Llobregat. 08820 (Barcelona), acompanyat d'una fotocòpia del document d'identificació oficial.
+        </p>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>4. Altres condicions</b>
+          <br/><br/>
+          1. Modificacions de les Condicions de myvueling: Vueling podrà modificar en qualsevol moment les Condicions del Programa àrea privada myvueling. Igualment podrà modificar el Pla de Punts sense necessitat d'avisar prèviament. Qualsevol actualització o variació sobre aquestes condicions sempre es publicarà a http://www.vueling.com/booking/myvueling. <br/><br/>
+          2. Les presents Condicions Generals Bàsiques es completen amb les "CONDICIONS OPERATIVES DEL PROGRAMA PUNTO", que contenen el detall del procés d'obtenció i ús de punts, amb les particularitats aplicables a cada gènere d'operació, i que es troben a la teva disposició sempre actualitzades a Internet, a través de la pàgina de Vueling, www.vueling.com. Les Condicions Myvueling i Punto formen una unitat i s'interpretaran i aplicaran de conformitat amb les Lleis del Regne de Espanya, tenint preferència la versió en espanyol sobre la resta de traduccions. Els clients assumiran la responsabilitat derivada de l'ús del Programa en els seus respectius països de residència segons la legislació local aplicable en cada cas.<br/>
+          Per a qualsevol qüestió relacionada amb la interpretació i aplicació de les presents Condicions Generals, les parts, amb la renúncia expressa al fur que els pugui correspondre, se sotmeten expressament a la jurisdicció dels jutjats i tribunals de Madrid capital.
+        </p>
+      </li>
+      <li>
+        <br/>
+        <br/>
+        <p>
+          <b>CONDICIONS OPERATIVES DEL PROGRAMA PUNTO</b>
+        </p>
+        <br/>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>1. Definicions</b><br/><br/>
+          PLA DE PUNTS: El Programa Punto inclou (i) tota la informació operativa sobre els Punts Vueling que es poden obtenir amb el consum de determinats serveis o productes, (ii) els serveis i productes que es poden aconseguir amb el bescanvi de Punts Vueling, i (iii) la quantitat necessària de Punts Vueling per a cada operació de bescanvi o redempció, que podrà variar en cada moment segons el Pla de Punts.<br/><br/>
+          PUNTS VUELING: són els que reben els Membres de l'àrea privada myvueling que s'identifiquen com a membres de Punto i que s'originen pel consum dels serveis o productes de Vueling o de les seves Entitats col·laboradores.<br/><br/>
+          ENTITATS COL·LABORADORES: són les entitats que participen amb Vueling per permetre l'obtenció de punts Vueling a través del consum dels seus productes i serveis, així com la prestació de tota la resta de serveis inclosos a la Clàusula 3.1 del present Document. Vueling no garanteix la permanència de les Entitats Col·laborades en el present Programa. Les Entitats Col·laboradores amb les que Vueling participa actualment són: ETrawler Limited, Booking.com B.V. i la Caixa d'Estalvis i Pensions de Barcelona.<br/><br/>
+        </p>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>2. Participació a Punto</b>
+          <br/><br/>
+          Cada Membre de myvueling tindrà assignat un compte Punto en el qual s'enumeren els Punts Vueling amb la finalitat d'indicar en cada moment el saldo de Punts Vueling, així com un històric de les operacions de compra de productes i serveis adquirits online pel Membre a través de la pàgina web www.vueling.com, que tindrà caràcter personal i intransferible.
+          <br/><br/>
+          En cas de finalització del Programa, els Membres del Programa podran bescanviar els Punts Vueling que tinguin acumulats durant un termini màxim de 6 mesos. El Programa quedarà cancel·lat sense cap avís previ ni cap responsabilitat i no s'aplicarà el que s'ha establert anteriorment en aquest punt, si en algú moment tenen lloc circumstàncies de força major o imposicions legals que impedissin la seva continuïtat o desenvolupament.
+          <br/><br/>
+          Els punts no bescanviats o redimits caducaran en el termini de 3 anys des de l'obtenció dels punts. També caducaran els punts Vueling per inactivitat del compte en un període màxim de 18 mesos de la seva obtenció. S'entén per inactivitat un termini sense que es dugui a terme cap operació d'obtenció i/o bescanvi de punts en el compte. Per tant, si un membre de PUNTO no realitza cap operació en un període de 18 mesos, els seus punts caducaran automàticament.
+          <br/><br/>
+          Vueling no es fa responsable dels fets que tinguin l'origen en l'adquisició de serveis o productes de les Entitats Col·laboradores o en les relacions entre aquestes entitats i els Membres de Punto+myvueling, i es limitarà a respondre de la correcta assignació dels Punts Vueling derivats de l'ús o consum dels serveis i productes de les esmentades Entitats Col·laboradores.
+        </p>
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>3. Obtenció de punts</b>
+          <br/><br/>
+          1. L'obtenció de Punts Vueling es produirà per l'adquisició o ús de productes o serveis Vueling o de les Entitats Col·laboradores en les condicions que figuren en cada moment al Pla de punts, sempre que en el moment de la contractació o adquisició el client s'identifiqui com a Membre del Programa Punto. A efectes informatius, s’obtindrà un (1) Punt Vueling per cada dos (2 €) euros de compra destinats a l’adquisició de bitllets de vols operats per Vueling en la pàgina web www.vueling.com que es corresponguin a reserves efectuades amb les tarifes “Basic”, “Optima” i “Excellence” de Vueling.
+          <br/><br/>
+          2. Si en el moment d'efectuar la reserva del bitllet, el Membre de Punto no ha indicat la seva adreça electrònica per obtenir els Punts Vueling corresponents a la reserva, podrà fer-ho en els següents 90 dies posteriors a la data de compra del bitllet, a l'apartat anomenat «Recupera Punts». Només obtindran punts Vueling aquells Membres de Punto que constin com a passatgers a la reserva i no únicament els compradors de la reserva
+          <br/><br/>
+          3. El compte Punto s'actualitzarà diàriament en funció dels Punts Vueling que obtinguin i consumeixin els Membres de l'esmentat Programa. L'anotació dels Punts Vueling derivats de l'adquisició de productes o serveis de les Entitats Col·laboradores també es podrà realitzar sempre i quan s'acrediti l'adquisició efectiva, i cada Membre disposa a aquest efecte d'un termini de 90 dies. L'acreditació exigirà l'exhibició de les factures o documentació que demostri suficientment el consum per cada Membre de Punto dels esmentats serveis o productes.
+          <br/><br/>
+          4. La transferència de Punts Vueling entre Membres no està permesa. Tanmateix, sí que es permet la designació per part del Membre de Punto d'un beneficiari per al gaudi dels serveis o productes obtinguts amb el bescanvi de Punts Vueling.
+        </p>
+
+      </li>
+      <li>
+        <span></span>
+        <p>
+          <b>4. Redempció o bescanvi dels Punts Vueling</b>
+          <br/><br/>
+          1. Per tal de procedir al bescanvi o redempció dels Punts Vueling segons el Programa Punto, caldrà que t'identifiquis com a Membre de l'esmentat Programa fent acreditació de la teva identitat a través del canal online. Si per motius tècnics no ha estat possible bescanviar els punts a través de l'entorn online, pots contactar amb el departament d'atenció al client de Punto, on t'oferiran altres alternatives.
+          <br/><br/>
+          2. Els Punts Vueling es poden bescanviar per bitllets en vols operats per Vueling i que es corresponguin únicament a la tarifa “Basic” de Vueling d’acord amb el Pla de Punts de Vueling. Els Punts Vueling no es poden bescanviar en cap cas per diners. Els Punts Vueling no podran complementar-se amb diners per a l'adquisició dels serveis o productes establerts en cada moment en el Pla de Punts.
+          <br/><br/>
+          3. Per procedir amb la redempció dels Punts Vueling amb càrrec a bitllets d'avió, s'aplicaran les normes següents:
+          <br/><br/>
+          i. El Membre de Punto haurà de pagar sempre les corresponents taxes aeroportuàries, així com qualsevol altre càrrec, despesa o impost addicional que pugui meritar-se en relació amb l'adquisició del bitllet. Tot i així, el Membre de Punto podrà recuperar els punts Vueling generats per les taxes i els impostos obtinguts de la contractació d'aquestes reserves, indicant el seu email Punto a l'espai designat a aquest efecte, disponible al pas 2 de «El teu vol».<br/><br/>
+          ii. Cal que en cada moment hi hagi disponibilitat de places.<br/><br/>
+          iii. Els bitllets emesos amb càrrec als Punts Vueling només admeten canvis si el propi bitllet i els termes i condicions establerts a les Condicions de Transport de Vueling els permeten. Tanmateix, no serà possible canviar el bitllet per un de tarifa superior quan la diferència de Punts Vueling entre ambdós bitllets la pugui abonar el Membre amb càrrec als Punts Vueling que tingui disponibles en el seu compte.<br/><br/>
+          Vueling podrà modificar el Pla de Punts sense necessitat d'avisar prèviament. Qualsevol actualització o variació sobre aquestes condicions sempre es publicarà a http://www.vueling.com/booking/myvueling.
+        </p>
+      </li>
+    </li>
+  </ul>
+  
+  <label id="guarda" text="Confirma"/>  
+</culture>

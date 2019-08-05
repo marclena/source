@@ -1,0 +1,1 @@
+function setupUnobtrusiveConfirmAction(n){var t=n.attr("data-ui-require-confirmation");(t==null||t=="undefined")&&(t="Are you sure?");n.requireConfirmation(t)}function setupAllUnobtrusiveConfirmActionsChildrenOf(n){n.find("[data-ui-require-confirmation]").each(function(){setupUnobtrusiveConfirmAction($(this))})}

@@ -428,9 +428,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Target Name="BeforeBuild">
-    <Exec Command="&quot;$(SolutionDir)ExecutePrebuildTasks.cmd&quot; &quot;$(SolutionDir)&quot; &quot;$(ProjectDir)&quot; 1&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.log&quot; 2&gt; &quot;$(ProjectDir)ExecutePrebuildTasks.error&quot;" />
-  </Target>
+  
   <Target Name="AfterBuild" Condition="'$(ISTEAMBUILDMACHINE)' == '1'">
     <ItemGroup>
       <DeleteAfterBuild Include="$(WebProjectOutputDir)\Web.*.config" />

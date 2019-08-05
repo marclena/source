@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Name>SKYSALES.INT.64</Name>
+  <TeamProject>Vueling</TeamProject>
+  <TeamProjectCollectionUri>http://wbcnvuetfs:8080/tfs/vueling</TeamProjectCollectionUri>
+  <Description />
+  <QueueStatus>Enabled</QueueStatus>
+  <ContinuousIntegrationType>Gated</ContinuousIntegrationType>
+  <ContinuousIntegrationQuietPeriod>0</ContinuousIntegrationQuietPeriod>
+  <BuildController>Controller1</BuildController>
+  <DefaultDropLocation>\\WBCNVUEBLD\Drops</DefaultDropLocation>
+  <Process>22</Process>
+  <ProcessParameters>&lt;Dictionary x:TypeArguments="x:String, x:Object" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:mtbwa="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;mtbwa:BuildSettings x:Key="BuildSettings" ProjectsToBuild="$/Vueling/SkySales/INT-20140630/SkySales.sln"&gt;
+    &lt;mtbwa:BuildSettings.PlatformConfigurations&gt;
+      &lt;mtbwa:PlatformConfigurationList Capacity="1"&gt;
+        &lt;mtbwa:PlatformConfiguration Configuration="Release" Platform="Any CPU" /&gt;
+      &lt;/mtbwa:PlatformConfigurationList&gt;
+    &lt;/mtbwa:BuildSettings.PlatformConfigurations&gt;
+  &lt;/mtbwa:BuildSettings&gt;
+  &lt;mtbwa:TestSpecList x:Key="TestSpecs" Capacity="1"&gt;
+    &lt;mtbwa:TestAssemblySpec AssemblyFileSpec="*UnitTest.dll" CategoryFilter="" FailBuildOnFailure="True" MSTestCommandLineArgs="" TestSettingsFileName="$/Vueling/SkySales/INT-20140630/Local.testsettings" /&gt;
+  &lt;/mtbwa:TestSpecList&gt;
+  &lt;mtbwa:CleanWorkspaceOption x:Key="CleanWorkspace"&gt;None&lt;/mtbwa:CleanWorkspaceOption&gt;
+  &lt;mtbwa:CodeAnalysisOption x:Key="RunCodeAnalysis"&gt;Always&lt;/mtbwa:CodeAnalysisOption&gt;
+  &lt;mtbwa:SourceAndSymbolServerSettings SymbolStorePath="{x:Null}" x:Key="SourceAndSymbolServerSettings" /&gt;
+  &lt;mtbwa:AgentSettings x:Key="AgentSettings" MaxWaitTime="04:00:00" TagComparison="MatchExactly" Tags="skysales-int" /&gt;
+  &lt;x:Boolean x:Key="CreateWorkItem"&gt;False&lt;/x:Boolean&gt;
+  &lt;x:Boolean x:Key="PerformTestImpactAnalysis"&gt;False&lt;/x:Boolean&gt;
+  &lt;x:String x:Key="ExcludeFilterList"&gt;bin\*,*.config,*orig,runtimehost.naml,ZipSkins\*,thumbs.db,naml\runtimehost.naml&lt;/x:String&gt;
+  &lt;x:String x:Key="FilterExclusionList"&gt;bin\Vueling*,bin\Autofac*,bin\Fasterflect*,bin\log4net*,bin\CommonServices.Operations.*,bin\CommonServices.Schedule.*,bin\Data.DataAccess.*,bin\DiffieHellman.*,bin\Esent.Interop.*,bin\HtmlAgilityPack.*,bin\ICSharpCode.SharpZipLib.*,bin\Newtonsoft.Json.Net35.*,bin\Org.Mentalis.Security.*,bin\SkySales.XmlSerializers.*,bin\Tamir.SharpSSH.*,bin\Wintellect.Threading.*,bin\skysales.*,bin\SkySales.ProxiesServices.ServiceLibrary.*,bin\Microsoft.ApplicationServer.Caching.Client.*,bin\Microsoft.ApplicationServer.Caching.Core.*,bin\Microsoft.WindowsFabric.Common.*,bin\Microsoft.WindowsFabric.Data.Common.*,bin\Config,bin\Config\*,packages.config,app.config&lt;/x:String&gt;
+  &lt;x:Decimal x:Key="BuildCodeCoveragePercentageError"&gt;7&lt;/x:Decimal&gt;
+  &lt;x:Decimal x:Key="BuildCodeCoveragePercentageWarning"&gt;10&lt;/x:Decimal&gt;
+  &lt;x:String x:Key="Environment"&gt;INT&lt;/x:String&gt;
+  &lt;x:String x:Key="Servers"&gt;wbcnvueintwww02&lt;/x:String&gt;
+&lt;/Dictionary&gt;</ProcessParameters>
+  <Schedules>
+    <Schedule>
+      <DaysToBuild>Monday, Tuesday, Wednesday, Thursday, Friday</DaysToBuild>
+      <StartTime>10800</StartTime>
+      <TimeZone>Romance Standard Time</TimeZone>
+      <Type>Weekly</Type>
+    </Schedule>
+  </Schedules>
+  <Mappings>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\antScripts</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/antScripts</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\CodeCoverageConsole</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/CodeCoverageConsole</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\NuGet</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/NuGet</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\PsTools</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/PsTools</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TFSBuildExtensions</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TFSBuildExtensions</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/SkySales/INT-20140630</ServerItem>
+    </Mapping>
+  </Mappings>
+  <RetentionPloicyList>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>All</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+  </RetentionPloicyList>
+</Root>

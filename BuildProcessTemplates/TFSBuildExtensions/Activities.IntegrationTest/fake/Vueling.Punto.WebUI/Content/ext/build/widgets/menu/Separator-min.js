@@ -1,0 +1,1 @@
+Ext.menu.Separator=function(n){Ext.menu.Separator.superclass.constructor.call(this,n)};Ext.extend(Ext.menu.Separator,Ext.menu.BaseItem,{itemCls:"x-menu-sep",hideOnClick:!1,onRender:function(n){var t=document.createElement("span");t.className=this.itemCls;t.innerHTML="&#160;";this.el=t;n.addClass("x-menu-sep-li");Ext.menu.Separator.superclass.onRender.apply(this,arguments)}})

@@ -1,0 +1,1 @@
+Ext.grid.AbstractSelectionModel=function(){this.locked=!1;Ext.grid.AbstractSelectionModel.superclass.constructor.call(this)};Ext.extend(Ext.grid.AbstractSelectionModel,Ext.util.Observable,{init:function(n){this.grid=n;this.initEvents()},lock:function(){this.locked=!0},unlock:function(){this.locked=!1},isLocked:function(){return this.locked}})

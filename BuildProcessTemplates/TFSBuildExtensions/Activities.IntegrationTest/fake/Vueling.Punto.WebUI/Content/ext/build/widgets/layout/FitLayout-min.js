@@ -1,0 +1,1 @@
+Ext.layout.FitLayout=Ext.extend(Ext.layout.ContainerLayout,{monitorResize:!0,onLayout:function(n,t){Ext.layout.FitLayout.superclass.onLayout.call(this,n,t);this.container.collapsed||this.setItemSize(this.activeItem||n.items.itemAt(0),t.getStyleSize())},setItemSize:function(n,t){n&&t.height>0&&n.setSize(t)}});Ext.Container.LAYOUTS.fit=Ext.layout.FitLayout

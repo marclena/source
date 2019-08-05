@@ -1,0 +1,209 @@
+/*PRJ-117*/
+.button{background:#3498db;color:#fff;display:block;font-size:16px;margin:20px auto;padding:20px;text-align:center;text-decoration:none;width:48%;}
+.buttons{padding:0 20px 20px; margin-bottom: 10px;}
+.buttons .button{background:#FFF;color:#3498db;float:left;margin:5px;}
+.center .slick-center h3{-moz-transform:scale(1.08);-ms-transform:scale(1.08);-o-transform:scale(1.08);-webkit-transform:scale(1.08);color:#e67e22;opacity:1;transform:scale(1.08);}
+.center h3{opacity:0.8;transition:all 300ms ease;}
+.content{margin:auto;padding:20px;width:600px;}
+.content:after,.buttons::after{clear:both;content:"";display:table;}
+.destroy{font-weight:400;margin-top:40px;}
+.features{display:block;list-style-type:none;margin-top:30px;padding:0;text-align:center;}
+.features li{margin:20px 0;}
+.filter .button{background:#FFF;color:#3498db; margin-bottom: 40px;}
+.fixed-header{background:#FFF;box-shadow:2px 0 5px rgba(0,0,0,0.5);display:none;padding:10px;position:fixed;top:0;width:100%;z-index:10000;}
+.fixed-header .header-content{margin:auto;width:600px;}
+.fixed-header .subheading{display:none;}
+.fixed-header h1.title{float:left;font-size:24px;margin:0;}
+.fixed-header ul.nav{float:right;margin:0;padding:5px;}
+.fixed-header ul.nav li{margin:0 0 0 10px;}
+.header{padding:20px 0;}
+.margin-40{margin-bottom:40px;}
+.more,.button.first{margin-top:40px;}
+.red{background:#e74c3c;color:#fff;}
+
+.subheading{color:#555;font-size:12px;font-style:italic;font-weight:400;margin:10px auto;text-align:center;}
+.white{background:#fff;color:#3498db;}
+.white pre,.white hr{background:#3498db;}
+
+.overlayDiv{  width:100%; height:80%; display:none; position:absolute; top:0px; left:0px; }
+.overlayDiv div { position:relative; display:inline-block; top:50%; margin:-50% 5px 0 0; color:white; }
+.ulSlider { list-style: none; width: 100%; }
+.liSlider { position:relative;display:inline-block; width:210px!important; height:100%!important;}
+
+.liSlider:hover .overlayDiv { display:block; background-color:black; opacity:0.75; position: absolute; top:0; left:0; width:190px; height:100%;	border-radius: 8px;	-webkit-border-radius: 8px; left:50%; margin-left: -90px; }
+
+/* Slider */
+.slick-slider {position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: none; -webkit-tap-highlight-color: transparent; }
+
+.slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }
+.slick-list:focus { outline: none; }
+.slick-list.dragging { cursor: pointer; }
+
+.slick-slider .slick-list, .slick-track, .slick-slide, .slick-slide img { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+.slick-track { position: relative; left: 0; top: 0; display: block; zoom: 1; }
+.slick-track:before, .slick-track:after { content: ""; display: table; }
+.slick-track:after { clear: both; }
+.slick-loading .slick-track { visibility: hidden; }
+
+.slick-slide { box-sizing: border-box; display: none; float: left; height: 100%; min-height: 1px;  padding: 0 17px 0 0}
+.slick-slide.slick-loading img { display: none; }
+.slick-slide.dragging img { pointer-events: none; }
+.slick-initialized .slick-slide { display: block; }
+.slick-loading .slick-slide { visibility: hidden; }
+.slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
+
+/* Arrows */
+.slick-prev, .slick-next { position: absolute; display: block; height: 53px; width: 23px; line-height: 0; font-size: 0; cursor: pointer; top: 50%; margin-top: -10px; padding: 0; border: none; outline: none; }
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus { outline: none;  }
+.slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before { opacity: 1; }
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before { opacity: 0.25; }
+
+.slick-prev:before, .slick-next:before { position:absolute; content:""; width:21px; height:51px; background-image: url(../../images/VuelingBase/sprite_graficos.png); top:50%; margin-top: -25px;}
+.slick-next:before{ background-position: -1462px -857px; right: 0; } /*ok*/
+.slick-prev:before{ background-position: -1434px -857px; left: 0; } /*ok*/
+
+button.slick-next:hover:before{background-position: -1402px -857px;} /*ok*/
+button.slick-prev:hover:before{background-position: -1373px -857px;} /*ok*/
+
+.slick-prev, .slick-next{ background-color: transparent;}
+
+.slick-next {right: -25px;}
+.slick-prev {left: -25px;}
+.slick-slide {float: right;}
+
+/*FIN PRJ-117*/  
+
+
+
+/**
+ * Modules
+ *
+ * @boxCars
+ *
+ * Modulo de de caja que contiene la informaciÃ³n de coches en el procesod e compra
+ *
+ */
+
+.carsSectionslider .borderTopDotted{margin-top: 0}
+.carsSectionSlider .content{ margin: auto; padding: 0 40px; width: 624px;}
+.slick-next{right:-31px;}
+.slick-prev{left:-31px;}
+
+
+/*columnado*/
+.carsSectionSlider--detail .liSlider .column_9{ width:65%; }
+.carsSectionSlider--detail .liSlider .column_3{ width: 35%; padding-left: 32px!important;}
+.carsSectionSlider--detail .liSlider .carsSectionSliderContent_callAction, .carsSectionSlider--detail .liSlider .carsSectionSliderContent_subprice { display: block; width: 90%; margin: 0 auto; }
+
+/*detalle coche*/
+.carsSectionSlider--detail .content{width: 623px; padding: 0 30px;}
+
+.carsSectionSliderContent_legend, .carsSection .carsSectionSliderContent .sectionPiece, .carsSectionListItems li{	box-sizing: border-box; -moz-box-sizing: border-box; }
+
+.carsSection{ margin-bottom: 20px; padding-bottom:0;}
+.carsSection .contentSection--carsSection{ padding: 0 0 25px 0;}
+
+.carsSection .carsSectionSlider_arrow { width:6%; vertical-align: middle; text-align:center }
+.carsSection .carsSectionSlider_arrow a{display: inline-block; width:21px; height:51px; background-image: url(../../images/VuelingBase/sprite_graficos.png); background-repeat: no-repeat;}
+.carsSection .carsSectionSlider_arrow a.carsSectionSlider_arrowLeft{ background-position: -1373px -857px;}/*ok*/
+.carsSection .carsSectionSlider_arrow a.carsSectionSlider_arrowLeft:hover{ background-position: -1434px -857px;}/*ok*/
+.carsSection .carsSectionSlider_arrow a.carsSectionSlider_arrowRight{ background-position: -1402px -857px;}/*ok*/
+.carsSection .carsSectionSlider_arrow a.carsSectionSlider_arrowRight:hover{ background-position: -376px -4453px;}/*ok*/
+
+.carsSection .carsSectionSliderContent .sectionPiece{ width:100%; margin:0 0 0 3.18%; border:2px solid #f0f0f0; padding:14px 16px; border-radius: 8px; -webkit-border-radius: 8px; float:none; margin: 0 auto; display: inline-block;}
+.carsSection .carsSectionSliderContent .sectionPiece:first-child{margin-left:0;}
+.carsSection .carsSectionSliderContent .sectionPiece.sectionSelected, .carsSection .carsSectionSliderContent .sectionPiece:hover{ border:2px solid #fc0; background-color: #fff;}
+
+.carsSectionSliderContent_logo, .carsSectionSliderContent_legend, .carsSectionSliderContent_car, .carsSectionSliderContent_model, .carsSectionSliderContent_description, .carsSectionSliderContent_price, .carsSectionSliderContent_callAction{ text-align: center; display: block;}
+
+.carsSectionSliderContent_logo, .carsSectionSliderContent_legend, .carsSectionSliderContent_car, .carsSectionSliderContent_model, .carsSectionSliderContent_description, .carsSectionSliderContent_price, .carsSectionSliderContent_callAction, .carsSectionSliderContent_logo{ margin-bottom: 10px; min-height: 35px;}
+.carsSectionSliderContent_logo img{height: auto; max-height:35px; width: auto; max-width:150px}
+.carsSectionSliderContent_wrapperLegend{ margin-bottom: 11px; min-height: 43px; position: relative;}
+.carsSectionSliderContent_car{ margin-bottom: 14px; min-height: 73px;}
+.carsSectionSliderContent_car img{ height:71px: width:132px;}
+.carsSectionSliderContent_description{ min-height: 29px; margin-bottom: 10px;}
+.carsSectionSliderContent_model{ min-height: 32px; margin-bottom: 7px;}
+.carsSectionSliderContent_price{ min-height: 28px; margin-bottom: 7px; font:normal 14px/1.2 DTLProkyonSTRegular, Verdana; color:#990}
+.carsSectionSliderContent_priceNum{ font-size: 27px; padding-right: 7px}
+.carsSectionSliderContent_callAction a{display: block;}
+#wrapper .carsSectionSliderContent_callAction a span{text-align: center!important;}
+
+.carsSectionSliderContent_legend{ padding: 7px 0 7px 5px; background-color: #990; text-align: left; width: 172px; position: relative; left:-25px;}
+.carsSectionSliderContent_legend > span{ padding:1px 0 0 24px; position: relative; font:normal 13px/1.2 DTLProkyonSTRegular, Verdana; color:#fff; display: block;}
+
+.carsSectionSliderContent_legend:after, .carsSectionSliderContent_legend:before{ content:""; position: absolute;}
+.carsSectionSliderContent_legend:after{ background: url(../../images/VuelingBase/carsLegendshadow.png) 0 bottom; height: 111%; right: -20px; top: 0; width: 20px;}
+.carsSectionSliderContent_legend:before{ background: url(../../images/VuelingBase/sprite_graficos.png) -1159px -936px no-repeat; bottom:-8px; left: 0; width:100%; height:8px;} /*ok*/
+
+.carsSectionSliderContent_legend > span:before{ content:""; position: absolute; left: 3px; width:15px; height:13px; background: url(../../images/VuelingBase/sprite_graficos.png) -1148px -896px no-repeat; top:2px;} /*OK*/
+
+.carsSection .sectionPiece{ border:0; }
+
+.carsSectionItemsList{ display: block; text-align: center; margin-top:10px;}
+.carsSectionItemsList li{margin:0 4px 4px 0; display: inline-block;}
+.carsSectionItemsList li span:first-child{ display: block; width:28px;height:28px;border:1px solid #333; padding:6px; border-radius:4px; -moz-border-radius:4px; }
+.carsSectionItemsList li span:first-child img{margin-top: 2px;}
+.carsSectionItemsList li span.itemsList_iconLabel{margin-top: 5px;display: block;}
+
+.carsSectionSlider--detail .carsSectionSlider_arrow{width:4%;}
+.carsSectionSlider--detail .carsSectionSliderContent{width:100%;}
+.carsBuscador{ background-color: #f0f0f0; padding: 12px 30px; margin-bottom: 20px; border-radius:8px; -webkit-border-radius:8px;}
+
+.carsBuscador .titleForm{font:normal 14px/1.2 DTLProkyonSTMedium, Verdana; margin-bottom: 7px;}
+.carsBuscadorRow{ display: block; margin-bottom: 14px;}
+.carsBuscadorRow input[type="text"], .carsBuscadorRow select{ height:26px; padding: 4px 7px!important; box-sizing: border-box; -moz-box-sizing: border-box; float:none; width:100%; line-height: 1.3; font-size: 1em}
+
+.carsBuscadorField_calendar, .carsBuscadorField_time{ float: left;}
+
+.carsBuscadorField_calendar{margin-right: 15px;}
+.carsBuscadorField_calendar input[type="text"]{width:180px; margin-right: 9px; float: left;}
+.carsBuscadorField_calendar img{width:21px; height:auto;}
+
+.carsBuscadorField_time select{ width:71px;}
+
+
+.carsSectionSlider--detail .liSlider{ width:618px!important; padding:0}
+.carsSectionSlider--detail .carsSectionSliderContent_legend{margin-bottom: 15px; width:93%; left:4px;}
+.carsSectionSlider--detail .colRow2{margin-bottom: 0;}
+.carsSectionSlider--detail .carsSectionSliderContent_legend span, .carsSectionSlider--detail .carsSectionSliderContent_model{font-size: 14px;}
+.carsSectionSlider--detail  .carsSectionSlider--detail .carsSectionSliderContent_model{ min-height: 0; margin-bottom: 5px; padding:0 20px;}
+.carsSectionSlider--noScroll .carsSectionSliderContent_description, .carsSectionSlider--noScroll .carsSectionSliderContent_model{padding: 0; padding: 0;
+min-height: 0; margin: 0 0 5px 0;}
+.carsSectionSliderContent_colPrice > div{text-align: center;}
+
+.carsSectionSliderContent_subprice{font:normal 14px/1.2 DTLProkyonSTMedium, Verdana; padding-bottom: 7px; border-bottom:1px dotted #ccc; margin-bottom: 17px!important;}
+.carsSectionSliderContent_logo{margin-bottom: 15px;}
+.carsSectionSliderContent_price{font:normal 14px/1.2 DTLProkyonSTMedium, Verdana;}
+.carsSectionSliderContent_subprice span, .carsSectionSliderContent_price span, .carsSectionSliderContent_subprice i, .carsSectionSliderContent_price i{font-family: DTLProkyonSTRegular, Verdana;}
+.carsSectionSliderContent_subprice span, .carsSectionSliderContent_subprice i{font-size: 26px;}
+.carsSectionSliderContent_price span, .carsSectionSliderContent_price i{font-size:21px}
+.carsSectionSliderContent_price span{padding-left: 4px;}
+.carsSectionSliderContent_price .carsSectionSliderContent_priceNum{font-size: 22px}
+.carsSectionSliderContent_price .carsSectionSliderContent_priceNum + span{font-size: 16px;}
+.carsSectionSliderContent_callAction a{display: block;}
+.carsSectionSliderContent_callAction, .carsSectionSliderContent_subprice{display: block; width:100%; margin: 0 auto;}
+
+
+.carsSectionSlider--noScroll{ width: 100%; padding-top: 20px;}
+.carsSectionSlider--noScroll .carsSectionSliderContent_description, .carsSectionSlider--noScroll .carsSectionSliderContent_model{ text-align: left;}
+.carsSectionSlider--noScroll .carsSectionSliderContent_model{ border-bottom:1px dotted #ccc; margin-bottom: 17px!important; padding-bottom:13px;}
+.carsSectionSliderContent_calendar{margin-bottom: 10px;}
+.carsSectionSliderContent_calendar > img{float:left;}
+.carsSectionSliderContent_calendar p{padding-left: 35px;}
+.carsSectionSliderContent_calendar p > span{display: block; color:#000;}
+.carsSectionSlider--noScroll .carsSectionSliderContent_wrapperLegend .carsSectionSliderContent_legend{left:0; margin-bottom: 15px;}
+.carsSectionSliderContent_calendar .ui-datepicker-trigger { cursor: default!important;}
+
+.loading{position: relative;}
+.loading .overlay{ background-color: #fff; height: 100%; left: 0;  opacity: 0.7;  position: absolute;  top: 0;  width: 100%; z-index: 19999;}
+.loadingBox{ position:absolute; width:449px; height:190px; top:45%; margin-top: -104px; left:50%; margin-left: -224px; z-index: 20000; text-align: center; padding:20px; color:#000;}
+.loadingBox h3{margin-bottom: 50px;}
+
+.carsBuscadorRow .ui-widget-content li a{ border: 0!important;  width: 100%; display: block; box-sizing: border-box; -moz-box-sizing: border-box; padding: 5px 5px 5px!important; margin: 0 5px; width: 97%;}
+.carsBuscadorRow .ui-widget-content li a:hover, .carsBuscadorRow .ui-widget-content li a.ui-state-hover{font-weight: 400; padding: 5px 5px 5px!important; color: #999!important; background-color: #E6E6E7; border-radius: 0;}
+.carsBuscadorRow  .cajaDesplegableTab{position: absolute; width: 90.5%;}
+.carsBuscadorRow  .cajaDesplegableTab .ui-widget-content{margin:11px 0;}
+.carsBuscadorRow  .cajaDesplegableTab .ui-menu.ui-widget-content{top: 0!important; border: 0; left: 0!important; margin-top: 0; padding: 5px 0 5px 0; box-sizing: border-box; height: 200px; overflow-y: scroll; margin: 0; width: 100%!important;}
+
+.carsBuscadorRow  .cajaDesplegableTab .ui-menu.ui-widget-content a:hover{cursor: pointer;}

@@ -1,0 +1,1 @@
+Ext.layout.AbsoluteLayout=Ext.extend(Ext.layout.AnchorLayout,{extraCls:"x-abs-layout-item",onLayout:function(n,t){t.position();Ext.layout.AbsoluteLayout.superclass.onLayout.call(this,n,t)}});Ext.Container.LAYOUTS.absolute=Ext.layout.AbsoluteLayout

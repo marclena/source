@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+  <Name>Vueling.Mailing.PRO.64</Name>
+  <TeamProject>Vueling</TeamProject>
+  <TeamProjectCollectionUri>http://wbcnvuetfs:8080/tfs/vueling</TeamProjectCollectionUri>
+  <Description />
+  <QueueStatus>Enabled</QueueStatus>
+  <ContinuousIntegrationType>None</ContinuousIntegrationType>
+  <ContinuousIntegrationQuietPeriod>0</ContinuousIntegrationQuietPeriod>
+  <BuildController>Controller1</BuildController>
+  <DefaultDropLocation>\\WBCNVUEBLD\Drops</DefaultDropLocation>
+  <Process>51</Process>
+  <ProcessParameters>&lt;Dictionary x:TypeArguments="x:String, x:Object" xmlns="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:mtbw="clr-namespace:Microsoft.TeamFoundation.Build.Workflow;assembly=Microsoft.TeamFoundation.Build.Workflow" xmlns:mtbwa="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;
+  &lt;mtbwa:BuildSettings x:Key="BuildSettings" ProjectsToBuild="$/Vueling/Vueling.Mailing/PRE/Vueling.Mailing.sln"&gt;
+    &lt;mtbwa:BuildSettings.PlatformConfigurations&gt;
+      &lt;mtbwa:PlatformConfigurationList Capacity="4"&gt;
+        &lt;mtbwa:PlatformConfiguration Configuration="Release" Platform="Any CPU" /&gt;
+      &lt;/mtbwa:PlatformConfigurationList&gt;
+    &lt;/mtbwa:BuildSettings.PlatformConfigurations&gt;
+  &lt;/mtbwa:BuildSettings&gt;
+  &lt;mtbwa:TestSpecList x:Key="TestSpecs" Capacity="0" /&gt;
+  &lt;mtbw:BuildVerbosity x:Key="Verbosity"&gt;Detailed&lt;/mtbw:BuildVerbosity&gt;
+  &lt;x:Boolean x:Key="Run_ValidateEnvironment"&gt;False&lt;/x:Boolean&gt;
+  &lt;x:Boolean x:Key="RunCodeMetrics"&gt;False&lt;/x:Boolean&gt;
+  &lt;x:String x:Key="Environment"&gt;PRO&lt;/x:String&gt;
+  &lt;mtbwa:StringList x:Key="ApplicationToServerMatching"&gt;Vueling.Mailing.LowPriority.WindowsService|wmadvueweb01,Vueling.Mailing.WindowsService|wmadvueweb01,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb01,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb02,Vueling.Mailing.WindowsService|wmadvueweb02,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb02,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb03,Vueling.Mailing.WindowsService|wmadvueweb03,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb03,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb04,Vueling.Mailing.WindowsService|wmadvueweb04,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb04,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb05,Vueling.Mailing.WindowsService|wmadvueweb05,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb05,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb06,Vueling.Mailing.WindowsService|wmadvueweb06,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb06,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb07,Vueling.Mailing.WindowsService|wmadvueweb07,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb07,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb08,Vueling.Mailing.WindowsService|wmadvueweb08,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb08,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb09,Vueling.Mailing.WindowsService|wmadvueweb09,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb09,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb10,Vueling.Mailing.WindowsService|wmadvueweb10,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb10,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb11,Vueling.Mailing.WindowsService|wmadvueweb11,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb11,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb12,Vueling.Mailing.WindowsService|wmadvueweb12,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb12,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb13,Vueling.Mailing.WindowsService|wmadvueweb13,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb13,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb14,Vueling.Mailing.WindowsService|wmadvueweb14,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb14,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb15,Vueling.Mailing.WindowsService|wmadvueweb15,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb15,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb16,Vueling.Mailing.WindowsService|wmadvueweb16,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb16,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb17,Vueling.Mailing.WindowsService|wmadvueweb17,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb17,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb18,Vueling.Mailing.WindowsService|wmadvueweb18,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb18,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb19,Vueling.Mailing.WindowsService|wmadvueweb19,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb19,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb20,Vueling.Mailing.WindowsService|wmadvueweb20,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb20,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb21,Vueling.Mailing.WindowsService|wmadvueweb21,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb21,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb22,Vueling.Mailing.WindowsService|wmadvueweb22,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb22,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb23,Vueling.Mailing.WindowsService|wmadvueweb23,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb23,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb24,Vueling.Mailing.WindowsService|wmadvueweb24,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb24,Vueling.Mailing.LowPriority.WindowsService|wmadvueweb25,Vueling.Mailing.WindowsService|wmadvueweb25,Vueling.Mailing.HighPriority.WindowsService|wmadvueweb25,Vueling.Mailing.LowPriority.WindowsService|Batch,Vueling.Mailing.WindowsService|Batch,Vueling.Mailing.HighPriority.WindowsService|Batch,Vueling.Mailing.LowPriority.WindowsService|Private,Vueling.Mailing.WindowsService|Private,Vueling.Mailing.HighPriority.WindowsService|Private,Vueling.Mailing.LowPriority.WindowsService|Public,Vueling.Mailing.WindowsService|Public,Vueling.Mailing.HighPriority.WindowsService|Public,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api01,Vueling.Mailing.WindowsService|wbcnvuei3api01,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api01,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api02,Vueling.Mailing.WindowsService|wbcnvuei3api02,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api02,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api03,Vueling.Mailing.WindowsService|wbcnvuei3api03,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api03,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api04,Vueling.Mailing.WindowsService|wbcnvuei3api04,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api04,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api05,Vueling.Mailing.WindowsService|wbcnvuei3api05,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api05,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api06,Vueling.Mailing.WindowsService|wbcnvuei3api06,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api06,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api07,Vueling.Mailing.WindowsService|wbcnvuei3api07,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api07,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api08,Vueling.Mailing.WindowsService|wbcnvuei3api08,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api08,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api09,Vueling.Mailing.WindowsService|wbcnvuei3api09,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api09,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api10,Vueling.Mailing.WindowsService|wbcnvuei3api10,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api10,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api11,Vueling.Mailing.WindowsService|wbcnvuei3api11,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api11,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api12,Vueling.Mailing.WindowsService|wbcnvuei3api12,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api12,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api13,Vueling.Mailing.WindowsService|wbcnvuei3api13,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api13,Vueling.Mailing.LowPriority.WindowsService|wbcnvuei3api14,Vueling.Mailing.WindowsService|wbcnvuei3api14,Vueling.Mailing.HighPriority.WindowsService|wbcnvuei3api14,Vueling.Mailing.LowPriority.WindowsService|TheRock,Vueling.Mailing.WindowsService|TheRock,Vueling.Mailing.HighPriority.WindowsService|TheRock,Vueling.Mailing.LowPriority.WindowsService|wbcnvuedmz01,Vueling.Mailing.WindowsService|wbcnvuedmz01,Vueling.Mailing.HighPriority.WindowsService|wbcnvuedmz01,Vueling.Mailing.LowPriority.WindowsService|wbcnvuedmz02,Vueling.Mailing.WindowsService|wbcnvuedmz02,Vueling.Mailing.HighPriority.WindowsService|wbcnvuedmz02,Vueling.Mailing.LowPriority.WindowsService|wbcnvuecrew01,Vueling.Mailing.WindowsService|wbcnvuecrew01,Vueling.Mailing.HighPriority.WindowsService|wbcnvuecrew01,Vueling.Mailing.LowPriority.WindowsService|wbcnvuecrew02,Vueling.Mailing.WindowsService|wbcnvuecrew02,Vueling.Mailing.HighPriority.WindowsService|wbcnvuecrew02,Vueling.Mailing.WCF.WebService|Private&lt;/mtbwa:StringList&gt;
+&lt;/Dictionary&gt;</ProcessParameters>
+  <Schedules />
+  <Mappings>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\antScripts</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/antScripts</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\CodeCoverageConsole</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/CodeCoverageConsole</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\MetaConfig</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/MetaConfig</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\NuGet</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/NuGet</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\NugetVersionChecker</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/NugetVersionChecker</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\PsTools</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/PsTools</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TeamBuildValidateEnvironmentApplication</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TeamBuildValidateEnvironmentApplication</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)\BuildProcessTemplates\TFSBuildExtensions\SupportFiles</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/BuildProcessTemplate/TFSBuildExtensions/SupportFiles</ServerItem>
+    </Mapping>
+    <Mapping>
+      <Depth>Full</Depth>
+      <LocalItem>$(SourceDir)</LocalItem>
+      <MappingType>Map</MappingType>
+      <ServerItem>$/Vueling/Vueling.Mailing/PRE</ServerItem>
+    </Mapping>
+  </Mappings>
+  <RetentionPloicyList>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>ValidateShelveset</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Succeeded</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>PartiallySucceeded</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Failed</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>10</NumberToKeep>
+    </RetentionPolicy>
+    <RetentionPolicy>
+      <BuildReason>Triggered</BuildReason>
+      <BuildStatus>Stopped</BuildStatus>
+      <DeleteOptions>DropLocation, Label, Details, Symbols</DeleteOptions>
+      <NumberToKeep>1</NumberToKeep>
+    </RetentionPolicy>
+  </RetentionPloicyList>
+</Root>

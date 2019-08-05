@@ -1,0 +1,1 @@
+Ext.data.MemoryProxy=function(n){Ext.data.MemoryProxy.superclass.constructor.call(this);this.data=n};Ext.extend(Ext.data.MemoryProxy,Ext.data.DataProxy,{load:function(n,t,i,r,u){n=n||{};var f;try{f=t.readRecords(this.data)}catch(e){this.fireEvent("loadexception",this,u,null,e);i.call(r,null,u,!1);return}i.call(r,f,u,!0)},update:function(){}})

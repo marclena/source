@@ -1,0 +1,15 @@
+<culture skin="Default" culture="es-ES" version="0.0.1">
+  
+  <label id="contactHeader" text="Contacta con nosotros" />
+  <label id="personalizedAttention" text="Atención personalizada para agencias llamando al:" />
+  <label id="callCenterAgencyPhone" text="902 48 77 48" />
+  <label id="callSchedule" text="Llámanos: 9-20 h de lunes a sábado." />
+  <label id="sendMessageHeader" text="Envíanos un mensaje" />
+  <label id="sendMessageText" text="Envíanos un e-mail explicándonos detalladamente el motivo de tu consulta. Te responderemos lo antes posible." />
+  <label id="sendMessageButton" text="Envía tu mensaje" />
+  <label id="askHeader" text="Haznos tu pregunta" />
+  <label id="askText" text="Si tienes una duda que necesitas solucionar cuanto antes, pregúntanoslo y tendrás respuesta al instante." />
+  <label id="askButton" text="Pregúntanos" />
+  <a id="LinkSendMessage"  href="{{URLCMS}}/es/somos-vueling/contacto/envianos-un-mensaje/">Envía tu mensaje</a>
+  
+</culture>

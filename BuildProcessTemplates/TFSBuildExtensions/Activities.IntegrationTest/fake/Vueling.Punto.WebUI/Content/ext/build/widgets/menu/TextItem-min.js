@@ -1,0 +1,1 @@
+Ext.menu.TextItem=function(n){this.text=n;Ext.menu.TextItem.superclass.constructor.call(this)};Ext.extend(Ext.menu.TextItem,Ext.menu.BaseItem,{hideOnClick:!1,itemCls:"x-menu-text",onRender:function(){var n=document.createElement("span");n.className=this.itemCls;n.innerHTML=this.text;this.el=n;Ext.menu.TextItem.superclass.onRender.apply(this,arguments)}})

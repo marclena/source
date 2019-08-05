@@ -1,0 +1,1 @@
+Ext.menu.ColorMenu=function(n){Ext.menu.ColorMenu.superclass.constructor.call(this,n);this.plain=!0;var t=new Ext.menu.ColorItem(n);this.add(t);this.palette=t.palette;this.relayEvents(t,["select"])};Ext.extend(Ext.menu.ColorMenu,Ext.menu.Menu)

@@ -1,0 +1,589 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B5FA81A-9E13-4D4C-ADE2-766B660D5EA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Activities.IntegrationTest</RootNamespace>
+    <AssemblyName>Activities.IntegrationTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a64e1179c81b1e25, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.0.1\lib\net40\Fasterflect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Build.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PrivateAssemblies\Microsoft.TeamFoundation.Build.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Administration.7.0.0.0\lib\net20\Microsoft.Web.Administration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NMock3">
+      <HintPath>..\packages\NMock3.3.0\lib\NMock3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="Vueling.Build.Contracts.ServiceLibrary, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Contracts.ServiceLibrary.4.0.1.0\lib\net40\Vueling.Build.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.DB.Infrastructure, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.DB.Infrastructure.4.0.3.0\lib\net40\Vueling.Build.DB.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Impl.ServiceLibrary, Version=4.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Impl.ServiceLibrary.4.0.4.0\lib\net40\Vueling.Build.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Configuration.Library, Version=1.2.0.2, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Configuration.Library.1.2.0.2\lib\net35\Vueling.Configuration.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Extensions.Library, Version=1.0.1.0, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Extensions.Library.1.0.1\lib\net35\Vueling.Extensions.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.ToolChain.Configuration.Contracts.ServiceLibrary, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ToolChain.Configuration.Contracts.ServiceLibrary.1.0.1.1\lib\net40\Vueling.ToolChain.Configuration.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.ToolChain.Configuration.Impl.ServiceLibrary, Version=1.0.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ToolChain.Configuration.Impl.ServiceLibrary.1.0.1.3\lib\net40\Vueling.ToolChain.Configuration.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AWS\When_UploadAWSPackageToS3.cs" />
+    <Compile Include="CodeMetrics\CodeMetricsTest.cs" />
+    <Compile Include="Communication\Email.cs" />
+    <Compile Include="Compression\JsCssMinActivityTest.cs" />
+    <Compile Include="ConfigurationSetupEnvironment\ConfigureRabbitMQActivityTest.cs" />
+    <Compile Include="Database\DeploySqlDatabaseTest.cs" />
+    <Compile Include="Database\SQLCodeAnalysisActivityTest.cs" />
+    <Compile Include="Deployment\DeployApplicationServiceActivityTest.cs" />
+    <Compile Include="FileSystem\IsAllowedToBeCopiedTest.cs" />
+    <Compile Include="FileSystem\LoadPropertiesFileActivityTest.cs" />
+    <Compile Include="Ftp\FtpActivityTest.cs" />
+    <Compile Include="InvokeCmd\When_InvokeAnExeCommand.cs" />
+    <Compile Include="LockBranches\SetPermissionsToBranchesTest.cs" />
+    <Compile Include="LockBuilds\When_SetPermissionBuildDefinition.cs" />
+    <Compile Include="Navitaire\GetSnapshotsFromPoolTest.cs" />
+    <Compile Include="NPM\RunNPMCommandsActivityTest.cs" />
+    <Compile Include="PlatformSettings\GetApplicationToServerMatchingSettingsTest.cs" />
+    <Compile Include="PlatformSettings\GetPlatformSettingsTest.cs" />
+    <Compile Include="PlatformSettings\GetServerSettingsTest.cs" />
+    <Compile Include="PowerShell\When_InvokePowerShellScripts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StyleStats\When_BuildRun.cs" />
+    <Compile Include="TeamFoundationServer\GetLastSuccessfulBuildNameFromPRE_isCalled.cs" />
+    <Compile Include="TeamFoundationServer\When_GetLastBuildTo920Server_isCalled.cs" />
+    <Compile Include="TeamFoundationServer\When_GetProjectWorkItemsFromId_isCalled.cs" />
+    <Compile Include="TeamFoundationServer\When_UpdateFilesFromLocalItemToServerItemService_isCalled.cs" />
+    <Compile Include="Validation\AssemblyFrameworkValidationTest.cs" />
+    <Compile Include="Validation\AssemblyVersionValidationTest.cs" />
+    <Compile Include="Validation\CodeCoverageTest.cs" />
+    <Compile Include="Validation\FileSizeLimitValidationTest.cs" />
+    <Compile Include="Validation\ConfigurationFilesValidationTest.cs" />
+    <Compile Include="Validation\XmlTextValidationTest.cs" />
+    <Compile Include="Validation\XmlFormatValidationTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fake\Vueling.Configuration.Config\global.config" />
+    <None Include="fake\Vueling.Punto.WebUI\Content\ext\resources\resources.jsb" />
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\DTLProkyonST.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\p022013t-webfont.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\p022c33t-webfont.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\ProkyonTRegular.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\ProkyonTRegular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\ProkyonTRegular.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Fixtures\SourcesDirectoryStaticContent\package.json" />
+    <None Include="Fixtures\SourcesDirectoryStaticContent\stylestats-results.json" />
+    <None Include="Fixtures\SourcesDirectoryStaticContent\stylestats-threshold.json" />
+    <None Include="Fixtures\SourcesDirectoryStaticContent\stylestatsconfig.json" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fake\SQL\KO\cursor.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\SQL\OK\query.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Views\AgencyContact.xml" />
+    <Content Include="fake\Views\AgencyPuntoRegistrationConfirmEmail_View1.xml" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.black.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.common.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.default.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.forest.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.hay.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.metro.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.office2007.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.office2010black.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.office2010blue.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.office2010silver.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.outlook.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.rtl.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.simple.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.sitefinity.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.sunset.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.telerik.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.transparent.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.vista.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.web20.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.webblue.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\2013.2.611\telerik.windows7.min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\css\vuelingIntranet.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\ext\ext-base.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\jquery\ext-jquery-adapter.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\jquery\jquery-plugins.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\jquery\jquery.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\prototype\effects.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\prototype\ext-prototype-adapter.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\prototype\prototype.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\prototype\scriptaculous.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\yui\ext-yui-adapter.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\adapter\yui\yui-utilities.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\adapter\ext-base-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\adapter\jquery-bridge-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\adapter\prototype-bridge-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\adapter\yui-bridge-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\CompositeElement-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\DomHelper-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\DomQuery-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\Element-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\EventManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\Ext-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\Fx-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\Template-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\core\UpdateManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\ArrayReader-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\Connection-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\DataField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\DataProxy-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\DataReader-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\GroupingStore-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\HttpProxy-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\JsonReader-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\JsonStore-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\MemoryProxy-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\Record-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\ScriptTagProxy-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\SimpleStore-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\SortTypes-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\Store-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\StoreMgr-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\Tree-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\data\XmlReader-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DDCore-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DragSource-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DragTracker-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DragZone-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DropTarget-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\DropZone-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\Registry-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\ScrollManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\dd\StatusProxy-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\debug-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\AbstractGridView-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\BasicDialog-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\GridView2-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\JsonView-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\BasicLayoutRegion-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\BorderLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\BorderLayoutRegions-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\ContentPanels-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\LayoutManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\LayoutRegion-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\LayoutStateManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\ReaderLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\layout\SplitLayoutRegion-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\MasterTemplate-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\legacy\View-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\locale\ext-lang-en.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\locale\ext-lang-es.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\state\CookieProvider-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\state\Provider-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\state\StateManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\ClickRepeater-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\CSS-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\Date-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\DelayedTask-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\Format-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\JSON-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\KeyMap-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\KeyNav-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\MixedCollection-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\Observable-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\TaskMgr-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\TextMetrics-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\util\XTemplate-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Action-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\BoxComponent-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Button-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\ColorPalette-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Component-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\ComponentMgr-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Container-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\CycleButton-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\DataView-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\DatePicker-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Editor-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Action-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\BasicForm-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Checkbox-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Combo-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\DateField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Field-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\FieldSet-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Form-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Hidden-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\HtmlEditor-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\NumberField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\Radio-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\TextArea-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\TextField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\TimeField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\TriggerField-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\form\VTypes-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\AbstractSelectionModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\CellSelectionModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\CheckboxSelectionModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\ColumnDD-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\ColumnModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\ColumnSplitDD-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\EditorGrid-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\GridDD-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\GridEditor-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\GridPanel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\GridView-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\GroupingView-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\PropertyGrid-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\RowNumberer-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\grid\RowSelectionModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Layer-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\AbsoluteLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\AccordionLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\AnchorLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\BorderLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\CardLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\ColumnLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\ContainerLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\FitLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\FormLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\layout\TableLayout-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\LoadMask-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\Adapter-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\BaseItem-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\CheckItem-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\ColorItem-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\ColorMenu-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\DateItem-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\DateMenu-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\Item-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\Menu-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\MenuMgr-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\Separator-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\menu\TextItem-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\MessageBox-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\PagingToolbar-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Panel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\PanelDD-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\ProgressBar-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Resizable-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Shadow-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\SplitBar-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\SplitButton-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\TabPanel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tips\QuickTip-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tips\QuickTips-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tips\Tip-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tips\ToolTip-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Toolbar-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\AsyncTreeNode-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeDragZone-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeDropZone-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeEditor-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeEventModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeFilter-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeLoader-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeNode-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeNodeUI-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreePanel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeSelectionModel-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\tree\TreeSorter-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Viewport-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\Window-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\widgets\WindowManager-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\yui\animation-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\yui\connection-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\yui\dom-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\yui\event-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\build\yui\yahoo-min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\CHANGES.txt" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext-all-debug.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext-all.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext-core-debug.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext-core.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext-local.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\ext.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\INCLUDE_ORDER.txt" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\LICENSE.txt" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\borders.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\box.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\button.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\combo.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\core.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\date-picker.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\dd.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\debug.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\dialog.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\editor.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\ext-all.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\form.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\grid.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\layout.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\menu.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\panel.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\progress.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\qtips.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\README.txt" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\reset-min.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\reset.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\resizable.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\tabs.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\toolbar.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\tree.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\window.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\css\xtheme-gray.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\ext\resources\license.txt" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\common\editwindow.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\common\formdialog.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\common\roweditor.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\common\searchfield.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\components\metaform.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\addmovement.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\CargaAdHoc.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\common.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\concepts.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\editmovement.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\ffpcalc.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\memberedit.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\membersearch.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\promotions.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\fflyeragent\promotionsGroups.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\init.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\lib\util.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\Site.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\themes\vueling\jquery-ui.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Content\themes\vueling\ui.jqgrid.css" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\jquery-1.7.1.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\jquery.validate.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.all.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.autocomplete.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.calendar.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.chart.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.combobox.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.common.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.datepicker.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.datetimepicker.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.draganddrop.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.editor.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.editing.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.filtering.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.grouping.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.reordering.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.grid.resizing.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.imagebrowser.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.list.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.menu.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.panelbar.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.slider.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.splitter.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.tabstrip.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.textbox.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.timepicker.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.treeview.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.upload.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\2013.2.611\telerik.window.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\BuyPoints\General.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\BuyPoints\ListTransactions.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\BuyPoints\ManagementOfTrackingData.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\BuyPoints\RedeemPoints.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\BuyPoints\SearchAndDetail.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.base.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.celledit.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.common.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.custom.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.formedit.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.grouping.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.import.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.inlinedit.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.jqueryui.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.loader.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.postext.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.setcolumns.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.subgrid.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.tbltogrid.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\grid.treegrid.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.notifyBar.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.validate.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.validate.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery-1.4.4-vsdoc.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery-1.4.4.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery-1.4.4.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery.unobtrusive-ajax.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryBase\jquery.validate-vsdoc.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery-ui.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery-ui.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.requireconfirmation.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.accordion.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.autocomplete.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.datepicker.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.draggable.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.requireconfirmation.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.slider.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryUI\jquery.ui.unobtrusive.tabs.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryValidate\jquery.validate.min.js" />
+    <Content Include="fake\Vueling.Punto.WebUI\Scripts\jqueryValidate\jquery.validate.unobtrusive.min.js" />
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\cars2.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\fonts\ProkyonTRegular.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\icon.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\icon_487.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\ie8.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\landing_promo_agencies.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\tablet_style.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\vueling.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\vueling_487.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\vueling_comp.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\vueling_ferran.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fake\Vueling.SkySales.StaticContent.JS.WebUI\css\VuelingBase\vueling_print.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Activities\Activities.csproj">
+      <Project>{ebca52c8-cfb1-4f62-af47-c11848e05d51}</Project>
+      <Name>Activities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TFSBuildExtensions.Library\TFSBuildExtensions.Library.csproj">
+      <Project>{50c7974d-f938-43ea-9ec2-4f80f8024660}</Project>
+      <Name>TFSBuildExtensions.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

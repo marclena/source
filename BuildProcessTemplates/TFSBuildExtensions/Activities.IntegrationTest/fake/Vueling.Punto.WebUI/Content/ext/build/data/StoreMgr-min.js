@@ -1,0 +1,1 @@
+Ext.StoreMgr=Ext.apply(new Ext.util.MixedCollection,{register:function(){for(var n=0,t;t=arguments[n];n++)this.add(t)},unregister:function(){for(var n=0,t;t=arguments[n];n++)this.remove(this.lookup(t))},lookup:function(n){return typeof n=="object"?n:this.get(n)},getKey:function(n){return n.storeId||n.id}})

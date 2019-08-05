@@ -1,0 +1,1 @@
+Ext.grid.GridEditor=function(n,t){Ext.grid.GridEditor.superclass.constructor.call(this,n,t);n.monitorTab=!1};Ext.extend(Ext.grid.GridEditor,Ext.Editor,{alignment:"tl-tl",autoSize:"width",hideEl:!1,cls:"x-small-editor x-grid-editor",shim:!1,shadow:!1})
