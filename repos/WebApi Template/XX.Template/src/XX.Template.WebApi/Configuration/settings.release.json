@@ -1,0 +1,5 @@
+﻿{
+  //apis settings behavior and business logic values
+  "SanitizeError": "#{SANITIZE_ERROR}#",
+  "PathBase": "#{PATH_BASE}#"
+}

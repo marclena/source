@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeCoverageThreshold Version=".0">
+  <Build>
+    <CodeCoveragePercentageError></CodeCoveragePercentageError>
+    <CodeCoveragePercentageWarning></CodeCoveragePercentageWarning>
+  </Build>
+  <Assembly>
+    <CodeCoveragePercentageError></CodeCoveragePercentageError>
+    <CodeCoveragePercentageWarning></CodeCoveragePercentageWarning>
+  </Assembly>
+</CodeCoverageThreshold>

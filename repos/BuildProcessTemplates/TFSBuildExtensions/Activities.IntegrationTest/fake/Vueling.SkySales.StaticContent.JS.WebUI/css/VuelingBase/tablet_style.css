@@ -1,0 +1,1202 @@
+.select{
+	background-color: #fff;
+	-webkit-appearance: caret;
+	-moz-appearance: caret;
+	background: #fff url(../../images/VuelingBase/downArrowAlone.png) no-repeat 95% center;
+	border-radius:0;
+	-webkit-border-radius:0;
+}
+
+/**  
+ * =IPAD
+ * 
+ * @section iradio
+ *
+ * Radiobutton para IPAD
+ *
+ */
+
+#wrapper .radioForm{
+    display:table;
+}
+
+#radiosBuscador{margin-bottom:20px}
+
+#wrapper .iradio{
+    height: 40px;
+    margin:0 0 0 5px!important;
+}
+#wrapper .iradio label,
+#wrapper .iradio a{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    vertical-align:middle!important;
+    height:40px;
+    display:table-cell!important;
+}
+
+#wrapper .iradio label{
+    position:relative;
+}
+#wrapper .iradio input[type="radio"]{
+    display: none!important;
+}
+#wrapper .iradio input[type="radio"] + label,
+#wrapper .iradio a{
+    background-color: #FFDD52;
+    border: 2px solid #FFDD52;
+    min-width: 80px;
+    padding: 4px 5px!important;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    cursor: pointer;
+    font: 800 0.9em/1.3 verdana;
+}
+
+.iradio--bulletVertical  input[type="radio"] + label{
+    text-align: left!important;
+    margin-bottom:10px;
+}
+#wrapper .iradio input[type="radio"] + label
+#wrapper .iradio a,
+#wrapper .iradio a span{
+    text-decoration:none;
+    color: #666666!important;
+    margin:0!important;
+}
+
+#wrapper .iradio a .icoGreenArrow{
+    display:none;
+}
+
+#wrapper .iradio input[type="radio"]:checked + label,
+#wrapper .iradio a:hover{
+    background-color: #efefef;
+    border-color: #A8A7A6;
+}
+
+#wrapper .buscador-home .iradio{    
+    float: left;
+    margin: 0 0 0 2.5%;
+    width: 31.5%;
+}
+#wrapper .buscador-home .radioForm .iradio:first-child{
+	margin-left:0;
+}
+.iradioInline{
+    float:left;
+}
+.iradioInline label{
+    width:auto!important;
+}
+
+
+/* iradio con bullet */
+
+#wrapper .iradio.iradio--bullet input[type="radio"] + label{
+  border: 1px solid #e1e1e1!important;
+  background-color: #fff!important;
+  padding: 12px 41px!important;
+  font-size: 13px;
+  width: 100%!important;
+  display: block!important;
+  height: auto;
+}
+#wrapper .iradio.iradio--bullet input[type="radio"]:checked + label{
+    border-color:#fc0!important;
+    background-color:#f7f7f7!important;
+}
+
+#wrapper .iradio.iradio--bullet input[type="radio"]:checked + label:after{
+    content:"";
+    position:absolute;
+    background:url(../../images/VuelingBase/sprite_graficos.png) -282px -899px no-repeat;
+    width:26px;
+    height:26px;
+    left: 7px;
+    top: 7px;
+}
+
+#wrapper .iradio.iradio--187w label{
+    min-width:187px!important;
+}
+
+#wrapper .iradio.iradio--bullet .iradio__content__text{
+    display: table-cell;
+    float: none;
+    height: 38px;
+    vertical-align: middle;
+    font-size:13px!important;
+}
+
+
+/* modificacion iconos labels */
+
+#wrapper .iradio .icoPuntoc3{
+    width:59px;
+    height:20px;
+    background-position:-992px -1110px;
+    margin:0 auto;
+    float:none;
+}
+#wrapper .loyaltyProgramRadio .iradio .icoPuntoc3{margin:9px auto}
+.loyaltyProgramRadio label span.icoIbplus_small{margin:13px 0;}
+
+/* modificacion en tarjeta de pago */
+
+#wrapper .paymentMethodRow.iradio--bullet input[type="radio"] + label{
+    /*padding-left:54px!important;*/
+    display:inline-block!important;
+    min-width:380px;
+    text-align:left;
+}
+#wrapper .IT .paymentMethodRow.iradio--bullet input[type="radio"] + label
+{
+    min-width: 402px;
+}
+#wrapper .paymentMethodRow.iradio.iradio--bullet input[type="radio"] + label{
+    padding:0 35px 0 20px!important;
+}
+#wrapper .paymentForm .iradio{
+    padding:5px;
+}
+#wrapper .paymentForm .iradio.selected{
+    background-color:transparent;
+}
+
+
+
+/**  
+ * =IPAD
+ * 
+ * @section checkbox2
+ *
+ * Checkbox para IPAD con la usabilidad de un radiobutton para IPAD
+ *
+ */
+
+#wrapper .icheckboxLabel{
+    display:inline-table;
+    width:100%;
+    max-width:100%;
+}
+
+#wrapper .icheckboxLabel input[type="checkbox"]{
+    display: none!important;
+}
+
+#wrapper .icheckboxLabel label{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    vertical-align:middle;
+    width:100%;
+}
+
+.paymentForm > span .icon{
+	left: 6px;
+}
+
+.paymentForm > span span {left:305px}
+
+#wrapper .icheckboxLabel input[type="checkbox"] + label{
+    background-color: #fafafa;
+    border: 2px solid #e1e1e1;
+    width:100%;
+    padding: 8px 5px!important;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 8px!important;
+    -webkit-border-radius: 8px!important;
+    cursor: pointer;
+    font: 800 11px/1.3 verdana;
+    display:inline-block;
+    margin:0;
+}
+
+#wrapper .icheckboxLabel input[type="checkbox"]:checked + label{
+    border-color: #FFDD52;
+}
+#wrapper .icheckboxLabel .icheckboxLabel__content{
+    display:table;
+    height:25px;
+    width:100%;
+}
+
+#wrapper .icheckboxLabel .icheckboxLabel__content__txt{
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+}
+
+#wrapper .icheckboxLabel .icheckboxLabel__content__txt__msg{
+    display:inline-block;
+    padding-left:25px;
+    position:relative;
+}
+#wrapper .icheckboxLabel .icheckboxLabel__content__txt__msg span{
+    max-width:none;
+}
+#wrapper .icheckboxLabel input[type="checkbox"] + label .icheckboxLabel__content__txt__msg:before,
+#wrapper .listaPasajeros input[type="radio"] + label .iradio__content__text:before{
+    content:"";
+    position:absolute;
+    background:url(../../images/VuelingBase/sprite_graficos.png) -318px -903px no-repeat;
+    width:22px;
+    height:22px;
+    left:0;
+    top:50%;
+    margin-top:-11px;
+}
+#wrapper .icheckboxLabel input[type="checkbox"]:checked + label .icheckboxLabel__content__txt__msg:before,
+#wrapper .listaPasajeros input[type="radio"]:checked + label .iradio__content__text:before{
+    background-position: -284px -901px;
+}
+
+
+
+/**  
+ * =IPAD
+ * 
+ * @section checkbox
+ *
+ * Checkbox para IPAD
+ *
+ */
+
+#wrapper .icheck {
+    position: relative;
+    display:table;
+}
+
+#wrapper .buscador-home .icheck{
+    margin-top:5px;
+}
+
+#wrapper .icheck .icheck__input {
+    display: none;
+}
+
+#wrapper .icheck .icheck__label{
+    display: block;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    vertical-align:middle;
+    text-align:left;
+    padding:0!important
+}
+
+#wrapper .icheck .icheck__label__txt,
+#wrapper .icheck .icheck__label__switch{
+    vertical-align:middle;
+    display:table-cell;
+}
+
+
+#wrapper .icheck .icheck__label__switch__content {
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    width: 60px;
+    border:2px solid #999;
+    vertical-align:middle;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    background-color:#666;
+}
+
+#wrapper .icheck .icheck__label__switch__content__inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+    height: 24px;
+}
+
+#wrapper .icheck .icheck__label__switch__content__inner:before,
+#wrapper .icheck .icheck__label__switch__content__inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height:100%;
+    padding: 0;
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#wrapper .icheck .icheck__label__switch__content__inner:before {
+    content: attr(valueOn);
+    padding-left: 10px;
+    background-color: #666666;
+    color: #FFFFFF;
+    text-align: left;
+}
+#wrapper .icheck .icheck__label__switch__content__inner:after {
+    content: attr(valueOff);
+    padding-right: 7px;
+    background-color: #EEEEEE;
+    color: #999999;
+    text-align: right;
+}
+#wrapper .icheck .icheck__label__switch__content__round {
+    display: block;
+    width: 16px;
+    height:16px;
+    margin: 3px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    border:2px solid #999;
+    top: 50%;
+    margin-top:-10px;
+    bottom: 0;
+    right: 33px;
+    -moz-transition: all 0.3s ease-in 0s;
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s;
+    transition: all 0.3s ease-in 0s;
+}
+.icheck .icheck__input:checked + .icheck__label .icheck__label__switch__content__inner {
+    margin-left: 0!important;
+}
+.icheck .icheck__input:checked + .icheck__label .icheck__label__switch__content,
+.icheck .icheck__input:checked + .icheck__label .icheck__label__switch__content__round {
+    border-color:#666!important;
+}
+.icheck .icheck__input:checked + .icheck__label .icheck__label__switch__content__round {
+    right: -2px!important;
+    width: 18px;
+    height:18px;
+    margin-top:-11px;
+}
+
+
+/* modificaciones elementos icheck */
+
+/* paso 2 */
+#wrapper .icheck .icheck__label__txt span{
+    float:none!important;
+    display:inline-block;
+    vertical-align:middle;
+}
+#wrapper .icheck--max400 label{
+    width:400px!important;
+}
+#wrapper .checkFieldRow label.resFamNum{margin-left:0}
+
+
+/* Hold */
+.checkHold .icheck{
+	padding-top:12px;
+}
+
+.wrapGenericTable_colRight .genericTable tr td, 
+.wrapGenericTable_colRight .genericTable tr th{
+    padding:5px;   
+}
+.genericTable tr th:first-child, 
+.genericTable tr td:first-child {
+    padding:5px;
+}
+.wrapGenericTable_colLeft .borderNone{
+    padding-top:24px!important;
+}
+#cancelPetPopUpLk{
+    padding:30px 0 15px;
+    font-size: 14px;
+}
+.seatPiece .conditions{
+   min-height: 15px;
+}
+.seatPiece .conditions a{
+    font-size: 1em;
+    font-weight: 800;
+
+}
+.seatPiece .conditions{
+    min-height: 24px;
+}
+.scrollSubHeader, .scrollDefault {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollSubHeader, .scrollDefault {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* mod posicion tooltips */
+.connectInfo {
+    bottom: 19px;
+    right: 38px;
+}
+
+
+/**
+ *  =IPAD
+ *
+ * Tootlip tarifas header
+ *
+ */
+
+.callout h3{
+	padding-right:30px;
+}
+
+
+/**
+ *  =IPAD
+ *
+ * Tabla comparativa tarifas
+ *
+ */
+
+.feeHeaderTabs{width:94.5%;}
+.feeHeaderTabs .tableHeaderLinkSection{width:41%;}
+
+
+/* 
+ * =IPAD
+ * 
+ * @section POP UPs
+ *
+ * fontsizes para IPAD
+ *
+ */
+
+
+.tablet__link {
+	font-size: 1.27em;
+}
+
+
+/* 
+ * =IPAD
+ * 
+ * @section POP UPs
+ *
+ * tooltip de sms chekinonline
+ *
+ */
+
+.tooltipWrapButton{
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.tooltipWrapButton .tooltipSMS input{
+	font-size: 13px;
+}
+
+
+/*
+ * =IPAD
+ *
+ * MAQUETACION ASIENTOS
+ *
+ */
+
+
+/*columnado*/
+
+.wrap_colHalf .colHalf_1,
+.wrap_colHalf .colHalf_2,
+#seatMap .colInRow.two-col .colIn{
+    width:49%!important;
+    margin-left:10px!important;
+}
+#wrapper .wrap_colHalf > div:first-child,
+#wrapper #seatMap .colInRow.two-col .colIn:first-child{
+    margin-left: 0!important;
+}
+
+/*end columnado*/
+
+
+/* modulo ruta*/
+
+.sectionBox,
+.wrap_colHalf > div{
+    box-sizing: border-box;
+}
+.sectionPassengers > div{
+    border:2px solid #ebebeb;
+    border-radius: 10px;
+}
+.sectionPassengers .sectionBox { 
+    padding:10px;
+}
+
+/* end modulo ruta */
+
+
+/* modulo pasajeros*/
+
+#wrapper .listaPasajeros{
+    margin: 1px 0 20px;
+}
+
+
+#wrapper .listaPasajeros .contentScroll{
+    height: 258px !important;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+#wrapper .listaPasajeros .iradio{
+	display: inline-table;
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0!important;
+}
+
+#wrapper .listaPasajeros .iradio__content{
+	display: table;
+	height: 25px;
+	width: 100%;
+}
+
+#wrapper .listaPasajeros .iradio .iradio__content__text{
+	display: inline-block;
+	padding-left: 25px;
+	position: relative;
+	height:auto!important;
+	font-size: 11px!important;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	width:100%;
+}
+#wrapper .listaPasajeros .iradio input[type="radio"] + label {
+	border-radius:0px!important;
+	border: 3px solid #e1e1e1!important;
+	background-color:#fff;
+    padding: 8px 5px!important;
+	font-size: 11px;
+	text-align: left;
+}
+#wrapper .listaPasajeros .iradio.iradio--bullet input[type="radio"]:checked + label{
+	background-color:#f9f9f9!important;
+    border-color:#e1e1e1!important;
+    position: relative;
+    z-index: 3;
+}
+
+#wrapper .listaPasajeros input[type="radio"] + label .iradio__content__text:before{top:10px;}
+
+#wrapper .listaPasajeros .iradio.iradio--bullet input[type="radio"]:checked + label:after{
+	display: none;
+}
+#wrapper .listaPasajeros .iradio fieldset {
+	padding-right: 40px;
+}
+#wrapper .listaPasajeros .seatInfo{padding-top: 4px;}
+#wrapper .listaPasajeros .labelSeat,
+#wrapper .listaPasajeros .numSeat,
+#wrapper .listaPasajeros .iradio .seatButton {
+	display: inline-block!important;
+}
+#wrapper .listaPasajeros .labelSeat {
+	margin: 0 8px;
+}
+
+#wrapper .listaPasajeros .iradio .seatButton {
+	height: auto;
+	padding: 9px!important;
+	border-radius: 30px;
+	min-width: 0;
+	text-decoration: none;
+	border: 35px;
+	width: 30px;
+	font-size: 14px;
+	line-height: 11px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #ccc;
+	color: #fff;
+}
+#wrapper .listaPasajeros .iradio .seatButton:hover{
+	background-color:#666;
+}
+#wrapper .listaPasajeros .contentScroll li {
+    margin:-3px 0 0!important; 
+    border:0;
+}
+#wrapper .listaPasajeros .contentScroll li:first-child {
+    margin-top:0px!important;
+}
+
+#wrapper .listaPasajeros .iradio__content__text label{
+    height:auto;
+	padding-bottom: 5px;
+	font-size: 11px;
+}
+#wrapper .listaPasajeros li:first-child .iradio label{
+    margin-top: 0;
+}
+
+/* end modulo pasajeros */
+
+
+.sprite {
+	background: url(../../images/VuelingBase/sprite_graficos.png) no-repeat;
+	display: block;
+}
+.img__asientos__avion_mini {
+	background-position: -978px -793px; /*OK*/
+	height: 134px;
+	width: 124px;
+	margin: 0 auto;
+}
+.img__asientos__avion_mini__scroll {
+	background-position: -978px -928px; /*OK*/
+	width: 124px;
+	height: 36px;
+	margin: 0 auto;
+	transition:all 1s;
+}
+.avion_mini__scroll_lengueta{
+	background-position: -978px -969px; /*OK*/
+	width: 124px;
+	height: 36px;
+	margin: 0 auto;
+	position:absolute;
+}
+.avion_mini__scroll {
+	display: block;
+	position: relative;
+    margin-bottom: 9px;
+}
+.avion_mini__scroll .img__asientos__avion_mini {
+	position: relative;
+}
+.avion_mini__scroll .img__asientos__avion_mini__scroll {
+	position: absolute;
+	/* transition:all 1s; */
+}
+.avion_mini__scroll_del > .avion_mini__scroll_lengueta{
+	top: 100%;
+}
+.avion_mini__scroll_tras > .avion_mini__scroll_lengueta{
+	bottom:94%
+}
+.avion_mini__scroll_tras > .avion_mini__scroll_lengueta{
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);	
+}
+.avion_mini__scroll_tras {
+
+	top: 85px;
+}
+.avion_mini__scroll_del {
+	top: 15px;
+}
+.fuselaje {
+	position: relative;
+	width:105%;
+}
+.fuselaje > div {
+}
+.linia {
+	border-style: solid;
+	border-width: 4px;
+	border-color: #efefef;
+	background-color: #F9F9F9;
+	width: 280px;
+	height: 649px;
+	position: absolute;
+	margin-left: 16px;
+	box-shadow: 0px 0px 9px -2px;
+}
+.casco {
+	position: relative;
+	height: 583px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-top: 40px;
+	left: 0px !important;
+    width:103%;
+}
+.btn_scroll,.btn_scroll:hover  {
+		content: "";
+		border-top: 0px none;
+		height: 39px;
+		width: 107px;
+		position: absolute;
+		z-index: 20;
+		left: 50%;
+		margin-left: -63px;
+		bottom: -60px;
+}
+.btn_scroll{
+		background-position: -1115px -793px; /*OK*/
+}
+.btn_scroll:hover {
+	background-position: -1115px -842px; /*OK*/
+}
+.btn_scroll--up {
+	transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+	top: -4%;
+}
+.btn_scroll--down {
+	bottom: -7%;
+}
+
+.trapezoide {
+	width: 292px;
+	position: relative;
+	margin-left: 20px;
+}
+.trapezoide--izq:before, .trapezoide--der:after {
+	background: url('../../images/VuelingBase/sprite_graficos.png') no-repeat scroll transparent;
+	content: "";
+	width: 20px;
+	height: 186px;
+	position: absolute;
+	top: 28.3%;
+}
+.trapezoide--der:after {
+	background-position: -1523px -755px !important; /*OK*/
+	right: -10px;
+}
+.trapezoide--izq:before {
+	background-position: -1495px -755px !important; /*OK*/
+	left: -21px;
+}
+.ocultar {
+	display: none !important;
+}
+
+.casco_filas{
+	width: 93%;
+	margin: 0 7px;
+	position: relative;
+	z-index: 1;
+}
+.filas td{
+	padding: 8px 5px;
+	vertical-align: middle;
+}
+.filas_asiento{
+	position:relative;
+}
+.line--dotted {
+	background-color: transparent;
+	height: 1px;
+	border: 0;
+	border-top: 1px dotted #333;
+}
+.casco .line--dotted {
+	margin-left: 3px;
+	width: 111%;
+}
+.filas--tope--sup, .filas--tope--inf {
+
+	position: absolute;
+	z-index: 13;
+	background-color: #f9f9f9;
+	margin-left: 20px;
+	border-color: #ebebeb;
+	border-style: solid;
+}
+.filas--tope--inf {
+	height: 10px;
+	border-width: 0px 4px 4px 4px;
+}
+.filas--tope--sup {
+    border-top: 4px solid #ebebeb;
+    left: 2px;
+    padding: 14px 2px 3px 10px;
+    top: 0;
+}
+
+.filas:hover .pasillo {
+	color: #FFCC00;
+}
+.filas > span {
+	float: left;
+	margin: 0 6px;
+}
+.filas > span.letra,
+.filas--tope--sup > span.pasillo{
+    display: inline-block;
+    margin: 0 0 0 12px;
+    width: 27px;
+}
+
+.filas > span.letra{
+    font:400 1.27em/1.4 DTLProkyonSTRegular, Verdana, Geneva, sans-serif;
+    height:auto;
+}
+
+.filas > span.letra:first-child{
+	margin-left:0;
+}
+.filas--excellence .cartel_Content {
+	background-color: #666666;
+}
+
+.filas--excellence .triangulo--inf {
+	border-top: 8px solid #666;
+}
+.filas--preferente .cartel_Content {
+	background-color: #7e7e00;
+}
+.filas--preferente .triangulo--inf {
+	border-top: 8px solid #7e7e00;
+}
+.filas--optima  .cartel_Content,
+.filas--basic  .cartel_Content{
+	background-color: #ffcc00;
+}
+.filas--optima .triangulo--inf,
+.filas--basic  .triangulo--inf{
+	border-top: 8px solid #ffcc00;
+}
+.filas--XL td{
+	padding-top:17px;
+}
+.avion321 .filas--XL td{
+	padding-top:17px;
+	padding-bottom:17px
+}
+.avion321 .filas--XL .cartel{
+	top: -51px;
+}
+.avion321 .filas--XL .cartel .triangulo--inf{
+	left:7px;
+}
+
+.filas--XL  .cartel_Content {
+    background-color: #999;
+    min-width: 15px;
+    padding: 7px 18px;
+}
+.filas--XL .triangulo--inf {
+	border-top: 8px solid #999;
+}
+.filas--XL, .filas--excellence {
+	margin-top: 7px;
+}
+.filas--corte {
+	border-top: 1px dotted #808080;
+}
+.cartel--sup .cartel_Content {
+	left: -46px;
+}
+.filas--preferente .cartel_Content,
+.filas--optima .cartel_Content,
+.filas--basic .cartel_Content,
+.filas--XL .cartel_Content{
+	left:-6px;
+}
+
+.rotate_90{
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: left bottom;
+	-moz-transform: rotate(90deg);
+}
+.rotate_-180{
+	 -webkit-transform: rotate(-180deg);
+ -moz-transform: rotate(-180deg);
+}
+.cartel {
+	position: absolute;
+	top:-164%;
+	display: inline-block;
+	-webkit-transform: rotate(90deg);
+	-webkit-transform-origin: left bottom;
+	-moz-transform: rotate(90deg);
+	-moz-transform-origin: left bottom;
+	left: 108%;
+	min-width: 300px;
+	width: 100%;
+	z-index: 10;
+	font-size: 12px;
+	padding: 6px;
+	position: absolute;
+}
+.cartel--pasajero .cartel_Content{
+	background-color:#fff!important;
+	color:#666;
+}
+.cartel--pasajero .triangulo--inf, .cartel--pasajero .triangulo--inf{
+	
+		border-top: 8px solid #fff;
+
+}
+.triangulo {
+	position: absolute;
+	left: 6px;
+	width: 0px;
+	height: 0px;
+
+	font-size: 0px;
+	line-height: 0;
+}
+.triangulo--inf,.triangulo--sup{
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		
+}
+.triangulo--inf{
+		border-top: 8px solid rgb(102, 102, 102);
+		bottom: 0px;
+	left:1px;
+
+		
+}
+.triangulo--sup{
+		border-bottom: 8px solid rgb(102, 102, 102);
+		top:0;		
+}
+
+.cartel--sup .triangulo--inf {
+	left: 0;
+}
+.cartel_Content {
+ color: #fff;
+ position: relative;
+ bottom: 0;
+ text-align: left;
+ background-color:#fff;
+ float: left;
+ padding: 7px;
+ font:400 1.091em/1.4 DTLProkyonSTRegular, Verdana, Geneva, sans-serif;
+}
+.cartel_Content .num{
+	font:800 1em/1.4 DTLProkyonSTRegular, Verdana, Geneva, sans-serif;
+	padding-left: 3px;
+}
+
+.asiento, .vacio, .espacio, .letra, .ocupado {
+	position: relative;
+	display: block;
+	width: 27px;
+	height: 27px;
+	border-radius: 20%;
+	text-align: center;
+	border: 2px solid transparent;
+	color: #666;
+	box-sizing: border-box;
+}
+.asiento:before {
+	position: absolute;
+	content: "";
+	border-top: 2px solid rgba(0, 0, 0, .2);
+	width: 18px;
+	height: 0px;
+	bottom: 3px;
+	left: 2px;
+}
+
+.pasillo{
+    font:400 1.27em/1.4 DTLProkyonSTRegular, Verdana, Geneva, sans-serif;
+}
+
+.asiento--excellence {
+	background-color: #666;
+	border: 2px solid #808080;
+}
+.asiento--preferente {
+	background-color: #999900;
+	border: 2px solid #7e7e00;
+}
+.asiento--optima,
+.asiento--basic {
+	background-color: #FFCC00;
+	border: 2px solid #EABB00;
+}
+.asiento--XL {
+	background-color: #999999;
+	border: 2px solid #B4B9BC;
+}
+
+.vacio{
+	background-color: #dcdcdc;
+	border: 2px solid #dcdcdc;
+}
+.asiento--bebe {
+	background-color: #ffffff;
+	border: 2px solid #999900;
+}
+
+.asiento--bebe:before {
+	content: "";
+	background: url('../../images/VuelingBase/sprite_graficos.png') no-repeat scroll -1242px -857px transparent; /*OK*/
+	border-top: 0px none;
+	height: 22px;
+	width: 22px;
+	left:0px;
+}
+.filas_asiento .sectionBorder_layerSmall{
+	width: 160px;
+	text-align: left;
+	padding-right: 0;
+	z-index: 11;
+	position: absolute;
+	top: -15px;
+}
+.bloqueABC .sectionBorder_layerSmall{
+	left: 122%;
+}
+.bloqueDEF .sectionBorder_layerSmall{
+	right: 122%;
+}
+
+.ocupado {
+	background: none;
+	border: 2px solid transparent;
+}
+.ocupado:before, .ocupado:after {
+	content: "";
+	display: block;
+	background-color: #333;
+	position: relative;
+	margin: 0px auto;
+}
+.ocupado:after {
+
+	border-radius: 50%;
+	height: 12px;
+	width: 12px;
+	margin: 0px auto;
+	bottom: 12px;
+}
+.ocupado:before {
+
+	height: 10px;
+	width: 22px;
+	top: 13px;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	left: 0px;
+}
+.leyenda {
+    background: url(../../images/VuelingBase/border-separator.png) center top repeat-y;
+    margin-top: 19px;
+    padding: 0 6px;
+}
+.leyenda .asiento, .leyenda .espacio {
+	-ms-transform: scale(.7 , .7);
+	-webkit-transform: scale(.7 , .7);
+	-moz-transform: scale(.7 , .7);
+	-o-transform: scale(.7 , .7);
+	transform: scale(.7 , .7);
+}
+.leyenda > div{
+	display:table;
+	width:100%;
+    box-sizing: border-box;
+}
+
+.leyenda div > span {
+	display: table-cell;
+	font-size: 9px;
+	vertical-align: middle;
+}
+
+.leyenda div > span:first-child {
+	width:20px;
+}
+
+.leyenda .texto {
+	padding-left: 10px;
+	color: #333;
+}
+.leyenda .texto.precio {
+    font-weight: bolder;
+    padding-left: 33px;
+    text-align: left;
+    width: auto;
+}
+.leyenda_sub{
+    padding:4px 4px 4px 0;
+}
+.leyenda .leyenda_sub span:first-child{
+    padding-left: 37px;
+}
+
+.leyenda .texto,
+.leyenda .leyenda_sub span:first-child{
+    width:113px;
+}
+.transparente{
+	-moz-opacity:0.5;-khtml-opacity:0.5;opacity:0.5;
+}
+.leyenda_resaltado{
+    background-color: #f9f9f9;
+    padding: 4px;
+    margin-top: 5px;
+    border-top:5px solid #fff;
+}
+.leyenda_resaltado .ocupado,
+.leyenda .asiento--bebe{
+ 	-ms-transform: scale(.8 , .8);
+	-webkit-transform: scale(.8 , .8);
+	-moz-transform: scale(.8 , .8);
+	-o-transform: scale(.8 , .8);
+	transform: scale(.8 , .8);   
+}
+
+.leyenda_resaltado .ocupado:before {
+    height: 10px;
+    width: 23px;
+}
+.leyenda_resaltado .ocupado:after {
+    height: 12px;
+    width: 13px;
+}
+
+/**
+ *  =IPAD
+ *
+ * Modificador para avión formato Desktop 
+ *
+ */
+.wrapAvionDesktop .pasillo{ width:auto; display: table-row;}
+.wrapAvionDesktop  .tableAvion_thList li.pasillo{display: block; box-sizing: content-box;}
+
+/**
+ *  =IPAD
+ *
+ * calendario 
+ *
+ */
+.ui-datepicker,
+.ui-icon-circle-triangle-w, .ui-icon-circle-triangle-e {
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.displayInlineBlock input[disabled]{background-color:#EBEBE4;color:#666}
+
+
+/*********************** FIXES ************************/
+/* CRT-121227 [MAQ] Sale desmaquetado logo y texto de punto (Ipad)
+   Posicionamos logo de punto para Ipad en la página de contact
+*/
+.icheck__label__txt .icoPuntoc3{top:4px;}
+.formLeft .programmRow .cssHint{width:196px!important;}
+
+/*
+CRT-124363 [MAQ][SAF] Cajas de punto y punto iberia salen desmaquetadas
+Las cajas de punto e IberiaPlus en contact.aspx logado en punto aparecen desmaquetadas
+*/
+#wrapper .pointsForm .iradio.iradio--bullet input[type="radio"] + label{float:left;}
+.tblMarginBottom23{margin-bottom:23px;}

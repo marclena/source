@@ -1,0 +1,6 @@
+﻿{
+  //apis settings behavior and business logic values
+  "SanitizeError": "false",
+  "PathBase": "/template"
+
+}

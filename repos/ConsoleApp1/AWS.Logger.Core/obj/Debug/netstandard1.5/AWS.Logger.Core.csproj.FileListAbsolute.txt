@@ -1,0 +1,18 @@
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.deps.json
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.csproj.CoreCompileInputs.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.AssemblyInfoInputs.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.AssemblyInfo.cs
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\src\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.csprojAssemblyReference.cache
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.AssemblyInfoInputs.cache
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.AssemblyInfo.cs
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.pdb
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.deps.json
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\bin\Debug\netstandard1.5\AWS.Logger.Core.pdb
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Core\obj\Debug\netstandard1.5\AWS.Logger.Core.csprojAssemblyReference.cache

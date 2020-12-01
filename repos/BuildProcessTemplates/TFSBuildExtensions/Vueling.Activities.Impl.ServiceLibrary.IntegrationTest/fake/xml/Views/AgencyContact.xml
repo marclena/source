@@ -1,0 +1,25 @@
+<culture skin="Default" culture="es-ES" version="0.0.1">
+  
+  <label
+    id="corporateFlightPointsInstruction" text="Ara, si reserves a través de la nostra web exclusiva 
+         per a Empreses, la teva empresa aconseguirà la mateixa 
+         quantitat de punts que acumularà 323
+         la persona que 
+         vola." plural="yoyoyoy" >
+  </label>
+
+  <label id="MarketLeavingFrom" text="
+         Leaving 
+         From:" />
+
+  <label id="corporateFlightPointsInstruction" text="Arafsdf" singular="pepito" />
+
+  <dynam id="sdfsdf" text="Ara" test="texto" />
+
+  <ul>
+    <li>
+      <yyy></yyy>
+    </li>
+  </ul>
+  
+</culture>

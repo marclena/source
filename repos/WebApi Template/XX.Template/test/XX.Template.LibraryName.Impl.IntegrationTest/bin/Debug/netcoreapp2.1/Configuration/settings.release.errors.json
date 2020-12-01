@@ -1,0 +1,13 @@
+﻿{
+  "BusinessErrors": {
+    "BookingNotFound": {
+      "Message": "Booking {0} not found!!!",
+      "Code": 1000
+    },
+    "InvalidUserOrPassword": {
+      "Message": "Error during loggon to Navitaire. Invalid username or password!!!",
+      "Code": 2000
+    }
+
+  }
+}

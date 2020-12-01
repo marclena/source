@@ -1,0 +1,32 @@
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csprojAssemblyReference.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csproj.CoreCompileInputs.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Log4net12.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Log4net12.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Core.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\log4net.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWSSDK.CloudWatchLogs.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Core.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.xml
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\log4net.xml
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csproj.CopyComplete
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\AWS.Logger.Log4net12\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Log4net12.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Log4net12.pdb
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Core.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\log4net.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWSSDK.CloudWatchLogs.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWS.Logger.Core.pdb
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.pdb
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\AWSSDK.Core.xml
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\bin\Debug\log4net.xml
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csprojAssemblyReference.cache
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.csproj.CopyComplete
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.dll
+C:\Users\jarbues\source\repos\ConsoleApp1\AWS.Logger.Log4net12\obj\Debug\AWS.Logger.Log4net12.pdb

@@ -1,0 +1,3 @@
+﻿@model System.Int64?
+@using System.Globalization
+@Html.TextBox("", (Model.HasValue ? Model.Value.ToString(CultureInfo.CurrentUICulture.NumberFormat) : string.Empty))

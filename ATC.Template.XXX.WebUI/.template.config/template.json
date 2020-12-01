@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vueling Architecture",
+  "classifications": [ "WebService", "WCF" ],
+  "name": "ASP.NET Vueling.XXX.WebUI",
+  "identity": "Vueling.XXX.WebUI.Template.CSharp",
+  "groupIdentity": "Vueling.XXX.Template",
+  "shortName": "Vueling.XXX.WebUI",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }, 
+  "preferNameDirectory": true,
+  "symbols": {
+
+    "slnName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "replaces": "Vueling.XXX",
+      "fileRename": "Vueling.XXX"
+    },
+    "dbName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "replaces": "Vueling_XXX",
+      "fileRename": "Vueling_XXX"
+    }
+  },
+  "sources": []
+}

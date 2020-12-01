@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBCA52C8-CFB1-4F62-AF47-C11848E05D51}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TFSBuildExtensions</RootNamespace>
+    <AssemblyName>TFSBuildExtensions</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\TFSBuildExtensions.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\TFSBuildExtensions.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.10.5260.16954, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.10.5260.16959\lib\net40\AjaxMin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.CodeDeploy, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.CodeDeploy.3.3.1.6\lib\net45\AWSSDK.CodeDeploy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.3.7\lib\net45\AWSSDK.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.EC2, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.EC2.3.3.4.3\lib\net45\AWSSDK.EC2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticBeanstalk, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.ElasticBeanstalk.3.3.2.3\lib\net45\AWSSDK.ElasticBeanstalk.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.ElasticLoadBalancing, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.ElasticLoadBalancing.3.3.0.6\lib\net45\AWSSDK.ElasticLoadBalancing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.RDS, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.RDS.3.3.3.1\lib\net45\AWSSDK.RDS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AWSSDK.S3, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.S3.3.3.5.2\lib\net45\AWSSDK.S3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fasterflect, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a64e1179c81b1e25, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.0.1\lib\net40\Fasterflect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=13.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Dac.1.0.3\lib\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Utilities, Version=13.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Dac.1.0.3\lib\Microsoft.Data.Tools.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dac, Version=13.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Dac.1.0.3\lib\Microsoft.SqlServer.Dac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Build.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Build.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\ReferenceAssemblies\v2.0\Microsoft.TeamFoundation.VersionControl.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Administration.7.0.0.0\lib\net20\Microsoft.Web.Administration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\lib\Quartz.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=3.5.4.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <HintPath>..\packages\RabbitMQ.Client.3.5.4\lib\net40\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vueling.Build.Contracts.ServiceLibrary, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Contracts.ServiceLibrary.4.0.1.0\lib\net40\Vueling.Build.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.DB.Infrastructure, Version=4.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.DB.Infrastructure.4.0.3.0\lib\net40\Vueling.Build.DB.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.AWS.Contracts.ServiceLibrary, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.AWS.Contracts.ServiceLibrary.1.0.1.0\lib\net40\Vueling.Build.Deploy.AWS.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.AWS.Impl.ServiceLibrary, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.AWS.Impl.ServiceLibrary.1.0.1.6\lib\net40\Vueling.Build.Deploy.AWS.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.AzurePlataform.Contracts.ServiceLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.AzurePlataform.Contracts.ServiceLibrary.1.0.0.1\lib\net40\Vueling.Build.Deploy.AzurePlataform.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.AzurePlataform.Impl.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.AzurePlataform.Impl.ServiceLibrary.1.0.0.0\lib\net40\Vueling.Build.Deploy.AzurePlataform.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.Config.DTO, Version=1.0.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.Config.DTO.1.0.1.6\lib\net35\Vueling.Build.Deploy.Config.DTO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.Proxy.Contracts.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.Proxy.Contracts.ServiceLibrary.2.0.0.0\lib\net40\Vueling.Build.Deploy.Proxy.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Deploy.Proxy.Impl.ServiceLibrary, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Deploy.Proxy.Impl.ServiceLibrary.2.0.0.0\lib\net40\Vueling.Build.Deploy.Proxy.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Build.Impl.ServiceLibrary, Version=4.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Build.Impl.ServiceLibrary.4.0.4.0\lib\net40\Vueling.Build.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Extensions.Library, Version=1.0.1.0, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Extensions.Library.1.0.1\lib\net35\Vueling.Extensions.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Messaging.RabbitMqSecurity.Library, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Messaging.RabbitMqSecurity.Library.1.0.0.6\lib\net35\Vueling.Messaging.RabbitMqSecurity.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.NugetManager.ServiceLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.NugetManager.ServiceLibrary.1.0.0.0\lib\net40\Vueling.NugetManager.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.ToolChain.Configuration.Contracts.ServiceLibrary, Version=1.0.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ToolChain.Configuration.Contracts.ServiceLibrary.1.0.1.1\lib\net40\Vueling.ToolChain.Configuration.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.ToolChain.Configuration.Impl.ServiceLibrary, Version=1.0.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.ToolChain.Configuration.Impl.ServiceLibrary.1.0.1.3\lib\net40\Vueling.ToolChain.Configuration.Impl.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WinSCPnet, Version=1.2.10.5874, Culture=neutral, PublicKeyToken=2271ec4a3c56d0bf, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinSCP.5.7.6\lib\WinSCPnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AWS\CreatePackage7z.cs" />
+    <Compile Include="AWS\CreateXmlFileDefinition.cs" />
+    <Compile Include="AWS\UploadAWSPackageToS3.cs" />
+    <Compile Include="BaseCodeActivity.cs" />
+    <Compile Include="CodeCoverage\CodeCoverageActivity.cs" />
+    <Compile Include="CodeMetrics\CodeMetricsActivity.cs" />
+    <Compile Include="Communication\Email.cs" />
+    <Compile Include="Compression\JsCssMinActivity.cs" />
+    <Compile Include="Compression\ZipActivity.cs" />
+    <Compile Include="ConfigurationSetupEnvironment\ConfigurationWorkflow.cs" />
+    <Compile Include="ConfigurationSetupEnvironment\ConfigureRabbitMQActivity.cs" />
+    <Compile Include="CustomTypes\ApplicationDeploymentConfiguration.cs" />
+    <Compile Include="CustomTypes\RunCommandsList.cs" />
+    <Compile Include="Database\DeploySqlDatabase.cs" />
+    <Compile Include="Database\ExecuteEventArgs.cs" />
+    <Compile Include="Database\SQLCodeAnalysisActivity.cs" />
+    <Compile Include="Database\SqlExecute.cs" />
+    <Compile Include="Database\SqlScriptLoader.cs" />
+    <Compile Include="Deployment\DeployApplicationServiceActivity.cs" />
+    <Compile Include="DTO\ApplicationPool.cs" />
+    <Compile Include="DTO\PlatformSettings.cs" />
+    <Compile Include="DTO\Site.cs" />
+    <Compile Include="DTO\VirtualDirectory.cs" />
+    <Compile Include="FileSystem\File.cs" />
+    <Compile Include="FileSystem\OrganizeBinariesDirectory.cs" />
+    <Compile Include="Ftp\FtpActivity.cs" />
+    <Compile Include="InvokeCmd\InvokeProcessAsync.cs" />
+    <Compile Include="InvokeCmd\ProcessResults.cs" />
+    <Compile Include="InvokeCmd\ProcessWrapper.cs" />
+    <Compile Include="LockBranches\SetPermissionsToBranches.cs" />
+    <Compile Include="LockBuilds\SetPermissionsBuildDefinition.cs" />
+    <Compile Include="MapFactories\MapExternalDTOToLocalDTO\EnumExternalDTOToLocalDTO.cs" />
+    <Compile Include="MapFactories\MapExternalDTOToLocalDTO\MapBuildPlatformSettingsToLocalDTO.cs" />
+    <Compile Include="MapFactories\MapExternalDTOToLocalDTO\MapExternalApplicationOnPremiseSettingToStringList.cs" />
+    <Compile Include="MapFactories\MapExternalDTOToLocalDTO\MapExternalServerToPropertiesDictionary.cs" />
+    <Compile Include="MapFactories\MapExternalDTOToLocalDTO\MappingFromExternalDTOFactory.cs" />
+    <Compile Include="MapFactories\MappingBase.cs" />
+    <Compile Include="Navitaire\GetSnapshotsFromPool.cs" />
+    <Compile Include="NPM\RunNPMCommandsActivity.cs" />
+    <Compile Include="PlatformSettings\GetFunctionalComponentSettings.cs" />
+    <Compile Include="PlatformSettings\GetPlatformSettings.cs" />
+    <Compile Include="PlatformSettings\GetServerSettings.cs" />
+    <Compile Include="PowerShell\ErrorMessages.cs" />
+    <Compile Include="PowerShell\InvokePowershellCommand.cs" />
+    <Compile Include="PowerShell\InvokePowershellCommandAsync.cs" />
+    <Compile Include="PowerShell\IUtilitiesForPowerShellActivity.cs" />
+    <Compile Include="PowerShell\PowerShellExecutionException.cs" />
+    <Compile Include="PowerShell\UtilitiesForPowerShellActivity.cs" />
+    <Compile Include="PowerShell\WorkflowPsHost.cs" />
+    <Compile Include="PowerShell\WorkflowPsHostUi.cs" />
+    <Compile Include="PowerShell\WorkflowRawPsHostUi.cs" />
+    <Compile Include="Release\CreateUniqueReleaseActivity.cs" />
+    <Compile Include="StaticContentHelper\StaticContentHelperActivity.cs" />
+    <Compile Include="StyleStats\StyleStatsActivity.cs" />
+    <Compile Include="TeamFoundationServer\GetLastBuildTo920Server.cs" />
+    <Compile Include="TeamFoundationServer\GetLastSuccessfulBuildNameFromPRE.cs" />
+    <Compile Include="TeamFoundationServer\GetProjectWorkItemsFromId.cs" />
+    <Compile Include="TeamFoundationServer\TeamFoundationServerConnection.cs" />
+    <Compile Include="TeamFoundationServer\UpdateFilesFromLocalItemToServerItem.cs" />
+    <Compile Include="Validation\AssemblyFrameworkValidation.cs" />
+    <Compile Include="Validation\ConfigurationContentFileValidation.cs" />
+    <Compile Include="Validation\ConfigurationFilesValidation.cs" />
+    <Compile Include="Validation\CronExpressionValidation.cs" />
+    <Compile Include="Validation\AssemblyVersionValidation.cs" />
+    <Compile Include="FileSystem\IsAllowedToBeCopiedActivity.cs" />
+    <Compile Include="FileSystem\LoadPropertiesFileActivity.cs" />
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solution\GetBuildProjectsActivity.cs" />
+    <Compile Include="SourceControl\FilesInChangesetActivity.cs" />
+    <Compile Include="SourceControl\GetCheckedInFiles.cs" />
+    <Compile Include="Validation\FileSizeLimitValidation.cs" />
+    <Compile Include="Validation\ValidateFileEncoding.cs" />
+    <Compile Include="Validation\ValidateNugetPackagesUpdatedUpgradeVersion.cs" />
+    <Compile Include="Validation\XmlFormatValidation.cs" />
+    <Compile Include="Validation\XmlTextValidation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TFSBuildExtensions.Library\TFSBuildExtensions.Library.csproj">
+      <Project>{50c7974d-f938-43ea-9ec2-4f80f8024660}</Project>
+      <Name>TFSBuildExtensions.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Configuration\Vueling.Activities.Configuration.csproj">
+      <Project>{3e37ff36-fabc-487c-8679-ad77596163d1}</Project>
+      <Name>Vueling.Activities.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Contracts.ServiceLibrary\Vueling.Activities.Contracts.ServiceLibrary.csproj">
+      <Project>{dd1fc46c-b589-4f48-8724-a419039ddce0}</Project>
+      <Name>Vueling.Activities.Contracts.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Impl.ServiceLibrary\Vueling.Activities.Impl.ServiceLibrary.csproj">
+      <Project>{a8aebbc2-ee54-4e31-8337-53a9aebac420}</Project>
+      <Name>Vueling.Activities.Impl.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activitites.DB.Infrastructure\Vueling.Activitites.DB.Infrastructure.csproj">
+      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
+      <Name>Vueling.Activitites.DB.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WinSCP.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

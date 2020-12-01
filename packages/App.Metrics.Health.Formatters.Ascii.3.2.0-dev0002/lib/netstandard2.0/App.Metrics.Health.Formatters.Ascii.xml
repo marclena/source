@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.Metrics.Health.Formatters.Ascii</name>
+    </assembly>
+    <members>
+        <member name="T:App.Metrics.Health.HealthTextOutputFormatterBuilder">
+            <summary>
+                Builder for configuring metric plain text output formatting using an
+                <see cref="T:App.Metrics.Health.IHealthBuilder" />.
+            </summary>
+        </member>
+        <member name="M:App.Metrics.Health.HealthTextOutputFormatterBuilder.AsPlainText(App.Metrics.Health.IHealthOutputFormattingBuilder,System.Action{App.Metrics.Health.Formatters.Ascii.HealthTextOptions})">
+            <summary>
+                Add the <see cref="T:App.Metrics.Health.Formatters.IHealthOutputFormatter" /> allowing health checks to optionally be reported as plain text.
+            </summary>
+            <param name="healthFormattingBuilder">
+                The <see cref="T:App.Metrics.Health.IHealthOutputFormattingBuilder" /> used to configure formatting
+                options.
+            </param>
+            <param name="setupAction">The plain text formatting options to use.</param>
+            <returns>
+                An <see cref="T:App.Metrics.Health.IHealthBuilder" /> that can be used to further configure App Metrics Health.
+            </returns>
+        </member>
+        <member name="M:App.Metrics.Health.Formatters.Ascii.HealthStatusTextWriter.Dispose">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Formatters.Ascii.HealthStatusTextWriter.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="P:App.Metrics.Health.Formatters.Ascii.HealthTextOptions.Padding">
+            <summary>
+                Gets or sets the padding to apply on health check labels and messages
+            </summary>
+            <value>
+                The padding to apply on health check labels and messages
+            </value>
+        </member>
+        <member name="P:App.Metrics.Health.Formatters.Ascii.HealthTextOptions.Separator">
+            <summary>
+                Gets or sets the separator to use between on health check labels and messages/status
+            </summary>
+            <value>
+                The separator to apply between on health check labels and messages/status
+            </value>
+        </member>
+    </members>
+</doc>

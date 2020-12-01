@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Vueling.XXX.WebUI.Template</id>
+    <version>1.0.0</version>
+    <title>Vueling.XXX.WebUI Template</title>
+    <authors>Architecture</authors>
+    <owners>Architecture</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://vueling.visualstudio.com/Templates/_git/ATC.Template.XXX.WCF</projectUrl>
+    <iconUrl>http://static.vueling.com/cms/images/vueling-logo.png</iconUrl>
+    <description>Architecture Template Code: .WebUI Application</description>
+    <releaseNotes>https://vueling.visualstudio.com/Templates/_git/ATC.Template.XXX.WCF</releaseNotes>
+    <copyright>Copyright __year__: Vueling.com. All right Reserved</copyright>
+    <language>en-US</language>
+    <tags>WebServices</tags>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+  </metadata>
+</package>

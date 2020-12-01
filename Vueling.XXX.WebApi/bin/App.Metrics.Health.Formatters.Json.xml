@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.Metrics.Health.Formatters.Json</name>
+    </assembly>
+    <members>
+        <member name="T:App.Metrics.Health.HealthJsonOutputFormatterBuilder">
+            <summary>
+                Builder for configuring metric JSON output formatting using an
+                <see cref="T:App.Metrics.Health.IHealthBuilder" />.
+            </summary>
+        </member>
+        <member name="M:App.Metrics.Health.HealthJsonOutputFormatterBuilder.AsJson(App.Metrics.Health.IHealthOutputFormattingBuilder,System.Action{App.Metrics.Health.Formatters.Json.HealthJsonOptions})">
+            <summary>
+                Add the <see cref="T:App.Metrics.Health.Formatters.Json.HealthStatusJsonOutputFormatter" /> allowing health check results to optionally be reported as JSON.
+            </summary>
+            <param name="metricFormattingBuilder">
+                The <see cref="T:App.Metrics.Health.IHealthOutputFormattingBuilder" /> used to configure JSON formatting
+                options.
+            </param>
+            <param name="setupAction">The JSON formatting options to use.</param>
+            <returns>
+                An <see cref="T:App.Metrics.Health.IHealthBuilder" /> that can be used to further configure App Metrics Health.
+            </returns>
+        </member>
+        <member name="M:App.Metrics.Health.Formatters.Json.DefaultJsonSerializerSettings.CreateSerializerSettings">
+            <summary>
+                Creates default <see cref="T:Newtonsoft.Json.JsonSerializerSettings" />.
+            </summary>
+            <returns>Default <see cref="T:Newtonsoft.Json.JsonSerializerSettings" />.</returns>
+        </member>
+    </members>
+</doc>

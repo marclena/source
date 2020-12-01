@@ -1,0 +1,12 @@
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\bin\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.deps.json
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\bin\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\bin\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\bin\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Core.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\bin\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Core.pdb
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.csprojAssemblyReference.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.csproj.CoreCompileInputs.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.AssemblyInfoInputs.cache
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.AssemblyInfo.cs
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.csproj.CopyComplete
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.dll
+C:\Kiteris\Vueling\AWS Logger\aws-logging-dotnet-master\ATC.Log.log4netappender.AWS.Logger.Log4net\obj\Debug\netstandard2.0\ATC.Log.log4netappender.AWS.Logger.Log4net.pdb

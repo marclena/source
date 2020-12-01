@@ -1,0 +1,13 @@
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\LibraryName.Contracts.xml
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\XX.Template.Library.Contracts.deps.json
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\XX.Template.Library.Contracts.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\XX.Template.Library.Contracts.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\XX.Template.Core.Extensions.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\bin\Debug\netstandard2.0\XX.Template.Core.Extensions.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.csprojAssemblyReference.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.AssemblyInfoInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.AssemblyInfo.cs
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.csproj.CopyComplete
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Library.Contracts\obj\Debug\netstandard2.0\XX.Template.Library.Contracts.pdb

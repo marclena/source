@@ -1,0 +1,8 @@
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\bin\Debug\netstandard2.0\XX.Template.Repository.Contracts.deps.json
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\bin\Debug\netstandard2.0\XX.Template.Repository.Contracts.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\bin\Debug\netstandard2.0\XX.Template.Repository.Contracts.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\obj\Debug\netstandard2.0\XX.Template.Repository.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\obj\Debug\netstandard2.0\XX.Template.Repository.Contracts.AssemblyInfoInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\obj\Debug\netstandard2.0\XX.Template.Repository.Contracts.AssemblyInfo.cs
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\obj\Debug\netstandard2.0\XX.Template.Repository.Contracts.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Repository.Contracts\obj\Debug\netstandard2.0\XX.Template.Repository.Contracts.pdb

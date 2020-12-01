@@ -1,0 +1,13 @@
+﻿@using Vueling.Web.UI.Library.Helpers
+
+<div class="headerData">
+    <div class="userName">
+        @if (Request.IsAuthenticated)
+        {
+            <text>Welcome <b>@Context.User.Identity.Name</b>!</text>
+        }
+    </div>
+    <div class="logout">
+        <a href="@Html.LogoutUrl()" >Log out</a>
+    </div>
+</div>  

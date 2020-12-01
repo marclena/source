@@ -1,0 +1,27 @@
+﻿{
+  "Serilog": {
+    "Using": [
+      "Serilog.Sinks.RollingFile",
+      "Serilog.Sinks.Async"
+    ],
+    "MinimumLevel": "#{LOG_MINIMUM_LEVEL}#",
+    "MaximumAllowedBytesSize": "256000",
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "RollingFile",
+              "Args": {
+                "rollingInterval": "Day",
+                "pathFormat": "#{LOG_PATH_FORMAT}#",
+                "formatter": "ATC.Log.Serilog.Impl.ServiceLibrary.CustomJsonFormatter, ATC.Log.Serilog.Impl.ServiceLibrary"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

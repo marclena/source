@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8AEBBC2-EE54-4E31-8337-53A9AEBAC420}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vueling.Activities.Impl.ServiceLibrary</RootNamespace>
+    <AssemblyName>Vueling.Activities.Impl.ServiceLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a64e1179c81b1e25, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.0.1\lib\net40\Fasterflect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Engine" />
+    <Reference Include="Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SqlCodeGuard.API, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Vueling-PRE\BuildProcessTemplates\TFSBuildExtensions\Vueling.Activities.Impl.ServiceLibrary\nuget\lib\SqlCodeGuard.API.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vueling.Extensions.Library, Version=1.0.1.0, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Extensions.Library.1.0.1\lib\net35\Vueling.Extensions.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseActivityService.cs" />
+    <Compile Include="Compression\ZipService.cs" />
+    <Compile Include="Database\SQLCodeAnalysisService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Release\CreateUniqueReleaseItemService.cs" />
+    <Compile Include="Solution\GetBuildProjectsService.cs" />
+    <Compile Include="StaticContentHelper\CodeGenerator.cs" />
+    <Compile Include="StaticContentHelper\FilesEnumerator.cs" />
+    <Compile Include="StaticContentHelper\StaticContentHelperGeneratorService.cs" />
+    <Compile Include="StyleStats\ValidateStyleStatsMetricsService.cs" />
+    <Compile Include="Synchronization\SynchronizeContentService.cs" />
+    <Compile Include="TeamFoundationServer\UpdateFilesFromLocalItemToServerItemService.cs" />
+    <Compile Include="Validation\AssemblyVersionValidationService.cs" />
+    <Compile Include="Validation\ValidateAssemblyFile.cs" />
+    <Compile Include="Validation\ValidateFileEncodingService.cs" />
+    <Compile Include="Validation\ValidateNugetReferenceIntegrity.cs" />
+    <Compile Include="Validation\ValidateNugetReferenceWithProjectReferenceIntegrity.cs" />
+    <Compile Include="Validation\ValidationHelper.cs" />
+    <Compile Include="Validation\VerifyVersionPackageAssemblies.cs" />
+    <Compile Include="Validation\XmlTextValidationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TFSBuildExtensions.Library\TFSBuildExtensions.Library.csproj">
+      <Project>{50c7974d-f938-43ea-9ec2-4f80f8024660}</Project>
+      <Name>TFSBuildExtensions.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Configuration\Vueling.Activities.Configuration.csproj">
+      <Project>{3e37ff36-fabc-487c-8679-ad77596163d1}</Project>
+      <Name>Vueling.Activities.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Contracts.ServiceLibrary\Vueling.Activities.Contracts.ServiceLibrary.csproj">
+      <Project>{dd1fc46c-b589-4f48-8724-a419039ddce0}</Project>
+      <Name>Vueling.Activities.Contracts.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Sync.Contracts.ServiceLibrary\Vueling.Activities.Sync.Contracts.ServiceLibrary.csproj">
+      <Project>{0f8c8f7e-94cd-4fb0-898a-8ed97b98b846}</Project>
+      <Name>Vueling.Activities.Sync.Contracts.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activities.Sync.Impl.ServiceLibrary\Vueling.Activities.Sync.Impl.ServiceLibrary.csproj">
+      <Project>{62d3f9f6-8fe6-4b1a-9584-f88cdcee8119}</Project>
+      <Name>Vueling.Activities.Sync.Impl.ServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vueling.Activitites.DB.Infrastructure\Vueling.Activitites.DB.Infrastructure.csproj">
+      <Project>{ee9e3587-8161-42d0-a1fb-cb06bbfebce0}</Project>
+      <Name>Vueling.Activitites.DB.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="nuget\lib\SqlCodeGuard.API.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

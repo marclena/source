@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vueling Architecture",
+  "classifications": [ "Web", "WebApi" ],
+  "name": "ASP.NET Core Web API for ATC",
+  "identity": "Atc.WebAPI.Template.CSharp",
+  "groupIdentity": "AtcMARC1",
+  "shortName": "webapi-atcMARC1",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  //"sourceName": "CompanyPrefix.ApplicationName.WebApi",
+  "preferNameDirectory": true,
+  "symbols": {
+
+    "slnName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "replaces": "CompanyPrefix.ApplicationName",
+      "fileRename": "CompanyPrefix.ApplicationName"
+    }
+  },
+  "sources": []
+}

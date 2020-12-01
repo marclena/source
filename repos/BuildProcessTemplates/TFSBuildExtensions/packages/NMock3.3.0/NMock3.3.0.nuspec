@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>NMock3</id>
+    <version>3.0</version>
+    <authors>Luis Mesa</authors>
+    <owners>Luis Mesa</owners>
+    <licenseUrl>http://nmock3.codeplex.com/license</licenseUrl>
+    <projectUrl>http://nmock3.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Mocking framework</description>
+    <tags>mocking testing</tags>
+    <references>
+      <reference file="NMock3.dll" />
+    </references>
+  </metadata>
+</package>

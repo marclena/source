@@ -1,0 +1,85 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CoverageDSPriv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Module" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="ModuleName"/>
+              <xs:element type="xs:int" name="ImageSize"/>
+              <xs:element type="xs:int" name="ImageLinkTime"/>
+              <xs:element type="xs:int" name="LinesCovered"/>
+              <xs:element type="xs:int" name="LinesPartiallyCovered"/>
+              <xs:element type="xs:int" name="LinesNotCovered"/>
+              <xs:element type="xs:int" name="BlocksCovered"/>
+              <xs:element type="xs:int" name="BlocksNotCovered"/>
+              <xs:element name="NamespaceTable" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="BlocksCovered"/>
+                    <xs:element type="xs:int" name="BlocksNotCovered"/>
+                    <xs:element type="xs:int" name="LinesCovered"/>
+                    <xs:element type="xs:int" name="LinesNotCovered"/>
+                    <xs:element type="xs:int" name="LinesPartiallyCovered"/>
+                    <xs:element type="xs:string" name="ModuleName"/>
+                    <xs:element type="xs:string" name="NamespaceKeyName"/>
+                    <xs:element type="xs:string" name="NamespaceName"/>
+                    <xs:element name="Class" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ClassKeyName"/>
+                          <xs:element type="xs:string" name="ClassName"/>
+                          <xs:element type="xs:int" name="LinesCovered"/>
+                          <xs:element type="xs:int" name="LinesNotCovered"/>
+                          <xs:element type="xs:int" name="LinesPartiallyCovered"/>
+                          <xs:element type="xs:int" name="BlocksCovered"/>
+                          <xs:element type="xs:int" name="BlocksNotCovered"/>
+                          <xs:element type="xs:string" name="NamespaceKeyName"/>
+                          <xs:element name="Method" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="MethodKeyName"/>
+                                <xs:element type="xs:string" name="MethodName"/>
+                                <xs:element type="xs:string" name="MethodFullName"/>
+                                <xs:element type="xs:int" name="LinesCovered"/>
+                                <xs:element type="xs:int" name="LinesPartiallyCovered"/>
+                                <xs:element type="xs:int" name="LinesNotCovered"/>
+                                <xs:element type="xs:int" name="BlocksCovered"/>
+                                <xs:element type="xs:int" name="BlocksNotCovered"/>
+                                <xs:element name="Lines" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:int" name="LnStart"/>
+                                      <xs:element type="xs:int" name="ColStart"/>
+                                      <xs:element type="xs:int" name="LnEnd"/>
+                                      <xs:element type="xs:int" name="ColEnd"/>
+                                      <xs:element type="xs:int" name="Coverage"/>
+                                      <xs:element type="xs:int" name="SourceFileID"/>
+                                      <xs:element type="xs:int" name="LineID"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SourceFileNames" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:int" name="SourceFileID"/>
+              <xs:element type="xs:string" name="SourceFileName"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

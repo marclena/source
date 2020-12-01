@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.1" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netcoreapp2.1\XX.Template.WebApi.xml</DocumentationFile>
+    <OutputPath>bin\Debug\netcoreapp2.1\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netcoreapp2.1\XX.Template.WebApi.xml</DocumentationFile>
+    <OutputPath>bin\Release\netcoreapp2.1\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="App.Metrics" />
+    <PackageReference Include="App.Metrics.AspNetCore.Mvc" />
+    <PackageReference Include="App.Metrics.AspNetCore.Reporting" />
+    <PackageReference Include="App.Metrics.AspNetCore.Tracking" />
+    <PackageReference Include="App.Metrics.Reporting.Console" />
+    <PackageReference Include="App.Metrics.Reporting.Elasticsearch"  />
+    <PackageReference Include="App.Metrics.Reporting.InfluxDB" />
+    <PackageReference Include="App.Metrics.Reporting.TextFile" />
+    <PackageReference Include="ATC.Extensions.Http" />
+    <PackageReference Include="ATC.Extensions.Http.Polly" />
+    <PackageReference Include="ATC.Swagger.Extension" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="ATC.HealthChecks.Extensions" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Settings.Configuration" />
+    <PackageReference Include="Serilog.Sinks.Async" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" />
+    <PackageReference Include="ATC.Log.Serilog.Impl.ServiceLibrary" />
+  </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\XX.Template.Core.Extensions\XX.Template.Core.Extensions.csproj" />
+      <ProjectReference Include="..\XX.Template.Library.Contracts\XX.Template.Library.Contracts.csproj" />
+      <ProjectReference Include="..\XX.Template.Library.Impl\XX.Template.Library.Impl.csproj" />
+      <ProjectReference Include="..\XX.Template.Repository.Contracts\XX.Template.Repository.Contracts.csproj" />
+      <ProjectReference Include="..\XX.Template.Repository.Impl\XX.Template.Repository.Impl.csproj" />
+    </ItemGroup>
+  <ItemGroup>
+    <Content Update="Configuration\settings.development.errors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.development.healthcheck.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.development.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.development.logging.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.development.redis.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.development.resources.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.errors.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.healthcheck.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.logging.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.redis.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="Configuration\settings.release.resources.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

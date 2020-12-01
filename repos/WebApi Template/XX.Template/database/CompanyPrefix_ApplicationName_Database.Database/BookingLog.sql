@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[BookingLog]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [RecordLocator] NVARCHAR(50) NOT NULL, 
+    [Date] DATETIME NOT NULL, 
+    [Email] NVARCHAR(250) NULL
+)

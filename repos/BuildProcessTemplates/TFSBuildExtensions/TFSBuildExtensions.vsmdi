@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestList name="XmlValidation" id="0766d087-97ab-4e33-b0c0-ce194275fc94" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="e0d97b79-248d-9b22-eef5-b1650f33ea37" name="ShouldBeXmlInvalidFile" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="1a10bbc2-a9d1-1cf9-9cda-d5124aedf520" name="ShouldBeXmlValidFile" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Database" id="5a0ac25f-a42c-4bfa-bf90-ecbf6ba3a3f7" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="6f990fd1-1473-82fe-dba3-87496300d748" name="ShouldDeploySql2012Database" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="b8e5a1e7-2f83-506c-476c-f178ffebd286" name="ShouldDeploySql2010Database" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="CodeCoverage" id="5ca0831d-dda7-4d9a-9f5d-9c473bc3311e" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="3e0e0e78-ddad-d884-8887-5155a984ad6a" name="KoFailAlthoughBuildCodeCoverageErrorThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="f5aba114-075d-e57d-6477-1afdceaa73b8" name="KoFailBuildCodeCoverageErrorThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="df0299a6-5473-cb9d-be8f-5c000fb59b69" name="KoFailAssemblyCodeCoverageErrorThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="e7778da8-45fc-0d73-8b63-e6edc1049c37" name="ShouldNotFailWhenCodeCoverageInstalled" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="93782965-652c-2210-6dec-e9230412a874" name="OkFailBuildCodeCoverageErrorThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="97710a42-6846-b984-f455-b1570b630018" name="OkFailAssemblyCodeCoverageErrorThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="ff26430a-3ce3-ea9b-126d-97e6647cb74b" name="ShouldFailWhenCodeCoverageConsoleIsNotInstalled" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="110d6d17-c55d-077a-dca7-ee5d1fa782b6" name="KoAssemblyCodeCoverageWarningThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="8c86ff31-d533-c5bf-be6e-326ca6230cef" name="OkBuildCodeCoverageWarningThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="9ceaf73b-c728-d26c-5373-b721fe37a95f" name="KoBuildCodeCoverageWarningThreshold" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <RunConfiguration id="0811b132-4624-4ed5-a4ec-9fd191fd43ce" name="Local" storage="local.testsettings" type="Microsoft.VisualStudio.TestTools.Common.TestRunConfiguration, Microsoft.VisualStudio.QualityTools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestList>
+  <TestList name="CodeMetrics" id="be401b9b-4d11-4752-bc9c-61c5e28280b4" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <TestLinks>
+      <TestLink id="73cd5e81-e4d8-4428-5a9b-1deb742c0461" name="Invalid_OnlyvuelingAssemblyExceptions_WithoutAssembliesToProcess" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="d95d5515-e055-26fb-9cd6-a122f7771c01" name="Valid_OnlyVuelingAssembliesToProcess_WithAssemblyExceptions" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="ca9c8d99-e8e6-e42b-ffdb-3040ed86b6f6" name="Invalid_OnlyVuelingAssembliesToProcess_WithoutAssemblyExceptions" storage="activities.unittest\bin\debug\activities.unittest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

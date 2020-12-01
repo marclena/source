@@ -1,0 +1,4 @@
+﻿@model System.DateTime?
+@using System.Globalization
+@Html.TextBox("", (Model.HasValue ? Model.Value.ToString(CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern) : string.Empty), new {style="width:90px"})
+(@CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern)

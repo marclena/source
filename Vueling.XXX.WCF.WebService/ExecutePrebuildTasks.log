@@ -1,0 +1,9 @@
+SOLUTION_DIR="D:\VSTS\Agents\bld1-charlie\_work\2319\s\"
+PROJECT_DIR="D:\VSTS\Agents\bld1-charlie\_work\2319\s\Vueling.XXX.WCF.WebService\"
+Using Continuous integration	
+Relative path : 
+Maps to path  : D:\VSTS\Agents\bld1-charlie\_work
+nugetDirectory="D:\VSTS\Agents\bld1-charlie\_work\2319\s\"BuildProcessTemplates\NuGet\
+ensureNugetPackagesFilePath="D:\VSTS\Agents\bld1-charlie\_work\2319\s\"BuildProcessTemplates\NuGet\EnsureNugetPackages.cmd 
+SOLUTION_DIR="D:\VSTS\Agents\bld1-charlie\_work\2319\s\"
+PROJECT_DIR="D:\VSTS\Agents\bld1-charlie\_work\2319\s\Vueling.XXX.WCF.WebService\"

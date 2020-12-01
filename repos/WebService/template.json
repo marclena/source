@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Vueling Architecture",
+  "classifications": [ "WebService", "WCF" ],
+  "name": "ASP.NET Vueling.XXX.Web Service",
+  "identity": "Vueling.XXX.WebService.Template.CSharp",
+  "groupIdentity": "Vueling.XXX.Template.WCF",
+  "shortName": "Vueling.XXX.WebService",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }, 
+  "preferNameDirectory": true,
+  "symbols": {
+
+    "slnName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "replaces": "Vueling.XXX",
+      "fileRename": "Vueling.XXX"
+    },
+	"dbName": {
+      "type": "parameter",
+      "datatype": "string",
+      "isRequired": true,
+      "replaces": "Vueling_XXX",
+      "fileRename": "Vueling_XXX"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [ "Vueling.XXX.sln","Vueling.XXX.WebUI.sln","Vueling.XXX.RabbitBus.Subscriber.Contracts.ServiceLibrary/**","Vueling.XXX.WebUI/**","Vueling.XXX.WebUI.UnitTest/**","Vueling.XXX.WCF.WebService.UnitTest/**","Vueling.XXX.WCF.WebService.IntegrationTest/**","Vueling.XXX.WCF.REST.WebService.UnitTest/**","Vueling.XXX.WCF.REST.WebService.IntegrationTest/**","Vueling.XXX.WCF.REST.WebService/**","Vueling.XXX.Subscriber.WindowsService/**","Vueling.XXX.StaticContent/**","Vueling.XXX.RabbitBus.Subscriber.WCF.WebService/**","Vueling.XXX.RabbitBus.Subscriber.Impl.ServiceLibrary/**","Vueling.XXX.Publisher.WCF.WebService/**","Vueling.XXX.Publisher.Impl.ServiceLibrary/**","Vueling.XXX.Publisher.Contracts.ServiceLibrary/**","Vueling.XXX.Model/**","Vueling.XXX.MessageConsumer.WindowsService/**","Vueling.XXX.Message/**","Vueling.XXX.EF.DB.Infrastructure.IntegrationTest/**","Vueling.XXX.EF.DB.Infrastructure/**" ]
+        }
+      ]
+    }
+  ]
+}

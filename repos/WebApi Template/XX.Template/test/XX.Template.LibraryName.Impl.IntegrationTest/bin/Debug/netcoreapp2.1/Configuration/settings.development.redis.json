@@ -1,0 +1,19 @@
+﻿{
+  "RedisClientSettings": {
+    "Nodes": [
+      {
+        "Host": "10.3.0.250",
+        "Port": "12583"
+      }
+    ],
+    "ApplicationName": "AMS",
+    "Password": "amsredisdb",
+    "IsUsingSharedDatabase": "true",
+    "UseFireAndForgetToSetCache": "True",
+    "MaxBytesLenghtAllowed": "10000000",
+    "EnviromentPrefix": "tst",
+    "KeyPrefix": "Avail",
+    "CacheBehaviourPolicy": {
+    }
+  }
+}

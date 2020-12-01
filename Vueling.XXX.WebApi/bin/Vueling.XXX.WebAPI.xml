@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vueling.XXX.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="T:Vueling.XXX.WebAPI.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Controllers.V1.ValuesController">
+            <summary>
+            Values controller v2 description
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V1.ValuesController.Get">
+            <summary>
+            Get header values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V1.ValuesController.GetHeaderValues">
+            <summary>
+            Demo of getting a custom header injected by swagger due to he HeaderAttribute specification
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V1.ValuesController.Post(System.String)">
+            <summary>
+            Create new element
+            </summary>
+            <param name="value">Some string data</param>
+            <remarks>
+            Note that the key is a GUID and not an integer.
+             
+                POST /api/values
+                {
+                   "string",
+                }
+            
+            </remarks>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V1.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            Put action description
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V1.ValuesController.Delete(System.Int32)">
+            <summary>
+            Delete action description
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Controllers.V2.ValuesController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V2.ValuesController.Get">
+            <summary>
+            Get all elements
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V2.ValuesController.Get(System.Int32)">
+            <summary>
+            Get by id
+            </summary>
+            <param name="id">id dto</param>
+            <response code="200">Returns a list of item</response>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Controllers.V2.ValuesController.Post(System.String)">
+            <summary>
+            Post action description
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Handlers.LoggingHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Handlers.LoggingHandler.SendAsync(System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.ItemsSourceTimingIssueTrace">
+            <summary>
+            Trace message for the ItemsSource timing issue. This line should be ignored.
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.#ctor">
+            <summary>
+            Initializes a new ins
+            </summary>
+        </member>
+        <member name="P:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.TraceSourceCollection">
+            <summary>
+            Gets or sets the trace source collection.
+            </summary>
+            <value>The trace source collection.</value>
+        </member>
+        <member name="P:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.ActiveTraceLevel">
+            <summary>
+            Gets or sets the active trace type.
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])">
+            <summary>
+            Writes trace information, a formatted array of objects and event information to the listener specific output.
+            </summary>
+            <param name="eventCache">A <see cref="T:System.Diagnostics.TraceEventCache"/> object that contains the current process ID, thread ID, and stack trace information.</param>
+            <param name="source">A name used to identify the output, typically the name of the application that generated the trace event.</param>
+            <param name="eventType">One of the <see cref="T:System.Diagnostics.TraceEventType"/> values specifying the type of event that has caused the trace.</param>
+            <param name="id">A numeric identifier for the event.</param>
+            <param name="format">A format string that contains zero or more format items, which correspond to objects in the <paramref name="args"/> array.</param>
+            <param name="args">An object array containing zero or more objects to format.</param>
+            <PermissionSet>
+            	<IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/>
+            	<IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode"/>
+            </PermissionSet>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)">
+            <summary>
+            Writes trace information, a message, and event information to the listener specific output.
+            </summary>
+            <param name="eventCache">A <see cref="T:System.Diagnostics.TraceEventCache"/> object that contains the current process ID, thread ID, and stack trace information.</param>
+            <param name="source">A name used to identify the output, typically the name of the application that generated the trace event.</param>
+            <param name="eventType">One of the <see cref="T:System.Diagnostics.TraceEventType"/> values specifying the type of event that has caused the trace.</param>
+            <param name="id">A numeric identifier for the event.</param>
+            <param name="message">A message to write.</param>
+            <PermissionSet>
+            	<IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Unrestricted="true"/>
+            	<IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="UnmanagedCode"/>
+            </PermissionSet>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.Write(System.String)">
+            <summary>
+            Writes text to the output window.
+            </summary>
+            <param name="message">Message to write.</param>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.Log4netTraceListener.WriteLine(System.String)">
+            <summary>
+            Writes a line of text to the output window.
+            </summary>
+            <param name="message">Message to write.</param>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Helpers.ReflectionRegistrator">
+            <summary>
+            Services registration
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.ReflectionRegistrator.CustomDependenciesRegister(Autofac.ContainerBuilder)">
+            <summary>
+            Register your custom services
+            </summary>
+            <param name="containerBuilder">Autofac container builder</param>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Helpers.WebApiRegistrator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.WebApiRegistrator.RegisterDependencies(Vueling.DIRegister.AssemblyDiscovery.ServiceLibrary.RegisterDefinition)">
+            <summary>
+            
+            </summary>
+            <param name="registerDefinition"></param>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.WebApiRegistrator.CustomDependenciesRegister(Autofac.ContainerBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="containerBuilder"></param>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Helpers.WebApiRegistrator.ResolveAfterBuildContainer(Autofac.IContainer)">
+            <summary>
+            
+            </summary>
+            <param name="container"></param>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Logging.UnhandledExceptionLogger">
+            <summary>
+            Log all unhandled exceptions
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Logging.UnhandledExceptionLogger.Log(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">
+            <summary>
+            Log error sync
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Logging.UnhandledExceptionLogger.ShouldLog(System.Web.Http.ExceptionHandling.ExceptionLoggerContext)">
+            <summary>
+            Determine if an exception must be logged
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Logging.UnhandledExceptionLogger.LogAsync(System.Web.Http.ExceptionHandling.ExceptionLoggerContext,System.Threading.CancellationToken)">
+            <summary>
+            Log error async
+            </summary>
+            <param name="context"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vueling.XXX.WebAPI.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vueling.XXX.WebAPI.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            
+            </summary>
+            <param name="appBuilder"></param>
+        </member>
+    </members>
+</doc>

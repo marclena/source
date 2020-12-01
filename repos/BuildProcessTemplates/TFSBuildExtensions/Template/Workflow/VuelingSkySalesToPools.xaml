@@ -1,0 +1,1741 @@
+﻿<Activity mc:Ignorable="sads sap sap2010" x:Class="TfsBuild.Vueling.SkySalesToPools.Process" this:Process.BuildSettings="[New Microsoft.TeamFoundation.Build.Workflow.Activities.BuildSettings()]" this:Process.TestSpecs="[New Microsoft.TeamFoundation.Build.Workflow.Activities.TestSpecList(New Microsoft.TeamFoundation.Build.Workflow.Activities.TestAssemblySpec(&quot;**\*test*.dll&quot;))]" this:Process.BuildNumberFormat="[&quot;$(BuildDefinitionName)_$(Date:yyyyMMdd)$(Rev:.r)&quot;]" this:Process.CleanWorkspace="[Microsoft.TeamFoundation.Build.Workflow.Activities.CleanWorkspaceOption.All]" this:Process.RunCodeAnalysis="[Microsoft.TeamFoundation.Build.Workflow.Activities.CodeAnalysisOption.AsConfigured]" this:Process.SourceAndSymbolServerSettings="[New Microsoft.TeamFoundation.Build.Workflow.Activities.SourceAndSymbolServerSettings(True, Nothing)]" this:Process.AgentSettings="[New Microsoft.TeamFoundation.Build.Workflow.Activities.AgentSettings() With {.MaxWaitTime = New System.TimeSpan(4, 0, 0), .MaxExecutionTime = New System.TimeSpan(0, 0, 0), .TagComparison = Microsoft.TeamFoundation.Build.Workflow.Activities.TagComparison.MatchExactly }]" this:Process.AssociateChangesetsAndWorkItems="[True]" this:Process.CreateWorkItem="[True]" this:Process.DropBuild="[True]" this:Process.MSBuildPlatform="[Microsoft.TeamFoundation.Build.Workflow.Activities.ToolPlatform.Auto]" this:Process.PerformTestImpactAnalysis="[True]" this:Process.CreateLabel="[True]" this:Process.DisableTests="[False]" this:Process.Verbosity="[Microsoft.TeamFoundation.Build.Workflow.BuildVerbosity.Normal]" this:Process.SupportedReasons="All" this:Process.Validate_Number_of_Servers_out_of_pool="True"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mt="clr-namespace:Microsoft.TeamFoundation;assembly=Microsoft.TeamFoundation.Common"
+ xmlns:mtbc="clr-namespace:Microsoft.TeamFoundation.Build.Client;assembly=Microsoft.TeamFoundation.Build.Client"
+ xmlns:mtbc1="clr-namespace:Microsoft.TeamFoundation.Build.Client;assembly=Microsoft.TeamFoundation.Build.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+ xmlns:mtbw="clr-namespace:Microsoft.TeamFoundation.Build.Workflow;assembly=Microsoft.TeamFoundation.Build.Workflow"
+ xmlns:mtbw1="clr-namespace:Microsoft.TeamFoundation.Build.Workflow;assembly=Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+ xmlns:mtbwa="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow"
+ xmlns:mtbwa1="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Activities;assembly=Microsoft.TeamFoundation.Build.Workflow, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+ xmlns:mtbwt="clr-namespace:Microsoft.TeamFoundation.Build.Workflow.Tracking;assembly=Microsoft.TeamFoundation.Build.Workflow"
+ xmlns:mtc="clr-namespace:Microsoft.TeamFoundation.Client;assembly=Microsoft.TeamFoundation"
+ xmlns:mttbb="clr-namespace:Microsoft.TeamFoundation.TestImpact.BuildIntegration.BuildActivities;assembly=Microsoft.TeamFoundation.TestImpact.BuildIntegration"
+ xmlns:mtvc="clr-namespace:Microsoft.TeamFoundation.VersionControl.Client;assembly=Microsoft.TeamFoundation.VersionControl.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+ xmlns:mtvc1="clr-namespace:Microsoft.TeamFoundation.VersionControl.Client;assembly=Microsoft.TeamFoundation.VersionControl.Client"
+ xmlns:mtvc2="clr-namespace:Microsoft.TeamFoundation.VersionControl.Common;assembly=Microsoft.TeamFoundation.VersionControl.Common"
+ xmlns:mtwc="clr-namespace:Microsoft.TeamFoundation.WorkItemTracking.Client;assembly=Microsoft.TeamFoundation.WorkItemTracking.Client"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:mvc="clr-namespace:Microsoft.VisualBasic.CompilerServices;assembly=Microsoft.VisualBasic"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:s1="clr-namespace:System;assembly=System.Core"
+ xmlns:s2="clr-namespace:System;assembly=System"
+ xmlns:s3="clr-namespace:System;assembly=System.ServiceModel"
+ xmlns:s4="clr-namespace:System;assembly=System.ComponentModel.Composition"
+ xmlns:s5="clr-namespace:System;assembly=Microsoft.VisualStudio.Platform.VSEditor"
+ xmlns:s6="clr-namespace:System;assembly=System.Numerics"
+ xmlns:s7="clr-namespace:System;assembly=System.DirectoryServices"
+ xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities"
+ xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sae="clr-namespace:System.Activities.Expressions;assembly=System.Activities"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System"
+ xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core"
+ xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sco1="clr-namespace:System.Collections.ObjectModel;assembly=System"
+ xmlns:si="clr-namespace:System.IO;assembly=System.Core"
+ xmlns:si1="clr-namespace:System.IO;assembly=System"
+ xmlns:si2="clr-namespace:System.IO;assembly=WindowsBase"
+ xmlns:si3="clr-namespace:System.IO;assembly=mscorlib"
+ xmlns:si4="clr-namespace:System.IO;assembly=System.ServiceModel"
+ xmlns:sl="clr-namespace:System.Linq;assembly=System.Core"
+ xmlns:sma="clr-namespace:System.Management.Automation;assembly=System.Management.Automation"
+ xmlns:swm="clr-namespace:System.Windows.Markup;assembly=PresentationFramework"
+ xmlns:swm1="clr-namespace:System.Windows.Markup;assembly=PresentationCore"
+ xmlns:swm2="clr-namespace:System.Windows.Markup;assembly=System.Xaml"
+ xmlns:swm3="clr-namespace:System.Windows.Markup;assembly=WindowsBase"
+ xmlns:t="clr-namespace:TfsBuild"
+ xmlns:t1="clr-namespace:TfsBuild2"
+ xmlns:ta="clr-namespace:TFSBuildExtensions.AWS;assembly=TFSBuildExtensions"
+ xmlns:tc="clr-namespace:TFSBuildExtensions.CustomTypes;assembly=TFSBuildExtensions"
+ xmlns:tc1="clr-namespace:TFSBuildExtensions.CodeMetrics;assembly=TFSBuildExtensions"
+ xmlns:tc2="clr-namespace:TFSBuildExtensions.Compression;assembly=TFSBuildExtensions"
+ xmlns:tc3="clr-namespace:TFSBuildExtensions.CodeCoverage;assembly=TFSBuildExtensions"
+ xmlns:tc4="clr-namespace:TFSBuildExtensions.Communication;assembly=TFSBuildExtensions"
+ xmlns:tc5="clr-namespace:TFSBuildExtensions.CodeMetricsActivity;assembly=TFSBuildExtensions"
+ xmlns:td="clr-namespace:TFSBuildExtensions.Database;assembly=TFSBuildExtensions"
+ xmlns:td1="clr-namespace:TFSBuildExtensions.Deployment;assembly=TFSBuildExtensions"
+ xmlns:tev="clr-namespace:TFSBuildExtensions.EnvironmentManagement.Validation;assembly=TFSBuildExtensions"
+ xmlns:tf="clr-namespace:TFSBuildExtensions.FileSystem;assembly=TFSBuildExtensions"
+ xmlns:this="clr-namespace:TfsBuild.Vueling.SkySalesToPools"
+ xmlns:tlw="clr-namespace:TFSBuildExtensions.Library.Workflow;assembly=TFSBuildExtensions.Library"
+ xmlns:tn="clr-namespace:TFSBuildExtensions.Navitaire;assembly=TFSBuildExtensions"
+ xmlns:tp="clr-namespace:TFSBuildExtensions.PowerShell;assembly=TFSBuildExtensions"
+ xmlns:tp1="clr-namespace:TFSBuildExtensions.PlatformSettings;assembly=TFSBuildExtensions"
+ xmlns:ts="clr-namespace:TFSBuildExtensions.Solution;assembly=TFSBuildExtensions"
+ xmlns:ts1="clr-namespace:TFSBuildExtensions.SourceControl;assembly=TFSBuildExtensions"
+ xmlns:tt="clr-namespace:TFSBuildExtensions.Types;assembly=TFSBuildExtensions"
+ xmlns:tt1="clr-namespace:TFSBuildExtensions.TeamFoundationServer;assembly=TFSBuildExtensions"
+ xmlns:tt2="clr-namespace:TfsBuild.TestingTemplate"
+ xmlns:tv="clr-namespace:TFSBuildExtensions.Validation;assembly=TFSBuildExtensions"
+ xmlns:tv1="clr-namespace:TfsBuild.VuelingSkysalesToNavitare"
+ xmlns:tv2="clr-namespace:TfsBuild.VuelingUnifiedTemplateWithConfigv2"
+ xmlns:tv3="clr-namespace:TfsBuild.VuelingUnifiedTemplateWithConfig"
+ xmlns:tv4="clr-namespace:TfsBuild.VuelingCMSTemplateTest"
+ xmlns:tv5="clr-namespace:TfsBuild.VuelingCMSTemplate"
+ xmlns:tv6="clr-namespace:TfsBuild.VuelingSkySalesFullDeployTemplate"
+ xmlns:tv7="clr-namespace:TfsBuild.VuelingSkysalesToNavitareTest"
+ xmlns:tvl="clr-namespace:TfsBuild.Vueling.LoadBalancerManagement"
+ xmlns:tvr="clr-namespace:TfsBuild.Vueling.RunCmd"
+ xmlns:tvs1="clr-namespace:TfsBuild.Vueling.SkySalesTemplate"
+ xmlns:tvs2="clr-namespace:TfsBuild.Vueling.SkySalesTemplateTest"
+ xmlns:tvv="clr-namespace:TfsBuild.Vueling.VuelingSkySalesToServersOnPremise"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="BuildSettings" Type="InArgument(mtbwa:BuildSettings)" />
+    <x:Property Name="TestSpecs" Type="InArgument(mtbwa:TestSpecList)" />
+    <x:Property Name="BuildNumberFormat" Type="InArgument(x:String)" />
+    <x:Property Name="CleanWorkspace" Type="InArgument(mtbwa:CleanWorkspaceOption)" />
+    <x:Property Name="RunCodeAnalysis" Type="InArgument(mtbwa:CodeAnalysisOption)" />
+    <x:Property Name="SourceAndSymbolServerSettings" Type="InArgument(mtbwa:SourceAndSymbolServerSettings)" />
+    <x:Property Name="AgentSettings" Type="InArgument(mtbwa:AgentSettings)" />
+    <x:Property Name="AssociateChangesetsAndWorkItems" Type="InArgument(x:Boolean)" />
+    <x:Property Name="CreateWorkItem" Type="InArgument(x:Boolean)" />
+    <x:Property Name="DropBuild" Type="InArgument(x:Boolean)" />
+    <x:Property Name="MSBuildArguments" Type="InArgument(x:String)" />
+    <x:Property Name="MSBuildPlatform" Type="InArgument(mtbwa:ToolPlatform)" />
+    <x:Property Name="PerformTestImpactAnalysis" Type="InArgument(x:Boolean)" />
+    <x:Property Name="CreateLabel" Type="InArgument(x:Boolean)" />
+    <x:Property Name="DisableTests" Type="InArgument(x:Boolean)" />
+    <x:Property Name="GetVersion" Type="InArgument(x:String)" />
+    <x:Property Name="PrivateDropLocation" Type="InArgument(x:String)" />
+    <x:Property Name="Verbosity" Type="InArgument(mtbw:BuildVerbosity)" />
+    <x:Property Name="Metadata" Type="mtbw:ProcessParameterMetadataCollection" />
+    <x:Property Name="SupportedReasons" Type="mtbc:BuildReason" />
+    <x:Property Name="Simulation_Mode" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Deploy_Navitaire" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Deploy_BCN" Type="InArgument(x:Boolean)" />
+    <x:Property Name="UpdateOnlyCoreLibraries" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Validate_Number_of_Servers_out_of_pool" Type="InArgument(x:Boolean)" />
+    <x:Property Name="Deploy_AWS" Type="InArgument(x:Boolean)" />
+  </x:Members>
+  <this:Process.MSBuildArguments>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.MSBuildArguments>
+  <this:Process.GetVersion>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Process.GetVersion>
+  <this:Process.Metadata>
+    <mtbw:ProcessParameterMetadataCollection />
+  </this:Process.Metadata>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>TfsBuild.Vueling.SkySalesToPools.Process</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>Microsoft.TeamFoundation</x:String>
+      <x:String>Microsoft.TeamFoundation.Build.Client</x:String>
+      <x:String>Microsoft.TeamFoundation.Build.Workflow</x:String>
+      <x:String>Microsoft.TeamFoundation.Build.Workflow.Activities</x:String>
+      <x:String>Microsoft.TeamFoundation.Build.Workflow.Tracking</x:String>
+      <x:String>Microsoft.TeamFoundation.Client</x:String>
+      <x:String>Microsoft.TeamFoundation.TestImpact.BuildIntegration.BuildActivities</x:String>
+      <x:String>Microsoft.TeamFoundation.VersionControl.Client</x:String>
+      <x:String>Microsoft.TeamFoundation.VersionControl.Common</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities.Debugger</x:String>
+      <x:String>System.Activities.Debugger.Symbol</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>TFSBuildExtensions.CustomTypes</x:String>
+      <x:String>TFSBuildExtensions.CodeMetrics</x:String>
+      <x:String>TFSBuildExtensions.Compression</x:String>
+      <x:String>TFSBuildExtensions.CodeCoverage</x:String>
+      <x:String>TFSBuildExtensions.Database</x:String>
+      <x:String>TFSBuildExtensions.EnvironmentManagement.Validation</x:String>
+      <x:String>TFSBuildExtensions.FileSystem</x:String>
+      <x:String>TFSBuildExtensions.Library.Workflow</x:String>
+      <x:String>TFSBuildExtensions.PowerShell</x:String>
+      <x:String>TFSBuildExtensions.Solution</x:String>
+      <x:String>TFSBuildExtensions.SourceControl</x:String>
+      <x:String>TFSBuildExtensions.Types</x:String>
+      <x:String>TFSBuildExtensions.Validation</x:String>
+      <x:String>TfsBuild</x:String>
+      <x:String>TfsBuild.Vueling.SkySalesToPools</x:String>
+      <x:String>TfsBuild.VuelingSkysalesToNavitare</x:String>
+      <x:String>Vueling.Activities.Configuration</x:String>
+      <x:String>TFSBuildExtensions.ConfigurationSetupEnvironment</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.Build.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.Build.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.TestImpact.BuildIntegration</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.VersionControl.Client</AssemblyReference>
+      <AssemblyReference>Microsoft.TeamFoundation.VersionControl.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Platform.VSEditor</AssemblyReference>
+      <AssemblyReference>System.Numerics</AssemblyReference>
+      <AssemblyReference>System.DirectoryServices</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>TFSBuildExtensions</AssemblyReference>
+      <AssemblyReference>TFSBuildExtensions.Library</AssemblyReference>
+      <AssemblyReference>Template</AssemblyReference>
+      <AssemblyReference>ASMTools.Libraries.AddInHost.Client</AssemblyReference>
+      <AssemblyReference>WebDeploy.Manager.Client</AssemblyReference>
+      <AssemblyReference>WebDeploy.Manager.Messages</AssemblyReference>
+      <AssemblyReference>Vueling.Activities.Configuration</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17" mtbwt:BuildTrackingParticipant.Importance="None" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="mtbc:IBuildDetail" Name="BuildDetail" />
+    </Sequence.Variables>
+    <mtbwa:GetBuildDetail DisplayName="Get the Build" sap2010:WorkflowViewState.IdRef="GetBuildDetail_1" mtbwt:BuildTrackingParticipant.Importance="Low" Result="[BuildDetail]" />
+    <Sequence DisplayName="Update Drop Location" sap2010:WorkflowViewState.IdRef="Sequence_3" mtbwt:BuildTrackingParticipant.Importance="Low">
+      <mtbwa:InvokeForReason DisplayName="Update Build Number for Triggered Builds" sap2010:WorkflowViewState.IdRef="InvokeForReason_1" Reason="Triggered">
+        <mtbwa:UpdateBuildNumber BuildNumberFormat="[BuildNumberFormat]" DisplayName="Update Build Number" sap2010:WorkflowViewState.IdRef="UpdateBuildNumber_1" />
+      </mtbwa:InvokeForReason>
+      <If Condition="[DropBuild AndAlso (BuildDetail.Reason And Microsoft.TeamFoundation.Build.Client.BuildReason.Triggered) = BuildDetail.Reason]" DisplayName="If DropBuild And Build Reason is Triggered" sap2010:WorkflowViewState.IdRef="If_2" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <If.Then>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1" mtbwt:BuildTrackingParticipant.Importance="None">
+            <If Condition="[String.IsNullOrEmpty(BuildDetail.DropLocationRoot)]" DisplayName="If DropLocationRoot is empty" sap2010:WorkflowViewState.IdRef="If_1" mtbwt:BuildTrackingParticipant.Importance="Low">
+              <If.Then>
+                <Throw DisplayName="Throw EmptyDropLocationRootException" Exception="[New Microsoft.TeamFoundation.Build.Workflow.Activities.EmptyDropLocationRootException(BuildDetail.BuildDefinition.Name)]" sap2010:WorkflowViewState.IdRef="Throw_1" mtbwt:BuildTrackingParticipant.Importance="Low" />
+              </If.Then>
+            </If>
+            <mtbwa:SetBuildProperties DisplayName="Set Drop Location" DropLocation="[BuildDetail.DropLocationRoot + &quot;\&quot; + BuildDetail.BuildDefinition.Name + &quot;\&quot; + BuildDetail.BuildNumber]" sap2010:WorkflowViewState.IdRef="SetBuildProperties_1" mtbwt:BuildTrackingParticipant.Importance="Low" PropertiesToSet="DropLocation" />
+            <mtbwa:CreateDirectory Directory="[BuildDetail.DropLocation]" DisplayName="Create the Drop Location" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" mtbwt:BuildTrackingParticipant.Importance="Normal" />
+          </Sequence>
+        </If.Then>
+      </If>
+      <If Condition="[DropBuild AndAlso BuildDetail.Reason = Microsoft.TeamFoundation.Build.Client.BuildReason.ValidateShelveset]" DisplayName="If DropBuild And Build Reason is ValidateShelveset" sap2010:WorkflowViewState.IdRef="If_4" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <If.Then>
+          <If Condition="[Not String.IsNullOrEmpty(PrivateDropLocation)]" sap2010:WorkflowViewState.IdRef="If_3" mtbwt:BuildTrackingParticipant.Importance="None">
+            <If.Then>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2" mtbwt:BuildTrackingParticipant.Importance="None">
+                <mtbwa:SetBuildProperties DisplayName="Set Drop Location for Private Build" DropLocation="[PrivateDropLocation + &quot;\&quot; + BuildDetail.BuildDefinition.Name + &quot;\&quot; + BuildDetail.BuildNumber]" sap2010:WorkflowViewState.IdRef="SetBuildProperties_2" mtbwt:BuildTrackingParticipant.Importance="Low" PropertiesToSet="DropLocation" />
+                <mtbwa:CreateDirectory Directory="[BuildDetail.DropLocation]" DisplayName="Create the Drop Location" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" mtbwt:BuildTrackingParticipant.Importance="Normal" />
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <mtbwa:WriteBuildWarning sap2010:WorkflowViewState.IdRef="WriteBuildWarning_1" Message="The build outputs for this private build will not be copied to the drop location because the PrivateDropLocation is not set." mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+            </If.Else>
+          </If>
+        </If.Then>
+      </If>
+    </Sequence>
+    <mtbwa:AgentScope DataToIgnore="" DisplayName="Run On Agent" sap2010:WorkflowViewState.IdRef="AgentScope_1" MaxExecutionTime="[AgentSettings.MaxExecutionTime]" MaxWaitTime="[AgentSettings.MaxWaitTime]" ReservationSpec="[AgentSettings.GetAgentReservationSpec()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <mtbwa:AgentScope.Variables>
+        <Variable x:TypeArguments="mtbc:IBuildAgent" Name="BuildAgent" />
+        <Variable x:TypeArguments="mtvc1:Workspace" Name="Workspace" />
+        <Variable x:TypeArguments="x:String" Name="BuildDirectory" />
+        <Variable x:TypeArguments="x:String" Default="[BuildDetail.BuildNumber]" Name="LabelName" />
+        <Variable x:TypeArguments="x:String" Name="WorkspaceName" />
+        <Variable x:TypeArguments="x:String" Name="SourcesDirectory" />
+        <Variable x:TypeArguments="x:String" Name="BinariesDirectory" />
+        <Variable x:TypeArguments="x:String" Name="TestResultsDirectory" />
+        <Variable x:TypeArguments="s:String[]" Name="ProjectsDetail" />
+        <Variable x:TypeArguments="scg:IList(mtvc1:Changeset)" Name="associatedChangesets" />
+        <Variable x:TypeArguments="x:String" Name="Snapshot" />
+        <Variable x:TypeArguments="x:String" Default="pro64" Name="NavitaireWebDeployManagerServer" />
+        <Variable x:TypeArguments="x:Int32" Default="240" Name="DelayBetweenPoolsInSeconds" />
+        <Variable x:TypeArguments="x:String" Default="Deploy Skins" Name="Action" />
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[ConfigurationWorkflow.TargetEnvironmentNavitaire]" Name="Target_Environment_Navitaire" />
+        <Variable x:TypeArguments="x:String" Name="SourceFolderBinariesDirectory" />
+        <Variable x:TypeArguments="x:String" Default="[ConfigurationWorkflow.folderBase]" Name="folderBase" />
+        <Variable x:TypeArguments="x:String" Name="LocalPathBaseSkin" />
+        <Variable x:TypeArguments="scg:List(scg:List(x:String))" Default="[ConfigurationWorkflow.TargetEnvironmentTLVBCN]" Name="Target_Environment_TLV_Bcn" />
+        <Variable x:TypeArguments="x:String" Name="LocalPathCustomSkin" />
+        <Variable x:TypeArguments="x:String" Name="LocalPathAWSSkin" />
+      </mtbwa:AgentScope.Variables>
+      <Sequence DisplayName="Initialize Variables" sap2010:WorkflowViewState.IdRef="Sequence_5" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <mtbwa:GetBuildAgent DisplayName="Get the Agent" sap2010:WorkflowViewState.IdRef="GetBuildAgent_1" mtbwt:BuildTrackingParticipant.Importance="Low" Result="[BuildAgent]" />
+        <mtbwa:GetBuildDirectory DisplayName="Get the Build Directory" sap2010:WorkflowViewState.IdRef="GetBuildDirectory_1" mtbwt:BuildTrackingParticipant.Importance="Low" Result="[BuildDirectory]" />
+        <Assign x:TypeArguments="x:String" DisplayName="Initialize Workspace Name" sap2010:WorkflowViewState.IdRef="Assign`1_1" mtbwt:BuildTrackingParticipant.Importance="Low" To="[WorkspaceName]" Value="[String.Format(&quot;{0}_{1}_{2}&quot;, BuildDetail.BuildDefinition.Id, Microsoft.TeamFoundation.LinkingUtilities.DecodeUri(BuildAgent.Uri.AbsoluteUri).ToolSpecificId, BuildAgent.ServiceHost.Name)]" />
+        <Assign x:TypeArguments="x:String" DisplayName="Initialize Sources Directory" sap2010:WorkflowViewState.IdRef="Assign`1_2" mtbwt:BuildTrackingParticipant.Importance="Low" To="[SourcesDirectory]" Value="[String.Format(&quot;{0}\Sources&quot;, BuildDirectory)]" />
+        <Assign x:TypeArguments="x:String" DisplayName="Initialize Binaries Directory" sap2010:WorkflowViewState.IdRef="Assign`1_3" mtbwt:BuildTrackingParticipant.Importance="Low" To="[BinariesDirectory]" Value="[String.Format(&quot;{0}\Binaries&quot;, BuildDirectory)]" />
+        <Assign x:TypeArguments="x:String" DisplayName="Initialize TestResults Directory" sap2010:WorkflowViewState.IdRef="Assign`1_5" mtbwt:BuildTrackingParticipant.Importance="Low" To="[TestResultsDirectory]" Value="[String.Format(&quot;{0}\TestResults&quot;, BuildDirectory)]" />
+        <If Condition="[Not BuildSettings.HasPlatformConfigurations]" DisplayName="If Not BuildSettings.HasPlatformConfigurations" sap2010:WorkflowViewState.IdRef="If_5" mtbwt:BuildTrackingParticipant.Importance="Low">
+          <If.Then>
+            <AddToCollection x:TypeArguments="mtbwa:PlatformConfiguration" Collection="[BuildSettings.PlatformConfigurations]" DisplayName="Use Default Platform Configuration" sap2010:WorkflowViewState.IdRef="AddToCollection`1_1" mtbwt:BuildTrackingParticipant.Importance="Low" Item="[Microsoft.TeamFoundation.Build.Workflow.Activities.PlatformConfiguration.Default]" />
+          </If.Then>
+        </If>
+        <If Condition="[WorkspaceName.Length &gt; Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxWorkspaceNameSize]" DisplayName="If WorkspaceName &gt; MaxSize" sap2010:WorkflowViewState.IdRef="If_6" mtbwt:BuildTrackingParticipant.Importance="Low">
+          <If.Then>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" mtbwt:BuildTrackingParticipant.Importance="None">
+              <mtbwa:WriteBuildWarning sap2010:WorkflowViewState.IdRef="WriteBuildWarning_2" Message="[String.Format(&quot;The workspace name '{0}' exceeds the maximum allowed limit of '{1}' characters. Truncating it to match the maximum limit.&quot;, WorkspaceName, Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxWorkspaceNameSize)]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+              <Assign x:TypeArguments="x:String" DisplayName="Truncate WorkspaceName to MaxSize" sap2010:WorkflowViewState.IdRef="Assign`1_4" mtbwt:BuildTrackingParticipant.Importance="Low" To="[WorkspaceName]" Value="[WorkspaceName.Substring(0, Microsoft.TeamFoundation.VersionControl.Common.RepositoryConstants.MaxWorkspaceNameSize).TrimEnd()]" />
+            </Sequence>
+          </If.Then>
+        </If>
+      </Sequence>
+      <Sequence DisplayName="Initialize Workspace" sap2010:WorkflowViewState.IdRef="Sequence_30" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <mtbwa:DeleteDirectory Directory="[TestResultsDirectory]" DisplayName="Delete Test Results Directory" sap2010:WorkflowViewState.IdRef="DeleteDirectory_1" mtbwt:BuildTrackingParticipant.Importance="Normal" Recursive="[True]" />
+        <If Condition="[Not CleanWorkspace = Microsoft.TeamFoundation.Build.Workflow.Activities.CleanWorkspaceOption.None]" DisplayName="If Not CleanWorkspace = CleanWorkspaceOption.None" sap2010:WorkflowViewState.IdRef="If_24" mtbwt:BuildTrackingParticipant.Importance="Low">
+          <If.Then>
+            <mtbwa:DeleteDirectory Directory="[BinariesDirectory]" DisplayName="Delete Binaries Directory" sap2010:WorkflowViewState.IdRef="DeleteDirectory_2" mtbwt:BuildTrackingParticipant.Importance="Normal" />
+          </If.Then>
+        </If>
+        <If Condition="[CleanWorkspace = Microsoft.TeamFoundation.Build.Workflow.Activities.CleanWorkspaceOption.All]" DisplayName="If CleanWorkspace = CleanWorkspaceOption.All" sap2010:WorkflowViewState.IdRef="If_25" mtbwt:BuildTrackingParticipant.Importance="Low">
+          <If.Then>
+            <Sequence DisplayName="Delete Workspace and Sources Directory" sap2010:WorkflowViewState.IdRef="Sequence_26" mtbwt:BuildTrackingParticipant.Importance="Low">
+              <mtbwa:DeleteWorkspace DeleteLocalItems="[True]" DisplayName="Delete Workspace" sap2010:WorkflowViewState.IdRef="DeleteWorkspace_1" mtbwt:BuildTrackingParticipant.Importance="Normal" Name="[WorkspaceName]" />
+              <mtbwa:DeleteDirectory Directory="[SourcesDirectory]" DisplayName="Delete Sources Directory" sap2010:WorkflowViewState.IdRef="DeleteDirectory_3" mtbwt:BuildTrackingParticipant.Importance="Normal" />
+            </Sequence>
+          </If.Then>
+        </If>
+        <mtbwa:CreateWorkspace BuildDirectory="[BuildDirectory]" Comment="[&quot;Workspace Created by Team Build&quot;]" DisplayName="Create Workspace" sap2010:WorkflowViewState.IdRef="CreateWorkspace_1" Name="[WorkspaceName]" Result="[Workspace]" SourcesDirectory="[SourcesDirectory]" />
+        <If Condition="[CleanWorkspace = Microsoft.TeamFoundation.Build.Workflow.Activities.CleanWorkspaceOption.Outputs]" DisplayName="If CleanWorkspace = CleanWorkspaceOption.Outputs" sap2010:WorkflowViewState.IdRef="If_28" mtbwt:BuildTrackingParticipant.Importance="Low">
+          <If.Then>
+            <ForEach x:TypeArguments="mtbwa:PlatformConfiguration" DisplayName="For Each Configuration in BuildSettings.PlatformConfigurations" sap2010:WorkflowViewState.IdRef="ForEach`1_7" mtbwt:BuildTrackingParticipant.Importance="Low" Values="[BuildSettings.PlatformConfigurations]">
+              <ActivityAction x:TypeArguments="mtbwa:PlatformConfiguration">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="mtbwa:PlatformConfiguration" Name="platformConfiguration" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Clean Configuration" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <If Condition="[BuildSettings.HasProjectsToBuild]" DisplayName="If BuildSettings.HasProjectsToBuild" sap2010:WorkflowViewState.IdRef="If_27" mtbwt:BuildTrackingParticipant.Importance="Low">
+                    <If.Then>
+                      <ForEach x:TypeArguments="x:String" DisplayName="For Each Project in BuildSettings.ProjectsToBuild" sap2010:WorkflowViewState.IdRef="ForEach`1_6" mtbwt:BuildTrackingParticipant.Importance="Low" Values="[BuildSettings.ProjectsToBuild]">
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="serverBuildProjectItem" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Clean Project" sap2010:WorkflowViewState.IdRef="Sequence_28" mtbwt:BuildTrackingParticipant.Importance="Normal">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="localBuildProjectItem" />
+                            </Sequence.Variables>
+                            <mtbwa:ConvertWorkspaceItem DisplayName="Convert Server Paths to Local Paths" sap2010:WorkflowViewState.IdRef="ConvertWorkspaceItem_1" mtbwt:BuildTrackingParticipant.Importance="Low" Input="[serverBuildProjectItem]" Result="[localBuildProjectItem]" Workspace="[Workspace]" />
+                            <If Condition="[System.IO.File.Exists(localBuildProjectItem)]" DisplayName="If File.Exists(Project)" sap2010:WorkflowViewState.IdRef="If_26" mtbwt:BuildTrackingParticipant.Importance="Low">
+                              <If.Then>
+                                <Sequence DisplayName="Actions to Project" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <mtbwa:MSBuild CommandLineArguments="[String.Format(&quot;/p:SkipInvalidConfigurations=true {0}&quot;, MSBuildArguments)]" Configuration="[platformConfiguration.Configuration]" DisplayName="Run MSBuild for Project" GenerateVSPropsFile="[True]" sap2010:WorkflowViewState.IdRef="MSBuild_1" OutDir="[BinariesDirectory]" Platform="[platformConfiguration.Platform]" Project="[localBuildProjectItem]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" Targets="[New String() { &quot;Clean&quot; }]" TargetsNotLogged="[New String() {&quot;GetNativeManifest&quot;, &quot;GetCopyToOutputDirectoryItems&quot;, &quot;GetTargetPath&quot;}]" ToolPlatform="[MSBuildPlatform]" Verbosity="[Verbosity]" />
+                                </Sequence>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </ActivityAction>
+                      </ForEach>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ForEach>
+          </If.Then>
+        </If>
+        <mtbwa:SyncWorkspace DisplayName="Get Workspace" sap2010:WorkflowViewState.IdRef="SyncWorkspace_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" VersionOverride="[GetVersion]" Workspace="[Workspace]" />
+      </Sequence>
+      <If Condition="[AssociateChangesetsAndWorkItems]" DisplayName="If AssociateChangesetsAndWorkItems" sap2010:WorkflowViewState.IdRef="If_18" mtbwt:BuildTrackingParticipant.Importance="Low">
+        <If.Then>
+          <mtbwa:InvokeForReason DisplayName="Associate Changesets and Work Items for non-Shelveset Builds" sap2010:WorkflowViewState.IdRef="InvokeForReason_4" Reason="Manual, IndividualCI, BatchedCI, Schedule, ScheduleForced, UserCreated">
+            <mtbwa:AssociateChangesetsAndWorkItems DisplayName="Associate Changesets and Work Items" sap2010:WorkflowViewState.IdRef="AssociateChangesetsAndWorkItems_1" Result="[associatedChangesets]" />
+          </mtbwa:InvokeForReason>
+        </If.Then>
+      </If>
+      <tc4:Email Attachments="{x:Null}" EnableSsl="{x:Null}" ErrorMessageList="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" Port="{x:Null}" Priority="{x:Null}" TreatWarningsAsErrors="{x:Null}" UserName="{x:Null}" UserPassword="{x:Null}" WarningMessageList="{x:Null}" Action="Send" Body="[&quot;SkySales deployment &quot; + BuildDetail.BuildNumber + &quot; started&quot;]" DisplayName="Send email deployment started" FailBuildOnError="False" Format="PLAIN" sap2010:WorkflowViewState.IdRef="Email_3" LogExceptionStack="True" MailFrom="no-reply@vueling.com" MailTo="[ConfigurationWorkflow.SkySalesDeploymentEmailNotification.ToArray]" SmtpServer="appsmtp.vuelingbcn.com" Subject="[&quot;Skysales deployment &quot; + BuildDetail.BuildNumber + &quot; started by &quot; + BuildDetail.RequestedBy]" UseDefaultCredentials="True" />
+      <tn:GetSnapshotsFromPool ErrorMessageList="{x:Null}" InformationMessageList="{x:Null}" PreviousSnapshot="{x:Null}" WarningMessageList="{x:Null}" ActiveSnapshot="[Snapshot]" FailBuildOnError="True" FullPathVuelingNavitaireWebDeployManagerConsoleUI="[folderBase + &quot;\Vueling.Build.Navitaire.Web.Deploy.Manager.ConsoleUI\Vueling.Build.Navitaire.Web.Deploy.Manager.ConsoleUI.exe&quot;]" sap2010:WorkflowViewState.IdRef="GetSnapshotsFromPool_2" IgnoreExceptions="False" LogExceptionStack="True" Pool="Vueling 900" TreatWarningsAsErrors="False" />
+      <Assign sap2010:WorkflowViewState.IdRef="Assign_15">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LocalPathBaseSkin]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[BuildDetail.DropLocationRoot + "\" + Snapshot.Substring(0, Snapshot.IndexOf("_")) + "\" + Snapshot + "\zips\deploy-package-skysales-base-skin.7z"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap2010:WorkflowViewState.IdRef="Assign_16">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LocalPathCustomSkin]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[BuildDetail.DropLocationRoot + "\" + Snapshot.Substring(0, Snapshot.IndexOf("_")) + "\" + Snapshot + "\zips\deploy-package-skysales-custom-skin.7z"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap2010:WorkflowViewState.IdRef="Assign_24">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[LocalPathAWSSkin]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[BuildDetail.DropLocationRoot + "\" + Snapshot.Substring(0, Snapshot.IndexOf("_")) + "\" + Snapshot + "\zips\" + Snapshot + ".zip"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If Condition="[System.IO.File.Exists(LocalPathBaseSkin) And System.IO.File.Exists(LocalPathCustomSkin) And System.IO.File.Exists(LocalPathAWSSkin)]" DisplayName="If zip snapshot file exists" sap2010:WorkflowViewState.IdRef="If_43">
+        <If.Then>
+          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_52">
+            <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_19" Message="[&quot;Base snapshot found at &quot; + LocalPathBaseSkin + &quot;. Custom snapshot found at &quot; + LocalPathCustomSkin]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_53">
+            <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_24" Message="[&quot;Base snapshot could not be found at &quot; + LocalPathBaseSkin + &quot;. Or custom snapshot could not be found at &quot; + LocalPathCustomSkin]" />
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[Deploy_BCN]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[Deploy_Navitaire]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap2010:WorkflowViewState.IdRef="Assign_25">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[Deploy_AWS]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+              </Assign.Value>
+            </Assign>
+            <mtbwa:SetBuildProperties CompilationStatus="[BuildPhaseStatus.Failed]" sap2010:WorkflowViewState.IdRef="SetBuildProperties_14" PropertiesToSet="CompilationStatus" />
+          </Sequence>
+        </If.Else>
+      </If>
+      <Assign sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[SourceFolderBinariesDirectory]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[BuildDetail.DropLocationRoot + "\" + Snapshot.Substring(0, Snapshot.IndexOf("_")) + "\" + Snapshot]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Parallel DisplayName="Deploy skysales Parallel London - Bcn" sap2010:WorkflowViewState.IdRef="Parallel_1">
+        <If Condition="[Deploy_BCN]" DisplayName="Deploy BCN" sap2010:WorkflowViewState.IdRef="If_38">
+          <If.Then>
+            <Sequence DisplayName="Deploy SkySales to Telvent BCN" sap2010:WorkflowViewState.IdRef="Sequence_45">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="ErrorCode" />
+                <Variable x:TypeArguments="x:Int32" Name="exitCode" />
+                <Variable x:TypeArguments="x:Int32" Default="0" Name="poolsCount" />
+              </Sequence.Variables>
+              <If Condition="[UpdateOnlyCoreLibraries]" DisplayName="If UpdateOnlyCoreLibraries create base package" sap2010:WorkflowViewState.IdRef="If_56">
+                <If.Then>
+                  <Sequence DisplayName="Create on premise snapshots" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="exitCodeCreateSnapshot" />
+                    </Sequence.Variables>
+                    <mtbwa:CreateDirectory Directory="[BinariesDirectory + &quot;\zips&quot;]" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" />
+                    <mtbwa:InvokeProcess Arguments="[&quot;/c del &quot; + BinariesDirectory + &quot;\zips\*.7z&quot;]" DisplayName="Delete old .7z files" FileName="cmd.exe" sap2010:WorkflowViewState.IdRef="InvokeProcess_8">
+                      <mtbwa:InvokeProcess.ErrorDataReceived>
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="errOutput" />
+                          </ActivityAction.Argument>
+                          <mtbwa:WriteBuildWarning sap2010:WorkflowViewState.IdRef="WriteBuildWarning_3" Message="[errOutput]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                        </ActivityAction>
+                      </mtbwa:InvokeProcess.ErrorDataReceived>
+                      <mtbwa:InvokeProcess.OutputDataReceived>
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="stdOutput" />
+                          </ActivityAction.Argument>
+                          <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_28" Message="[stdOutput]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                        </ActivityAction>
+                      </mtbwa:InvokeProcess.OutputDataReceived>
+                    </mtbwa:InvokeProcess>
+                    <mtbwa:InvokeProcess Arguments="[&quot;a -t7z &quot; + BinariesDirectory + &quot;\zips\deploy-package-skysales-base-skin.7z &quot; + SourcesDirectory + &quot;\SkySales\PRO\SkySales\* -r&quot;]" DisplayName="Create base 7z file" FileName="C:\Program Files\7-Zip\7z.exe" sap2010:WorkflowViewState.IdRef="InvokeProcess_9">
+                      <mtbwa:InvokeProcess.ErrorDataReceived>
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="errOutput" />
+                          </ActivityAction.Argument>
+                          <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_33" Message="[errOutput]" />
+                        </ActivityAction>
+                      </mtbwa:InvokeProcess.ErrorDataReceived>
+                      <mtbwa:InvokeProcess.OutputDataReceived>
+                        <ActivityAction x:TypeArguments="x:String">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:String" Name="stdOutput" />
+                          </ActivityAction.Argument>
+                        </ActivityAction>
+                      </mtbwa:InvokeProcess.OutputDataReceived>
+                    </mtbwa:InvokeProcess>
+                  </Sequence>
+                </If.Then>
+              </If>
+              <ForEach x:TypeArguments="scg:List(x:String)" DisplayName="Select pool" sap2010:WorkflowViewState.IdRef="ForEach`1_23" Values="[Target_Environment_TLV_Bcn]">
+                <ActivityAction x:TypeArguments="scg:List(x:String)">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="scg:List(x:String)" Name="pool" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Deploy to a Pool" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <If Condition="[Validate_Number_of_Servers_out_of_pool]" DisplayName="Validate_Number_of_Servers_out_of_pool" sap2010:WorkflowViewState.IdRef="If_57">
+                      <If.Then>
+                        <Sequence DisplayName="Validate number out of pool servers" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Int32" Name="numberServersOutBalancer" />
+                          </Sequence.Variables>
+                          <mtbwa:InvokeProcess Arguments="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\LoadBalancer\SKYSALES_NFrontalsOUT.vbs&quot;]" DisplayName="Get servers out of load balancer" FileName="cscript.exe" sap2010:WorkflowViewState.IdRef="InvokeProcess_7" Result="[[numberServersOutBalancer]]">
+                            <mtbwa:InvokeProcess.ErrorDataReceived>
+                              <ActivityAction x:TypeArguments="x:String">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="errOutput" />
+                                </ActivityAction.Argument>
+                                <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_25" Message="[errOutput]" />
+                              </ActivityAction>
+                            </mtbwa:InvokeProcess.ErrorDataReceived>
+                            <mtbwa:InvokeProcess.OutputDataReceived>
+                              <ActivityAction x:TypeArguments="x:String">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="stdOutput" />
+                                </ActivityAction.Argument>
+                                <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_20" Message="[stdOutput]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                              </ActivityAction>
+                            </mtbwa:InvokeProcess.OutputDataReceived>
+                          </mtbwa:InvokeProcess>
+                          <If Condition="[numberServersOutBalancer &gt;= 2]" sap2010:WorkflowViewState.IdRef="If_44">
+                            <If.Then>
+                              <Sequence DisplayName="Build Failed" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_26" Message="[&quot;There are &quot; + numberServersOutBalancer.ToString() + &quot; servers out of 12 servers. Out of pool cannot be executed.&quot;]" />
+                                <mtbwa:SetBuildProperties CompilationStatus="[BuildPhaseStatus.Failed]" sap2010:WorkflowViewState.IdRef="SetBuildProperties_15" PropertiesToSet="Status, CompilationStatus" Status="[BuildStatus.Failed]" />
+                                <Assign sap2010:WorkflowViewState.IdRef="Assign_14">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">4</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </If.Then>
+                            <If.Else>
+                              <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_21" Message="[&quot;There are &quot; + numberServersOutBalancer.ToString() + &quot; servers out of 12 servers. Out of pool will be executed.&quot;]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                            </If.Else>
+                          </If>
+                        </Sequence>
+                      </If.Then>
+                    </If>
+                    <If Condition="[ErrorCode = 0]" DisplayName="Out of pool from servers" sap2010:WorkflowViewState.IdRef="If_42">
+                      <If.Then>
+                        <ParallelForEach x:TypeArguments="x:String" DisplayName="ParallelForEach Out of pool" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_4" Values="[pool]">
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="server" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Properties" />
+                                <Variable x:TypeArguments="sma:PSObject[]" Name="PowerShellResult" />
+                              </Sequence.Variables>
+                              <tp1:GetServerSettings ErrorMessageList="{x:Null}" FailBuildOnError="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" TreatWarningsAsErrors="{x:Null}" WarningMessageList="{x:Null}" sap2010:WorkflowViewState.IdRef="GetServerSettings_1" LogExceptionStack="True" Properties="[Properties]" Server="[server]" />
+                              <tp:InvokePowershellCommandAsync Arguments="[String.Format(&quot;-Server {0} -User {1} -Password {2} -Command {3}&quot;, Properties(&quot;server.iis.ip&quot;), Properties(&quot;server.iis.deployuser&quot;), Properties(&quot;server.iis.deploypassword&quot;), &quot;C:\scripts\Delete-LB-VY-TLV.bat&quot;)]" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_4" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\InvokeRemoteCommand.ps1&quot;]" />
+                              <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[PowerShellResult]">
+                                <ActivityAction x:TypeArguments="sma:PSObject">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                  </ActivityAction.Argument>
+                                  <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_35">
+                                    <If.Then>
+                                      <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                        <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_15" Message="[powerShellResultItem.ToString()]" />
+                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_8">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_16" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                    </If.Else>
+                                  </If>
+                                </ActivityAction>
+                              </ForEach>
+                            </Sequence>
+                          </ActivityAction>
+                        </ParallelForEach>
+                      </If.Then>
+                      <If.Else>
+                        <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_20" Message="[&quot;Out of pool not executed on pool &quot; + pool.ToString()]" />
+                      </If.Else>
+                    </If>
+                    <If Condition="[ErrorCode = 0]" DisplayName="Update servers" sap2010:WorkflowViewState.IdRef="If_40">
+                      <If.Then>
+                        <ParallelForEach x:TypeArguments="x:String" DisplayName="ParallelForEach Deploy SkySales" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_5" Values="[pool]">
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="server" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Properties" />
+                                <Variable x:TypeArguments="sma:PSObject[]" Name="PowerShellResult" />
+                                <Variable x:TypeArguments="x:String" Name="platformSettings" />
+                              </Sequence.Variables>
+                              <tp1:GetServerSettings ErrorMessageList="{x:Null}" FailBuildOnError="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" TreatWarningsAsErrors="{x:Null}" WarningMessageList="{x:Null}" sap2010:WorkflowViewState.IdRef="GetServerSettings_2" LogExceptionStack="True" Properties="[Properties]" Server="[server]" />
+                              <tp1:GetPlatformSettings ErrorMessageList="{x:Null}" FailBuildOnError="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" PlatformSettingsObject="{x:Null}" TreatWarningsAsErrors="{x:Null}" WarningMessageList="{x:Null}" ApplicationType="skysales" sap2010:WorkflowViewState.IdRef="GetPlatformSettings_1" LogExceptionStack="True" PlatformSettings="[platformSettings]" Server="[server]" Website="[Properties(&quot;server.iis.website&quot;)]" />
+                              <If Condition="[UpdateOnlyCoreLibraries]" DisplayName="If Update Only Core Libraries" sap2010:WorkflowViewState.IdRef="If_51">
+                                <If.Then>
+                                  <Sequence DisplayName="Deploy core libraries" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                    <tp:InvokePowershellCommandAsync Arguments="[String.Format(&quot;-ApplicationName {0} -Server {1} -User {2} -Password {3} -SourcePath {4} -LocalTargetPath {5} -UNCTargetPath {6} -TargetFolder {7} -AppPool {8} -PlatformSettings {10}{9}{10}&quot;, &quot;skysales-base-skin&quot;, Properties(&quot;server.iis.ip&quot;), Properties(&quot;server.iis.deployuser&quot;), Properties(&quot;server.iis.deploypassword&quot;), SourceFolderBinariesDirectory + &quot;\zips&quot;, Properties(&quot;server.iis.local.deploy.dir&quot;), Properties(&quot;server.iis.remote.deploy.dir&quot;).Replace(&quot;${server.iis.ip}&quot;, Properties(&quot;server.iis.ip&quot;)), Properties(&quot;server.iis.local.deploy.dir&quot;) + &quot;SkySales\&quot;, &quot;SkySales&quot;, platformSettings, &quot;&quot;&quot;&quot;)]" BuildWorkspace="[Workspace]" DisplayName="Deploy Base Skin SkySales" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_9" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\InvokeVuelingApplicationDeployer-skysales-base-skin.ps1&quot;]" />
+                                    <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_19" Values="[PowerShellResult]">
+                                      <ActivityAction x:TypeArguments="sma:PSObject">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                        </ActivityAction.Argument>
+                                        <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_48">
+                                          <If.Then>
+                                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                              <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_29" Message="[powerShellResultItem.ToString()]" />
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_20">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_24" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                          </If.Else>
+                                        </If>
+                                      </ActivityAction>
+                                    </ForEach>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence DisplayName="Full Deploy" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                    <tp:InvokePowershellCommandAsync Arguments="[String.Format(&quot;-ApplicationName {0} -Server {1} -User {2} -Password {3} -SourcePath {4} -LocalTargetPath {5} -UNCTargetPath {6} -TargetFolder {7} -AppPool {8} -PlatformSettings {10}{9}{10}&quot;, &quot;skysales-base-skin-clean&quot;, Properties(&quot;server.iis.ip&quot;), Properties(&quot;server.iis.deployuser&quot;), Properties(&quot;server.iis.deploypassword&quot;), SourceFolderBinariesDirectory + &quot;\zips&quot;, Properties(&quot;server.iis.local.deploy.dir&quot;), Properties(&quot;server.iis.remote.deploy.dir&quot;).Replace(&quot;${server.iis.ip}&quot;, Properties(&quot;server.iis.ip&quot;)), Properties(&quot;server.iis.local.deploy.dir&quot;) + &quot;SkySales\&quot;, &quot;SkySales&quot;, platformSettings, &quot;&quot;&quot;&quot;)]" BuildWorkspace="[Workspace]" DisplayName="Deploy Base Skin SkySales" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_10" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\InvokeVuelingApplicationDeployer-skysales-base-skin.ps1&quot;]" />
+                                    <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_20" Values="[PowerShellResult]">
+                                      <ActivityAction x:TypeArguments="sma:PSObject">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                        </ActivityAction.Argument>
+                                        <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_49">
+                                          <If.Then>
+                                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                              <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_30" Message="[powerShellResultItem.ToString()]" />
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_21">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_25" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                          </If.Else>
+                                        </If>
+                                      </ActivityAction>
+                                    </ForEach>
+                                    <tp:InvokePowershellCommandAsync Arguments="[String.Format(&quot;-ApplicationName {0} -Server {1} -User {2} -Password {3} -SourcePath {4} -LocalTargetPath {5} -UNCTargetPath {6} -TargetFolder {7} -AppPool {8} -PlatformSettings {10}{9}{10}&quot;, &quot;skysales-custom-skin&quot;, Properties(&quot;server.iis.ip&quot;), Properties(&quot;server.iis.deployuser&quot;), Properties(&quot;server.iis.deploypassword&quot;), SourceFolderBinariesDirectory + &quot;\zips&quot;, Properties(&quot;server.iis.local.deploy.dir&quot;), Properties(&quot;server.iis.remote.deploy.dir&quot;).Replace(&quot;${server.iis.ip}&quot;, Properties(&quot;server.iis.ip&quot;)), Properties(&quot;server.iis.local.deploy.dir&quot;) + &quot;SkySales\&quot;, &quot;SkySales&quot;, platformSettings, &quot;&quot;&quot;&quot;)]" BuildWorkspace="[Workspace]" DisplayName="Deploy Custom Skin SkySales" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_11" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\InvokeVuelingApplicationDeployer-skysales-custom-skin.ps1&quot;]" />
+                                    <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_21" Values="[PowerShellResult]">
+                                      <ActivityAction x:TypeArguments="sma:PSObject">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                        </ActivityAction.Argument>
+                                        <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_50">
+                                          <If.Then>
+                                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                              <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_31" Message="[powerShellResultItem.ToString()]" />
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_22">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_26" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                          </If.Else>
+                                        </If>
+                                      </ActivityAction>
+                                    </ForEach>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ParallelForEach>
+                      </If.Then>
+                      <If.Else>
+                        <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_18" Message="[&quot;Deployment code skysales not executed on pool &quot; + pool.ToString()]" />
+                      </If.Else>
+                    </If>
+                    <Sequence DisplayName="Warm up server" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Properties" />
+                        <Variable x:TypeArguments="sma:PSObject[]" Name="PowerShellResult" />
+                      </Sequence.Variables>
+                      <If Condition="[System.IO.File.Exists(folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\warm-up\warm-up-skysales.ps1&quot;)]" DisplayName="Run warm up script only if it exists" sap2010:WorkflowViewState.IdRef="If_55">
+                        <If.Then>
+                          <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                            <tp:InvokePowershellCommandAsync Arguments="[&quot;-Pool &quot; + (poolsCount + 1).ToString() + &quot; -User tfsbuild&quot; + &quot; -Password Bu1ld1ng&quot;]" DisplayName="Warm up pool" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_12" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\warm-up\warm-up-skysales.ps1&quot;]" />
+                            <If Condition="[(Not PowerShellResult Is Nothing)]" DisplayName="If there's results to analyze" sap2010:WorkflowViewState.IdRef="If_54">
+                              <If.Then>
+                                <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_22" Values="[PowerShellResult]">
+                                  <ActivityAction x:TypeArguments="sma:PSObject">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                    </ActivityAction.Argument>
+                                    <If Condition="[Not (powerShellResultItem Is Nothing)]" sap2010:WorkflowViewState.IdRef="If_53">
+                                      <If.Then>
+                                        <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_52">
+                                          <If.Then>
+                                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                              <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_32" Message="[powerShellResultItem.ToString()]" />
+                                              <Assign sap2010:WorkflowViewState.IdRef="Assign_23">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_27" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                          </If.Else>
+                                        </If>
+                                      </If.Then>
+                                    </If>
+                                  </ActivityAction>
+                                </ForEach>
+                              </If.Then>
+                            </If>
+                          </Sequence>
+                        </If.Then>
+                      </If>
+                    </Sequence>
+                    <If Condition="[ErrorCode = 0]" DisplayName="In the pool servers" sap2010:WorkflowViewState.IdRef="If_41">
+                      <If.Then>
+                        <ParallelForEach x:TypeArguments="x:String" DisplayName="ParallelForEach In the of pool" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_6" Values="[pool]">
+                          <ActivityAction x:TypeArguments="x:String">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:String" Name="server" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Properties" />
+                                <Variable x:TypeArguments="sma:PSObject[]" Name="PowerShellResult" />
+                              </Sequence.Variables>
+                              <tp1:GetServerSettings ErrorMessageList="{x:Null}" FailBuildOnError="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" TreatWarningsAsErrors="{x:Null}" WarningMessageList="{x:Null}" sap2010:WorkflowViewState.IdRef="GetServerSettings_3" LogExceptionStack="True" Properties="[Properties]" Server="[server]" />
+                              <tp:InvokePowershellCommandAsync Arguments="[String.Format(&quot;-Server {0} -User {1} -Password {2} -Command {3}&quot;, Properties(&quot;server.iis.ip&quot;), Properties(&quot;server.iis.deployuser&quot;), Properties(&quot;server.iis.deploypassword&quot;), &quot;C:\scripts\Copy-LB-VY-TLV.bat&quot;)]" sap2010:WorkflowViewState.IdRef="InvokePowershellCommandAsync_6" Result="[PowerShellResult]" Script="[folderBase + &quot;\Vueling.Build.Scripts.ConsoleUI\powershell\InvokeRemoteCommand.ps1&quot;]" />
+                              <ForEach x:TypeArguments="sma:PSObject" DisplayName="Analyze PowerShell Result" sap2010:WorkflowViewState.IdRef="ForEach`1_15" Values="[PowerShellResult]">
+                                <ActivityAction x:TypeArguments="sma:PSObject">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sma:PSObject" Name="powerShellResultItem" />
+                                  </ActivityAction.Argument>
+                                  <If Condition="[powerShellResultItem.ToString().StartsWith(&quot;Error&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_37">
+                                    <If.Then>
+                                      <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                        <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_17" Message="[powerShellResultItem.ToString()]" />
+                                        <Assign sap2010:WorkflowViewState.IdRef="Assign_10">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[ErrorCode]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Int32">3</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_18" Message="[powerShellResultItem.ToString()]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                    </If.Else>
+                                  </If>
+                                </ActivityAction>
+                              </ForEach>
+                            </Sequence>
+                          </ActivityAction>
+                        </ParallelForEach>
+                      </If.Then>
+                      <If.Else>
+                        <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_19" Message="[&quot;In the pool not executed on pool &quot; + pool.ToString()]" />
+                      </If.Else>
+                    </If>
+                    <If Condition="[poolsCount &lt; Target_Environment_TLV_Bcn.Count()]" sap2010:WorkflowViewState.IdRef="If_47">
+                      <If.Then>
+                        <Delay Duration="[TimeSpan.FromSeconds(60)]" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                      </If.Then>
+                    </If>
+                    <Assign sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[poolsCount]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[poolsCount + 1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ActivityAction>
+              </ForEach>
+            </Sequence>
+          </If.Then>
+        </If>
+        <If Condition="[Deploy_Navitaire]" DisplayName="Deploy Navitaire" sap2010:WorkflowViewState.IdRef="If_39">
+          <If.Then>
+            <Sequence DisplayName="Deploy SkySales to Navitare" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="exitCodeCreateSnapshot" />
+                <Variable x:TypeArguments="x:Int32" Name="exitCodeStage" />
+                <Variable x:TypeArguments="x:Int32" Name="exitCodeDeploy" />
+                <Variable x:TypeArguments="x:String" Default="OK" Name="DeploymentResult" />
+              </Sequence.Variables>
+              <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_11" Message="[&quot;Detected snapshot name is: &quot; + Snapshot]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+              <If Condition="[String.IsNullOrEmpty(Snapshot)]" DisplayName="If Snapshot contains named snapshot" sap2010:WorkflowViewState.IdRef="If_34">
+                <If.Then>
+                  <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_11" Message="No SnapShot defined." />
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Deploy snapshot" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Default="1" Name="poolsCount" />
+                    </Sequence.Variables>
+                    <ForEach x:TypeArguments="x:String" DisplayName="Deploy snapshot to defined Pools" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[Target_Environment_Navitaire]">
+                      <ActivityAction x:TypeArguments="x:String">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:String" Name="item" />
+                        </ActivityAction.Argument>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <mtbwa:InvokeProcess Arguments="[String.Format(&quot; -U tfsbuild -P EZXmXImBDXjno06FFkxcTw== {1} --deploy-snapshot {0}{2}{0} {0}{3}{0} {0}{4}{0}&quot;, &quot;&quot;&quot;&quot;, If(Simulation_Mode, &quot;--simulator-mode&quot;, &quot;&quot;), item, If(String.IsNullOrEmpty(Snapshot), BuildDetail.BuildNumber, Snapshot), Action)]" DisplayName="Deploy Snapshot" FileName="C:\Program Files\Web Deploy Manager\bin\WDMClient.exe" sap2010:WorkflowViewState.IdRef="InvokeProcess_6" Result="[[exitCodeDeploy]]">
+                            <mtbwa:InvokeProcess.ErrorDataReceived>
+                              <ActivityAction x:TypeArguments="x:String">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="errOutput" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Fail Build" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                  <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_12" Message="[&quot;There was an error while deploying snapshot: &quot; + errOutput + &quot;. Exit code: &quot; + exitCodeDeploy.ToString()]" />
+                                  <Assign sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[DeploymentResult]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">KO</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <mtbwa:SetBuildProperties CompilationStatus="[BuildPhaseStatus.Failed]" DisplayName="Set Status to Failed" sap2010:WorkflowViewState.IdRef="SetBuildProperties_12" mtbwt:BuildTrackingParticipant.Importance="Low" PropertiesToSet="Status, CompilationStatus" Status="[Microsoft.TeamFoundation.Build.Client.BuildStatus.Failed]" />
+                                  <Throw Exception="[New Exception(&quot;Error deploying to Navitaire servers. Pool &quot; + item)]" sap2010:WorkflowViewState.IdRef="Throw_5" />
+                                </Sequence>
+                              </ActivityAction>
+                            </mtbwa:InvokeProcess.ErrorDataReceived>
+                            <mtbwa:InvokeProcess.OutputDataReceived>
+                              <ActivityAction x:TypeArguments="x:String">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:String" Name="stdOutput" />
+                                </ActivityAction.Argument>
+                                <If Condition="[stdOutput.Contains(&quot;Script execution exited with error code&quot;) Or stdOutput.Contains(&quot;Outcome: Error&quot;) Or stdOutput.Contains(&quot;Unexpected error&quot;) Or stdOutput.Contains(&quot;Service is busy processing another deployment request&quot;) Or stdOutput.Contains(&quot;Exception&quot;)]" DisplayName="" sap2010:WorkflowViewState.IdRef="If_32">
+                                  <If.Then>
+                                    <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                      <mtbwa:WriteBuildError sap2010:WorkflowViewState.IdRef="WriteBuildError_13" Message="[stdOutput]" />
+                                      <Assign sap2010:WorkflowViewState.IdRef="Assign_6">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[DeploymentResult]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">KO</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <mtbwa:SetBuildProperties CompilationStatus="[BuildPhaseStatus.Failed]" DisplayName="Set Status to Failed" sap2010:WorkflowViewState.IdRef="SetBuildProperties_13" mtbwt:BuildTrackingParticipant.Importance="Low" PropertiesToSet="Status, CompilationStatus" Status="[Microsoft.TeamFoundation.Build.Client.BuildStatus.Failed]" />
+                                      <TerminateWorkflow sap2010:WorkflowViewState.IdRef="TerminateWorkflow_4" Reason="Error deploying to Navitaire servers" />
+                                    </Sequence>
+                                  </If.Then>
+                                  <If.Else>
+                                    <mtbwa:WriteBuildMessage sap2010:WorkflowViewState.IdRef="WriteBuildMessage_12" Message="[stdOutput]" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" />
+                                  </If.Else>
+                                </If>
+                              </ActivityAction>
+                            </mtbwa:InvokeProcess.OutputDataReceived>
+                          </mtbwa:InvokeProcess>
+                          <If Condition="[poolsCount &lt; Target_Environment_Navitaire.Count()]" sap2010:WorkflowViewState.IdRef="If_33">
+                            <If.Then>
+                              <Delay Duration="[TimeSpan.FromSeconds(DelayBetweenPoolsInSeconds)]" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                            </If.Then>
+                          </If>
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_7">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[poolsCount]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">[poolsCount + 1]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </ForEach>
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </If.Then>
+        </If>
+        <If Condition="[Deploy_AWS]" DisplayName="Deploy AWS" sap2010:WorkflowViewState.IdRef="If_59">
+          <If.Then>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_68">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="scg:List(x:String)" Name="ErrorMessagesList" />
+              </Sequence.Variables>
+              <td1:DeployApplicationServiceActivity AutoscalingName="{x:Null}" DestinationSubFolder="{x:Null}" ErrorMessageList="{x:Null}" InformationMessageList="{x:Null}" WarningMessageList="{x:Null}" ApplicationName="SkySales" BucketKey="[Snapshot + &quot;.zip&quot;]" BucketName="skysales-revisions" DeployTimeoutInSeconds="5400" DeploymentConfigName="CodeDeployDefault.OneAtATime" DeploymentGroupName="Vueling-SkySales-App" ElasticLoadBalancerName="skysales-elb" Environment="PRO" ErrorMessageListArgument="[ErrorMessagesList]" FailBuildOnError="True" FilePath="[BinariesDirectory + &quot;\zips\&quot; + Snapshot + &quot;.zip&quot;]" sap2010:WorkflowViewState.IdRef="DeployApplicationServiceActivity_1" IgnoreExceptions="False" IsEC2GetInstancesFromAutoscalingNameEnabled="False" IsELBGetInstancesFromAutoscalingNameEnabled="True" IsEnabledCodeDeployDeploy="True" IsEnabledCodeDeployRegister="False" IsEnabledS3Deploy="False" LogExceptionStack="True" TreatWarningsAsErrors="False" />
+              <If Condition="[ErrorMessagesList.Count &gt; 0]" sap2010:WorkflowViewState.IdRef="If_58">
+                <If.Then>
+                  <mtbwa:SetBuildProperties sap2010:WorkflowViewState.IdRef="SetBuildProperties_16" PropertiesToSet="Status" Status="[BuildStatus.Failed]" />
+                </If.Then>
+              </If>
+            </Sequence>
+          </If.Then>
+        </If>
+      </Parallel>
+      <tc4:Email Attachments="{x:Null}" EnableSsl="{x:Null}" ErrorMessageList="{x:Null}" IgnoreExceptions="{x:Null}" InformationMessageList="{x:Null}" Port="{x:Null}" Priority="{x:Null}" TreatWarningsAsErrors="{x:Null}" UserName="{x:Null}" UserPassword="{x:Null}" WarningMessageList="{x:Null}" Action="Send" Body="[&quot;SkySales deployment &quot; + BuildDetail.BuildNumber + &quot; finished&quot;]" DisplayName="Send email deployment finished" FailBuildOnError="False" Format="PLAIN" sap2010:WorkflowViewState.IdRef="Email_4" LogExceptionStack="True" MailFrom="no-reply@vueling.com" MailTo="[ConfigurationWorkflow.SkySalesDeploymentEmailNotification.ToArray]" SmtpServer="appsmtp.vuelingbcn.com" Subject="[&quot;SkySales deployment &quot; + BuildDetail.BuildNumber + &quot; finished &quot;]" UseDefaultCredentials="True" />
+      <If Condition="[(BuildDetail.CompilationStatus = Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus.Succeeded And BuildDetail.TestStatus = Microsoft.TeamFoundation.Build.Client.BuildPhaseStatus.Succeeded) Or Not String.IsNullOrEmpty(Snapshot)]" DisplayName="Vueling Deployment, only if Compilation and Tests Succeeded" sap2010:WorkflowViewState.IdRef="If_22" />
+    </mtbwa:AgentScope>
+    <sads:DebugSymbol.Symbol>d4ABQzpcY2FybG9zLmFycmFuelxSZXBvc2l0b3JpZXNcVEZTXFZ1ZWxpbmdcQnVpbGRQcm9jZXNzVGVtcGxhdGVzXFRGU0J1aWxkRXh0ZW5zaW9uc1xUZW1wbGF0ZVxXb3JrZmxvd1xWdWVsaW5nU2t5U2FsZXNUb1Bvb2xzLnhhbWzqAwH0CwG0DAERAdgJAd8JARAB8gUB2AYBDwHwBAHFBQEOAY4NAZMNAQ0B2wEBhQMBDAH1BgGECQELAZ4KAeUKAQoB+AkB/wkBCQGwCwG3CwEIAbMJAboJAQcBgwQB0QQBBgGOCwGVCwEFAXkBwgEBBAGmAwHlAwEDAdMLAdsLAQLRAQOVBw4CAQHVAQXVAbMBAwGjBdYBBfYBEAMBhgX3AQWTBxgCAQLVAaEB1QGwAQMBpAXXAQfZAR8DAZ8F2gEH5gEMAwGUBecBB/UBDAMBhwX3AbEB9wHOAQIBDfcBggH3AaQBAgEM9wHfAfcBigICAQr8ATb8AVECAQmEAjaEAj0CAQiFAjWFAjoCAQeGAjaGAkQCAQaHAkCHAnQCAQWJAjaJAloCAQSLAkqLAnsCAQOPAgejAhIDAd4EpAIH2gISAwGMBNsCB+ECDAMBhQTiAgfiAtMGAwH7A+MCB+MCqAQDAfED5AIH6wIQAwHtA+wCB/MCEAMB6QP0Agf7AhADAeUD/AIHoAMMAwHHA6EDB6gDEAMBwwOpAweQBxICARqRBweRB7kGAgEQkgcHkgf0AgIBDtgBCdgBpAEDAaAF2gEV2gGUAQMBlQXcAQvkARYDAZYF5wEV5wGDAQMBiAXpAQvzARADAYkFkAIJkAK0AQMBhAWRAgmRAsoBAwGBBZICCZIClgMDAf0EkwIJkwKPAgMB+ASUAgmUApICAwHzBJUCCZUCmwIDAe4ElgIJmgIOAwHpBJsCCaICDgMB3wSlAgmlAusBAwHaBKYCCaoCDgMB1ASrAgmyAg4DAckEswIJswKhAgMBvwS0AgnYAg4DAZYE2QIJ2QKJAgMBjQTbAhXbAjgDAYYE3QIL3wIjAwGIBOIC3APiAuMDAwGEBOICzQPiAtQDAwGDBOICugLiAo8DAwGCBOICsATiAsYEAwGBBOICwAXiArMGAwGABOICygbiAtAGAwH/A+ICoATiAqYEAwH+A+ICnwXiArcFAwH9A+ICzgTiApMFAwH8A+MCngTjAqUEAwH6A+MC/gHjAokDAwH4A+MC1APjAtsDAwH3A+MCxQHjAssBAwH2A+MC7gPjAvQDAwH1A+MC+gPjAocEAwH0A+MCpwHjArMBAwHyA+kCMukCxQEDAfAD5gIz5gJGAwHuA/ECMvECxwEDAewD7gIz7gJIAwHqA/kCMvkCtQEDAegD9gIz9gJFAwHmA/wCFfwCnAEDAcgD/gILgAMWAwHfA4MDC54DFgMBzAOmAzKmA5YBAwHGA6MDM6MDUgMBxAOqAwmgBg4DAYcBoQYJgAcOAgE8gQcJjwcOAgEbkQfeA5EH5QMCARmRB88DkQfWAwIBGJEHugKRB5ADAgEXkQeyBJEHyAQCARaRB8IFkQeZBgIBFZEHsAaRB7YGAgEUkQeiBJEHqAQCARORB6EFkQe5BQIBEpEH0ASRB5UFAgERkgcVkgf/AQIBD9gBNNgBSQMBoQXdAQ3hARIDAZsF4gEN4gHaAgMBmQXjAQ3jAdsBAwGXBekBGekBSgMBigXrAQ/uARoDAY8F8QEP8QHLAgMBjAWQAqMBkAKxAQMBhQWRArUBkQLHAQMBggWSAswBkgKTAwMBgAWSArQBkgLFAQMB/gSTAtIBkwKMAgMB+wSTArcBkwLLAQMB+QSUAtQBlAKPAgMB9gSUArgBlALNAQMB9ASVAtoBlQKYAgMB8QSVArsBlQLTAQMB7wSWAheWAkYDAeoEmAINmALzAgMB6wSbAhebAowBAwHgBJ0CDaACGAMB4QSlAiqlAkIDAdwEpQLgAaUC6AEDAdsEpgIXpgJ8AwHVBKgCDagC1QEDAdYEqwIXqwJ3AwHKBK0CDbACGAMBywSzAi+zAkEDAccEswJKswJ5AwHGBLMC6wGzAvgBAwHEBLMCigKzAp4CAwHCBLMC0gGzAuMBAwHABLQCF7QCewMBlwS2Ag3WAhcDAZgE2QLgAdkC7gEDAZEE2QL5AdkChgIDAY8E3gIN3gLMAQMBiQT/Ag3/AscCAwHgA4QDDYQD/AEDAdsDhQMNjAMWAwHXA40DDZQDFgMB0wOVAw2cAxYDAc8DnQMNnQOzAQMBzQOqAxeqAyUDAYgBrAMNngYYAwGKAaEGF6EGKwIBPaMGDf4GGAIBP4EHF4EHJQIBHIMHDY0HGAIBHt0BG90BUQMBnAXfARHfAa0CAwGdBeIBVOIB0QEDAZoF4wEu4wFKAwGYBewBEewB5wIDAZIF7QER7QHfAQMBkAXxAWbxAeQBAwGOBZgCV5gCfwMB7QSYApwCmALwAgMB7ASeAg+eAs0DAwHmBJ8CD58C3gIDAeIEqAIuqAJDAwHYBK4CD64C3wEDAdAErwIPrwLVAQMBzAS2AvYBtgKeAgMBvgS7AhHUAhwDAZkE3gKxAd4CyQEDAYoE/wJl/wLgAQMB4gOEA2GEA/kBAwHcA4oDOYoDPgMB2gOHAzqHA0YDAdgDkgM5kgM+AwHWA48DOo8DTAMB1AOaAzmaAz4DAdIDlwM6lwNGAwHQA50DOZ0DVAMBzgOwAz2wA0ADAYsBsgMP3gMUAwGmA98DD50GGQMBjAGoBj6oBkICAUCqBg+qBoQCAwGDAasGD/0GFAIBQYcHD4cH3QcCASSIBw+MBxQCAR/fAVXfAdABAwGeBewBauwB3gEDAZMF7QEy7QFOAwGRBZ4CZp4C5gIDAegEnwLaAZ8C2wIDAeUEnwLCAZ8C0wEDAeMErgI3rgI/AwHTBK4CywGuAtwBAwHRBK8CMK8CRAMBzgS8AhPTAhgDAZoEsgMdsgM4AwGnA7QDE9wDHgMBqQPfA40B3wOrAQMBpAPkAxObBh4DAY0BqgZnqgadAQMBhQGrBh2rBj8CAUKtBhOtBoABAwGBAbAGE/sGHgIBRIcH8QGHB5ACAgE6hwfTB4cH2gcCATmHB98GhwflBgIBOIcHlwOHB60DAgE3hwecAocHsAICATaHB4IHhweJBwIBNYcH1gWHB90FAgE0hwenBIcHrQQCATOHB5wHhwejBwIBMocH4QOHB+YDAgExhwe2B4cHvAcCATCHB74GhwfEBgIBL4cH5AKHB4IDAgEuhweKBocHkQYCAS2HB8gChwfOAgIBLIcHxgOHB9QDAgErhweABIcHlQQCASmHB9wBhwfmAQIBKIcHtwSHB/8EAgEliAcdiAc/AgEgigcTigeeAQIBIrwCIbwCRQMBmwS+AhfRAiEDAZwEuAMVuAOWAQMBwAO5AxXKAysDAbMDywMV2wMrAwGqA+UDFZIEGgMBgAOTBBXBBBoDAdkCwgQVsAUaAwHeAbEFFd4FIAMBwAHfBRWNBhoDAZkBjgYVkgYaAwGTAZMGFZoGHgMBjgGtBmetBn0DAYIBsgZDsgZGAgFFtAYV+gYfAgFGigeFAYoHmwECASO+AuABvgKBAgMBvQTDAhvPAiYDAZ0EuAM2uANfAwHBA7kDNLkDeAMBvQO5A6UBuQOuAQMBvAPHAxvHA+cBAwG4A78DG78D5gEDAbQDywM0ywPWAQMBrwPLA4ICywOhAgMBrgPRAxvRA38DAasD5QMj5QNNAwGBA+cDGZAEJAMBgwOTBCOTBDQDAdoClQQZvAQrAwHfAr8EGb8EswEDAdwCwgQjwgQ0AwHfAcQEGasFKwMB5AGuBRmuBcABAwHhAbYFF90FHAMBwQHfBSPfBTQDAZoB4QUZiAYrAwGfAYsGGYsGswEDAZwBjgYjjgZZAwGUAZAGGZAGcgMBlwGYBj+YBk8DAZEBlQZAlQZMAwGPAbQGngG0Br4BAgF/uQYZ+AYkAgFHxwIdxwKwAgMBtgTIAh3OAiIDAZ4ExwNzxwOAAQMBugO/A3K/A38DAbYD0QNv0QN8AwGsA+sDG/wDMQMBlgP9AxuPBCADAYQDlQSsAZUEtAEDAf4CmgQdugQoAwHgAr8Ebb8EsAEDAd0CxASwAcQEuAEDAdcCyQQdqQUoAwHlAa4Fba4FvQEDAeIBtgUltgWhAQMBwgG4BRvbBSYDAcQB4QWvAeEFtwEDAb4B5gUdhgYoAwGgAYsGbYsGsAEDAZ0BkAYpkAZFAwGYAboGG+oGMQIBU+sGG+8GIAIBTfAGG/cGJAIBSMcC2gHHAvQBAwG7BMcC/AHHApUCAwG5BMcCoALHAq0CAwG3BMgCK8gCWwMBnwTKAiHMAiwDAaEE6wM66wOeAQMBoQPrA9cB6wPkAQMBoAPrA54C6wO8AgMBngP5AyH5A+0BAwGaA/EDIfEDhQEDAZcD/QMp/QNNAwGFA/8DH4oEKgMBiwONBB+NBOYCAwGHA58EH58E6AIDAfgCoAQfoASXBAMB7wKhBB+5BCkDAeECzwQfzwToAgMB0QLQBB/QBOwDAwHIAtEEH6gFJAMB5gG5BR25BaUDAwHXAboFHdoFIgMBxQHrBR/rBegCAwG4AewFH+wFlQQDAa8B7QUfhQYpAwGhAboGOroG5QICAX26Bo0DugbEAwIBfLoG/gO6BpIEAgF61AYh5wYmAgFiwAYhzAYsAgFU6wYp6wZhAgFO7QYf7QaQAQIBUfUGRfUGVQIBS/IGRvIGUgIBScsCI8sChAYDAaIE+QN5+QOGAQMBnAPxA3XxA4IBAwGYA4AEIYAEggIDAZMDgQQhgQTtAQMBkAOCBCGJBCoDAYwDjQR3jQT/AQMBiQOfBMUCnwTTAgMB/AKfBLMCnwS5AgMB+wKfBNsCnwTlAgMB+QKgBLQDoASUBAMB9gKgBEqgBM8CAwHyAqAEmAOgBKwDAwHwAqEEpQGhBLkBAwHuAqYEI7cEKAMB4gLPBMUCzwTTAgMB1QLPBLMCzwS5AgMB1ALPBNsCzwTlAgMB0gLQBPQC0AT6AgMB0ALQBJ8C0ASpAgMBzwLQBLsD0ATpAwMBzQLQBIwD0ASgAwMBywLQBKgD0ASyAwMByQLRBC3RBEgDAecB0wQj7gQuAwGoAvEEI6YFLgMB6QG5Bb0CuQWiAwMB3AG5BUi5BbwBAwHaAbkFoQK5BbUCAwHYAboFK7oFUAMBxgG8BSHYBSsDAccB6wXFAusF0wIDAbwB6wWzAusFuQIDAbsB6wXbAusF5QIDAbkB7AWyA+wFkgQDAbYB7AVK7AXNAgMBsgHsBZYD7AWqAwMBsAHtBaUB7QW5AQMBrgHyBSODBigDAaIB1AYv1AbmAgIBY9YGJeIGMAIBbeUGJeUG8QECAWnBBiPBBvsBAgFewgYjyQYsAgFaygYjygboAgIBV8sGI8sGsgECAVXtBi/tBmMCAVLLAo4CywKWAgMBswTLAvQFywKBBgMBsgTLAtYFywLpBQMBsATLApoEywLABAMBrwTLAkfLAp0BAwGtBMsC6QLLAosDAwGsBMsClAPLAq0DAwGnBMsCrAHLAtMBAwGmBMsCygLLAt8CAwGkBMsC0gTLAsgFAwGjBIAEdYAE/wEDAZQDgQTUAYEE6gEDAZIDgQRNgQRoAwGRA4cES4cETAMBjwOEBEyEBFcDAY0DpgQxpgRyAwHjAqgEJ7IEMgMB5wK1BCe1BIkCAwHkAtQEJdQE7AgDAbcC1QQl7QQvAwGpAvIEJfIE8wgDAZcC8wQliwUvAwGJAowFJYwF8wgDAfgBjQUlpQUvAwHqAbwFpwG8BbsBAwHWAcEFJdYFKgMByAHyBTHyBXIDAaMB9AUn/gUyAwGnAYEGJ4EGiQIDAaQB1wYn1waLAQIBd9gGJ98GMAIBc+AGJ+AG7AICAXDhBifhBqABAgFu5QZ95QaKAQIBa8EGd8EG+AECAV/HBk7HBlACAV3EBk/EBmECAVvKBqkCygblAgIBWcoGT8oGagIBWMsGNMsGhQECAVapBCmpBKMBAwHsAqoEKbEEMgMB6AK1BH+1BKIBAwHmAtQE6QfUBOkIAwHGAtQEUNQEvwYDAbwC1ATNB9QE4QcDAboC1ATPBtQE3AYDAbgC1QSrAdUEvwEDAbYC2gQp6wQuAwGqAvIE8AfyBPAIAwGmAvIEUPIExQYDAZwC8gTUB/IE6AcDAZoC8gTVBvIE4gYDAZgC8wSrAfMEvwEDAZYC+AQpiQUuAwGKAowF7geMBfAIAwGHAowFUIwFwQYDAf0BjAXSB4wF5gcDAfsBjAXRBowF3gYDAfkBjQWrAY0FvwEDAfcBkgUpowUuAwHrAcEFM8EFXAMByQHDBSnUBS4DAcoB9QUp9QWjAQMBrAH2BSn9BTIDAagBgQZ/gQaiAQMBpgHXBnvXBogBAgF43QZS3QZUAgF22gZT2gZlAgF04AatAuAG6QICAXLgBlPgBm4CAXHhBnfhBp0BAgFvqQR9qQSgAQMB7QKvBFOvBFQDAesCrARUrARfAwHpAtoEN9oEeAMBqwLcBC3mBDgDAa8C6QQt6QSPAgMBrAL4BDf4BHgDAYsC+gQthAU4AwGPAocFLYcFjwIDAYwCkgU3kgV4AwHsAZQFLZ4FOAMB8AGhBS2hBY8CAwHtAcMFN8MFeAMBywHFBS3PBTgDAc8B0gUt0gWPAgMBzAH1BX31BaABAwGtAfsFU/sFVAMBqwH4BVT4BV8DAakB3QQv3QSpAQMBtALeBC/lBDgDAbAC6QSFAekEqAEDAa4C+wQv+wSpAQMBlAL8BC+DBTgDAZAChwWFAYcFqAEDAY4ClQUvlQWpAQMB9QGWBS+dBTgDAfEBoQWFAaEFqAEDAe8BxgUvxgWpAQMB1AHHBS/OBTgDAdAB0gWFAdIFqAEDAc4B3QSDAd0EpgEDAbUC4wRZ4wRaAwGzAuAEWuAEZQMBsQL7BIMB+wSmAQMBlQKBBVmBBVoDAZMC/gRa/gRlAwGRApUFgwGVBaYBAwH2AZsFWZsFWgMB9AGYBVqYBWUDAfIBxgWDAcYFpgEDAdUBzAVZzAVaAwHTAckFWskFZQMB0QE=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="GetBuildDetail_1" sap:VirtualizedContainerService.HintSize="816,22" />
+      <sap2010:ViewStateData Id="UpdateBuildNumber_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokeForReason_1" sap:VirtualizedContainerService.HintSize="589,51" />
+      <sap2010:ViewStateData Id="Throw_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="464,208" />
+      <sap2010:ViewStateData Id="SetBuildProperties_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="CreateDirectory_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="589,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SetBuildProperties_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="CreateDirectory_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildWarning_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_3" sap:VirtualizedContainerService.HintSize="464,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_4" sap:VirtualizedContainerService.HintSize="589,356">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="816,819">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetBuildAgent_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="GetBuildDirectory_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Assign`1_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Assign`1_2" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Assign`1_3" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="Assign`1_5" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="AddToCollection`1_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_5" sap:VirtualizedContainerService.HintSize="464,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildWarning_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Assign`1_4" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_6" sap:VirtualizedContainerService.HintSize="464,356">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_5" sap:VirtualizedContainerService.HintSize="794,943">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DeleteDirectory_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="DeleteDirectory_2" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_24" sap:VirtualizedContainerService.HintSize="464,51" />
+      <sap2010:ViewStateData Id="DeleteWorkspace_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="DeleteDirectory_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_26" sap:VirtualizedContainerService.HintSize="222,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_25" sap:VirtualizedContainerService.HintSize="464,356">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="CreateWorkspace_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="ConvertWorkspaceItem_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="MSBuild_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_27" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_26" sap:VirtualizedContainerService.HintSize="464,294" />
+      <sap2010:ViewStateData Id="Sequence_28" sap:VirtualizedContainerService.HintSize="486,480">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_6" sap:VirtualizedContainerService.HintSize="516,628" />
+      <sap2010:ViewStateData Id="If_27" sap:VirtualizedContainerService.HintSize="200,51" />
+      <sap2010:ViewStateData Id="Sequence_29" sap:VirtualizedContainerService.HintSize="222,175">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_7" sap:VirtualizedContainerService.HintSize="287,323">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_28" sap:VirtualizedContainerService.HintSize="464,471">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="SyncWorkspace_1" sap:VirtualizedContainerService.HintSize="464,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_30" sap:VirtualizedContainerService.HintSize="794,1297">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AssociateChangesetsAndWorkItems_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokeForReason_4" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_18" sap:VirtualizedContainerService.HintSize="794,294">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Email_3" sap:VirtualizedContainerService.HintSize="794,22" />
+      <sap2010:ViewStateData Id="GetSnapshotsFromPool_2" sap:VirtualizedContainerService.HintSize="794,22" />
+      <sap2010:ViewStateData Id="Assign_15" sap:VirtualizedContainerService.HintSize="794,60" />
+      <sap2010:ViewStateData Id="Assign_16" sap:VirtualizedContainerService.HintSize="794,60" />
+      <sap2010:ViewStateData Id="Assign_24" sap:VirtualizedContainerService.HintSize="794,60" />
+      <sap2010:ViewStateData Id="WriteBuildMessage_19" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_52" sap:VirtualizedContainerService.HintSize="222,146">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_24" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_12" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Assign_13" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Assign_25" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="SetBuildProperties_14" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Sequence_53" sap:VirtualizedContainerService.HintSize="264,508">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_43" sap:VirtualizedContainerService.HintSize="794,656">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_4" sap:VirtualizedContainerService.HintSize="794,60" />
+      <sap2010:ViewStateData Id="CreateDirectory_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildWarning_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildMessage_28" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokeProcess_8" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_33" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokeProcess_9" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_67" sap:VirtualizedContainerService.HintSize="222,328">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_56" sap:VirtualizedContainerService.HintSize="798,476">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_25" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildMessage_20" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokeProcess_7" sap:VirtualizedContainerService.HintSize="489,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_26" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="SetBuildProperties_15" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_14" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_54" sap:VirtualizedContainerService.HintSize="264,308">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_21" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_44" sap:VirtualizedContainerService.HintSize="489,456">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_55" sap:VirtualizedContainerService.HintSize="511,671">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_57" sap:VirtualizedContainerService.HintSize="746,819">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetServerSettings_1" sap:VirtualizedContainerService.HintSize="519,22" />
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_4" sap:VirtualizedContainerService.HintSize="519,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_15" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_8" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_49" sap:VirtualizedContainerService.HintSize="264,246">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_16" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_35" sap:VirtualizedContainerService.HintSize="489,394">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_13" sap:VirtualizedContainerService.HintSize="519,542">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_41" sap:VirtualizedContainerService.HintSize="541,790">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ParallelForEach`1_4" sap:VirtualizedContainerService.HintSize="571,938">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_20" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_42" sap:VirtualizedContainerService.HintSize="746,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetServerSettings_2" sap:VirtualizedContainerService.HintSize="469,22" />
+      <sap2010:ViewStateData Id="GetPlatformSettings_1" sap:VirtualizedContainerService.HintSize="469,22" />
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_9" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_29" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_20" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_59" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_24" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_48" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_19" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_60" sap:VirtualizedContainerService.HintSize="222,237">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_10" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_30" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_21" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_61" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_25" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_49" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_20" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_11" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_31" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_22" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_62" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_26" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_50" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_21" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_63" sap:VirtualizedContainerService.HintSize="222,390">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_51" sap:VirtualizedContainerService.HintSize="469,538">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_58" sap:VirtualizedContainerService.HintSize="491,786">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ParallelForEach`1_5" sap:VirtualizedContainerService.HintSize="521,934">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_18" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_40" sap:VirtualizedContainerService.HintSize="746,1082">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_12" sap:VirtualizedContainerService.HintSize="769,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_32" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_23" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_64" sap:VirtualizedContainerService.HintSize="264,246">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_27" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_52" sap:VirtualizedContainerService.HintSize="489,394">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_53" sap:VirtualizedContainerService.HintSize="614,542">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_22" sap:VirtualizedContainerService.HintSize="644,690">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_54" sap:VirtualizedContainerService.HintSize="769,838">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_65" sap:VirtualizedContainerService.HintSize="791,1024">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_55" sap:VirtualizedContainerService.HintSize="916,1172">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_66" sap:VirtualizedContainerService.HintSize="746,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetServerSettings_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="InvokePowershellCommandAsync_6" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_17" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_10" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_51" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_18" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_37" sap:VirtualizedContainerService.HintSize="464,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_15" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_43" sap:VirtualizedContainerService.HintSize="222,299">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ParallelForEach`1_6" sap:VirtualizedContainerService.HintSize="287,447">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_19" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_41" sap:VirtualizedContainerService.HintSize="746,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Delay_4" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_47" sap:VirtualizedContainerService.HintSize="746,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_19" sap:VirtualizedContainerService.HintSize="746,60" />
+      <sap2010:ViewStateData Id="Sequence_44" sap:VirtualizedContainerService.HintSize="768,2686">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_23" sap:VirtualizedContainerService.HintSize="798,2834">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_45" sap:VirtualizedContainerService.HintSize="820,3474">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_38" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_11" sap:VirtualizedContainerService.HintSize="541,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_11" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="WriteBuildError_12" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_5" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="SetBuildProperties_12" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Throw_5" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Sequence_36" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildError_13" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Assign_6" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="SetBuildProperties_13" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="TerminateWorkflow_4" sap:VirtualizedContainerService.HintSize="242,22" />
+      <sap2010:ViewStateData Id="Sequence_37" sap:VirtualizedContainerService.HintSize="264,370">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteBuildMessage_12" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_32" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="InvokeProcess_6" sap:VirtualizedContainerService.HintSize="242,328">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Delay_3" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_33" sap:VirtualizedContainerService.HintSize="242,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="242,60" />
+      <sap2010:ViewStateData Id="Sequence_38" sap:VirtualizedContainerService.HintSize="264,643">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="ForEach`1_12" sap:VirtualizedContainerService.HintSize="294,791">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_39" sap:VirtualizedContainerService.HintSize="316,915">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_34" sap:VirtualizedContainerService.HintSize="541,1063">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_40" sap:VirtualizedContainerService.HintSize="563,1249">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_39" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="DeployApplicationServiceActivity_1" sap:VirtualizedContainerService.HintSize="464,22" />
+      <sap2010:ViewStateData Id="SetBuildProperties_16" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="If_58" sap:VirtualizedContainerService.HintSize="464,208">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_68" sap:VirtualizedContainerService.HintSize="486,394">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="If_59" sap:VirtualizedContainerService.HintSize="200,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="794,97">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Email_4" sap:VirtualizedContainerService.HintSize="794,22" />
+      <sap2010:ViewStateData Id="If_22" sap:VirtualizedContainerService.HintSize="794,51">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="AgentScope_1" sap:VirtualizedContainerService.HintSize="816,4248">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_17" sap:VirtualizedContainerService.HintSize="838,5293">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="TfsBuild.Vueling.SkySalesToPools.Process" sap:VirtualizedContainerService.HintSize="878,5373">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

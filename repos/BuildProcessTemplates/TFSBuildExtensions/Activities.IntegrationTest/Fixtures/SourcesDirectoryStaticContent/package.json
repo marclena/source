@@ -1,0 +1,14 @@
+{
+  "name": "Vueling.StaticContent",
+  "version": "0.0.1",
+  "description": "Package manager for StaticContent",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "stylestats": "latest"
+  },
+  "scripts": {
+    "stylestats": "stylestats ./Vueling.StaticContent.WebUI/skysales/css/**/*.css -c stylestatsconfig.json -f json > stylestats-results.json"
+  }
+}

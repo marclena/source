@@ -1,0 +1,9 @@
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\bin\Debug\CompanyPrefix_ApplicationName_Database.Database.dacpac
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\bin\Debug\Foo_Database.Database.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\bin\Debug\Foo_Database.Database.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\Foo_Database.Database.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\Foo_Database.Database.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\Model.xml
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\refactor.xml
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\postdeploy.sql
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\database\CompanyPrefix_ApplicationName_Database.Database\obj\Debug\predeploy.sql

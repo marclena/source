@@ -1,0 +1,38 @@
+﻿{
+    "ConnectionStrings": {
+        "FooDatabaseConnection": "#{}#"
+    },
+    "NavitaireParameters": {
+        "ApiSoapUrl": "https://vytrainr3xapi.navitaire.com",
+        "NavitaireLogin": {
+            "DomainCode": "SYS",
+            "AgentName": "WEBANONYMOUS",
+            "Password": "^heWebP@ss"
+        }
+    },
+    "JwtBearer": {
+        "Authority": "https://idp-tst.vueling.com/sts",
+        "RequireHttpsMetadata": false,
+        "TokenValidationParameters": {
+            "ValidAudiences": [
+                "app://ams-api",
+                "app//aud-test"
+            ]
+        }
+    },
+    "RetryPolicies": [
+        {
+            "Type": "HttpRetry",
+            "Name": "Retry5Times",
+            "BackoffPower": 2,
+            "Count": 5
+        }
+    ],
+    "Proxies": {
+      "GoogleProxy": {
+        "BaseAddress": "https://www.google.com",
+        "RetryPolicies": [ "Retry5Times" ],
+        "Timeout": "00:00:30" //TimeSpan hh:mm:ss
+      }
+    }
+}

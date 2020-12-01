@@ -1,0 +1,72 @@
+﻿@using Vueling.Configuration
+@using Vueling.Web.UI.Library.Helpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-control" content="public" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>@ViewBag.Title</title>
+
+    @*<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">*@
+
+    <link type="image/x-icon" rel="shortcut icon" href="@(ViewBag.StaticContentUrlBase)back/themes/vueling/images/vueling.ico" />
+    <link type="image/x-icon" rel="icon" href="@(ViewBag.StaticContentUrlBase)back/themes/vueling/images/vueling.ico" />
+
+    <link href="@(ViewBag.StaticContentUrlBase)back/themes/bootstrap/cssbundle.bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="@(ViewBag.StaticContentUrlBase)back/themes/vueling/BackStyle.css" rel="stylesheet" type="text/css" />
+
+    <script src="@(ViewBag.StaticContentUrlBaseJs)back/js/bundle.jquery.base.min.js" type="text/javascript"></script>
+
+    <script src="@(ViewBag.StaticContentUrlBaseJs)back/js/bundle.bootstrap.min.js" type="text/javascript"></script>
+
+    @if (@Html.ExistsView("_HeadExtended"))
+    { @Html.Partial("_HeadExtended");
+    }
+
+    @if (IsSectionDefined("Head"))
+    {
+        @RenderSection("Head")
+    }
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="appName">
+            @Html.ApplicationName()
+        </div>
+
+        @if (@Html.ExistsView("_LoginPartial"))
+        { @Html.Partial("_LoginPartial");
+        }
+
+    </header>
+
+    @if (@Html.ExistsView("_NavigationPartial"))
+    { @Html.Partial("_NavigationPartial");
+    }
+
+    <div id="main">
+        @RenderBody()
+    </div>
+
+    <div id="footer">
+
+        @if (@Html.ExistsView("_FooterExtended"))
+        { @Html.Partial("_FooterExtended");
+        }
+
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+
+    </div>
+
+</body>
+
+</html>

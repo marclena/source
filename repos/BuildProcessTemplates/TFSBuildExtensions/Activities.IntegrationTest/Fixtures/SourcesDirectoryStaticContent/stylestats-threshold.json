@@ -1,0 +1,28 @@
+{
+  "published": "2015-05-18T11:04:50.174Z",
+  "paths": [
+  ],
+  "rules": 300,
+  "selectors": 300,
+  "simplicity": 0.85,
+  "averageOfIdentifier": 1,
+  "mostIdentifier": 4,
+  "averageOfCohesion": 10,
+  "lowestCohesion": 4,
+  "totalUniqueFontSizes": 30,
+  "totalUniqueFontFamilies": 10,
+  "idSelectors": 20,
+  "universalSelectors": 0,
+  "unqualifiedAttributeSelectors": 0,
+  "javascriptSpecificSelectors": 0,
+  "importantKeywords": 0,
+  "floatProperties": 0,
+  "propertiesCount": [
+    {
+      "property": "width",
+      "count": 3000
+    }
+
+  ],
+  "mediaQueries": 0
+}

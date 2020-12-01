@@ -1,0 +1,8 @@
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\bin\Debug\netstandard2.0\XX.Template.Core.Extensions.deps.json
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\bin\Debug\netstandard2.0\XX.Template.Core.Extensions.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\bin\Debug\netstandard2.0\XX.Template.Core.Extensions.pdb
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\obj\Debug\netstandard2.0\XX.Template.Core.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\obj\Debug\netstandard2.0\XX.Template.Core.Extensions.AssemblyInfoInputs.cache
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\obj\Debug\netstandard2.0\XX.Template.Core.Extensions.AssemblyInfo.cs
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\obj\Debug\netstandard2.0\XX.Template.Core.Extensions.dll
+C:\Users\jarbues\source\repos\WebApi Template\XX.Template\src\XX.Template.Core.Extensions\obj\Debug\netstandard2.0\XX.Template.Core.Extensions.pdb

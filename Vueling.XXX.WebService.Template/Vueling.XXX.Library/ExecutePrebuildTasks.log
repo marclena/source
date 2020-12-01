@@ -1,0 +1,9 @@
+SOLUTION_DIR="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\"
+PROJECT_DIR="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\Vueling.XXX.Library\"
+Using Continuous integration	
+Relative path : 
+Maps to path  : C:\Users\jarbues
+nugetDirectory="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\"BuildProcessTemplates\NuGet\
+ensureNugetPackagesFilePath="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\"BuildProcessTemplates\NuGet\EnsureNugetPackages.cmd 
+SOLUTION_DIR="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\"
+PROJECT_DIR="C:\Users\jarbues\source\Vueling.XXX.WebService.Template\Vueling.XXX.Library\"

@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.Metrics.Health.Core</name>
+    </assembly>
+    <members>
+        <member name="M:App.Metrics.Health.Builder.HealthBuilder.CanReport">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Builder.HealthBuilder.Configuration">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Builder.HealthBuilder.OutputHealth">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Builder.HealthBuilder.Report">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Builder.HealthCheckBuilder.Builder">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthCheckBuilder.AddChecks(System.Collections.Generic.IEnumerable{App.Metrics.Health.HealthCheck})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthCheckBuilder.AddCheck``1(``0)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthCheckBuilder.AddCheck``1">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthCheckBuilder.AddCheck(System.String,System.Func{System.Threading.Tasks.ValueTask{App.Metrics.Health.HealthCheckResult}})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthCheckBuilder.AddCheck(System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{App.Metrics.Health.HealthCheckResult}})">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Builder.HealthReportingBuilder.Builder">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthReportingBuilder.Using(App.Metrics.Health.IReportHealthStatus)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Builder.HealthReportingBuilder.Using``1">
+            <inheritdoc />
+        </member>
+        <member name="T:App.Metrics.Health.HealthConfigurationBuilder">
+            <summary>
+                Builder for configuring the <see cref="T:App.Metrics.Health.HealthOptions" />.
+            </summary>
+        </member>
+        <member name="P:App.Metrics.Health.HealthConfigurationBuilder.Builder">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Configure(App.Metrics.Health.HealthOptions)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Configure(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Configure(App.Metrics.Health.HealthOptions,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Configure(System.Action{App.Metrics.Health.HealthOptions})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Extend(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthConfigurationBuilder.Extend(App.Metrics.Health.HealthOptions)">
+            <inheritdoc />
+        </member>
+        <member name="T:App.Metrics.Health.HealthOutputFormattingBuilder">
+            <summary>
+                Builder for configuring <see cref="T:App.Metrics.Health.Formatters.IHealthOutputFormatter" />s used for formatting <see cref="T:App.Metrics.Health.HealthCheckResult" />s when
+                they are reported.
+            </summary>
+        </member>
+        <member name="P:App.Metrics.Health.HealthOutputFormattingBuilder.Builder">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthOutputFormattingBuilder.Using(App.Metrics.Health.Formatters.IHealthOutputFormatter)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthOutputFormattingBuilder.Using``1">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthOutputFormattingBuilder.Using(App.Metrics.Health.Formatters.IHealthOutputFormatter,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.HealthOutputFormattingBuilder.Using``1(System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.OutputHealthFormatters">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.DefaultOutputHealthFormatter">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.Options">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.HealthCheckRunner">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.Reporters">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.HealthRoot.Checks">
+            <inheritdoc />
+        </member>
+        <member name="P:App.Metrics.Health.Internal.DefaultHealth.Checks">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Internal.DefaultHealthCheckRunner.#ctor(System.Collections.Generic.IEnumerable{App.Metrics.Health.HealthCheck})">
+            <summary>
+                Initializes a new instance of the <see cref="T:App.Metrics.Health.Internal.DefaultHealthCheckRunner" /> class.
+            </summary>
+            <param name="checks">The registered health checks.</param>
+        </member>
+        <member name="M:App.Metrics.Health.Internal.DefaultHealthCheckRunner.ReadAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+        <member name="M:App.Metrics.Health.Internal.NoOp.NoOpHealthCheckRunner.ReadAsync(System.Threading.CancellationToken)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

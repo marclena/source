@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ATC.HealthChecks.NET</id>
+    <title>ATC.HealthChecks.NET</title>
+    <version>1.0.9</version>
+    <authors>Marc Cardenas</authors>
+    <description>Paquete para añadir healthchecks a proyectos full framework</description>
+    <projectUrl>https://vueling.visualstudio.com/Lab%20and%20PoC/_git/ATC.HealthCheck.NET</projectUrl>
+    <license type="expression">MIT</license>
+    <tags>diagnostics healthchecks</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    
+  </metadata>
+   <files>
+    <file src="**" exclude="**\.vs\**\*;**\obj\**\*;**\*.user;**\*.lock.json;_rels\**\*;**\packages\**\*;**\BuildProcessTemplates\**\*" />
+	 <file src="Lib\*.dll" target="lib\net461" />
+	
+  </files>
+</package>

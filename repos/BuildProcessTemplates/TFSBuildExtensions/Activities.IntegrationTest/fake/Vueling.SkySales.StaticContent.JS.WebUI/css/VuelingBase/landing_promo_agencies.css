@@ -1,0 +1,179 @@
+/**
+ * AGENCIAS PROMO REG
+ *
+ *
+ */
+*[class*="checkDisplay"] {
+	display: none
+}
+
+/* pagina registro agencias normal */
+
+.registerPageTA .article [class*="column"] {
+	width: 100%;
+	display: block;
+}
+
+.registerPageTA .registerPageTA_checkDisplay {
+	display: block
+}
+
+/*reset columnado*/
+
+.registerPageTA [class*="column"]{
+	width:100%;
+	clear: both;
+	margin-bottom: 10px;
+	padding:0 8px!important;
+}
+.registerPageTA [class*="sectionTable"] > [class*="column_"]:first-child,
+[class*="colRow2--halfDottedLine"] > [class*="column_"]:first-child{
+	padding-left: 8px!important
+}
+.registerPageTA [class*="sectionTable"] > [class*="column_"]:last-child,
+[class*="colRow2--halfDottedLine"] > [class*="column_"]:last-child{
+	padding-right: 8px!important
+}
+
+.registerPageTA .colRow2.sectionTable{
+	margin: 0 -8px!important;
+	display: block;
+}
+
+
+#wrapper .registerPageTA .formLeft.form-vertical label,
+#wrapper .registerPageTA .formLeft.form-vertical .txtEdit,
+#wrapper .registerPageTA .formLeft.form-vertical .radioForm {
+	float:none;
+	display: inline-block;
+}
+
+#wrapper .registerPageTA .formLeft.form-vertical label{
+	width:40%!important
+}
+#wrapper .registerPageTA .introForm .formLeft.form-vertical .checkRow{
+	padding-left:40%!important;
+}
+#wrapper .registerPageTA .introForm .formLeft.form-vertical .checkRow,
+#wrapper .registerPageTA .introForm .formLeft.form-vertical .checkRow label{
+	width:auto!important;
+	display: block
+}
+#wrapper .registerPageTA .formLeft.form-vertical .txtEdit,
+#wrapper .registerPageTA .formLeft.form-vertical .radioForm  {
+	width:60%!important
+}
+
+#wrapper .registerPageTA [class*="colRow2--halfDottedLine"]{
+	background-image: none!important
+}
+
+#wrapper .registerPageTA .introForm .formLeft.form-vertical .wrap_btBig_arrow {
+	width:100%;
+	text-align: center;
+}
+
+/* pagina registro agencias landing */
+
+.registerPageTA_landing .article {
+	width: 100% !important;
+	float: none;
+}
+
+.registerPageTA_landing .introForm .formLeft{
+	border:none;
+}
+
+.registerPageTA_landing .registerPageTA_landing_checkDisplay {
+	display: block
+}
+
+.registerPageTA_landing .registerPageTA_checkDisplay {
+	display: none
+}
+
+.registerPageTA_landing .introForm {
+	padding: 0;
+	background: none
+}
+
+.registerPageTA_landing .formLeft.form-vertical .colRow2{
+	margin-top:0;
+	margin-bottom:10px;
+}
+
+.registerPageTA_landing .introForm .title_content {
+	margin-bottom: 16px
+}
+
+.registerPageTA_landing .title_sub_header{
+	min-height: 0!important
+}
+
+
+/* formVertical */
+
+.formLeft.form-vertical .form__fieldTitle {
+	padding: 0;
+	position: relative;
+	min-height: 24px;
+}
+
+.formLeft.form-vertical .form__fieldTitle > span {
+	position: absolute;
+	bottom: 0;
+}
+
+.formLeft.form-vertical .formRow {
+	margin: 4px 0;
+	display: block;
+	padding: 0
+}
+
+.formLeft.form-vertical .formRow.noInput {
+	margin: 10px 0;
+	display: block;
+	padding: 0
+}
+
+.formLeft.form-vertical input[type="text"],
+.formLeft.form-vertical input[type="password"],
+.formLeft.form-vertical select {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	height: 29px
+}
+
+.formLeft.form-vertical .variosnputsRow input[type="text"] {
+	float: left;
+	margin-left: 10px
+}
+
+.formLeft.form-vertical .variosnputsRow input:first-child {
+	margin-left: 0
+}
+
+.formLeft.form-vertical select {
+	width: 100%
+}
+
+.formLeft.form-vertical div.s97 select {
+	width: 97% !important;
+	margin-bottom: 15px
+}
+
+.formLeft.form-vertical .form__fieldTitle,
+.formLeft.form-vertical .txtEdit .toggleEdit,
+.formLeft.form-vertical input[type="text"] {
+	font-size: 1.09em
+}
+
+.formLeft.form-vertical .bt_form p {
+	width: 100%
+}
+
+.formLeft.form-vertical .bt_form label {
+	width: auto
+}
+

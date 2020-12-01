@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.0.1" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+    <PackageReference Include="ATC.Log.Contracts.ServiceLibrary" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XX.Template.Core.Extensions\XX.Template.Core.Extensions.csproj" />
+    <ProjectReference Include="..\XX.Template.Library.Contracts\XX.Template.Library.Contracts.csproj" />
+    <ProjectReference Include="..\XX.Template.Repository.Contracts\XX.Template.Repository.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

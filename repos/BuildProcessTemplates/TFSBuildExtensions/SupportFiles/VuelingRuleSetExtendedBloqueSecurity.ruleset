@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="VuelingRuleSetExtendedBloque1" Description=" " ToolsVersion="11.0">
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    	<Rule Id="CA2103" Action="Error" />
+	<Rule Id="CA2109" Action="Error" />
+	<Rule Id="CA2151" Action="Error" />
+	<Rule Id="CA5122" Action="Error" />
+  </Rules>
+</RuleSet>

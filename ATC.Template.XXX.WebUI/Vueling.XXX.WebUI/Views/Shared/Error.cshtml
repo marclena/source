@@ -1,0 +1,9 @@
+﻿<p>
+    Sorry, an error occurred while processing your request.
+</p>
+<p class="paragraphError">
+    @if (ViewBag != null && !string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        @ViewBag.ErrorMessage
+    }
+</p>

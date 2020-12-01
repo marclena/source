@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>App.Metrics.Health</name>
+    </assembly>
+    <members>
+        <member name="T:App.Metrics.Health.AppMetricsHealth">
+            <summary>
+            Provides convenience methods for creating instances of <see cref="T:App.Metrics.Health.IHealth"/> and <see cref="T:App.Metrics.Health.IHealthBuilder"/> with pre-configured defaults.
+            </summary>
+        </member>
+        <member name="M:App.Metrics.Health.AppMetricsHealth.CreateDefaultBuilder">
+            <summary>
+                Initializes a new instance of the <see cref="T:App.Metrics.Health.IHealthBuilder" /> class with pre-configured defaults.
+            </summary>
+            <remarks>
+                The following defaults are applied to the returned <see cref="T:App.Metrics.Health.IHealthBuilder" />:
+                use, JSON and Plain Text health check result formatting.
+            </remarks>
+            <returns>The initialized <see cref="T:App.Metrics.Health.IHealthBuilder" />.</returns>
+        </member>
+    </members>
+</doc>

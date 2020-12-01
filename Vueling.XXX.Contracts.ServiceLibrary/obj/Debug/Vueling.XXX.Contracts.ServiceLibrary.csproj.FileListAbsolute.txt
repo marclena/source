@@ -1,0 +1,15 @@
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Vueling.XXX.Contracts.ServiceLibrary.dll.config
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Vueling.XXX.Contracts.ServiceLibrary.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Vueling.XXX.Contracts.ServiceLibrary.pdb
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Vueling.XXX.Contracts.ServiceLibrary.dll.CodeAnalysisLog.xml
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Vueling.XXX.Contracts.ServiceLibrary.dll.lastcodeanalysissucceeded
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\ATC.Taskling.Client.Contracts.ServiceLibrary.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\ATC.Taskling.Client.Core.Extensions.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\System.Data.SqlClient.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\obj\Debug\Vueling.XXX.Contracts.ServiceLibrary.csprojAssemblyReference.cache
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\obj\Debug\Vueling.XXX.Contracts.ServiceLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\obj\Debug\Vueling.XXX.Contracts.ServiceLibrary.csproj.CopyComplete
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\obj\Debug\Vueling.XXX.Contracts.ServiceLibrary.dll
+C:\Users\jarbues\source\Vueling.XXX.Contracts.ServiceLibrary\obj\Debug\Vueling.XXX.Contracts.ServiceLibrary.pdb

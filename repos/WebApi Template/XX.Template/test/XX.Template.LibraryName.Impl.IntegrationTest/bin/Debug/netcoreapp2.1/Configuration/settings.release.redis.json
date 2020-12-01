@@ -1,0 +1,82 @@
+﻿{
+  "RedisClientSettings": {
+    "Nodes": [
+      {
+        "Host": "#{REDIS_HOST}#",
+        "Port": "#{REDIS_PORT}#"
+      }
+    ],
+    "ApplicationName": "AMS",
+    "Password": "#{REDIS_PASSWORD}#",
+    "IsUsingSharedDatabase": "true",
+    "UseFireAndForgetToSetCache": "True",
+    "MaxBytesLenghtAllowed": "10000000",
+    "EnviromentPrefix": "#{REDIS_ENVIRONMENT_PREFIX}#",
+    "KeyPrefix": "Avail",
+    "CacheBehaviourPolicy": {
+      "DefaultMillisecondsExpiration": "300000",
+      "DefaultUseSlidingExpiration": "True",
+      "EntityBehaviourPolicyByEntityName": {
+        "AvailabilityService": {
+          "MillisecondsToExpire": "900000",
+          "UseSlidingExpiration": "True",
+          "CreateEntityIndex": "True"
+        },
+
+        "Markets": {
+          "MillisecondsToExpire": "28800000",
+          "UseSlidingExpiration": "True",
+          "CreateEntityIndex": "False",
+          "UseInMemoryCache": "true",
+          "IsSharedKeyBetweenApplications": "true",
+          "InMemoryMilisecToNoCheckRedis": "30000"
+        },
+
+        "Products": {
+          "MillisecondsToExpire": "3600000",
+          "UseSlidingExpiration": "True",
+          "CreateEntityIndex": "False",
+          "UseInMemoryCache": "true",
+          "IsSharedKeyBetweenApplications": "true",
+          "InMemoryMilisecToNoCheckRedis": "60000",
+          "MilliSecsToSetAndWaitWhenLockIsOnKey": "8000",
+          "SetRedisLockWhenGetIsNull": "true"
+        },
+
+        "NskToken": {
+          "CreateEntityIndex": "true",
+          "IsSharedKeyBetweenApplications": "true",
+          "MillisecondsToExpire": "1200000",
+          "UseSlidingExpiration": "true",
+          "UseInMemoryCache": "true",
+          "InMemoryMilisecToNoCheckRedis": "30000"
+        },
+
+        "PaxDefinitions": {
+          "MillisecondsToExpire": "28800000",
+          "UseSlidingExpiration": "True",
+          "CreateEntityIndex": "False",
+          "UseInMemoryCache": "true",
+          "IsSharedKeyBetweenApplications": "true",
+          "InMemoryMilisecToNoCheckRedis": "30000"
+        },
+        "Services": {
+          "MillisecondsToExpire": "28800000",
+          "UseSlidingExpiration": "True",
+          "CreateEntityIndex": "False",
+          "UseInMemoryCache": "true",
+          "IsSharedKeyBetweenApplications": "false",
+          "UseCompression": "true",
+          "InMemoryMilisecToNoCheckRedis": "30000",
+          "MilliSecsToSetAndWaitWhenLockIsOnKey": "10000",
+          "SetRedisLockWhenGetIsNull": "true"
+        }
+
+      }
+
+    }
+
+  }
+
+
+}

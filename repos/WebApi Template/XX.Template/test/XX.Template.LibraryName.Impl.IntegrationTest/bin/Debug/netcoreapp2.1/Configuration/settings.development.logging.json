@@ -1,0 +1,25 @@
+﻿{
+  "Serilog": {
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Async",
+        "Args": {
+          "configure": [
+            {
+              "Name": "RollingFile",
+              "Args": {
+                "rollingInterval": "Day",
+                "pathFormat": "c://Logs//XX.Template.WebApi//log-{Date}.txt",
+                "formatter": "ATC.Log.Serilog.Impl.ServiceLibrary.CustomJsonFormatter, ATC.Log.Serilog.Impl.ServiceLibrary"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Name": "Console"
+      }
+    ]
+  }
+}

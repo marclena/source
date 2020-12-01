@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XX.Template.Library.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:XX.Template.Library.Contracts.Dto.FooRqDto">
+            <summary>
+                Todos los contratos deben estar documentados
+            </summary>
+        </member>
+        <member name="P:XX.Template.Library.Contracts.Dto.FooRqDto.RecordLocator">
+            <summary>
+                Todas las propiedades publicas deben estar documentadas. Esto es utilizado por Swagger
+            </summary>
+        </member>
+        <member name="P:XX.Template.Library.Contracts.Dto.FooRqDto.StationCode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:XX.Template.Library.Contracts.Dto.FooRqDto.Email">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:XX.Template.Library.Contracts.Dto.FooRsDto">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:XX.Template.Library.Contracts.Dto.FooRsDto.AgentId">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:XX.Template.Library.Contracts.Dto.FooRsDto.CreationDate">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:XX.Template.Library.Contracts.IFooService">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:XX.Template.Library.Contracts.IFooService.DoSomethingAsync(XX.Template.Library.Contracts.Dto.FooRqDto)">
+            <summary>
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:XX.Template.Library.Contracts.IGoogleService">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:XX.Template.Library.Contracts.IGoogleService.InvokeAsync">
+            <summary>
+            </summary>
+        </member>
+    </members>
+</doc>

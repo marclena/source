@@ -1,0 +1,116 @@
+@import url("vueling.css");
+
+.noPrint{
+	display:none;
+}
+
+.backImg{
+	background-image:none;
+}
+
+css3-container{
+	display:none;
+}
+
+#paxDetails{
+	margin-bottom:16px;
+}
+
+/*********** Print modificaction itinerary ***********/
+
+#itineraryBody{
+	margin:0 auto;
+	width:706px;
+}
+#itineraryBody .aside{
+	display:none;
+}
+
+#itineraryBody .page,
+#itineraryBody #header,
+#itineraryBody .footerSb{
+	width:706px;	
+}
+
+#itineraryBody .footerSb ul{
+	display:none;
+}
+
+/* SB Itinerary print */
+#itineraryBody #header,
+#itineraryBody #itineraryPage .confirmMsg,
+#itineraryBody #itineraryPage #itineraryArticle .wrap_arrowSep,
+#itineraryBody #itineraryPage #itineraryArticle .sepDotsGrey,
+#itineraryBody #itineraryPage #itineraryArticle #freqFlyCard,
+#itineraryBody #itineraryPage #itineraryArticle #seatUpgrade,
+#itineraryBody #itineraryPage #itineraryArticle #securityUpgrade,
+#itineraryBody #itineraryPage #itineraryArticle #paxDetailsEmergency,
+#itineraryBody .footer
+{
+    display:none;
+}
+
+/* C3 Itinerary print */
+#c3Body #tureservaPage .Breadcrumb,
+/*#c3Body #tureservaPage h1,*/
+#c3Body #tureservaPage #tureservaArticle UL.menuAcordeon,
+#c3Body #tureservaPage #tureservaArticle h2,
+#c3Body #tureservaPage #tureservaArticle .opcionVuelo,
+#c3Body #tureservaPage p.wrap_arrowSep,
+#c3Body #tureservaPage .sepDotsGrey,
+#c3Body .footer
+{
+    display:none;
+}
+
+#c3Body #tureservaPage,
+#c3Body #tureservaPage .article,
+#c3Body #tureservaPage .col_1-2-3
+{
+    width:100%;   
+}
+
+/*********** Fin print modificaction itinerary ***********/
+
+/*********** Print Modificaction area privada ***********/
+
+#privateBody #header,
+#privateBody .Breadcrumb,
+#privateBody .aside,
+#privateBody .article h1,
+#privateBody .article .sinNumPasos,
+#privateBody .footer{
+	display:none;
+}
+#privateBody .page{
+	width:706px;
+}
+
+/*********** Fin Print Modificaction area privada ***********/
+
+/*********** Print Modificaction area privada ***********/
+
+#c3Body #header,
+#c3Body .Breadcrumb,
+#c3Body .aside,
+#c3Body .footer .footerRow-1 .formRow,
+#c3Body .footer .footerRow-3,
+#c3Body .footer .wrap_btFooter{
+	display:none;
+}
+#c3Body .footerRow-2 #footerLeader{
+	width:100%;
+	margin-right:0;
+}
+#c3Body .menuAcordeon .acordeonContent{
+	display:block!important;
+}
+#c3Body .footerRow-2 .footerVentajas{
+	clear:both;
+}
+#c3Body .page,
+#c3Body .footer{
+	width:686px;
+}
+
+/*********** Fin Print Modificaction area privada ***********/

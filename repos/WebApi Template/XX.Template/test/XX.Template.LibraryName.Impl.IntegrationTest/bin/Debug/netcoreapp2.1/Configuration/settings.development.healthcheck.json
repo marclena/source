@@ -1,0 +1,39 @@
+﻿{
+  "HealthCheckOkRelativeUri": "/healthcheck/ok",
+  "HealthChecks": [
+    {
+      "Name": "Foo_Database",
+      "Type": "DatabaseHealthCheck",
+      "Properties": {
+        "ConnString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Foo_Database;Integrated Security=True",
+        "DataTable": "dbo.BookingLog"
+      }
+    },
+    {
+      "Name": "SessionManager",
+      "Type": "HttpHealthCheck",
+      "Properties": {
+        "Uri": "https://vytrainr3xapi.navitaire.com/SessionManager.svc",
+        "ValidHttpStatusCodes": [ 200 ]
+      }
+    },
+    {
+      "Name": "BookingManager",
+      "Type": "HttpHealthCheck",
+      "Properties": {
+        "Uri": "https://vytrainr3xapi.navitaire.com/BookingManager.svc",
+        "ValidHttpStatusCodes": [ 200 ]
+      }
+    },
+    {
+      "Name": "redis-cache",
+      "Type": "RedisHealthCheck",
+      "Properties": {
+        "Host": "10.3.0.250",
+        "Port": "12583",
+        "Password": "amsredisdb",
+        "UnhealthyAsDegraded": true
+      }
+    }
+  ]
+}

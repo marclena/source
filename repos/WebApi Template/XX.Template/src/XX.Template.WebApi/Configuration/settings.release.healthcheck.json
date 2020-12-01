@@ -1,0 +1,31 @@
+﻿{
+  "HealthCheckOkRelativeUri": "/healthcheck/ok",
+  "HealthChecks": [
+    {
+      "Name": "Foo_Database",
+      "Type": "DatabaseHealthCheck",
+      "Properties": {
+        "ConnString": "#{DATABASE_RMS_BBV}#",
+        "DataTable": "dbo.BookingLog"
+      }
+    },
+    {
+      "Name": "resources",
+      "Type": "HttpHealthCheck",
+      "Properties": {
+        "Uri": "#{AMS_RESOURCES_URL}##{HEALTHCHECK_RELATIVE_URL}#",
+        "ValidHttpStatusCodes": [ 200 ]
+      }
+    },
+    {
+      "Name": "redis-cache",
+      "Type": "RedisHealthCheck",
+      "Properties": {
+        "Host": "#{REDIS_HOST}#",
+        "Port": "#{REDIS_PORT}#",
+        "Password": "#{REDIS_PASSWORD}#",
+        "UnhealthyAsDegraded": true
+      }
+    }
+  ]
+}

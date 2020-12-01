@@ -1,0 +1,9 @@
+SOLUTION_DIR="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\"
+PROJECT_DIR="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\Vueling.XXX.WebUI\"
+Using Continuous integration	
+Relative path : 
+Maps to path  : C:\Users\jarbues
+nugetDirectory="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\"BuildProcessTemplates\NuGet\
+ensureNugetPackagesFilePath="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\"BuildProcessTemplates\NuGet\EnsureNugetPackages.cmd 
+SOLUTION_DIR="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\"
+PROJECT_DIR="C:\Users\jarbues\source\ATC.Template.XXX.WebUI\Vueling.XXX.WebUI\"

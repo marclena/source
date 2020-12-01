@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Marc Cardenas</Authors>
+    <Company>Vueling</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Core" Version="3.3.31.11" />
+    <PackageReference Include="log4net" Version="1.2.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\AWS.Logger.Core\ATC.Log.log4netappender..AWS.Logger.Core.csproj" />
+  </ItemGroup>
+
+</Project>

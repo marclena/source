@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemGroup Label="ATC Nugets">
+    <PackageReference Update="ATC.HealthChecks.Extensions" Version="1.0.2" />
+    <PackageReference Update="ATC.Log.Contracts.ServiceLibrary" Version="1.1.1" />
+    <PackageReference Update="ATC.Log.Serilog.Impl.ServiceLibrary" Version="1.1.7" />
+    <PackageReference Update="ATC.Swagger.Extension" Version="2.0.2" />
+    <PackageReference Update="ATC.Extensions.Http" Version="1.0.0" />
+    <PackageReference Update="ATC.Extensions.Http.Polly" Version="1.0.0" />
+    <PackageReference Update="App.Metrics" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.AspNetCore.Mvc" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.Reporting.InfluxDB" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.AspNetCore.Reporting" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.Reporting.Console" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.Reporting.TextFile" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.AspNetCore.Tracking" Version="3.0.0" />
+    <PackageReference Update="App.Metrics.Reporting.Elasticsearch" Version="2.0.0-alpha" />
+  </ItemGroup>
+
+</Project>

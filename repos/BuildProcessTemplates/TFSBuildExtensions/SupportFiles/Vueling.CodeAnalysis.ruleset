@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Vueling CodeAnalysis Rules" ToolsVersion="14.0">
+  <RuleHintPaths>
+    <Path>.\GeneratedRuleCodeDll\14.0\Vueling.CodeAnalysis.dll</Path>
+  </RuleHintPaths>
+  <Rules AnalyzerId="Microsoft.Analyzers.ManagedCodeAnalysis" RuleNamespace="Microsoft.Rules.Managed">
+    <Rule Id="VY1000" Action="Error" />
+    <Rule Id="VY1001" Action="Error" />
+    <Rule Id="VY1002" Action="Error" />
+    <Rule Id="VY1003" Action="None" />
+    <Rule Id="VY1004" Action="Error" />
+    <Rule Id="VY1005.1" Action="Error" />
+    <Rule Id="VY1005.2" Action="Error" />
+    <Rule Id="VY1005.3" Action="Error" />
+    <Rule Id="VY1005.4" Action="Error" />
+    <Rule Id="VY1005.5" Action="Error" />
+    <Rule Id="VY1005.6" Action="Error" />
+    <Rule Id="VY1005.7" Action="None" />
+    <Rule Id="VY1005.8" Action="None" />
+    <Rule Id="VY1005.9" Action="None" />
+    <Rule Id="VY1005.10" Action="Error" />
+    <Rule Id="VY1005.11" Action="Error" />
+    <Rule Id="VY1005.12" Action="Error" />
+    <Rule Id="VY1005.13" Action="Error" />
+    <Rule Id="VY1005.14" Action="Error" />
+    <Rule Id="VY1005.15" Action="Error" />
+    <Rule Id="VY1005.16" Action="None" />
+    <Rule Id="VY1005.17" Action="Error" />
+    <Rule Id="VY1005.18" Action="Error" />
+    <Rule Id="VY1005.19" Action="None" />
+    <Rule Id="VY1005.20" Action="Warning" />
+    <Rule Id="VY1005.21" Action="Error" />
+    <Rule Id="VY1008" Action="None" />
+    <Rule Id="VY1009" Action="None" />
+    <Rule Id="VY1010" Action="Error" />
+    <Rule Id="VY1011" Action="None" />
+    <Rule Id="VY1012" Action="Error" />
+    <Rule Id="VY1013" Action="Warning" />
+  </Rules>
+</RuleSet>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XX.Template.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:XX.Template.WebApi.Controllers.V1.MyServiceController">
+            <summary>
+                Get or Create booking services
+            </summary>
+        </member>
+        <member name="M:XX.Template.WebApi.Controllers.V1.MyServiceController.GetByRecordLocator(System.String)">
+            <summary>
+                Get booking by PNR X7CERP
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:XX.Template.WebApi.Controllers.V1.MyServiceController.PostBooking(System.Object)">
+            <summary>
+                Create booking
+            </summary>
+            <param name="booking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:XX.Template.WebApi.Controllers.V1.MyServiceController.InvokeProxy">
+            <summary>
+                Invokes a call to google.com via httpclient proxy
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

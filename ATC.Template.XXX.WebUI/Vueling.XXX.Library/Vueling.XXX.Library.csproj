@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D48807F-7D49-4444-95D7-6453AF9C13DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vueling.XXX.Library</RootNamespace>
+    <AssemblyName>Vueling.XXX.Library</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == '1'">..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(ISTEAMBUILDMACHINE)' == ''">..\..\..\BuildProcessTemplates\TFSBuildExtensions\SupportFiles\VuelingRuleSet.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect, Version=2.0.1.0, Culture=neutral, PublicKeyToken=a64e1179c81b1e25, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.0.1\lib\net35\Fasterflect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net35\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vueling.Configuration.Library, Version=1.3.0.1, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Configuration.Library.1.3.0.1\lib\net35\Vueling.Configuration.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.DBAccess.Contracts.ServiceLibrary, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.DBAccess.Contracts.ServiceLibrary.1.0.0.2\lib\net35\Vueling.DBAccess.Contracts.ServiceLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Vueling.Extensions.Library, Version=1.0.1.0, Culture=neutral, PublicKeyToken=64469f821e1d1c06, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vueling.Extensions.Library.1.0.1\lib\net35\Vueling.Extensions.Library.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\IXXXLibraryConfiguration.cs" />
+    <Compile Include="Configuration\XXXLibraryConfiguration.cs" />
+    <Compile Include="DomainServicesContracts\IBookingCancelerDomainServices.cs" />
+    <Compile Include="DomainServicesContracts\IBookingDomainServices.cs" />
+    <Compile Include="DomainServicesContracts\IBookingFeaturesDomainServices.cs" />
+    <Compile Include="DomainServicesContracts\IFleetRecoverAndPersist.cs" />
+    <Compile Include="DomainServicesContracts\ISeatAssignment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DomainServicesImplementations\AircraftRecoverAndPersist.cs" />
+    <Compile Include="DomainServicesContracts\IAircraftRecoverAndPersist.cs" />
+    <Compile Include="DomainServicesImplementations\BookingCancelerDomainServices.cs" />
+    <Compile Include="DomainServicesImplementations\BookingDomainServices.cs" />
+    <Compile Include="DomainServicesImplementations\BookingFeaturesDomainServices.cs" />
+    <Compile Include="DomainServicesImplementations\FleetRecoverAndPersist.cs" />
+    <Compile Include="DomainServicesImplementations\SeatAssignment.cs" />
+    <Compile Include="Entities\Aircraft.cs" />
+    <Compile Include="Entities\AvailabilityEnum.cs" />
+    <Compile Include="Entities\Booking.cs" />
+    <Compile Include="Entities\Journey.cs" />
+    <Compile Include="Entities\Passenger.cs" />
+    <Compile Include="Entities\Seat.cs" />
+    <Compile Include="Exceptions\AircraftParamIsNullException.cs" />
+    <Compile Include="Exceptions\ConfigurationInitializationException.cs" />
+    <Compile Include="Exceptions\InvalidBookingOperationException.cs" />
+    <Compile Include="Exceptions\RowOrColumnParamsAreNullOrEmptyException.cs" />
+    <Compile Include="Exceptions\UpdateToRepositoryException.cs" />
+    <Compile Include="InfrastructureContracts\IAircraftRepository.cs" />
+    <Compile Include="InfrastructureContracts\IBookingRepository.cs" />
+    <Compile Include="InfrastructureContracts\IFleetRepository.cs" />
+    <Compile Include="InfrastructureContracts\IUnitOfWorkBooking.cs" />
+    <Compile Include="InfrastructureContracts\IUnitOfWorkBookingCanceler.cs" />
+    <Compile Include="BookingServices\BookingBulkModifierServices.cs" />
+    <Compile Include="BookingServices\IBookingBulkModifierServices.cs" />
+    <Compile Include="BookingServices\InMemoryBookingProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\NugetPackageGenerationAttribute.cs" />
+    <Compile Include="Validations\BookingCancelerValidations.cs" />
+    <Compile Include="Validations\IBookingCancelerValidations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

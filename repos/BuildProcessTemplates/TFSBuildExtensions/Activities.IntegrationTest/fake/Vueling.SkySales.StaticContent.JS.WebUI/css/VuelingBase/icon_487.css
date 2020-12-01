@@ -1,0 +1,545 @@
+/****** iconos general *****/
+
+/*declaración icon*/
+.icon{display:block;background-image:url(../../images/VuelingBase/global_sprite_2.png);background-repeat:no-repeat;}
+
+.secTab .icon{position:relative;top:-2px;margin-right:5px;}
+.sectionHold .styleBox_white h3 .icon{position:absolute;top:0;left:0;}
+.holdDetails .numPassenger .icon{margin-right:10px;}
+.holdDetails .pnrDetailBar .paymentStatus .icon{position:relative;top:-8px;margin-bottom:-8px;}
+.pnrDetail .icon{position:absolute;top:0;left:0;}
+.pnrDetailBar .statusMsg .icon{margin:0 5px 0 3px;}
+.opcionVuelo li a span,.opcionVuelo li a.desplegable span.icon{display:block;float:left;position:relative;top:-4px;margin-right:4px;}
+.opcionVuelo li a.desplegable span.icon{border:none;}
+.toolsList li h6 a .icon{position:absolute;top:0;left:0;}
+#research a .icon{position:relative;top:2px;margin-right:3px;}
+.HoldSb .icon{position:absolute;top:0;left:0;}
+.myVuelingUserRow .iconSection .icon{float:right;margin:0;}
+.espBaggageListIcons .icon{float:left;width:44px;height:42px;margin:3px;}
+#paymentHoldAside .travelInfo h3 .icon{left:2px;position:absolute;top:-4px;*top:0;}
+#paymentHoldConfirmArticle #paxDetails .paxPaymentTotal .icon{float:left;margin-right:7px;position:relative;top:-11px;}
+.bottomComment .icon{margin-right:10px;}
+#punto_visaPage .radioForm .icon{position:relative;top: -8px;}
+#ap_formaPagoArticle .icoSafe .icon{margin-right:10px;}
+.c3AsideBar .c3AsideBar_footer .ventajas .icon{position:relative;top:1px;}
+.c3AsideBar .c3AsideBar_footer h3 .icon{margin-right:10px;}
+.paxPaymentRow .paymentStatus .icon{margin-right:8px;}
+#c3_checkinArticle .passengersBar fieldset span.col3 span.icon{cursor:default;}
+#c3_checkinArticle .seatLegendList span.icon{cursor:default;}
+.shareBox ul li a span.icon{position:absolute;top:0;left:0;}
+.welcomePunto_list li .icon{margin-right:5px;position:relative;top:-2px;}
+.welcomePunto_list li .icon.icoWelcomePunto_checkin{top:-4px;}
+.checkinItineraryList li a .icon{float:left;}
+.checkinItineraryList li:first-child span.icon{top:0;}
+.feeListTab li .icon{float:left;}.listado_imgText li .icon{float:left;}
+.reservationList .flyResume .bt_detalles span.icon{position:absolute;right:0;top:0;}
+.reservationList .flyResume .bt_detalles_active .icon{background-position:-409px -26px;}
+.reservationList .flyResume .bt_detalles .icon{float:right;margin-left:8px;}
+.improveFlyLayer ul li .icon{float:left;}
+.proformaTable .passenger .col2 .icon{position:relative;top:-2px;}
+.sectionInsuranceUsers h3 .icon{margin-right:11px;}
+.availability th .icon{position:relative;top:14px;}
+.availability .arrowLeft .icon{margin:0 4px 0 0;}
+.availability .arrowRight .icon{margin:0 8px 0 4px;}
+.tabFee .icon{margin-top:4px;}
+.newTabs .icon{margin-top:0;}.tabExcellence .tabFee .icon{margin-top:23px;}
+.newTabs .tabExcellence .tabFee .icon{margin-top:0;}
+.sectionPiece .icon{margin:18px auto 13px;}
+.disabledPiece .desc,.disabledPiece .icon{opacity:0.3;*zoom:1;;filter: alpha (opacity=30);}
+.disabledPiece .icon.icoSeatDuo{background-position:-796px -3423px\0/!important;}
+.disabledPiece .icon.icoSeatCero{background-position:-907px -3423px\0/!important;}
+.disabledPiece .icon.icoSeatBasic{background-position:-795px -3487px\0/!important;}
+.disabledPiece .icon.icoSeatXL{background-position:-461px -3505px\0/!important;}
+.disabledPiece .icon.icoSeatOptimum{background-position:-596px -3507px\0/!important;}
+.sectionBaggage .sectionPiece .icon{margin:0;}
+.sectionInsurance .icon{width:64px;margin-top:8px;}
+.payBox .numPasos .icon{margin-right:10px;}
+.promoCode .icon{position:relative;top:4px;}
+.passengersBar .whiteBox .seatLegend .icon{margin-right:5px;top:-2px;position:relative;*position:static;}
+.seatLegendList li .icon{margin-right:7px;float:left;}
+.listFacturas tbody td.listDescargar a span.icon{position:relative;top:-2px;}
+
+.submenu ul ul li a span.icon{position:absolute;left:0;top:2px;}
+.menuAcordeon li .acordeonContent .icon{float:left;}
+.newSearch h5 .icon{float:left;margin-right:5px;}
+.checkRow label span.icon{margin-right:4px;}
+
+/*submenu iconos*/
+.icoMenu{position:absolute;width:26px;height:25px;z-index:1;top:0!important;left:0;float:left;}
+.icoMenu_gestiona{background-position:-900px -899px!important;}
+.icoMenu_checkin{background-position:-864px -896px!important;}
+.icoMenu_seat{background-position:-863px -960px!important;}
+.icoMenu_change{background-position:-864px -928px!important;}
+.icoMenu_block{background-position:-865px -1080px!important;}
+.icoMenu_go{background-position:-863px -1051px!important;}
+.icoMenu_baggage{background-position:-865px -1112px!important;}
+.icoMenu_especial{background-position:-866px -1143px!important;}
+.icoMenu_insurance{background-position:-867px -990px!important;}
+.icoMenu_api{background-position:-870px -1173px!important;}
+.icoMenu_factura{background-position:-868px -1200px!important;}
+.icoMenu_residente{background-position:-865px -1235px!important;}
+.icoMenu_mascota{background-position:-899px -928px!important;}
+.icoMenu_puntos{background-position:-896px -962px!important;}
+.icoMenu_preparation{background-position:-899px -990px!important;}
+.icoMenu_airport{background-position:-901px -1017px!important;}
+.icoMenu_aboard{background-position:-904px -1050px!important;}
+.icoMenu_destination{background-position:-904px -1079px!important;}
+.icoMenu_business{background-position:-903px -1113px!important;}
+.icoMenu_services{background-position:-861px -1021px!important;}
+.icoMenu_home{background-position:-907px -1174px!important;}
+.icoMenu_flying{background-position:-906px -1202px!important;}
+.icoMenu_net{background-position:-933px -898px!important;}
+.icoMenu_job{background-position:-934px -927px!important;}
+.icoMenu_investors{background-position:-936px -961px!important;}
+.icoMenu_press{background-position:-939px -989px!important;}
+.icoMenu_contact{background-position:-936px -1022px!important;}
+.icoMenu_search{background-position:-938px -1171px!important;}
+.icoMenu_where{background-position:-939px -1080px!important;}
+.icoMenu_estimation{background-position:-938px -1110px!important;}
+.icoMenu_calendar{background-position:-936px -1141px!important}
+.icoMenu_groups{background-position:-938px -1048px!important;}
+.icoMenu_tarifas{background-position:-939px -1200px !important;}
+.icoMenu_legal{background-position:-901px -1142px !important}
+.icoMenu_specialPassenger{background-position:-968px -897px!important;}
+
+/*iconos*/
+.icoPlane_big,.icoSeatsOptima,.icoPrograms,.icoAdelanta_medium,.icoInstantCheckin_big,.icoSnack_big,.icoHandBaggage_big,.icoPreferentBoarding_big,.icoMostradores_big,.icoDuo_big,.icoReembolso_big,.icoFacturacion_big,.icoFlexibilidad_big,.icoVip_big,.icoCarril_big{width:73px;height:59px;}
+.icoPlane_big{background-position:-110px -3346px;}
+.icoSeatsOptima{background-position:-193px -3346px;height:75px;}
+.icoPrograms{background-position:-274px -3346px;}
+.icoAdelanta_medium{background-position:-357px -3346px;}
+.icoInstantCheckin_big{background-position:-28px -3428px;}
+.icoSnack_big{background-position:-522px -3428px;}
+.icoHandBaggage_big{background-position:-275px -3428px;}
+.icoPreferentBoarding_big{background-position:-192px -3428px;}
+.icoMostradores_big{background-position:-357px -3428px;}
+.icoDuo_big{background-position:-111px -3428px;}
+.icoReembolso_big{background-position:-439px -3428px;}
+.icoFacturacion_big{background-position:-603px -3428px;position:relative;top:-10px;}
+.icoFlexibilidad_big{background-position:-684px -3428px;}
+.icoVip_big{background-position:-29px -3346px;}
+.icoCarril_big{background-position:-439px -3346px;}
+.icoBrowser_ff,.icoBrowser_ie,.icoBrowser_ch{width:74px;margin-right:70px;height:67px;}
+.icoBrowser_ff{background-position:0 -3185px;}
+.icoBrowser_ie{background-position:-80px -3185px;}
+.icoBrowser_ch{background-position:-160px -3185px;}
+.icoGoma{width:39px;height:37px;background-position:-741px -3212px;float:left;}
+.icoHandBaggageNoTxt_small{background-position:-541px -2226px!important;height:68px;width:53px;}
+.icoPromoUniversal{width:22px;height:21px;background-position:-947px -3104px;}
+.icoRoundAdded{background-position:-646px -3068px;height:26px;width:28px;}
+.icoAdvantageFeeOk,.icoAdvantageFeeNo{width:35px;height:35px;}
+.icoAdvantageFeeOk{background-position:-489px -3029px;}
+.icoAdvantageFeeNo{background-position:-530px -3029px;}
+.icoRoundFeeBasic,.icoRoundFeeOptima,.icoRoundFeeExcellence{width:10px!important;height:10px!important;float:left;margin-right:6px;position:relative;top:2px;}
+.icoRoundFeeOptima{background-position:-596px -3024px;}
+.icoRoundFeeBasic{background-position:-596px -3039px;}
+.icoRoundFeeExcellence{background-position:-596px -3055px;}
+.icoFeeTabListSeats_small,.icoFeeTabListBaggage_small,.icoFeeTabListChrono_small,.icoFeeTabListPlane_small,.icoFeeTabListPrograma_small,.icoFeeTabListPreferent_small,.icoFeeTabListDuo_small,.icoFeeTabListChangeFlight_small,.icoFeeTabListHandBaggage_small,.icoFeeTabListReembolso_small,.icoFeeTabListClick_small,.icoFeeTabListSnack_small,.icoFeeTabListPunto_small,.icoFeeTabListIberia_small,.icoFeeTabListSeatOptimum_small,.icoFeeTabListSeatXL_small,.icoFeeTabListBCNMAD_small,.icoFeeTabListAdelanta2_small,.icoFeeTabListCombina_small{float:left;width:45px;height:31px;}
+.icoFeeTabListBCNMAD_small{background-position:-954px -2980px;}
+.icoFeeTabListSeatXL_small{background-position:-905px -2980px;}
+.icoFeeTabListSeatOptimum_small{background-position:-905px -3018px;}
+.icoFeeTabListIberia_small{background-position:-905px -2943px;}
+.icoFeeTabListPunto_small{background-position:-625px -3024px;}
+.icoFeeTabListSnack_small{background-position:-375px -3031px;}
+.icoFeeTabListClick_small{background-position:-625px -2981px;}
+.icoFeeTabListReembolso_small{background-position:-468px -2981px;}
+.icoFeeTabListHandBaggage_small{background-position:-573px -2981px;}
+.icoFeeTabListChangeFlight_small{background-position:-415px -2981px;}
+.icoFeeTabListDuo_small{background-position:-430px -3031px;}
+.icoFeeTabListPreferent_small{background-position:-520px -2981px;}
+.icoFeeTabListPrograma_small{background-position:-362px -2981px;}
+.icoFeeTabListSeats_small{background-position:-257px -2981px;}
+.icoFeeTabListBaggage_small{background-position:-204px -2981px;}
+.icoFeeTabListChrono_small{background-position:-310px -2981px;}
+.icoFeeTabListPlane_small{background-position:-62px -2981px;}
+.icoFeeTabListAdelanta2_small{background-position:-266px -3250px;}
+.icoFeeTabListCombina_small{background-position:-265px -3188px;height:52px;}
+.icoFeeOptimaTab{width:55px;height:21px;background-position:0 -3596px;}
+.icoComparativaFees{width:19px;height:19px;background-position:-108px -3031px;left:0;position:absolute;top:-1px;}
+.icoFeeExcellenceTab{width:95px;height:21px;background-position:-70px -3596px;}
+.icoFeeTab{width:18px;height:17px;position:absolute;left:10px;}
+.icoFeeTab_seat{background-position:-140px -3030px;}
+.icoFeeTab_baggage{background-position:-140px -3054px;}
+.icoFeeTab_adelanta{background-position:-140px -3079px;}
+.icoFeeTab_plus{background-position:-167px -3030px;}
+.icoFeeTab_pref{background-position:-167px -3054px;}
+.icoFeeTab_flex{background-position:-167px -3077px;}
+.icoFeeExcellence_small{width:14px;height:25px;float:left;background-position:-8px -2980px;}
+.icoBaggageAdded{width:101px;height:102px;background-position:-32px -758px;float:left;}
+.icoBaggageAdded_small{width:56px;height:43px;background-position:-739px -3100px;float:left;}
+.icoDuoSeatAdded{background-position:-739px -3159px;float:left;width:55px;height:40px;}
+.icoBaggageDiscount{width:43px;height:41px;background-position:-579px -1063px;float:left;}
+.icoCorpLaptop{width:210px;height:162px;background-position:-676px -2896px;float:left;}
+.icoClock{width:31px;height:38px;background-position:-14px -2686px;float:left;}
+.iconHotelDefault,.iconCarDefault{width:110px;height:82px;background-position:-18px -2872px;float:left;}
+.iconCarDefault{background-position:-18px -2759px;}
+.icoConnectionIda,.icoConnectionVuelta{width:54px;float:left;height:36px;background-position:-770px -2797px;}
+.icoConnectionVuelta{background-position:-770px -2833px;}
+.icoConnectionIda_small,.icoConnectionVuelta_small{width:36px;float:left;height:26px;background-position:-839px -2805px;}
+.icoConnectionVuelta_small{background-position:-839px -2843px;}
+.icoUserConfirmMyVueling{width:77px;height:76px;background-position:-680px -2801px;}
+.icoMyVuelingLogo{width:186px;height:37px;background-position:-683px -2746px;}
+.icoMyvueling_unlogged,.icoMyvueling_logged{width:14px;height:20px;position:relative;top:-5px;background-position:-520px -2112px;}
+.icoMyvueling_logged{background-position:-504px -2112px;margin:0 10px;}
+.icoLupa_grey{width:30px;height:24px;float:left;background-position:-680px -1545px;left:0;position:absolute;top:3px;}
+.icoTel_small{width:37px;height:35px;background-position:-7px -2629px;}
+.icoQuestionConnect_small{width:49px;height:35px;float:left;background-position:-52px -2629px;}
+.icoVisaCard_tutorial{width:270px;height:107px;background-position:-392px -2628px;}
+.icoExpressCard_tutorial{width:270px;height:109px;background-position:-683px -2627px;}
+.icoPreference_big{width:93px;float:left;height:90px;background-position:-266px -2628px;}
+.icoGestionIntegral_small{width:60px;height:47px;background-position:-475px -2327px;float:left;margin:10px 10px 0 0;}
+.icoGestionIntegral_big{width:79px;height:60px;background-position:-571px -2312px;float:left;}
+.icoTarifaPromo_small{width:62px;height:59px;background-position:-475px -2403px;float:left;margin-right:10px;}
+.icoTarifaPromo_big{width:80px;height:76px;background-position:-575px -2384px;float:left;}
+.icoAtencionCliente_big{width:76px;height:86px;background-position:-571px -2485px;float:left;}
+.icoAtencionCliente_small{width:67px;height:57px;margin-right:10px;background-position:-474px -2514px;float:left;}
+.icoInvoiceRquest_big{width:160px;height:162px;background-position:-279px -2444px;}
+.icoEmergency_big{width:167px;height:169px;background-position:-273px -2243px;}
+.icoErrro404{width:218px;height:356px;background-position:-28px -2239px;}
+.icoSmiley{width:25px;height:26px;display:inline;background-position:-961px -162px;zoom:1;position:relative;top:6px;margin:-5px 0 0 5px;padding:0 40px 7px 0;}
+.icoChat{width:20px;height:18px;background-position:-678px -346px;}
+.icoDescargaFactura{width:20px;height:20px;background-position:-787px -1545px;}
+.icoLupa_big{width:124px;height:143px;background-position:-544px -1863px;}
+.icoPlaneOut_small{width:18px;height:17px;background-position:-590px -411px;}
+.icoPlaneBack_small{width:18px;height:17px;background-position:-617px -411px;}
+.icoGoogleCalendar{width:22px;height:20px;background-position:-400px -1885px;position:relative;top:-2px;margin-bottom:-2px;}
+.icoOutlook{width:22px;height:22px;background-position:-399px -1923px;position:relative;top:-2px;margin-bottom:-4px;}
+.icoFacebookLayer{background-position:-257px -1885px;width:107px;height:40px;}
+.icoTwitterLayer{background-position:-256px -1940px;width:121px;height:33px;}
+.icoLoading{display:block;width:59px;height:58px;background:url(../../images/VuelingBase/loading.gif) 0 0 no-repeat;margin:40px auto 0;}
+.paymentLoading .icoloading{background:url(../../images/VuelingBase/icoLoadingPaymnet.gif) top left no-repeat;width:301px;height:50px;}
+.icoRoundSeat_basic,.icoRoundSeat_xl,.icoRoundSeat_optimum,.icoRoundSeat_duo,.icoRoundSeat_select,.icoRoundSeat_reserved,.icoRoundSeat_bebe,.icoRoundSeat_fleetblocked,.icoRoundSeat_0{width:17px;height:17px;}
+.icoRoundSeat_basic{background-position:-517px -1545px!important;}
+.icoRoundSeat_xl{background-position:-468px -1545px!important;}
+.icoRoundSeat_optimum{background-position:-493px -1545px!important;}
+.icoRoundSeat_duo{background-position:-443px -1545px!important;}
+.icoRoundSeat_reserved{background-position:-565px -1545px!important;}
+.icoRoundSeat_bebe{background-position:-609px -1545px!important;}
+.icoRoundSeat_fleetblocked{background-position:-632px -1545px!important;}
+.icoRoundSeat_0{background-position:-653px -1545px!important;}
+.icoRoundSeat_select{background-position:-541px -1545px!important;}
+.icoCondEspecialChair,.icoCondEspecialPregnant,.icoCondEspecialBaby,.icoCondEspecialBlind,.icoCondEspecialChair_big,.icoCondEspecialPregnant_big,.icoCondEspecialBaby_big,.icoCondEspecialBlind_big{width:59px;height:43px;}
+.icoCondEspecialChair,.icoCondEspecialChair_big{background-position:-25px -1459px;}
+.icoCondEspecialPregnant,.icoCondEspecialPregnant_big{background-position:-95px -1459px;}
+.icoCondEspecialBaby,.icoCondEspecialBaby_big{background-position:-172px -1459px;}
+.icoCondEspecialBlind,.icoCondEspecialBlind_big{background-position:-236px -1459px;}
+.icoUM_big{width:77px;height:82px;float:left;background-position:-905px -2831px;}
+.icoUM_small{width:31px;height:43px;background-position:-882px -588px;}
+.icoMail{width:66px;height:55px;background-position:-887px -790px;}
+.icoArrow_yellow{width:6px;height:14px;background-position:-566px -55px;}
+.icoAdd{width:14px;height:13px;background-position:-508px -408px;float:left;margin-right:4px;}
+.icoEliminar{width:14px;height:13px;float:left;cursor:pointer;margin-right:4px;background-position:-10px -34px;}
+.icoAlert{width:44px;height:41px;background-position:-853px -466px;}
+.icoHoldDetails,.icoHoldHeader{width:21px;height:29px;background-position:-724px -246px;}
+.icoYellowArrow{background-position:-394px -400px;height:17px;width:6px;}
+.icoYellowArrow_big{background-position:-538px -55px;height:19px;width:8px;}
+.icoGratis{width:76px;height:30px;background-position:-167px -445px;}
+.icoPet_small{width:35px;height:34px;background-position:-445px -408px;}
+.icoPet_medium{width:52px;height:52px;background-position:-317px -1456px;}
+.icoInsuranceBack,.icoInsuranceTrip,.icoInsuranceNone{width:80px!important;height:106px;}
+.icoInsuranceBack{background-position:-425px -1302px;}
+.icoInsuranceTrip{background-position:-508px -1303px;}
+.icoInsuranceNone{background-position:-586px -1304px;}
+.icoInsuranceSky_c3,.icoInsuranceGolf_c3,.icoInsuranceHobby_c3,.icoInsuranceDear_c3,.icoInsuranceHealth_c3,.icoSegMaleta{width:78px;height:105px;}
+.icoInsuranceSky_c3{background-position:-428px -1417px;}
+.icoInsuranceGolf_c3{background-position:-516px -1417px;}
+.icoInsuranceHobby_c3{background-position:-607px -1417px;}
+.icoInsuranceDear_c3,.icoSegMaleta{background-position:-696px -1417px;}
+.icoInsuranceHealth_c3{background-position:-790px -1417px;}
+.icoBaggage{width:93px;height:96px;background-position:-349px -652px;}
+.icoSeatDuo,.icoSeatXL,.icoSeatOptimum,.icoSeatBasic,.icoSeatCero{width:99px;height:50px;}
+.icoSeatDuo{background-position:-192px -792px;}
+.icoSeatXL{background-position:-333px -792px;}
+.icoSeatOptimum{background-position:-468px -792px;}
+.icoSeatBasic{background-position:-604px -792px;}
+.icoSeatCero{background-position:-740px -792px;}
+.icoInfo{width:18px;height:18px;background-position:-110px -4px;}
+.icoInfo_grey{width:18px;height:18px;background-position:-552px -297px;}
+.icoPromoCode{width:23px;height:21px;background-position:-456px -297px;}
+.icoHold_small{width:15px;height:20px;background-position:-855px -16px;}
+.icoMsgError{width:44px;height:41px;background-position:-851px -412px;}
+.icoMsgError_small{width:28px;height:29px;float:left;background-position:-959px -90px;}
+.icoUser_grey,.icoUser_red{width:13px;height:14px;}
+.icoUser_grey{background-position:-358px -427px;}
+.icoUser_red{background-position:-357px -398px;}
+.icon .secRoundTab span{right:42px!important;top:-33px!important;}
+.icoPig,.icoCup,.icoPlane{margin-right:10px;float:left;}
+.icoPig{width:62px;height:46px;background-position:-18px -247px;}
+.icoCup{width:39px;height:45px;background-position:-112px -247px;}
+.icoPlane{width:65px;height:41px;background-position:-179px -247px;}
+.icoPlaneBig_ida,.icoPlaneBig_vuelta{width:47px;height:33px;}
+.icoPlaneBig_ida{background-position:-158px -506px;}
+.icoPlaneBig_vuelta{background-position:-205px -506px;}
+.logoPunto_medium{width:93px;height:29px;background-position:-152px -3285px;}
+.logoPunto_medium.icoFlotante_Top{position:absolute;right:0;top:0;}
+#iconPhone{height:17px;width:16px;margin-right:4px;display:block;float:left;background:url(../../images/VuelingBase/global_sprite_2.png) no-repeat;background-position:0 -59px;}
+.iconPhone_footer{height:36px;width:41px;margin-right:14px;float:left;background-position:-151px -8px;}
+.iconClose{position:relative;-webkit-border-radius:3px;border-radius:3px;font-size:.9em!important;height:9px;width:9px;background-color:#d2460c;color:#fff;text-align:center;margin-right:3px;line-height:7px;float:left;text-decoration:none!important;font:normal .88em/.8 Verdana!important;top:2px;display:block;padding:1px 1px 2px;}
+.icoModificar{width:13px;height:12px;float:left;cursor:pointer;margin-right:4px;background-position:-112px -54px;}
+.icoExportar{width:10px;height:12px;float:left;cursor:pointer;margin-right:4px;background-position:-967px -212px;}
+.icoModificar_white{width:14px;height:13px;float:left;cursor:pointer;margin-right:4px;background-position:-111px -33px;}
+.icoVisaMedium{width:104px;height:69px;background-position:-12px -347px;}
+.icoVisaBig{width:215px;height:171px;background-position:-437px -1111px;}
+.icoVisaCola{width:104px;height:69px;background-position:-115px -347px;}
+.icoVisaDots{width:107px;height:69px;background-position:-221px -348px;}
+.logoPunto_big{width:122px;height:44px;background-position:-437px -3px;}
+.icoCrono{width:100px;height:76px;float:left;background-position:-373px -484px;}
+.icoPuntoc3{width:57px;height:22px;background-position:-818px -57px;}
+.icoCrono_small{width:88px;float:left;height:62px;background-position:-571px -980px;}
+.ico_solFactura{width:20px;height:20px;background-position:-508px -251px;}
+.icoPrint{width:18px;height:18px;background-position:-553px -254px;}
+.icoLupa{width:15px!important;height:15px!important;background-position:-594px -257px;}
+.icoCheckin_online,.icoCambio_vuelo,.icoInsurance_small,.icoSeat_small,.icoEquipajeEspecial_small,.icoEquipaje_small,.icoApi_small,.icoPet_mini,.icoVer_vuelo,.icoBag_mini{width:36px;height:23px;}
+.icoWheelChair{width:36px;height:46px;}
+.icoVer_vuelo{background-position:-666px -304px;}
+.icoSeat_vuelo{width:13px;height:21px;background-position:-799px -321px;}
+.icoReservasVoladas{background-position:0 -866px;height:150px;width:268px;margin:0 15px;}
+.icoGrupos{background-position:-274px -881px;height:138px;width:147px;margin:0 73px 12px;}
+.icoCheckin_online{background-position:-793px -251px;}
+.icoCambio_vuelo{background-position:-793px -274px;}
+.icoWheelChair{background-position:-33px -1460px; }
+.icoInsurance_small{background-position:-793px -297px;}
+.icoSeat_small{background-position:-793px -320px;}
+.icoEquipajeEspecial_small{background-position:-793px -343px;}
+.icoEquipaje_small{background-position:-793px -389px;}
+.icoApi_small{background-position:-793px -411px;}
+.icoPet_mini{background-position:-796px -470px;}
+.icoBag_mini{background-position:-794px -442px;}
+.icoIbplus_small{width:53px;height:15px;background-position:-308px -55px;}
+.icoPunto_small{width:57px;height:22px;background-position:-235px -52px;}
+.icoPlaneIda,.icoPlaneVuelta{width:20px;height:19px;float:left;}
+.icoPlaneIda{background-position:-409px -55px;}
+.icoPlaneVuelta{background-position:-445px -55px;}
+.icoConfirm_big{width:40px;height:40px;background-position:-743px -8px;}
+.icoConfirm_medium{width:20px;height:20px;background-position:-480px -55px;}
+.icoConfirm_medium_white{width:24px;height:24px;background-position:-595px -293px;}
+.icoConfirm_small{width:14px;height:14px;background-position:-507px -61px;}
+.icoError_big{width:40px;height:40px;background-position:-950px -3152px;}
+.icoInsurance_big,.icoSeat_big,.icoMaleta_big,.icoEquipoEspecial_big,.icoPet_big,.icoMoneyBack_medium{width:158px;height:106px;}
+.icoInsurance_big{background-position:0 -647px;}
+.icoSeat_big{background-position:-158px -647px;}
+.icoMaleta_big{background-position:-316px -647px;}
+.icoEquipoEspecial_big{background-position:-632px -647px;}
+.icoPet_big{background-position:-862px -1671px;}
+.icoMoneyBack_medium{width:84px;background-position:-425px -1302px;}
+.icoTarjetaEmabarque_small{width:35px;height:41px;background-position:-846px -257px;}
+.icoComment_small{width:30px;height:32px;background-position:-851px -312px;}
+.icoComment_big{width:47px;height:42px;background-position:-850px -352px;}
+.icoCoberturas_small{width:21px;height:24px;background-position:-110px -467px;}
+.icoHomeAgencias_left{width:254px;height:123px;background-position:-10px -883px;}
+.icoHomeAgencias_right,.icoGrupos_big{width:116px;height:116px;background-position:-289px -890px;}
+.icoGrupos_small{width:68px;height:71px;background-position:-460px -1012px;}
+.icoAccesAgencias{width:112px;height:96px;background-position:-440px -890px;}
+.icoVentajaGris{width:15px;height:15px;background-position:-110px -592px;}
+.icoPromo{float:none!important;margin:10px auto 23px;}
+.icoPrint_grey,.icoFactura_grey,.icoCalendar_grey,.icoGuide_grey,.icoInsurance_grey,.icoSeat_grey,.icoGestiona_grey,.icoMail_grey,.icoCheckin_grey,.icoAddBaggage_grey,.icoAddSpecialBaggage_grey,.icoChangeFly_grey,.icoInfo-passenger{width:41px;height:42px;}
+.icoAddBaggage_grey{background-position:-56px -572px;}
+.icoAddSpecialBaggage_grey{background-position:-8px -572px;}
+.icoMail_grey{background-position:-918px -2026px;}
+.icoPrint_grey{background-position:-206px -572px;}
+.icoFactura_grey{background-position:-254px -572px;}
+.icoCalendar_grey{background-position:-295px -572px;}
+.icoInsurance_grey{background-position:-400px -593px;}
+.icoGuide_grey{background-position:-350px -593px;}
+.icoSeat_grey{background-position:-440px -593px;}
+.icoGestiona_grey{background-position:-945px -614px;}
+.icoCheckin_grey{background-position:-163px -616px;}
+.icoChangeFly_grey{background-position:-207px -614px;}
+.icoInfo-passenger{background-position:-158px -570px;}
+.icoSeat_general,.icoInsurance_general,.icoShare_medium,.icoBoardinpass_medium,.icoCar_medium{width:82px;height:81px;}
+.icoInsurance_general{height:71px;background-position:-750px -890px;}
+.icoSeat_general{background-position:-670px -1052px;}
+.icoShare_medium{background-position:-670px -890px;}
+.icoBoardinpass_medium{background-position:-673px -973px;}
+.icoCar_medium{background-position:-758px -963px;}
+.icoFacebook_grey,.icoTwitter_grey{width:28px;height:29px;}
+.icoFacebook_grey{background-position:-297px -469px;}
+.icoTwitter_grey{background-position:-298px -518px;}
+.icoCheckin_big{width:33px;height:33px;background-position:-502px -291px;}
+.icoPay{width:21px;height:28px;background-position:-815px -8px;}
+.ico_nskError_Tel,.ico_nskError_Chat{width:73px;height:75px;}
+.ico_nskError_Tel{background-position:-28px -3514px;}
+.ico_nskError_Chat{background-position:-111px -3514px;}
+.icoCreditCardVV,.icoCreditCardVI,.icoCreditCardVE,.icoCreditCardMC,.icoCreditCardMD,.icoCreditCardAX,.icoCreditCardDI,.icoCreditCardEL,.icoCreditCardVD,.icoCreditCardMB,.icoCreditCardDL,.icoCreditCardCM,.icoCreditCardAB,.icoCreditCardDB{width:40px;height:27px;}
+.icoCreditCardVV,.icoCreditCardEL{background-position:-744px -529px}
+.icoCreditCardVE,.icoCreditCardVD{background-position:-900px -529px}
+.icoCreditCardVI,.icoCreditCardDL{background-position:-783px -529px}
+.icoCreditCardMC,.icoCreditCardMD,.icoCreditCardMB,.icoCreditCardCM{background-position:-822px -529px}
+.icoCreditCardAX,.icoCreditCardAB{background-position:-861px -529px}
+.icoCreditCardDI,.icoCreditCardDB{background-position:-939px -529px}
+.icoUsbCookie{background-position:-242px -3514px; width:42px; height:48px; display:inline-block;top: 17px;position: relative;}
+.icoVisaV,.icoVisa2,.icoVisaE,.icoMasterCD,.icoAX,.icoDi,.icoPaypalCard{width:40px;height:27px;}
+.icoVisaV{background-position:-744px -529px}
+.icoVisaE{background-position:-900px -529px}
+.icoVisa2{background-position:-783px -529px}
+.icoMasterCD{background-position:-822px -529px}
+.icoAX{background-position:-861px -529px}
+.icoDi{background-position:-939px -529px}
+.icoPaypalCard{background-position:-939px -555px;}
+.icoPromoSelect_promoAgent{width:28px;height:24px;background-position:-265px -3297px;position:relative;margin:-23px auto 2px!important;}
+.icoModSeat{background-position:-293px -3513px;width:55px;height:48px;}
+.icoBaggageDiscount{width:43px;height:41px;background-position:-579px -1063px;float:left;}
+.icoPhotoCatalonia{width:188px;height:122px;background:none;}
+.icoStars{width:50px;height:18px; background-position:-758px -2414px;}
+.icoCataloniaVuelingLogo{width: 216px;height: 37px;background-position: -759px -2358px;position: relative;top: -11px;}
+
+.h3GreyArrow{display:none;width:699px;height:31px; background-position:-292px -3576px;position:absolute;left:0;bottom:-14px;}
+.icoModernClock{width:27px;height:26px;background-position:-821px -3159px;}
+.icoRightArrow_yellow{width:9px;height:19px;background-position:-222px -53px;float:left;}
+.icoWelcomePunto_sobre,.icoWelcomePunto_checkin,.icoWelcomePunto_hotel,.icoWelcomePunto_car,.icoWelcomePunto_visa,.icoWelcomePunto_vuelingPass{width:55px;	height:45px;display:block;float:left;}
+.icoWelcomePunto_sobre{background-position:-921px -3295px;}
+.icoWelcomePunto_checkin{background-position:-797px -3346px;}
+.icoWelcomePunto_hotel{background-position:-792px -3297px;}
+.icoWelcomePunto_car{background-position:-859px -3299px;}
+.icoWelcomePunto_visa{background-position:-862px -3348px;}
+.icoWelcomePunto_vuelingPass{background-position:-923px -3348px;}
+.espBaggageListIcons .contentListPet .icon{float:right;}
+.espBaggageListIcons .contentListEsp a{margin-top:38px;}
+.espBaggageListIcons .contentListPet a{margin-top:8px;}
+.espBaggageListIcons .icoCondEspecialChair{background-position:-30px -1456px;}
+.espBaggageListIcons .icoSSRSky{background-position:-931px -250px;}
+.espBaggageListIcons .icoSSRSports{background-position:-920px -309px;width:63px;}
+.espBaggageListIcons .icoSSRMusic{background-position:-932px -431px;}
+.espBaggageListIcons .icoSSRBicycle{background-position:-921px -373px;width:63px;}
+#c3Body .ssrs .icoSSRWindsurf{margin-right:5px;}
+#c3Body .icoSSRSports{width:39px;height:34px;background-position:-933px -317px;}
+#c3Body .icoSSRBicycle{width:55px;height:34px;background-position:-924px -379px;}
+#c3Body .icoSSRWindsurf,#c3Body .icoSSRKitesurf{width:27px;height:34px;}
+#c3Body .icoSSRSky,#c3Body .icoSSRMusic,#c3Body .icoSSRArms{width:35px;height:34px;}
+#c3Body .icoSSRArms{background-position:-347px -1358px;}
+#c3Body .icoSSRSky{background-position:-935px -258px;}
+#c3Body .icoSSRMusic{background-position:-939px -437px;}
+.icoFeeTabListSeats_small,.icoFeeTabListSeatsAdv_small,.icoFeeTabListBaggage_small,.icoFeeTabListChrono_small,.icoFeeTabListPlane_small,.icoFeeTabListPrograma_small,.icoFeeTabListPreferent_small,.icoFeeTabListDuo_small,.icoFeeTabListChangeFlight_small,.icoFeeTabListHandBaggage_small,.icoFeeTabListReembolso_small,.icoFeeTabListClick_small,.icoFeeTabListSnack_small,.icoFeeTabListPunto_small,.icoFeeTabListIberia_small,.icoFeeTabListSeatOptimum_small,.icoFeeTabListSeatXL_small,.icoFeeTabListBCNMAD_small,.icoFeeTabListVip_small,.icoFeeTabListCarril_small{float:left;width:45px;height:31px;}
+.icoFeeTabListBCNMAD_small{background-position:-954px -2980px;}
+.icoFeeTabListSeatXL_small{background-position:-905px -2980px;}
+.icoFeeTabListSeatOptimum_small{background-position:-905px -3018px;}
+.icoFeeTabListIberia_small{background-position:-905px -2943px;}
+.icoFeeTabListPunto_small{background-position:-625px -3024px;}
+.icoFeeTabListSnack_small{background-position:-375px -3031px;}
+.icoFeeTabListClick_small{background-position:-374px -3069px;}
+.icoFeeTabListReembolso_small{background-position:-468px -2981px;}
+.icoFeeTabListHandBaggage_small{background-position:-573px -2981px;}
+.icoFeeTabListChangeFlight_small{background-position:-415px -2981px;}
+.icoFeeTabListDuo_small{background-position:-430px -3031px;}
+.icoFeeTabListPreferent_small{background-position:-520px -2981px;}
+.icoFeeTabListPrograma_small{background-position:-362px -2981px;}
+.icoFeeTabListSeats_small{background-position:-257px -2981px;}
+.icoFeeTabListSeatsAdv_small{background-position:-430px -3069px;}
+.icoFeeTabListBaggage_small{background-position:-204px -2981px;}
+.icoFeeTabListChrono_small{background-position:-310px -2981px;}
+.icoFeeTabListPlane_small{background-position:-62px -2981px;}
+.icoFeeTabListVip_small{background-position:-321px -3031px;}
+.icoFeeTabListCarril_small{background-position:-321px -3069px;}
+.icoLeftArrow,.icoRightArrow,.icoLeftArrowIE7,.icoRightArrowIE7{width:14px;height:33px;}
+.icoLeftArrow,.icoLeftArrowIE7{background-position:-41px -10px;}
+.icoRightArrow,.icoRightArrowIE7{background-position:-71px -10px;}
+.icoCalendar_white{width:23px;height:28px;background-position:-352px -349px;cursor:pointer;}
+.icoCalendar_mediumGrey{width:22px;height:25px;background-position:-350px -468px;}
+.cellBorder:hover .icoLeftArrow{background-position:-56px -10px;}
+.cellBorder:hover .icoRightArrow{background-position:-86px -10px;}
+.icoMsgErrorChat{background-position:-55px -2627px;height:39px;width:50px;}
+.icoVeriSign{background-position:-699px -1869px;height:36px;width:70px;}
+.icoComment_yellow{background-position:-373px -3513px; width:44px; height:41px;}
+.icoDropDownLink{position:relative;padding-right:17px;display:inline-block;margin-bottom:10px;}
+.icoDropDownLink i{position:absolute;right:0;top:2px;width:12px;height:12px;background-position:-15px -457px;}
+.icoDropDownLink.active i{background-position:-15px -441px!important;}
+.icoFooter-Puntos,.icoFooter-Puntosxvuelos,.icoFooter-Crono{width:61px;height:50px;}
+.icoFooter-Puntos{background-position:-29px -1368px;}
+.icoFooter-Puntosxvuelos{background-position:-105px -1368px;}
+.icoFooter-Crono{background-position:-180px -1368px;}
+.icoFeeNewService{position:relative;}
+.icoNewSticker{background-position:-256px -1369px;width:26px;height:26px;}
+.listado_imgText .icoNewSticker{position:relative;top:6px;}
+.icoFeeNewService h4{padding-right:30px;}
+.icoFeeNewService:after{content:"";position:absolute;width:26px;height:26px;right:-8px;top:-8px;background:url(../../images/VuelingBase/global_sprite_2.png) -256px -1369px no-repeat;}
+.icoVisaSmall2{width:75px;height:49px;background-position:-34px -1031px;}
+.icoIdeal-mini{width:40px;height:25px;background-position:-955px -668px;}
+
+
+/*iconos idioma*/
+.ES .iconLang,.CA .iconLang,.GA .iconLang,.EU .iconLang,.FR .iconLang,.EN .iconLang,.IT .iconLang,.PT .iconLang,.NL .iconLang,.DE .iconLang,.RU .iconLang{display:block;float:left;}
+.ES .iconLang{background:url(../../images/VuelingBase/spriteIcon_ES.png) no-repeat;}
+.CA .iconLang{background:url(../../images/VuelingBase/spriteIcon_CA.png) no-repeat;}
+.GA .iconLang{background:url(../../images/VuelingBase/spriteIcon_GA.png) no-repeat;}
+.EU .iconLang{background:url(../../images/VuelingBase/spriteIcon_EU.png) no-repeat;}
+.EN .iconLang{background:url(../../images/VuelingBase/spriteIcon_EN.png) no-repeat;}
+.FR .iconLang{background:url(../../images/VuelingBase/spriteIcon_FR.png) no-repeat;}
+.IT .iconLang{background:url(../../images/VuelingBase/spriteIcon_IT.png) no-repeat;}
+.NL .iconLang{background:url(../../images/VuelingBase/spriteIcon_NL.png) no-repeat;}
+.PT .iconLang{background:url(../../images/VuelingBase/spriteIcon_PT.png) no-repeat;}
+.DE .iconLang{background:url(../../images/VuelingBase/spriteIcon_DE.png) no-repeat;}
+.RU .iconLang{background:url(../../images/VuelingBase/spriteIcon_RU.png) no-repeat;}
+.boxPrmoPunto .iconLang{float:none;margin:15px auto;}
+.expressFee_lightBox .colHalf_2 .handBaggage .iconLang{float:right!important;}
+.body .ico100puntos{width:87px;height:67px;background-position:-189px -6px;}
+.body .icoCanjear_puntos{background-position:-302px 0;height:89px;width:100px;}
+.body .ico_homePunto{width:323px;float:none;height:130px;background-position:-16px -203px;margin:10px auto 23px;}
+.body .ico_homePunto_small{width:150px;float:left;height:60px;background-position:-7px -132px;}
+.body .ico100puntos_small{height:56px;background-position:0 -15px;}
+.body .icoCanjear_puntos_small{height:75px;background-position:-88px 0;}
+html body .icoHandBaggage{width:90px;height:121px;background-position:-409px -199px!important;}
+html body .icoHandBaggage_small{background-position:-523px -249px!important;height:75px;width:58px;}
+.body .ico20puntos_small{width:34px;height:26px;background-position:-5px -96px;}
+.body .icoCorpPoints{width:212px;height:123px;background-position:-607px -209px;}
+.body .icoPointsFlight{width:76px;height:74px;background-position:-95px -2px;}
+.body .icoPointsFlight_big{width:96px;height:86px;float:left;background-position:-304px -2px;}
+.body .ico500PointsxUser{width:161px;height:66px;background-position:-639px -356px;}
+.body .icoAcumulaPoints{background-position:-433px -103px;}
+.icoHoldSample{display:block;width:430px;height:178px;background-position:-561px -5px!important;float:none!important;overflow:hidden;margin:20px auto;}
+body .tutoPNRDetail{width:504px;height:258px;background-position:-9px -367px!important;}
+body .icofeeClaim{width:94px;height:86px;background-position:-861px -204px!important;}
+body .stickerDiscount40{background-position:-531px -437px!important;}
+body .stickerNew{background-position:-531px -496px!important;}
+.body .ico500Points,.body .icoAcumulaPoints,.body .ico500Points{width:91px;height:73px;background-position:-433px -16px;}
+
+/*modificación iconos*/
+.paymentForm > span span.icoMyvueling_logged{left:36px;top:5px;}
+.sectionSolid_checkin fieldset .icoInfo_grey {position:relative; top:50%; margin-top:8px; display:block;} 
+.sectionSolid_checkin fieldset .icoInfo_grey a{display:block;width:100%;height:100%;}
+.sectionBorder_lightBox .header .icoHoldHeader{position:relative;top:-5px;margin-right:10px;}
+.opcionVuelo li a span.ico_solFactura{top:-6px;}
+.opcionVuelo li a span.icoLupa{top:-2px;}
+tr.tabsFee .icofeeClaim{position:absolute;right:0;top:-17px;z-index:2;}
+tr.tabsFee .tabBasic .icofeeClaim{height:71px!important;right:-2px;}
+.leyendTab-basic .feeListTab li .icoPunto_small{left:-30px;margin-right:-15px;position:relative;top:6px;}
+.leyendTab-optima .feeListTab li .icoFeeTabListSeats_small{margin-right:9px;position:relative;}
+.leyendTab-excellence .feeListTab li .icoFeeTabListSeats_small{position:relative;left:-23px;margin-right:-15px;}
+.availabilityBody tr .price .wrap_icoPrice{position:relative;margin:-25px 2px 5px!important;display:block;}
+.availabilityBody tr .price .icoPromoUniversal, .availabilityBody tr .price .icoPromoCode{display: inline-block;}
+.blockUIPopUpBasicDetailBox .icoPrograms{height:30px;}
+@media (min-resolution: .001dpcm) {
+	.genericTable .icoRoundFeeBasic, .genericTable .icoRoundFeeOptima, .genericTable .icoRoundFeeExcellence{top:-8px;top:2px\9}	
+}
+@-moz-document url-prefix(){
+	.genericTable .icoRoundFeeBasic, .genericTable .icoRoundFeeOptima, .genericTable .icoRoundFeeExcellence{top:2px}
+}
+.disabledPiece .icon.icoSeatDuo{background-position:-796px -3423px\0/!important;}
+.disabledPiece .icon.icoSeatCero{background-position:-907px -3423px\0/!important;}
+.sectionBaggage .icoBaggage{background-position:-340px -652px;position:relative;width:106px;}
+.sectionBaggage .roundPromo_small{left:auto;right:-15px!important;}
+.icoSSRSky,.icoSSRSports,.icoSSRBicycle,.icoSSRMusic,.icoSSRSurf{width:75px;height:44px;}
+.icoSSRSky{background-position:-915px -251px;}
+.icoSSRSports{background-position:-915px -309px;}
+.icoSSRBicycle{background-position:-915px -371px;}
+.icoSSRMusic{background-position:-915px -431px;}
+.insuranceContent .icoSSRSurf,.insuranceContent .icoSSRSky,.insuranceContent .icoSSRSkateboard,.insuranceContent .icoSSRWindsurf{width:46px;height:44px;}
+.insuranceContent .icoSSRSky{background-position:-929px -251px;}
+.insuranceContent .icoSSRSurf{background-position:-292px -1397px;}
+.insuranceContent .icoSSRSkateboard{background-position:-159px -1397px;}
+.insuranceContent .icoSSRWindsurf{background-position:-210px -1397px;}
+.insuranceContent .roundPromo_small{top:-20px;left:92%;}
+#errorMsg .icoUM_small,.errorMsg .icoUM_small{margin-left:10px;}
+#seatAssignment .icoLoading{margin-top:10px!important;}
+.blockFree .icoRoundSeat_select[data-seat-description]{opacity:1;filter:Alpha(Opacity=100);}
+.icoRoundSeat_duo,.icoRoundSeat_basic,.icoRoundSeat_optimum,.icoRoundSeat_bebe,.icoRoundSeat_xl{cursor:pointer;}
+.icoRoundSeat_select,.icoRoundSeat_reserved,.icoRoundSeat_fleetblocked{cursor:default;}
+.disableChat .icoQuestionConnect_small{background-position:-104px -2628px}
+#c3_cambioVueloArticle .icoCalendar_mediumGrey{margin:1px 0 0 5px;}
+.desplegableFiltroVuelos .nav_calendar fieldset .icoCalendar_mediumGrey{float:left;}
+.formRow .disable .icoCalendar_mediumGrey{opacity:0.5;filter:alpha(opacity=50);cursor:default!important;}
+.blockUI-loading .icoLoading{margin:0 auto 10px!important;}
+.callout .icoLoading{margin:10px auto 10px!important;}
+#points.logged h3 .closeCont span.iconClose{font-size:.8em!important;}
+.multiJourneyBox h3 .icoConnectionIda_small{position:relative;top:-3px;}
+.contactBar .icon{margin-right:6px;margin-top:1;}
+.payTabs .icoIdeal{position:relative;top:-7px;}
