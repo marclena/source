@@ -1,0 +1,8 @@
+{
+    "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "evhnierbimo_iothubroutes_iotadfpro_EVENTHUB": "Endpoint=sb://evh-nierbimo.servicebus.windows.net/;SharedAccessKeyName=iothubroutes_iot-adf-pro;SharedAccessKey=yiLoV8OG0ZLc+5Lvix7Je2H9JkOUhdlNMU615FvR7Hc=;EntityPath=evh-event-nierbimo"
+  }
+}
